@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Hugo Belin</title>
+    <link>https://hugobelin.com/posts/</link>
+    <description>Recent content in Posts on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jun 2020 22:36:03 -0700</lastBuildDate><atom:link href="https://hugobelin.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resume</title>
+      <link>https://hugobelin.com/posts/resume/</link>
+      <pubDate>Wed, 28 Apr 2021 21:04:15 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/resume/</guid>
+      <description>We are all a masterpiece in progress. We are all capable of great things. As such I strive to create excellent software that creates delightful experiences for end users. I am a Software Engineer based on the Seatle Area, you can find out more about my career history in my LinkedIn Profile . Every now and then I contribute with Vizzes to Tableau Public , this website as well as few others (such as BrewingCats ) that I maintain are hosted in GitLab or in GitHub Tableau Visualization of My Work History      var divElement = document.</description>
+    </item>
+    
+    <item>
+      <title>Instagram</title>
+      <link>https://hugobelin.com/posts/instagram/</link>
+      <pubDate>Tue, 14 Jan 2020 12:08:35 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/instagram/</guid>
+      <description>This plugin has been deprecated
+Instagram-Auto-Embed
+window.AutoInstagram.Control.Initialize(&#34;636890196944822&#34;, &#34;17b874bd11a90bf04332b10b5c45dc9f&#34;); if (window.AutoInstagram.Control.LoadFromParam() === &#39;&#39;) { window.AutoInstagram.Control.QueryAndAddInstagramPost( &#39;CDqPPKxp1cT&#39;, &#34;Instagram-Auto-Embed&#34; ); } else { window.AutoInstagram.Control.QueryAndAddInstagramPost( window.AutoInstagram.Control.LoadFromParam(), &#34;Instagram-Auto-Embed&#34; ); } BrewingCatsCore.Logger.traceInfo( `AutoInstagram Component`, &#39;component.autoinstagram&#39;, &#39;tagId_a&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AutoInstagram&#39; } );  </description>
+    </item>
+    
+  </channel>
+</rss>

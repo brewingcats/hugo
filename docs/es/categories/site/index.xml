@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>site on Hugo Belin</title>
+    <link>https://hugobelin.com/es/categories/site/</link>
+    <description>Recent content in site on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Sep 2021 20:40:17 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/categories/site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Árbol de Enlaces</title>
+      <link>https://hugobelin.com/es/posts/site/linktree/</link>
+      <pubDate>Tue, 07 Sep 2021 20:40:17 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/linktree/</guid>
+      <description>Lista de Contenido Promovido  Juego de Lotería Mexicana en NFT   Juego de Lotería Mexicana en NFT creado usando pixel art  Leer más      Colección de Caminatas   Dashboard de Tableau contiene mi colección de caminatas con imágenes que pueden ser vistas a través del tiempo  Leer más      Colección de Imagenes   Todas mis fotos en un mapa.</description>
+    </item>
+    
+    <item>
+      <title>Currículum</title>
+      <link>https://hugobelin.com/es/posts/resume/</link>
+      <pubDate>Wed, 28 Apr 2021 21:04:23 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/resume/</guid>
+      <description>Todos somos una obra de arte en progreso. Todos somos capaces de lograr grandes cosas. Y como tal mi objetivo es crear software excelente que cree experiencias deleitables para los usuarios finales. Soy un Ingeniero de Software basado en el área de Seattle, puede conocer mas acerca de mi experiencia profesional en mi Perfil de LinkedIn . De vez en cuando contribuyo con Vizzes en Tableau Public , este sitio web y algunos otros (como BrewingCats ) que mantengo se encuentran hosteados en GitLab o en GitHub Visualización de Tableau de Mi Experiencia Profesional      var divElement = document.</description>
+    </item>
+    
+    <item>
+      <title>Telemetría</title>
+      <link>https://hugobelin.com/es/posts/site/telemetry/</link>
+      <pubDate>Sat, 13 Feb 2021 17:29:42 -0800</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/telemetry/</guid>
+      <description>La mayoría si no es que todos los sitios web usan alguna forma de telemetría. Desde la creación de este sitio web he tenido planes de añadir telemetría. Muchos sitios sin embargo, recoleccionan datos no solo con el propósito de mejorar el sitio, detectar problemas de usabilidad, o con la finalidad de mejorarlo; muchos sitios venden esta información y la usan para otros propósitos. Dado que mi intención se limita a mejorar este sitio he tomado algunos pasos para asegurar que el manejo de la información es transparente</description>
+    </item>
+    
+  </channel>
+</rss>

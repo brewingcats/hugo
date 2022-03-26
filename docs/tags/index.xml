@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Hugo Belin</title>
+    <link>https://hugobelin.com/tags/</link>
+    <description>Recent content in Tags on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Sep 2021 20:40:11 -0700</lastBuildDate><atom:link href="https://hugobelin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>site</title>
+      <link>https://hugobelin.com/tags/site/</link>
+      <pubDate>Tue, 07 Sep 2021 20:40:11 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/tags/site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uncategorized</title>
+      <link>https://hugobelin.com/tags/uncategorized/</link>
+      <pubDate>Sat, 24 Apr 2021 00:07:48 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/tags/uncategorized/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://hugobelin.com/tags/software/</link>
+      <pubDate>Sat, 08 Aug 2020 14:51:46 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travel</title>
+      <link>https://hugobelin.com/tags/travel/</link>
+      <pubDate>Fri, 24 Jul 2020 20:48:55 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/tags/travel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gaming</title>
+      <link>https://hugobelin.com/tags/gaming/</link>
+      <pubDate>Mon, 29 Jun 2020 15:42:08 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/tags/gaming/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>uncategorized on Hugo Belin</title>
+    <link>https://hugobelin.com/categories/uncategorized/</link>
+    <description>Recent content in uncategorized on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Apr 2021 00:07:48 -0700</lastBuildDate><atom:link href="https://hugobelin.com/categories/uncategorized/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Latest Reads</title>
+      <link>https://hugobelin.com/posts/categories/uncategorized/tweets/</link>
+      <pubDate>Sat, 24 Apr 2021 00:07:48 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/uncategorized/tweets/</guid>
+      <description> Tweets by hugobelinm   Image Credits: Unsplash: Road Trip with Raj image by @roadtripwithraj    Scroll to Top   function invokeScrollToTop() { BrewingCatsCore.Logger.traceInfo( `Scrolling to top`, &#39;ScrollToTop&#39;, &#39;tagId_13&#39;, &#39;ComponentInteraction&#39;, { &#39;url&#39;: window.location.href, } ); BrewingCatsCore.Util.scrollToTop(); }   Site Views: 0  Page Views: 0  Your Site Views: 0  Your Page Views: 0   </description>
+    </item>
+    
+  </channel>
+</rss>

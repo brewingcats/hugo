@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>viajes on Hugo Belin</title>
+    <link>https://hugobelin.com/es/categories/viajes/</link>
+    <description>Recent content in viajes on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jul 2020 20:48:59 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/categories/viajes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Colección de Caminatas</title>
+      <link>https://hugobelin.com/es/posts/categories/travel/hikecollection/</link>
+      <pubDate>Fri, 24 Jul 2020 20:48:59 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/travel/hikecollection/</guid>
+      <description>El mapa mostrado abajo tiene los lugares de mis caminatas documentadas (de acuerdo a mi archivo de fotos). Planeo actualizar el mapa conforme hago más caminatas, así que no olvide regresar a este artículo de vez en cuando para ver nuevo contenido. El dashboard de Tableau muestra el lugar, fecha y título de cada caminata
+     var divElement = document.getElementById(&#39;viz1595830498772&#39;); var vizElement = divElement.getElementsByTagName(&#39;object&#39;)[0]; if ( divElement.</description>
+    </item>
+    
+    <item>
+      <title>Colección de Imagenes</title>
+      <link>https://hugobelin.com/es/posts/categories/travel/photocollection/</link>
+      <pubDate>Fri, 17 Jul 2020 23:39:22 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/travel/photocollection/</guid>
+      <description>Este artículo contiene un resumen de mi colección de fotos las cuales he utilizado en otros artículos en mi sitio, mientras que los artículos individuales muestran porciones más pequeñas de terreno lo que los hace más conveniente para interactuar con el viz. Tener todas las fotos en un solo lugar sin embargo, permite ver todos los lugares en los que he estado y me permite traer memorias y recuerdos de nuevo 😃</description>
+    </item>
+    
+    <item>
+      <title>2019 Faro de Mukilteo y Diablo Lake</title>
+      <link>https://hugobelin.com/es/posts/categories/travel/2019mukilteodiablolake/</link>
+      <pubDate>Fri, 10 Jul 2020 14:16:31 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/travel/2019mukilteodiablolake/</guid>
+      <description>Comenzando el fin de semana el 27 de Julio decidimos visitar el Faro de Mukilteo. Sorprendentemente después de vivir varios años en la región nunca nos habíamos visitado este faro así que decidimos ir a conocer y ver como está
+ Vista Principal desde el Faro, Ferry al fondo
+  BrewingCatsCore.Logger.traceInfo( `Unsplash Component`, &#39;component.unsplash&#39;, &#39;tagId_m&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;Unsplash&#39;, &#39;imageId&#39;: &#39;hi-6URE4bqA&#39; } );     Faro y Ferry de Mukilteo</description>
+    </item>
+    
+    <item>
+      <title>Viaje a San Diego 2019</title>
+      <link>https://hugobelin.com/es/posts/categories/travel/2019sandiego/</link>
+      <pubDate>Mon, 29 Jun 2020 20:24:41 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/travel/2019sandiego/</guid>
+      <description>Para un viaje sencillo y corto, San Diego. Una buena oportunidad para conocer un gran lugar de EUA. Saliendo temprano en Sábado tuvimos la oportunidad de pasar la última parte de la mañana en San Diego, en una caminata inicial pudimos conocer: el centro de San Diego y las cercanías de Gaslamp Quarter
+ Vista inicial del centro de San Diego
+ El primer pensamiento que vino a mi mente sobre la ciudad fue que &amp;rsquo;es un lugar donde lo antiguo y lo moderno coexisten&amp;rsquo;, idea misma que reforcé durante el viaje&amp;hellip; construcciones modernas y antiguas juntas una y otra vez.</description>
+    </item>
+    
+  </channel>
+</rss>

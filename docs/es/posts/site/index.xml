@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sitio on Hugo Belin</title>
+    <link>https://hugobelin.com/es/posts/site/</link>
+    <description>Recent content in Sitio on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 18 Jun 2020 18:32:29 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/posts/site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Árbol de Enlaces</title>
+      <link>https://hugobelin.com/es/posts/site/linktree/</link>
+      <pubDate>Tue, 07 Sep 2021 20:40:17 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/linktree/</guid>
+      <description>Lista de Contenido Promovido  Juego de Lotería Mexicana en NFT   Juego de Lotería Mexicana en NFT creado usando pixel art  Leer más      Colección de Caminatas   Dashboard de Tableau contiene mi colección de caminatas con imágenes que pueden ser vistas a través del tiempo  Leer más      Colección de Imagenes   Todas mis fotos en un mapa.</description>
+    </item>
+    
+    <item>
+      <title>Telemetría</title>
+      <link>https://hugobelin.com/es/posts/site/telemetry/</link>
+      <pubDate>Sat, 13 Feb 2021 17:29:42 -0800</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/telemetry/</guid>
+      <description>La mayoría si no es que todos los sitios web usan alguna forma de telemetría. Desde la creación de este sitio web he tenido planes de añadir telemetría. Muchos sitios sin embargo, recoleccionan datos no solo con el propósito de mejorar el sitio, detectar problemas de usabilidad, o con la finalidad de mejorarlo; muchos sitios venden esta información y la usan para otros propósitos. Dado que mi intención se limita a mejorar este sitio he tomado algunos pasos para asegurar que el manejo de la información es transparente</description>
+    </item>
+    
+    <item>
+      <title>Brewing Cats Core</title>
+      <link>https://hugobelin.com/es/posts/site/brewingcatscore/</link>
+      <pubDate>Thu, 25 Jun 2020 22:19:47 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/brewingcatscore/</guid>
+      <description>Este sitio web es creado a partir de una librería central usada por otros sitios. Contiene características y funcionalidad especifica que hacen de HugoBelin.com un mejor sitio. Brewing Cats Core es la librería que aumenta la funcionalidad base del Tema Ananke que funciona con Hugo framework
+Este artículo muestra el trabajo completado asi como la funcionalidad en la que estamos trabajando. Los detalles se pueden ver en la siguiente tabla de Trello:</description>
+    </item>
+    
+    <item>
+      <title>Planeación del Sitio</title>
+      <link>https://hugobelin.com/es/posts/site/roadmap/</link>
+      <pubDate>Wed, 24 Jun 2020 21:15:45 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/roadmap/</guid>
+      <description>Este sitio es una versión derivada del sitio que compone Brewing Cats (mi compañía) utilizando una librería que llamo Brewing Cats Core (puedes ver los planes del proyecto aquí ). Como tal este sitio tiene sus propios planes, mismos que se muestran abajo:
+    $(&#39;article&#39;).css(&#39;max-width&#39;, &#39;100%&#39;);    BrewingCatsCore.Logger.traceInfo( `Trello Component`, &#39;component.trello&#39;, &#39;tagId_l&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;Trello&#39;, &#39;boardId&#39;: &#39;dGtZpxVf&#39; } );   Trabajo Completado   BrewingCatsCore.</description>
+    </item>
+    
+    <item>
+      <title>Créditos</title>
+      <link>https://hugobelin.com/es/posts/site/credits/</link>
+      <pubDate>Wed, 24 Jun 2020 18:00:29 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/credits/</guid>
+      <description>Este artículo fue creado para reconocer la labor y el duro trabajo de los muchos desarrolladores que han hecho posible este sitio. Desde hosting de sitios web, hasta librerías, todas las reconocemos aquí:
+Hosting, Librerías, Frameworks y otras Tecnologías   BrewingCatsCore.Logger.traceInfo( `AirTable Component`, &#39;component.airtable&#39;, &#39;tagId_10&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AirTable&#39;, &#39;tableId&#39;: &#39;shraGTO9M4qs0Th5v&#39; } );  
+ Créditos de la Imagen: Unsplash: Tarjeta de Circuitos imagen de @harrisonbroadbent    Créditos de la Imagen: Página Principal.</description>
+    </item>
+    
+    <item>
+      <title>Acerca de</title>
+      <link>https://hugobelin.com/es/posts/site/about/</link>
+      <pubDate>Fri, 19 Jun 2020 22:58:06 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/about/</guid>
+      <description>Mi nombre es Hugo Belin y este es mi sitio web personal. Si buscas mi currículum y experiencia profesional la podrás encontrar en mi Currículum Solo otro ser humano en este planeta que busca dejarlo en mejor estado 
+Esta es mi huella en internet:
+  Facebook   Twitter   Instagram   Snapchat   Reddit   Tableau Public   LinkedIn   También soy dueño de, y mantengo BrewingCats como proyecto personal.</description>
+    </item>
+    
+    <item>
+      <title>Bitácora de Cambios</title>
+      <link>https://hugobelin.com/es/posts/site/changelog/</link>
+      <pubDate>Fri, 19 Jun 2020 21:23:24 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/changelog/</guid>
+      <description>Este artículo presenta una lista de cambios hechos al sitio web, tiene como objetivo llevar control del mismo
+
+Version: 3.19.27 Release: Han Solo
+ Políticas de Versión Mayor.Menor.Incremento  | | |_______ Versión de Brewing Cats Core  | |_____________ Nueva funcionalidad  |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)
+ Convención de Nombres de Proyecto Los nombres de proyecto se toman de:
+  Lista de personajes de Star Wars posteriormente:  Lista de personajes legendarios de Star Wars posteriormente:  Lista de personajes de la Rebelión de Star Wars posteriormente:  Personajes de Star Wars: Caballeros de la Vieja República posteriormente:  Miembros del elenco de Star Wars posteriormente:  Miembros del elenco de Star Wars: La Batalla de los Clones   El Código de Proyecto será presentado de la siguiente forma:</description>
+    </item>
+    
+    <item>
+      <title>Política de Uso</title>
+      <link>https://hugobelin.com/es/posts/site/policy/</link>
+      <pubDate>Sun, 31 May 2020 17:34:44 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/policy/</guid>
+      <description>Política de Uso Creemos en hacer el bien y no el mal. El uso de este sitio web implica que esta de acuerdo con los términos explicados abajo. Aclarado lo anterior Brewing Cats opera con cierta cantidad de información que se utilizada de diferentes formas para mejorar la funcionalidad del sitio web así como para permitir la interoperabilidad con otros sitios en la web. La información generada debida a su uso será utilizada de una forma justa y transparente, creemos que la información generada por un usuario dado puede ayudarnos a hacer este sitio web mejor, crear nuevas mejoras, optimizándolo, y permitiendo conocer inversiones clave.</description>
+    </item>
+    
+  </channel>
+</rss>

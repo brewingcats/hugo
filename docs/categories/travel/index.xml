@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>travel on Hugo Belin</title>
+    <link>https://hugobelin.com/categories/travel/</link>
+    <description>Recent content in travel on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Jul 2020 20:48:55 -0700</lastBuildDate><atom:link href="https://hugobelin.com/categories/travel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hike Collection</title>
+      <link>https://hugobelin.com/posts/categories/travel/hikecollection/</link>
+      <pubDate>Fri, 24 Jul 2020 20:48:55 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/travel/hikecollection/</guid>
+      <description>The map below has the places of my documented hikes (according to my photo archive). I plan to update this as I go on more hikes so make sure to check here every now and then. The Tableau dashboard below shows the location, date, and title of each hike on a map
+     var divElement = document.getElementById(&#39;viz1595830498772&#39;); var vizElement = divElement.getElementsByTagName(&#39;object&#39;)[0]; if ( divElement.offsetWidth  800 ) { vizElement.</description>
+    </item>
+    
+    <item>
+      <title>Photo Collection</title>
+      <link>https://hugobelin.com/posts/categories/travel/photocollection/</link>
+      <pubDate>Fri, 17 Jul 2020 23:39:18 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/travel/photocollection/</guid>
+      <description>This post summarizes my collection of photos all of which are spread across multiple posts in this website and more, while individual posts point to specific places from the world which is more convenient for visualizing smaller portions of land and interacting with the viz. Having all of the photos in one place make it nice to see all the places I&amp;rsquo;ve been to and bring memories back 😃
+You can check out the viz directly on Tableau Public      var divElement = document.</description>
+    </item>
+    
+    <item>
+      <title>2019 Mukilteo and Diablo Lake</title>
+      <link>https://hugobelin.com/posts/categories/travel/2019mukilteodiablolake/</link>
+      <pubDate>Fri, 10 Jul 2020 14:16:22 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/travel/2019mukilteodiablolake/</guid>
+      <description>Starting the weekend on July 27 we decided to visit the Mukilteo Lighthouse. Surprisingly after being several years in the region we&amp;rsquo;ve never visited this lighthouse before so we decided to head over there and take a look at it
+ Main View from the Lighthouse, Ferry
+  BrewingCatsCore.Logger.traceInfo( `Unsplash Component`, &#39;component.unsplash&#39;, &#39;tagId_m&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;Unsplash&#39;, &#39;imageId&#39;: &#39;hi-6URE4bqA&#39; } );     Mukilteo lighthouse and ferry</description>
+    </item>
+    
+    <item>
+      <title>Trip to San Diego 2019</title>
+      <link>https://hugobelin.com/posts/categories/travel/2019sandiego/</link>
+      <pubDate>Mon, 29 Jun 2020 20:24:34 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/travel/2019sandiego/</guid>
+      <description>A simple, short trip to San Diego. A good opportunity to get to know another nice place from US. Off we go early on Saturday we got a chance to catch the late morning in San Diego, first walk: downtown San Diego, close to Gaslamp Quarter. Doing an initial assessment of the surroundings
+ Downtown First View
+ My initial thought about the city was &amp;rsquo;new meets old&amp;rsquo;, I had this idea reinforced throughout the trip&amp;hellip; new buildings next to old ones over and over.</description>
+    </item>
+    
+  </channel>
+</rss>

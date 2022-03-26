@@ -12,6 +12,7 @@ googleAnalytics = "UA-85767008-2"
 enableRobotsTXT = true
 enableEmoji = true
 disqusShortname = "hugobelin"
+publishDir = "docs"
 
 [sitemap]
   changefreq = "monthly"
