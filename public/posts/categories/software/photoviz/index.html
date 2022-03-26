@@ -1,0 +1,2092 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>How to make your own Photo Viz | Hugo Belin</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Tutorial for creating Tableau Dashboards to showcase your Instagram photos (and from other sources). Step by step and with code samples">
+    <meta name="generator" content="Hugo 0.95.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+
+    
+      
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+
+    
+
+    
+    
+    <meta property="og:title" content="How to make your own Photo Viz" />
+<meta property="og:description" content="Tutorial for creating Tableau Dashboards to showcase your Instagram photos (and from other sources). Step by step and with code samples" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hugobelin.com/posts/categories/software/photoviz/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-08-08T14:51:46-07:00" />
+<meta property="article:modified_time" content="2020-08-08T14:51:46-07:00" />
+
+<meta itemprop="name" content="How to make your own Photo Viz">
+<meta itemprop="description" content="Tutorial for creating Tableau Dashboards to showcase your Instagram photos (and from other sources). Step by step and with code samples"><meta itemprop="datePublished" content="2020-08-08T14:51:46-07:00" />
+<meta itemprop="dateModified" content="2020-08-08T14:51:46-07:00" />
+<meta itemprop="wordCount" content="5300">
+<meta itemprop="keywords" content="software," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to make your own Photo Viz"/>
+<meta name="twitter:description" content="Tutorial for creating Tableau Dashboards to showcase your Instagram photos (and from other sources). Step by step and with code samples"/>
+
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-85767008-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+    
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85767008-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-85767008-2');
+    </script>
+    
+    <script type='text/javascript' src="/javascript/autoinstagram.js#3.19.27" ></script>
+    <script type='text/javascript' src="/javascript/headparser.js#3.19.27" ></script>
+    
+    <script type='text/javascript' src="/javascript/config.js#3.19.27" ></script>
+    <script type='text/javascript' src="/javascript/interfaces.js#3.19.27" ></script>
+    <script type='text/javascript' src="/javascript/util.js#3.19.27" ></script>
+    <script type='text/javascript' src="/javascript/logger.js#3.19.27" ></script>
+    <script type='text/javascript' src="/javascript/gdpr.js#3.19.27" ></script>
+    <script type='text/javascript' src="/javascript/control.js#3.19.27" ></script> 
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    <script>
+      BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
+      BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
+      BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
+      BrewingCatsCore.Config.LinkHoverColor = '#00802B';
+      BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
+      BrewingCatsCore.Config.SiteVersion = '3.19.27';
+      
+      BrewingCatsCore.Control.Init();
+      let version = '3.19.27';
+      let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
+      let timeZoneMsg = `UTC+${timeZone}`;
+      if (timeZone < 0) {
+        timeZoneMsg = `UTC${timeZone}`;
+      }
+
+      BrewingCatsCore.Logger.traceInfo(
+        `Loading: ${window.location.href}`,
+        'document.body',
+        'tagId_1',
+        'Bootstrap',
+        {
+          'url': window.location.href,
+          'siteVersion': version,
+          'height': $(window).height(),
+          'width': $(window).width(),
+          'timezone': timeZoneMsg
+        }
+      );
+
+      BrewingCatsCore.Control.UpdateStats((stats) => {
+        BrewingCatsCore.Logger.traceInfo(
+          `Loading: ${window.location.href}`,
+          'document.body',
+          'tagId_12',
+          'Bootstrap',
+          stats
+        );
+
+        $('span[tag-id="site-page-views-footer"]').html(stats.SiteViews);
+        $('button[tag-id="stats-widget-site-views"]').html(stats.SiteViews);
+        $('button[tag-id="stats-widget-page-views"]').html(stats.PageViews);
+        $('button[tag-id="stats-widget-user-site-views"]').html(stats.UserSiteViews);
+        $('button[tag-id="stats-widget-user-page-views"]').html(stats.UserPageViews);
+      });
+    </script>
+    
+   
+   
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://hugobelin.com/images/categories/software/photoviz.jpg');">
+    <div class="bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Hugo Belin
+      
+    </a>
+    <div class="flex-l items-center">
+      
+<h4></h4>
+<ul class="pl0 mr3">
+    
+    <li class="list f5 f4-ns fw4 dib pr3">
+        <a class="hover-white no-underline white-90" href="/es/posts/categories/software/photoviz/">es</a>
+    </li>
+    
+</ul>
+
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/categories/" title="Categories page">
+              Categories
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/site/" title="Site page">
+              Site
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://www.facebook.com/hobelinm4" target="_blank" class="facebook ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Facebook link" rel="noopener" aria-label="follow on Facebook——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://twitter.com/hugobelinm" target="_blank" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.instagram.com/darth.oguh/" target="_blank" class="instagram ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Instagram link" rel="noopener" aria-label="follow on Instagram——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.271,26.578v-0.006c0.502,0,1.005,0.01,1.508-0.002  c0.646-0.017,1.172-0.57,1.172-1.217c0-0.963,0-1.927,0-2.89c0-0.691-0.547-1.24-1.236-1.241c-0.961,0-1.922-0.001-2.883,0  c-0.688,0.001-1.236,0.552-1.236,1.243c-0.001,0.955-0.004,1.91,0.003,2.865c0.001,0.143,0.028,0.291,0.073,0.426  c0.173,0.508,0.639,0.82,1.209,0.823C41.344,26.579,41.808,26.578,42.271,26.578z M33,27.817c-3.384-0.002-6.135,2.721-6.182,6.089  c-0.049,3.46,2.72,6.201,6.04,6.272c3.454,0.074,6.248-2.686,6.321-6.043C39.254,30.675,36.462,27.815,33,27.817z M21.046,31.116  v0.082c0,4.515-0.001,9.03,0,13.545c0,0.649,0.562,1.208,1.212,1.208c7.16,0.001,14.319,0.001,21.479,0  c0.656,0,1.215-0.557,1.215-1.212c0.001-4.509,0-9.02,0-13.528v-0.094h-2.912c0.411,1.313,0.537,2.651,0.376,4.014  c-0.161,1.363-0.601,2.631-1.316,3.803s-1.644,2.145-2.779,2.918c-2.944,2.006-6.821,2.182-9.946,0.428  c-1.579-0.885-2.819-2.12-3.685-3.713c-1.289-2.373-1.495-4.865-0.739-7.451C22.983,31.116,22.021,31.116,21.046,31.116z   M45.205,49.255c0.159-0.026,0.318-0.049,0.475-0.083c1.246-0.265,2.264-1.304,2.508-2.557c0.025-0.137,0.045-0.273,0.067-0.409  V21.794c-0.021-0.133-0.04-0.268-0.065-0.401c-0.268-1.367-1.396-2.428-2.78-2.618c-0.058-0.007-0.113-0.02-0.17-0.03H20.761  c-0.147,0.027-0.296,0.047-0.441,0.08c-1.352,0.308-2.352,1.396-2.545,2.766c-0.008,0.057-0.02,0.114-0.029,0.171V46.24  c0.028,0.154,0.05,0.311,0.085,0.465c0.299,1.322,1.427,2.347,2.77,2.52c0.064,0.008,0.13,0.021,0.195,0.03H45.205z M33,64  C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.youtube.com/channel/UCGXUuZrYZxwHVQSNWDc44-w/" target="_blank" class="youtube ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="YouTube link" rel="noopener" aria-label="follow on YouTube——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.527,41.34c-0.278,0-0.478,0.078-0.6,0.244  c-0.121,0.156-0.18,0.424-0.18,0.796v0.896h1.543V42.38c0-0.372-0.062-0.64-0.185-0.796C42.989,41.418,42.792,41.34,42.527,41.34z   M36.509,41.309c0.234,0,0.417,0.076,0.544,0.23c0.123,0.155,0.185,0.383,0.185,0.682v4.584c0,0.286-0.053,0.487-0.153,0.611  c-0.1,0.127-0.256,0.189-0.47,0.189c-0.148,0-0.287-0.033-0.421-0.096c-0.135-0.062-0.274-0.171-0.415-0.313v-5.531  c0.119-0.122,0.239-0.213,0.36-0.271C36.26,41.335,36.383,41.309,36.509,41.309z M41.748,44.658v1.672  c0,0.468,0.057,0.792,0.17,0.974c0.118,0.181,0.313,0.269,0.592,0.269c0.289,0,0.491-0.076,0.606-0.229  c0.114-0.153,0.175-0.489,0.175-1.013v-0.405h1.795v0.456c0,0.911-0.217,1.596-0.657,2.059c-0.435,0.459-1.089,0.687-1.958,0.687  c-0.781,0-1.398-0.242-1.847-0.731c-0.448-0.486-0.676-1.157-0.676-2.014v-3.986c0-0.768,0.249-1.398,0.742-1.882  c0.493-0.484,1.128-0.727,1.911-0.727c0.799,0,1.413,0.225,1.843,0.674c0.429,0.448,0.642,1.093,0.642,1.935v2.264H41.748z   M38.623,48.495c-0.271,0.336-0.669,0.501-1.187,0.501c-0.343,0-0.646-0.062-0.912-0.192c-0.267-0.129-0.519-0.327-0.746-0.601  v0.681h-1.764V36.852h1.764v3.875c0.237-0.27,0.485-0.478,0.748-0.616c0.267-0.143,0.534-0.212,0.805-0.212  c0.554,0,0.975,0.189,1.265,0.565c0.294,0.379,0.438,0.933,0.438,1.66v4.926C39.034,47.678,38.897,48.159,38.623,48.495z   M30.958,48.884v-0.976c-0.325,0.361-0.658,0.636-1.009,0.822c-0.349,0.191-0.686,0.282-1.014,0.282  c-0.405,0-0.705-0.129-0.913-0.396c-0.201-0.266-0.305-0.658-0.305-1.189v-7.422h1.744v6.809c0,0.211,0.037,0.362,0.107,0.457  c0.077,0.095,0.196,0.141,0.358,0.141c0.128,0,0.292-0.062,0.488-0.188c0.197-0.125,0.375-0.283,0.542-0.475v-6.744h1.744v8.878  H30.958z M24.916,38.6v10.284h-1.968V38.6h-2.034v-1.748h6.036V38.6H24.916z M32.994,32.978c0-0.001,12.08,0.018,13.514,1.45  c1.439,1.435,1.455,8.514,1.455,8.555c0,0-0.012,7.117-1.455,8.556C45.074,52.969,32.994,53,32.994,53s-12.079-0.031-13.516-1.462  c-1.438-1.435-1.441-8.502-1.441-8.556c0-0.041,0.004-7.12,1.441-8.555C20.916,32.996,32.994,32.977,32.994,32.978z M42.52,29.255  h-1.966v-1.08c-0.358,0.397-0.736,0.703-1.13,0.909c-0.392,0.208-0.771,0.312-1.14,0.312c-0.458,0-0.797-0.146-1.027-0.437  c-0.229-0.291-0.345-0.727-0.345-1.311v-8.172h1.962v7.497c0,0.231,0.045,0.399,0.127,0.502c0.08,0.104,0.216,0.156,0.399,0.156  c0.143,0,0.327-0.069,0.548-0.206c0.22-0.137,0.423-0.312,0.605-0.527v-7.422h1.966V29.255z M31.847,27.588  c0.139,0.147,0.339,0.219,0.6,0.219c0.266,0,0.476-0.075,0.634-0.223c0.157-0.152,0.235-0.358,0.235-0.618v-5.327  c0-0.214-0.08-0.387-0.241-0.519c-0.16-0.131-0.37-0.196-0.628-0.196c-0.241,0-0.435,0.065-0.586,0.196  c-0.148,0.132-0.225,0.305-0.225,0.519v5.327C31.636,27.233,31.708,27.439,31.847,27.588z M30.408,19.903  c0.528-0.449,1.241-0.674,2.132-0.674c0.812,0,1.48,0.237,2.001,0.711c0.517,0.473,0.777,1.083,0.777,1.828v5.051  c0,0.836-0.255,1.491-0.762,1.968c-0.513,0.476-1.212,0.714-2.106,0.714c-0.858,0-1.547-0.246-2.064-0.736  c-0.513-0.492-0.772-1.152-0.772-1.983v-5.068C29.613,20.954,29.877,20.351,30.408,19.903z M24.262,16h-2.229l2.634,8.003v5.252  h2.213v-5.5L29.454,16h-2.25l-1.366,5.298h-0.139L24.262,16z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30  S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://github.com/hobelinm" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://gitlab.com/hobelinm" target="_blank" class="gitlab ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitLab link" rel="noopener" aria-label="follow on GitLab——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M29.782 199.732L256 493.714 8.074 309.699c-6.856-5.142-9.712-13.996-7.141-21.993l28.849-87.974zm75.405-174.806c-3.142-8.854-15.709-8.854-18.851 0L29.782 199.732h131.961L105.187 24.926zm56.556 174.806L256 493.714l94.257-293.982H161.743zm349.324 87.974l-28.849-87.974L256 493.714l247.926-184.015c6.855-5.142 9.711-13.996 7.141-21.993zm-85.404-262.78c-3.142-8.854-15.709-8.854-18.851 0l-56.555 174.806h131.961L425.663 24.926z"></path></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/hugobelin/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://stackoverflow.com/users/747572/hugobelin" target="_blank" class="stackoverflow ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Stack Overflow link" rel="noopener" aria-label="follow on Stack Overflow——Opens in a new window">
+      
+        <span class="icon"><svg
+    style="enable-background:new 0 0 67 67;"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    
+>
+    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.869 5.903l3.114 4.567-.975.665-3.115-4.567.976-.665zm-2.812 2.585l4.84 2.838-.6 1.017-4.842-2.838.602-1.017zm-1.276 2.724l5.413 1.521-.291 1.077-5.428-1.458.306-1.14zm-.588 2.461l5.687.569-.103 1.12-5.691-.513.107-1.176zm-.169 2.16h5.835v1.167h-5.835v-1.167zm7.976 3.167h-10v-6h1v5h8v-5h1v6zm.195-8.602l-.945-5.446 1.162-.202.947 5.446-1.164.202z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">How to make your own Photo Viz</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Tutorial for creating Tableau Dashboards to showcase your Instagram photos (and from other sources). Step by step and with code samples
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+   
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    
+      <header class="mt4 w-100">
+        <aside class="instapaper_ignoref b helvetica tracked">
+            
+          SOFTWARE
+        </aside>
+        
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://www.facebook.com/sharer.php?u=https://hugobelin.com/posts/categories/software/photoviz/" class="ananke-social-link facebook no-underline" aria-label="share on Facebook">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+      
+      <a href="https://twitter.com/share?url=https://hugobelin.com/posts/categories/software/photoviz/&amp;text=How%20to%20make%20your%20own%20Photo%20Viz" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://hugobelin.com/posts/categories/software/photoviz/&amp;title=How%20to%20make%20your%20own%20Photo%20Viz" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+        <h1 class="f1 athelas mt3 mb1">How to make your own Photo Viz</h1>
+        
+        <p class="tracked">
+            By <strong>
+            
+                Hugo Belin
+            
+            </strong>
+        </p>
+        
+        
+        <time class="f6 mv4 dib tracked" datetime="2020-08-08T14:51:46-07:00">August 8, 2020</time>
+
+        
+        
+      </header>
+    
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l">
+<script>
+  $(document).ready(() => {
+    window.HeadParser.Control.updateHeaders();
+    $('#tocContents')[0].appendChild(window.HeadParser.Control.CreateHeaderList());
+  });
+</script>
+<aside id="toc">
+  <p>
+    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
+      
+      <h2>Table of Contents</h2>
+      
+    </button>
+  </p>
+  <div class="collapse" id="collapseToc">
+    <div class="card card-body" id="tocContents">
+    </div>
+  </div>
+</aside>
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">D</span>ust off your photo archive and put it to work! In this post I&rsquo;m going to show you how to take your photos into a basic Tableau dashboard that will have them located
+in a map. This map will show where those photos were taken allowing you to group them and see significant events by location and optionally over time</p>
+<p>We will also review options for hosting your photos in a way that can be embed-able and useful for our Tableau dashboard. We want users to interact with the Tableau
+dashboard by selecting a data point in the map and get the related photo (or set of photos). This is by no means a comprehensive guide but it should get you started and give you
+some ideas to perfect your work (I&rsquo;m even refining the details myself and looking for ways to improve the hosting of my photos)</p>
+<p>I will also dive into some of the technical details of my work so be prepared to review some code. The code samples I will be sharing will be very basic and could be
+easily replaced with non-coding alternatives, these samples are based around hosting my site and preparing the work for some types of photo hosting. This site is built using the
+
+
+
+<a href="https://gohugo.io/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/', 'Hugo framework')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hugo framework</a>
+ and some of the code examples are tailored to use this framework; if you&rsquo;re into coding (JavaScript mostly) it should be no
+major trouble to adapt the code to other frameworks and systems</p>
+<p>A little disclaimer 😁 I&rsquo;m no Tableau expert and I&rsquo;m no code super expert, I&rsquo;m sure things can be definitively improved (consider these as V1 at the time of writing this
+post). I&rsquo;m simply putting few concepts together and I&rsquo;m sharing this so you can also build upon these concepts and adapt them according to your expertise</p>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Mechanics</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">L</span>et&rsquo;s talk about the mechanics of this. We&rsquo;re going to need few pieces of data as follows:</p>
+<br />
+<ul>
+<li>A set of photos you&rsquo;d like to share (obviously). For it to work the photos should be hosted in a way that can be accessible publicly (or you&rsquo;ll have to build some authentication
+mechanism in your Tableau dashboard). Before building our dashboard we need to decide whether we want to access our photos individually or by groups. Locating photos in our dashboard
+individually give us granular control over its location at the expense of extra work since you would need the coordinates of each photo. Locating photos in our dashboard by groups
+is more convenient but you loose the granularity, for a single data point in the map you would access a group of photos so the location might be only representative of that group
+of photos. In this post I will explore both options and give examples</li>
+<li>Latitude and longitude of the photos you want to add to your dashboard. If you plan to locate single photos in the dashboard you&rsquo;ll need the coordinates of each photo. If you plan
+to add groups of photos you can pick a representative location of each group. More details on how to get these coordinates on this later</li>
+<li>Title or description for each photo/group of photos. We can show this information via tooltips or in the dashboard</li>
+<li>Photo or group of photos URL. We will explore this out and will have this once we find the proper hosting for it</li>
+<li>Selecting our data source. Storing the aforementioned data will constitute our data source and Tableau needs to be able to access that</li>
+</ul>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Individual Photos vs Groups of Photos</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">A</span>s mentioned before you could decide to pinpoint individual photos or groups of photos in the Tableau Viz. There are several things to consider:</p>
+<p><div class="container">
+  <div class="row">
+<div class="col">
+Individual Photos:
+</div>
+<div class="col">
+Groups of Photos:
+</div>
+<div class="w-100"></div>
+<div class="col">
+- Coordinates for each photo
+</div>
+<div class="col">
+- Coordinates per group photos
+</div>
+<div class="w-100"></div>
+<div class="col">
+- Title or description per photo
+</div>
+<div class="col">
+- Title or description per group of photos
+</div>
+<div class="w-100"></div>
+<div class="col">
+- URL per photo. Each photo must be addressable by a single URL (see 'Hosting your Photos' below for more details)
+</div>
+<div class="col">
+- URL per group of photos. To be able to show a group of photos you need to implement a carousel or a tiled component where individual photos can be selectively viewed (will leverage 
+Instagram for this)
+</div>
+<div class="w-100"></div>
+<div class="col">
+- Each photo is a data point in the map
+</div>
+<div class="col">
+- Each group of photos is a data point in the map
+</div>
+</div>
+</div>
+<br /></p>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Getting Coordinates of Individual Photos</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">I</span>f the photos you want to share were taken with a phone chances are that you can see the location of any particular photo. For our exercise we&rsquo;ll need these coordinates in
+decimal degrees instead of <code>hour-minute-second</code> degrees. If your device gets you this metadata in <code>HH:MM:SS</code> degrees you will need to convert them to decimal degrees by using this
+
+
+
+<a href="https://www.fcc.gov/media/radio/dms-decimal" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.fcc.gov\/media\/radio\/dms-decimal', 'online tool')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">online tool</a>
+ to perform the conversion. There are multiple ways of getting this information, here are some of those:</p>
+<ul>
+<li>Use a third party app to read the metadata for you (I tried 
+
+
+<a href="https://apps.apple.com/us/app/exif-metadata/id1455197364" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/apps.apple.com\/us\/app\/exif-metadata\/id1455197364', 'EXIF Metadata for iOS')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">EXIF Metadata for iOS</a>
+)</li>
+<li>Transfer your photos to a PC or Mac and read its metadata from there. Photos transferred as <code>.HEIC</code> format usually include location metadata. For Mac OS open the photo on Finder,
+make sure the preview pane is displayed and scroll down the properties of the photo and find their location. If the location is in <code>HH:MM:SS</code> format use this
+
+
+
+<a href="https://www.fcc.gov/media/radio/dms-decimal" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.fcc.gov\/media\/radio\/dms-decimal', 'online tool')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">online tool</a>
+ to convert them before saving them</li>
+</ul>
+
+<div>
+  <img src="/images/categories/software/photoviz/metadatamac.jpg" 
+    alt="Photo coordinates from metadata on Mac"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Photo coordinates from metadata on Mac</p>
+</div>
+<ul>
+<li>Transfer your photos to a Mac and read its metadata via command line. Mac OS includes a command line utility <code>mdls</code> that reads through the metadata on a given photo file. If you
+have large amounts of photos to add you can script this command quite easily to do it in bulk (I&rsquo;ll leave the details of it to you 😉). To read the metadata simply pass the path
+to an <code>mdls</code> command, look for <code>kMDItemLatitude</code> and <code>kMDItemLongitude</code> returned properties. You can check the 
+
+
+<a href="https://ss64.com/osx/mdls.html" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/ss64.com\/osx\/mdls.html', 'details of that command here')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">details of that command here</a>
+</li>
+</ul>
+
+<div>
+  <img src="/images/categories/software/photoviz/mdls.jpg" 
+    alt="Read photo coordinates using mdls command"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Read photo coordinates using mdls command</p>
+</div>
+<ul>
+<li>A cross-device solution that works across iOS and Android is by using 
+
+
+<a href="https://photos.google.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/photos.google.com\/', 'Google Photos')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Photos</a>
+. In iOS you can easily see the coordinates where your
+photos were taken, just open the App -&gt; Open the picture you want to see its location -&gt; Show the details of the photo (On you browser the process is similar, just need to open the Google maps
+thumbnail and it will contain the coordinates of the image)</li>
+</ul>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/metadataios1.jpg" 
+    alt="Google Photos App, getting picture info"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Google Photos App, getting picture info</p>
+</div>
+  </div>
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/metadataios2.jpg" 
+    alt="Coordinates of a given photo in Google Photos App"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Coordinates of a given photo in Google Photos App</p>
+</div>
+  </div>
+</div>
+</div>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Getting Coordinates of Groups of Photos</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">I</span>f you decide to go for having your photos grouped you can use 
+
+
+<a href="https://www.google.com/maps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Maps</a>
+. Decide how your pictures will be grouped together and
+assemble the groups, for each group select a representative location. Click on 
+
+
+<a href="https://www.google.com/maps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Maps</a>
+ on the desired location in order to create a pin on the
+map, when this occurs the coordinates of the pin are displayed in the bottom (see picture below), simply take these coordinates for your group of photos</p>
+
+<div>
+  <img src="/images/categories/software/photoviz/gmapspoint.jpg" 
+    alt="Coordinates of a pin in Google Maps"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Coordinates of a pin in Google Maps</p>
+</div>
+<p>If this particular group of photos is about a location (like a park or a historic site) those can be easily selected in 
+
+
+<a href="https://www.google.com/maps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Maps</a>
+. There are no
+rules however and you can create groups of photos as you like and pinpoint them anywhere</p>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Hosting Your Photos</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">T</span>he first thing to note here is that the photos you decide to host for the Tableau dashboard have to have publicly accessible URLs or at least for the purposes of this guide (is
+worth mentioning that with a little bit of knowledge you could include authentication mechanisms in your Tableau dashboard or control the access to those photos even by applying custom login
+mechanisms in your web object). This website is hosted using 
+
+
+<a href="https://about.gitlab.com/stages-devops-lifecycle/pages/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/about.gitlab.com\/stages-devops-lifecycle\/pages\/', 'GitLab Pages')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">GitLab Pages</a>
+ (so far I love it mostly 😍) so
+naturally my first option was to include media like photos directly on my 
+
+
+<a href="https://about.gitlab.com/stages-devops-lifecycle/pages/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/about.gitlab.com\/stages-devops-lifecycle\/pages\/', 'GitLab Pages')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">GitLab Pages</a>
+ site and while this is an easy
+solution I didn&rsquo;t think of the performance implications of it (if you want an example you can check out this post about 
+
+
+<a href="/posts/categories/travel/2019sandiego/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/categories\/travel\/2019sandiego\/', 'San Diego')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">San Diego</a>
+
+where I included lots of media that impacted the performance quite a bit). If you don&rsquo;t plan to have tons of views or the resolution of your images isn&rsquo;t considerable, you could consider
+hosting them this way, simply follow 
+
+
+<a href="https://docs.gitlab.com/ee/user/project/pages/index.html" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/docs.gitlab.com\/ee\/user\/project\/pages\/index.html', 'their guide')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">their guide</a>
+ and you will be ready pretty quickly (light knowledge of <code>git</code>
+is required for this)</p>
+<p>Ideally to host photos on a website you own it should be production-ready with all the goodness of a production website (to use a CDN with Geo-replication, load balancing, etcetera, you know the works
+😉). Typically these websites are either hosted by third party providers or developed by a team of professionals with a good amount of resources. For us mortals we can provide a degraded
+performance website, pay for a decent performance, or find a compromise (delegate heavy asset loading to other services while keeping light assets on your lower performance hosting, we&rsquo;ll
+eventually reach to such compromise in this post)</p>
+<p>Let&rsquo;s explore few other options</p>
+<p>
+<h3 style="text-align: center; color:rgb(0, 117, 178);">Unsplash</h3>
+
+<span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">S</span>toring your photos in 
+
+
+<a href="https://unsplash.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Unsplash</a>
+. 
+
+
+<a href="https://unsplash.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Unsplash</a>
+ is great for storing images, it gives you all the goodness of a
+production-ready website (you can even get the pictures in different resolutions without having to do the resizing work yourself allowing you to optimize even further). You can easily get
+shareable links to the photo only (without Unsplash UI shell). There are a few downsides of Unsplash:</p>
+<ul>
+<li>The photos are not only public (we&rsquo;ll use URLs for the photos in our Tableau dashboard) but they&rsquo;re also indexed and searchable. 
+
+
+<a href="https://unsplash.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Unsplash</a>
+ intends to
+allow people to freely use and share pictures so any picture uploaded to the platform is easily discoverable (vs being accessible but not easily discoverable when hosting them on your own),
+you have to be ok with that</li>
+<li>Uploaded photos are subject to the 
+
+
+<a href="https://unsplash.com/license" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/license', 'Unsplash License')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Unsplash License</a>
+ which gives rights to anyone to use them and modify them and use them for any purpose
+(personal or commercial). Your photos might end up in commercial products and you have to be ok with this too</li>
+<li>You cannot upload just any photo you&rsquo;d like. Very similar photos (like those of objects just taken from a slightly different angle) are taken down to keep quality up. Of course can&rsquo;t include
+copyrighted content in your photo or it might be taken down</li>
+<li>If everything above is ok for you, using 
+
+
+<a href="https://unsplash.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Unsplash</a>
+ for your photos will work easily for locating them individually in our map. This means that if you want
+to group them in a map you will need some extra work by adding a component that will allow you to circle through your photos (one option could be modifying a
+
+
+
+<a href="https://getbootstrap.com/docs/4.5/components/carousel/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/getbootstrap.com\/docs\/4.5\/components\/carousel\/', 'Bootstrap carousel')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Bootstrap carousel</a>
+ to take inputs from query parameters that can be passed from the Tableau dashboard, we&rsquo;ll do
+something similar later in the post, you can also use this 
+
+
+<a href="https://gohugo.io/content-management/shortcodes/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/content-management\/shortcodes\/', 'Hugo\u0027s short-code')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hugo&#39;s short-code</a>
+ carousel
+
+
+
+<a href="https://gist.github.com/hobelinm/c7249acf3c20b09228a5911aa00483b0" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gist.github.com\/hobelinm\/c7249acf3c20b09228a5911aa00483b0', 'component')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">component</a>
+ that I created for this site as a starter for your 
+
+
+<a href="https://gohugo.io/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/', 'Hugo')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hugo</a>
+ site)</li>
+</ul>
+<p>
+<h3 style="text-align: center; color:rgb(0, 117, 178);">Instagram</h3>
+
+<span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">Y</span>ou can also store your photos in 
+
+
+<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+ and access them on your Viz. 
+
+
+<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+ is a very
+popular platform that takes care of the hosting complexities (replication, availability, etcetera) and gives you the characteristics of a production site. You can render
+
+
+
+<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+ posts inside your Viz that contain single photos or groups of photos no extra work required. With this option you can display the pictures
+but you will see Instagram&rsquo;s shell on the photo (obviously they want you to end up in their platform too). Using 
+
+
+<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+ is not a bad thing if
+you&rsquo;re building your brand or website to use this platform. You can drive traffic interchangeably between your 
+
+
+<a href="https://public.tableau.com/s/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/s\/', 'Tableau Public')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Tableau Public</a>
+ profile
+↔️ your Instagram profile ↔️ your website basically casting a wider net to get an audience, content is king, right? You can leverage #️⃣hashtags to drive
+traffic to Instagram and that in turn can take traffic to your Tableau profile or website (use the Home Page field on your profile for that). A requirement for this to work is that your
+Instagram profile has to be public for the embedded photos to be displayed. A bonus point is that if you turn your Instagram account into a business profile you can get telemetry from the app
+and get additional knowledge (see the sample below for one of my 
+
+
+<a href="https://www.instagram.com/super.m4n/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com\/super.m4n\/', 'business profiles')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">business profiles</a>
+)</p>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/instainsights1.jpg" 
+    alt="Insights Button on Business Profiles"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Insights Button on Business Profiles</p>
+</div>
+  </div>
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/instainsights2.jpg" 
+    alt="Activity Insights"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Activity Insights</p>
+</div>
+  </div>
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/instainsights3.jpg" 
+    alt="Follow Activity"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Follow Activity</p>
+</div>
+  </div>
+</div>
+</div>
+<p>Things to consider when embedding Instagram posts. You&rsquo;re subject to their terms of use. Loading Instagram&rsquo;s post by their URL directly might work in our Tableau Desktop but when publishing the
+Viz to the web the web object becomes an <code>iframe</code> which is detected by Instagram and blocked accordingly. To be able to embed Instagram posts we need to setup a
+
+
+
+<a href="https://developers.facebook.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/', 'Facebook developer account')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Facebook developer account</a>
+, create an App, and finally add <code>oEmbed Product</code> to the App. Then we will have access to make API calls that can pull
+the HTML required to embed our posts. Certainly not the easiest process but also not too complicated either 😉</p>
+
+<div>
+  <img src="/images/categories/software/photoviz/embedrefuse1.jpg" 
+    alt="Instagram refuses to show posts inside an iframe"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Instagram refuses to show posts inside an iframe</p>
+</div>
+
+<h3 style="text-align: center; color:rgb(0, 117, 178);">Options That Did Not Work</h3>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">I</span>&rsquo;ve explored the use of 
+
+
+<a href="https://photos.google.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/photos.google.com\/', 'Google Photos')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Photos</a>
+ to host your pictures, and while it works in Tableau Desktop, once you publish, the resulting Viz
+has Google blocking the content as soon it detects it&rsquo;s been rendered on an <code>iframe</code> (see the picture above). A key difference from Instagram is that there&rsquo;s no client API for this, you need to
+host a backend server that perform the API calls for you and then forward the results to your web client, since I&rsquo;m not running backend infrastructure right now is not an option for me. If
+you go this route and make it work let us know by commenting below</p>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">How to Make Instagram Work</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">I</span>&rsquo;m focusing on embedding Instagram because the other options are either straightforward and you should have no issues with them or quite custom and you should be ahead of me on those.
+If you don&rsquo;t want to use Instagram you should be able to skip this section. At this point we&rsquo;ve decided whether to store these images individually or by groups; if you decided to locate the
+photos individually create individual posts per photo on your Instagram profile, if you opted for groups of photos you can create posts that contain all the photos on the group. In this section
+I will outline the steps I took to make Instagram embeds work</p>
+<p>
+<h3 style="text-align: center; color:rgb(0, 117, 178);">Facebook Developer Work</h3>
+
+<span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">A</span>gain if you use URL posts on the Tableau app it <em>will</em> work but as soon as you publish on the web Instagram will block embedded posts. To solve these issues we have to do some work:</p>
+<ul>
+<li>Sign up for a 
+
+
+<a href="https://developers.facebook.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/', 'Facebook Developer account')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Facebook Developer account</a>
+ you can use your regular Facebook credentials for this</li>
+<li>
+
+
+<a href="https://developers.facebook.com/docs/apps#register" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/docs\/apps#register', 'Create a new app')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Create a new app</a>
+ that we will use to access Instagram, you can add an app from
+
+
+
+<a href="https://developers.facebook.com/apps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/apps\/', 'your dashboard')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">your dashboard</a>
+</li>
+</ul>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/newapp.jpg" 
+    alt="Create new app in Facebook Developer Portal"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Create new app in Facebook Developer Portal</p>
+</div>
+  </div>
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/newapp2.jpg" 
+    alt="Select type of app to register"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Select type of app to register</p>
+</div>
+  </div>
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/newapp3.jpg" 
+    alt="Provide details for the app"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Provide details for the app</p>
+</div>
+  </div>
+</div>
+</div>
+<ul>
+<li>Once in the app you need to add the <code>oEmbed</code> product to it. From the list of products select it and click on &lsquo;Set Up&rsquo;, you will see screen on the right picture below</li>
+</ul>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/oembedproduct.jpg" 
+    alt="Select oEmbed Product"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Select oEmbed Product</p>
+</div>
+  </div>
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/oembeddone.jpg" 
+    alt="oEmbed Product added"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">oEmbed Product added</p>
+</div>
+  </div>
+</div>
+</div>
+<ul>
+<li>Go back to the app dashboard (Dashboard button on the left), you&rsquo;ll see the application stats already</li>
+</ul>
+
+<div>
+  <img src="/images/categories/software/photoviz/appdashboard.jpg" 
+    alt="App Dashboard"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">App Dashboard</p>
+</div>
+<ul>
+<li>The only thing left is to do here is to move your app from <code>Development</code> to <code>Live</code>. When you try to turn on Live mode you might get alerts for additional actions to take, simply take
+those actions</li>
+</ul>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/devlivemode.jpg" 
+    alt="Turn on Live mode"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Turn on Live mode</p>
+</div>
+  </div>
+  <div class="w-100"></div>
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/applivemode.jpg" 
+    alt="Live mode is enabled"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Live mode is enabled</p>
+</div>
+  </div>
+</div>
+</div>
+<ul>
+<li>Now we need two fields in order to start making <code>oEmbed</code> API calls. One of them is the <code>App ID</code> which you can get next to the <code>Live</code> button. <code>Client Token</code> can be viewed by going to the
+menu on the left <code>Settings -&gt; Advanced</code></li>
+</ul>
+<p>
+<h3 style="text-align: center; color:rgb(0, 117, 178);">Using Instagram API</h3>
+
+<span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">W</span>ith the information we need we can proceed and create a library that will do the work when we need to. Then I will give out the details for invoking this library from within
+
+
+
+<a href="https://gohugo.io/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/', 'Hugo framework')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hugo framework</a>
+, if you use a different site you can skip those details however it should be quite straightforward at that point to use it. This library is
+quite simple, it exposes a method for parsing the Instagram ID from the query parameters and another one for querying the Instagram API and getting the HTML fragment needed for rendering
+the post. This library is written in TypeScript and transpiled, it uses its own namespace to avoid mixing with other JavaScript pieces from the page. It can be used to embed well known Instagram
+post ids (not just at runtime). This library takes a selector of an existing place in the website&rsquo;s page and replaces it with the embedded Instagram post</p>
+
+<div>
+  <img src="/images/categories/software/photoviz/autoinstagram.jpg" 
+    alt="Auto Instagram Library"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Auto Instagram Library</p>
+</div>
+<p>To use it:</p>
+<ul>
+<li>Update <code>AutoInstagram.LocalConstants.AppTok</code> with your Application Token and <code>AutoInstagram.LocalConstants.CliTok</code> with your Application Client Token previously retrieved</li>
+<li>Build Auto Instagram library</li>
+<li>Add Instagram&rsquo;s embed library to your website or post:</li>
+<li><code>&lt;script type='text/javascript' src=&quot;//www.instagram.com/embed.js&quot; &gt;&lt;/script&gt;</code></li>
+<li>Add your built library to your website or post as reference</li>
+<li>In your post you can get the Instagram post id when passed via URL in the form of the query parameter as follows: <code>?insta=&lt;postId&gt;</code>. To retrieve <code>&lt;postId&gt;</code> make the following call:</li>
+<li><code>window.AutoInstagram.Control.LoadFromParam()</code></li>
+<li>In its current form you can replace any paragraph <code>&lt;p&gt;</code> with the given text inside for the library to replace it with the actual Instagram post. Internally a selector is built to find the
+node and replace the code. Example: The  given paragraph <code>&lt;p&gt;Insert-Instagram-Here&lt;/p&gt;</code> will be replaced with the Instagram post by making the following library call:</li>
+<li><code>window.AutoInstagram.Control.QueryAndAddInstagramPost('&lt;postId&gt;', 'Insert-Instagram-Here');</code></li>
+<li>Obviously you can modify the library to use other selectors if you want</li>
+</ul>
+<p>You can view the library contents in 
+
+
+<a href="https://gist.github.com/hobelinm/ce7ebdb0dc601a05542376eeb393e378" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gist.github.com\/hobelinm\/ce7ebdb0dc601a05542376eeb393e378', 'this Gist')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">this Gist</a>
+</p>
+<p>Is pretty simple as you can see 😉</p>
+<p>
+<h3 style="text-align: center; color:rgb(0, 117, 178);">Integrating Our Library with Hugo</h3>
+
+<span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">O</span>k so we know how to make API calls to embed Instagram posts into a web page. Later we will use this feature just added to our website in order to have our Tableau dashboard
+embed our website elements rather than Instagram directly. I personally I end up embedding the Tableau Viz back on my website in the following way:</p>
+
+<div>
+  <img src="/images/categories/software/photoviz/embedchain.jpg" 
+    alt="Embedding Components a la Inception"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Embedding Components a la Inception</p>
+</div>
+<p>The following details outline how I managed to create a place for a &ldquo;special&rdquo; post whose only content or job will be to display whatever Instagram post is indicated via query parameters at
+runtime (notice that Hugo already provides a shortcode that allows you to 
+
+
+<a href="https://gohugo.io/content-management/shortcodes/#instagram" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/content-management\/shortcodes\/#instagram', 'embed Instagram')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">embed Instagram</a>
+ posts however the
+specific IDs have to be known before building your site while we need them to update the posts while already deployed). Since this post will be embedded in our Tableau Viz and we can&rsquo;t get
+rid of the Instagram&rsquo;s shell we will need to save as much real estate as possible for the actual picture to be displayed. Therefore this post needs to hide all UI elements that are part of
+the standard posts (navigation header at the top, title, sharing buttons, discussion plugin, footer, etcetera). Notice that I&rsquo;m using the
+
+
+
+<a href="https://gohugo-ananke-theme-demo.netlify.app/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo-ananke-theme-demo.netlify.app\/', 'Ananke Theme')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Ananke Theme</a>
+ that is suggested by default by 
+
+
+<a href="https://gohugo.io/getting-started/quick-start/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/getting-started\/quick-start\/', 'Hugo\u0027s setup guide')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hugo&#39;s setup guide</a>
+.
+I created a local copy and modified the following theme files to allow hiding all the UI pieces at will</p>
+
+<div>
+  <img src="/images/categories/software/photoviz/baseof.jpg" 
+    alt="baseof.html - Allows to hide footer"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">baseof.html - Allows to hide footer</p>
+</div>
+<p>The remaining change is done in <code>single.html</code> and for the sake of simplicity you can view it 
+
+
+<a href="https://gist.github.com/hobelinm/11b327cccac1ab5a5201bff6614ad188" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gist.github.com\/hobelinm\/11b327cccac1ab5a5201bff6614ad188', 'here')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">here</a>
+. Now we have
+the option of hiding the UI pieces, for the special post we create a simple post without photo header and we simply add the option <code>barePage: true</code> to the front matter. We need to create a
+shortcode that allows to connect our post with the library we added in the previous section. This shortcode will take two parameters: the first one to indicate whether to parse the
+Instagram&rsquo;s post from query parameters and the second to locate the contents of the paragraph used for the selector to replace with the actual post&rsquo;s content</p>
+<p><script type="application/javascript" src="https://gist.github.com/hobelinm/667e929b1de8b57eabf360bb1781bb9d.js"></script>
+
+<p style="text-align: center; font-style: italic;">Shortcode to connect posts with our Instagram library</p></p>
+<p>Finally we call this shortcode from our special post, this is how it looks like:</p>
+<script type="application/javascript" src="https://gist.github.com/hobelinm/6de724ebfc80560db7c8da05141fc571.js"></script>
+
+<p>You can see it running on 
+
+
+<a href="/posts/instagram/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/instagram\/', 'this post')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">this post</a>
+. You can add <code>?insta=&lt;postId&gt;</code> to the URL to load custom posts, feel free to give it a try. If you want help getting
+Instagram post IDs 
+
+
+<a href="https://brewingcats.com/posts/projects/software/instaparser/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/posts\/projects\/software\/instaparser\/', 'I built a post')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">I built a post</a>
+ to help you extract those IDs and visualize them loaded, feel free to
+check it out as well. Also if you don&rsquo;t want to build all of this for yourself feel free to take 
+
+
+<a href="/posts/instagram/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/instagram\/', 'my special post')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">my special post</a>
+ for your own Tableau Vizzes, again you can
+get help from this 
+
+
+<a href="https://brewingcats.com/posts/projects/software/instaparser/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/posts\/projects\/software\/instaparser\/', 'Brewing Cats\u0027 post')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Brewing Cats&#39; post</a>
+. <del>Finally you can see the code working here:</del></p>
+<p>Instagram-Embed-Working-Here</p>
+
+<script type="text/javascript">
+
+
+
+
+
+window.AutoInstagram.Control.Initialize("636890196944822", "17b874bd11a90bf04332b10b5c45dc9f");
+
+
+window.AutoInstagram.Control.QueryAndAddInstagramPost(
+  ("CC7iPq7p5HW"),
+  ("Instagram-Embed-Working-Here")
+);
+
+
+BrewingCatsCore.Logger.traceInfo(
+  `AutoInstagram Component`,
+  'component.autoinstagram',
+  'tagId_a',
+  'ComponentSetup',
+  {
+    'component': 'AutoInstagram'
+  }
+);
+</script>
+
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Creating Our Data Source</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">F</span>inally we have all we need to start working on our Tableau Viz. In this section I&rsquo;ll detail how I put together the data to be consumed by the Tableau Viz. You have many options in
+regards to the format of the source <code>.txt</code>, <code>.csv</code>, <code>.xlsx</code>, locally. I decided to use 
+
+
+<a href="https://www.google.com/sheets/about/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/sheets\/about\/', 'Google Sheets')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Sheets</a>
+ because it is very convenient and easy
+to update. Connecting to either of these data sources is actually pretty simple. I&rsquo;ve organized the data that we already collected in the following columns in the spreadsheet:</p>
+<ul>
+<li>Latitude</li>
+<li>Longitude</li>
+<li>Title/Description of the photo/group of photos</li>
+<li>Date of the photo/group of photos</li>
+<li>URL of the photos. For this post I&rsquo;m using Instagram IDs since our shortcode already assembles the full URL (you can get the post IDs from
+
+
+
+<a href="https://brewingcats.com/posts/projects/software/instaparser/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/posts\/projects\/software\/instaparser\/', 'here')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">here</a>
+)</li>
+</ul>
+
+<div>
+  <img src="/images/categories/software/photoviz/gsheets.jpg" 
+    alt="Google Sheets Sample"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Google Sheets Sample</p>
+</div>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Creating the Viz</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">O</span>pen Tableau Public app on your desktop and connect to you data source. Then select the right table and go to <code>Sheet 1</code></p>
+
+<div>
+  <img src="/images/categories/software/photoviz/connectgsheets.jpg" 
+    alt="Connecting to Google Sheets"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Connecting to Google Sheets</p>
+</div>
+<p>On the worksheet drag <code>Longitude</code> pill over to the Columns shelf, then drag <code>Latitude</code> pill over to the Rows shelf. Make sure both pills on the shelves are set to <code>Dimensions</code> and <code>Continuous</code>.
+If the Viz area is not set to a map you can set it manually to be a map, just go to <code>Marks</code> shelf, and from the <code>Automatic</code> dropdown change it to be <code>Map</code></p>
+
+<div>
+  <img src="/images/categories/software/photoviz/vizmap.jpg" 
+    alt="Map built using Latitude and Longitude"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Map built using Latitude and Longitude</p>
+</div>
+<p>We will need the remaining fields to create actions and other data, drag the following fields into the <code>Detail</code> button under <code>Marks</code> shelf: <code>Name</code>, <code>Instagram</code>, and <code>Date</code>, for <code>Date</code> after
+dropping the pill I changed it to <code>Exact Date</code> and <code>Continuous</code>. To add some color drag <code>Date</code> pill to <code>Color</code> button under <code>Marks</code> shelf, this will set the data points on the map to be
+colored according to their date. I used <code>Year</code> as the granularity to see clearly events taken by year. Let&rsquo;s name our worksheet <code>Map</code></p>
+
+<div>
+  <img src="/images/categories/software/photoviz/vizmap2.jpg" 
+    alt="Remaining Pills added to Map"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Remaining Pills added to Map</p>
+</div>
+<p>We&rsquo;ll be adding a label for the <code>Name</code> and the <code>Date</code> for our dashboard but these will be different worksheets. Let&rsquo;s create a worksheet named <code>Date</code> and drag <code>Date</code> pill to <code>Text</code> button on
+the <code>Marks</code> shelf (again use <code>Exact Date</code> and <code>Continuous</code>). Drag <code>Instagram</code>, <code>Latitude</code>, and <code>Longitude</code> pills into the <code>Details</code> button on the <code>Marks</code> shelf to bring it to context (make
+sure Latitude and Longitude are set to <code>Dimension</code> and <code>Continuous</code>). Create another worksheet for <code>Name</code> and repeat the same steps</p>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/vizdate.jpg" 
+    alt="Date worksheet"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Date worksheet</p>
+</div>
+  </div>
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/vizname.jpg" 
+    alt="Name worksheet"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Name worksheet</p>
+</div>
+  </div>
+</div>
+</div>
+<p>Let&rsquo;s create a dashboard now! Make sure you give it a relevant name since this will be the name of your resulting Viz</p>
+<ul>
+<li>Once on the dashboard, from the pane on the left that contains the list of sheets we&rsquo;ve created before. Drag <code>Map</code> sheet to the dashboard area to bring the map</li>
+<li>On the left pane adjust the <code>Size</code> of the dashboard area (I used automatic so the dashboard can take the whole area)</li>
+<li>On the left pane from the list of <code>Objects</code> drag <code>Web Page</code> to the dashboard area and arrange however you like (I personally used left side for the map, right side for the web page) you can
+enter any URL since we&rsquo;re going to update this later to show our photos</li>
+<li>Select <code>Year of Date</code> labels and from the buttons that show up in the zone select the arrow dropdown and <code>Floating</code> to optimize the space, then drag the area over to the map</li>
+<li>On the map zone right click on the title and select <code>Hide Title</code> to optimize the space even more (is obvious that this is a map)</li>
+<li>Drag <code>Name</code> and <code>Date</code> sheets on the dashboard area, make them <code>Floating</code> on the map area to optimize space, you can also use <code>Fit Width</code></li>
+<li>Hide all sheets by right clicking on the dashboard tab then <code>Hide All Sheets</code></li>
+</ul>
+
+<div>
+  <img src="/images/categories/software/photoviz/dashboard1.jpg" 
+    alt="Resulting Dashboard"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Resulting Dashboard</p>
+</div>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Lights, Camera, ... Actions!</h1>
+
+<p>Let&rsquo;s add some actions to load our photos into the web page component. If you&rsquo;re trying to add photos by URL simply use the URL field as is in the data source, for our example we&rsquo;ll compose
+the resulting URL by adding the Instagram&rsquo;s post ID as query parameter to the special post we created before which allows us to embed Instagram posts. Follow the steps on the dashboard:</p>
+<ul>
+<li><code>Dashboard</code> menu -&gt; <code>Actions...</code></li>
+<li>Click <code>Add Action &gt;</code></li>
+<li>Select <code>Go to URL...</code></li>
+<li>Add a name for your action, say <code>View</code></li>
+<li>The action should run on the dashboard we created and on <code>Select</code> action</li>
+<li>For the URL field you can either use the URL directly, in our case we&rsquo;ll use the following URL (you can use this if you&rsquo;d like too), notice that <code>&lt;Instagram&gt;</code> is the name of the field and
+in your case it might be different, you can add it from the arrow on the right:</li>
+<li><code>https://hugobelin.com/posts/instagram/?insta=&lt;Instagram&gt;</code></li>
+<li>For the <code>URL Target</code> select <code>Web Page Object</code> to use the web component on the right</li>
+<li>Click <code>OK</code> and see it working. Whenever you click on a data point on the map the picture should load on the <code>Web Page</code> component</li>
+</ul>
+
+<div>
+  <img src="/images/categories/software/photoviz/action1.jpg" 
+    alt="Dashboard Action to Load Our Picture"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Dashboard Action to Load Our Picture</p>
+</div>
+<p>The following actions are optional but they will improve the usability on smaller screens and when embedding the Viz itself. We&rsquo;ll be adding two actions, one to see the data point in
+
+
+
+<a href="https://www.google.com/maps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Maps</a>
+, the other to open the Instagram post on a new browser tab. For each action the following is common:</p>
+<ul>
+<li>They will be <code>Go To URL...</code> actions</li>
+<li>They will run in our current dashboard</li>
+<li>They will be available on <code>Menu</code> (you&rsquo;ll click on a data point and then a menu with the links will be shown)</li>
+<li>Their <code>URL Target</code> will be <code>New Browser Tab</code></li>
+<li>We&rsquo;ll name one &lsquo;Open Location in Maps&rsquo; and the other &lsquo;Open Instagram&rsquo;</li>
+</ul>
+<p>Each action will have a different URL field, for opening Google Maps:</p>
+<ul>
+<li><code>http://www.google.com/maps/place/&lt;Latitude&gt;,&lt;Longitude&gt;</code></li>
+</ul>
+<p>For Opening in Instagram:</p>
+<ul>
+<li><code>https://www.instagram.com/p/&lt;Instagram&gt;/</code></li>
+</ul>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/actioninsta.jpg" 
+    alt="Open Instagram Action"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Open Instagram Action</p>
+</div>
+  </div>
+  <div class="col">
+    
+<div>
+  <img src="/images/categories/software/photoviz/actionmaps.jpg" 
+    alt="View Location in Maps Action"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">View Location in Maps Action</p>
+</div>
+  </div>
+</div>
+</div>
+
+<div>
+  <img src="/images/categories/software/photoviz/dashboardactions.jpg" 
+    alt="Dashboard with Actions Working"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Dashboard with Actions Working</p>
+</div>
+<p>Finally we need to create a 
+
+
+<a href="https://help.tableau.com/current/pro/desktop/en-us/actions_filter.htm" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/help.tableau.com\/current\/pro\/desktop\/en-us\/actions_filter.htm', 'filter action')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">filter action</a>
+ to synchronize the data points selected in the map with our
+<code>Name</code> and <code>Date</code> sheets. Select the map zone in the dashboard area and from its controls click on the Filter icon that has the tooltip <code>Use as a Filter</code>, after this selecting a single data
+point in the map should filter all the labels (you can apply some formatting here to make the labels bigger)</p>
+
+<div>
+  <img src="/images/categories/software/photoviz/dashboardfinal.jpg" 
+    alt="Resulting Dashboard with a single data point selected"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Resulting Dashboard with a single data point selected</p>
+</div>
+<p>Now we&rsquo;re ready to publish our workbook and use it however we want to. As mentioned before I use it to embed them back into my website to enrich other posts. You can see below samples of
+embedded Vizzes using 
+
+
+<a href="https://public.tableau.com/profile/hugo.belin#!/vizhome/SanDiego_15741313638760/SanDiego" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/vizhome\/SanDiego_15741313638760\/SanDiego', 'unique photos')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">unique photos</a>
+ per location and
+
+
+
+<a href="https://public.tableau.com/profile/hugo.belin#!/vizhome/HikeCollection/Hikes" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/vizhome\/HikeCollection\/Hikes', 'grouped photos')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">grouped photos</a>
+</p>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Embedding the Resulting Viz</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">T</span>echnically at this point we&rsquo;re done, consider this section optional. To extend the use of our published Viz I will use them to create rich experiences in my posts. In this
+section I&rsquo;m outlining the steps I took to be able to embed Tableau vizzes in Hugo framework posts. To connect to Tableau Vizzes in our posts I&rsquo;ve created a custom shortcode that takes
+certain parameters from the sharing code to render the Viz in the post. This is the shortcode:</p>
+<script type="application/javascript" src="https://gist.github.com/hobelinm/de089f99c3543e2a16f8f24fee4d958e.js"></script>
+
+<p>From the Viz share button you have to parse (for now since I&rsquo;m working on a tool to parse the fields for you) certain fields from it in order to feed them to the shortcode. For example for
+
+
+
+<a href="https://public.tableau.com/profile/hugo.belin#!/vizhome/HikeCollection/Hikes" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/vizhome\/HikeCollection\/Hikes', 'my hikes Viz')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">my hikes Viz</a>
+ when clicking on the <code>Share</code> icon from the bottom right you get a text field with the
+embed code, from them I get the fields on the second picture below</p>
+
+<div>
+  <img src="/images/categories/software/photoviz/vizshare.jpg" 
+    alt="How to get the code for embedding a Viz"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">How to get the code for embedding a Viz</p>
+</div>
+
+<div>
+  <img src="/images/categories/software/photoviz/vizsharecode.jpg" 
+    alt="Fields from the share code needed for our shortcut"
+    style="
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width:min-content;
+      max-height:min-content; ">
+  <p style="text-align: center; font-style: italic;">Fields from the share code needed for our shortcut</p>
+</div>
+<p>Then I call my shortcode as follows:</p>
+<p><code>{&lt; tableau &quot;viz1595830498772&quot; &quot;Hi&quot; &quot;HikeCollection&quot; &quot;Hikes&quot; &gt;}</code></p>
+<p>Again I&rsquo;m working on automating the parsing of these fields, stay tuned for an update on 
+
+
+<a href="https://brewingcats.com/%e2%80%ba" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/›', 'Brewing Cats')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Brewing Cats</a>
+</p>
+<p>You can see the embedded Vizzes down below</p>
+
+<div class='tableauPlaceholder' id='viz1581401042962' style='position: relative'>
+  <noscript>
+    <a href='#'>
+      <img alt=' '
+        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SanDiego_15741313638760&#47;SanDiego&#47;1_rss.png'
+        style='border: none' />
+    </a>
+  </noscript>
+  <object class='tableauViz'  style='display:none;'>
+    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+    <param name='embed_code_version' value='3' />
+    <param name='site_root' value='' />
+    <param name='name' value='SanDiego_15741313638760&#47;SanDiego' />
+    <param name='tabs' value='no' />
+    <param name='toolbar' value='yes' />
+    <param name='static_image' 
+      value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SanDiego_15741313638760&#47;SanDiego&#47;1.png' />
+    <param name='animate_transition' value='yes' />
+    <param name='display_static_image' value='yes' />
+    <param name='display_spinner' value='yes' />
+    <param name='display_overlay' value='yes' />
+    <param name='display_count' value='yes' />
+    <param name='language' value='en' />
+  </object>
+</div>
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1581401042962');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  if ( divElement.offsetWidth > 800 ) {
+    vizElement.style.width='1000px';
+    vizElement.style.height='827px';
+  } else if ( divElement.offsetWidth > 500 ) {
+    vizElement.style.width='1000px';
+    vizElement.style.height='827px';
+  } else {
+    vizElement.style.width='100%';
+    vizElement.style.height='2027px';
+  }
+
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  BrewingCatsCore.Logger.traceInfo(
+    `Tableau Component`,
+    'component.tableau',
+    'tagId_j',
+    'ComponentSetup',
+    {
+      'component': 'Tableau',
+      'vizId': 'viz1581401042962'
+    }
+  );
+</script>
+<p><p style="text-align: center; font-style: italic;">San Diego Viz uses single photos per location</p>
+
+
+
+<a href="/posts/categories/travel/2019sandiego/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/categories\/travel\/2019sandiego\/', 'San Diego Trip')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">San Diego Trip</a>
+</p>
+
+<div class='tableauPlaceholder' id='viz1595830498772' style='position: relative'>
+  <noscript>
+    <a href='#'>
+      <img alt=' '
+        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Hi&#47;HikeCollection&#47;Hikes&#47;1_rss.png'
+        style='border: none' />
+    </a>
+  </noscript>
+  <object class='tableauViz'  style='display:none;'>
+    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+    <param name='embed_code_version' value='3' />
+    <param name='site_root' value='' />
+    <param name='name' value='HikeCollection&#47;Hikes' />
+    <param name='tabs' value='no' />
+    <param name='toolbar' value='yes' />
+    <param name='static_image' 
+      value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Hi&#47;HikeCollection&#47;Hikes&#47;1.png' />
+    <param name='animate_transition' value='yes' />
+    <param name='display_static_image' value='yes' />
+    <param name='display_spinner' value='yes' />
+    <param name='display_overlay' value='yes' />
+    <param name='display_count' value='yes' />
+    <param name='language' value='en' />
+  </object>
+</div>
+<script type='text/javascript'>
+  var divElement = document.getElementById('viz1595830498772');
+  var vizElement = divElement.getElementsByTagName('object')[0];
+  if ( divElement.offsetWidth > 800 ) {
+    vizElement.style.width='1000px';
+    vizElement.style.height='827px';
+  } else if ( divElement.offsetWidth > 500 ) {
+    vizElement.style.width='1000px';
+    vizElement.style.height='827px';
+  } else {
+    vizElement.style.width='100%';
+    vizElement.style.height='2027px';
+  }
+
+  var scriptElement = document.createElement('script');
+  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  BrewingCatsCore.Logger.traceInfo(
+    `Tableau Component`,
+    'component.tableau',
+    'tagId_j',
+    'ComponentSetup',
+    {
+      'component': 'Tableau',
+      'vizId': 'viz1595830498772'
+    }
+  );
+</script>
+<p><p style="text-align: center; font-style: italic;">Hikes Collection uses grouped photos</p>
+
+
+
+<a href="/posts/categories/travel/hikecollection/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/categories\/travel\/hikecollection\/', 'Hike Collection')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hike Collection</a>
+</p>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Conclusion</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">C</span>reating your own photo Viz not only lets you put your photos to work but it allows to share them in a more meaninful way. You can tell stories about the places in your Viz,
+those who were with you in the locations can surely relate better to the events that took place, and overall you offer a richer experience than simply showing your photos. Once you accomplish
+the setup pieces (which you can skip and leverage my 
+
+
+<a href="/posts/instagram/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/instagram\/', 'loader page')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">loader page</a>
+ for it) it&rsquo;s all Tableau and your photos from there</p>
+<p>Embedding vizzes is a nice bonus because it enhances the the functionality of your site and gives you rich experiences that can only be accomplished with Tableau only. Pairing these types of
+embedded vizzes with a powerfull storytelling and other media will make of it a killer website. For now the vizzes that I&rsquo;ve created have been used to tell about trips and to keep my
+photo collections but more options might come later. Having these types of vizzes also let me remove all fotos from a page making it more light and interactive (vs adding all the photos at
+once). Leveraging Instagram let me get good performance embeds and also gave me extra ways to drive traffic to my website by means of my profile account and the use of hashtags. Similarly
+my published vizzes can also capture traffic into my website so is a win-win scenario for any publisher</p>
+<p>One observation on Tableau is that layouts do not update automatically while embedded making it not he best experience in smaller screens, however all things considered is great to have the
+ability to use Tableau along with your websites, showcasing your photos and enrich the web in a positive experience. I will look forward for more use cases on my website 😄</p>
+<p>
+
+
+
+<br />
+<div class="col align-self-center" style="text-align: center;">
+  <button type="button" class="btn btn-primary" onclick="invokeScrollToTop()">Scroll to Top</button>
+</div>
+<script>
+  function invokeScrollToTop() {
+    BrewingCatsCore.Logger.traceInfo(
+      `Scrolling to top`,
+      'ScrollToTop',
+      'tagId_13',
+      'ComponentInteraction',
+      {
+        'url': window.location.href,
+      }
+    );
+
+    BrewingCatsCore.Util.scrollToTop();
+  }
+</script>
+<br>
+<br>
+<div style="text-align: center;">
+  <div class="btn-group btn-group-sm" role="group" aria-label="Site Stats" style="align-content: center;">
+    <button type="button" class="btn btn-light">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+    </svg> Site Views:</button>
+    <button type="button" class="btn btn-primary" tag-id="stats-widget-site-views">0</button>
+    <button type="button" class="btn btn-light">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
+      </svg> Page Views:</button>
+    <button type="button" class="btn btn-success" tag-id="stats-widget-page-views">0</button>
+    <button type="button" class="btn btn-light">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"/>
+      </svg> Your Site Views:</button>
+    <button type="button" class="btn btn-warning" tag-id="stats-widget-user-site-views">0</button>
+    <button type="button" class="btn btn-light">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+        <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+      </svg> Your Page Views:</button>
+    <button type="button" class="btn btn-dark" tag-id="stats-widget-user-page-views">0</button>
+  </div>
+</div>
+<br></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/software" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">software</a>
+   </li>
+  
+</ul>
+
+        <div class="mt6 instapaper_ignoref">
+        
+          <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugobelin" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
+        
+      
+      </div>
+    </div>
+
+    
+      <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+    
+
+  </article>
+
+    </main>
+    <div id="toastArea"></div>
+    
+    
+<div id="social-stats-footer" style="display: none;">
+  <br><br>
+  <div style="text-align: center;">
+    <div class="btn-group btn-group-sm" role="group" aria-label="Site Stats" style="align-content: center;">
+      <button type="button" class="btn btn-light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+          <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+      </svg> Site Views:</button>
+      <button type="button" class="btn btn-primary" tag-id="stats-widget-site-views">0</button>
+      <button type="button" class="btn btn-light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
+        </svg> Page Views:</button>
+      <button type="button" class="btn btn-success" tag-id="stats-widget-page-views">0</button>
+      <button type="button" class="btn btn-light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-graph-up" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"/>
+        </svg> Your Site Views:</button>
+      <button type="button" class="btn btn-warning" tag-id="stats-widget-user-site-views">0</button>
+      <button type="button" class="btn btn-light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+          <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z"/>
+        </svg> Your Page Views:</button>
+      <button type="button" class="btn btn-dark" tag-id="stats-widget-user-page-views">0</button>
+    </div>
+  </div>
+  <br>
+</div>
+
+<footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+    <div>
+      <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://hugobelin.com/" >
+        &copy;  Hugo Belin 2022 
+      </a>
+      <code class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3">
+        
+        <small>
+          <a href="https://brewingcats.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com', 'BCats')" 
+            style="color: rgb(200, 200, 200); box-shadow: rgb(255, 153, 0) 0px -4px 0px inset; text-decoration: none; " 
+            onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+            onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BCats</a>
+          Version: 3.19.27 Release: Han Solo Site Views: <span tag-id="site-page-views-footer">0</span>
+        </small>
+        
+      </code>
+    </div>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://www.facebook.com/hobelinm4" target="_blank" class="facebook ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Facebook link" rel="noopener" aria-label="follow on Facebook——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://twitter.com/hugobelinm" target="_blank" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.instagram.com/darth.oguh/" target="_blank" class="instagram ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Instagram link" rel="noopener" aria-label="follow on Instagram——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.271,26.578v-0.006c0.502,0,1.005,0.01,1.508-0.002  c0.646-0.017,1.172-0.57,1.172-1.217c0-0.963,0-1.927,0-2.89c0-0.691-0.547-1.24-1.236-1.241c-0.961,0-1.922-0.001-2.883,0  c-0.688,0.001-1.236,0.552-1.236,1.243c-0.001,0.955-0.004,1.91,0.003,2.865c0.001,0.143,0.028,0.291,0.073,0.426  c0.173,0.508,0.639,0.82,1.209,0.823C41.344,26.579,41.808,26.578,42.271,26.578z M33,27.817c-3.384-0.002-6.135,2.721-6.182,6.089  c-0.049,3.46,2.72,6.201,6.04,6.272c3.454,0.074,6.248-2.686,6.321-6.043C39.254,30.675,36.462,27.815,33,27.817z M21.046,31.116  v0.082c0,4.515-0.001,9.03,0,13.545c0,0.649,0.562,1.208,1.212,1.208c7.16,0.001,14.319,0.001,21.479,0  c0.656,0,1.215-0.557,1.215-1.212c0.001-4.509,0-9.02,0-13.528v-0.094h-2.912c0.411,1.313,0.537,2.651,0.376,4.014  c-0.161,1.363-0.601,2.631-1.316,3.803s-1.644,2.145-2.779,2.918c-2.944,2.006-6.821,2.182-9.946,0.428  c-1.579-0.885-2.819-2.12-3.685-3.713c-1.289-2.373-1.495-4.865-0.739-7.451C22.983,31.116,22.021,31.116,21.046,31.116z   M45.205,49.255c0.159-0.026,0.318-0.049,0.475-0.083c1.246-0.265,2.264-1.304,2.508-2.557c0.025-0.137,0.045-0.273,0.067-0.409  V21.794c-0.021-0.133-0.04-0.268-0.065-0.401c-0.268-1.367-1.396-2.428-2.78-2.618c-0.058-0.007-0.113-0.02-0.17-0.03H20.761  c-0.147,0.027-0.296,0.047-0.441,0.08c-1.352,0.308-2.352,1.396-2.545,2.766c-0.008,0.057-0.02,0.114-0.029,0.171V46.24  c0.028,0.154,0.05,0.311,0.085,0.465c0.299,1.322,1.427,2.347,2.77,2.52c0.064,0.008,0.13,0.021,0.195,0.03H45.205z M33,64  C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.youtube.com/channel/UCGXUuZrYZxwHVQSNWDc44-w/" target="_blank" class="youtube ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="YouTube link" rel="noopener" aria-label="follow on YouTube——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M42.527,41.34c-0.278,0-0.478,0.078-0.6,0.244  c-0.121,0.156-0.18,0.424-0.18,0.796v0.896h1.543V42.38c0-0.372-0.062-0.64-0.185-0.796C42.989,41.418,42.792,41.34,42.527,41.34z   M36.509,41.309c0.234,0,0.417,0.076,0.544,0.23c0.123,0.155,0.185,0.383,0.185,0.682v4.584c0,0.286-0.053,0.487-0.153,0.611  c-0.1,0.127-0.256,0.189-0.47,0.189c-0.148,0-0.287-0.033-0.421-0.096c-0.135-0.062-0.274-0.171-0.415-0.313v-5.531  c0.119-0.122,0.239-0.213,0.36-0.271C36.26,41.335,36.383,41.309,36.509,41.309z M41.748,44.658v1.672  c0,0.468,0.057,0.792,0.17,0.974c0.118,0.181,0.313,0.269,0.592,0.269c0.289,0,0.491-0.076,0.606-0.229  c0.114-0.153,0.175-0.489,0.175-1.013v-0.405h1.795v0.456c0,0.911-0.217,1.596-0.657,2.059c-0.435,0.459-1.089,0.687-1.958,0.687  c-0.781,0-1.398-0.242-1.847-0.731c-0.448-0.486-0.676-1.157-0.676-2.014v-3.986c0-0.768,0.249-1.398,0.742-1.882  c0.493-0.484,1.128-0.727,1.911-0.727c0.799,0,1.413,0.225,1.843,0.674c0.429,0.448,0.642,1.093,0.642,1.935v2.264H41.748z   M38.623,48.495c-0.271,0.336-0.669,0.501-1.187,0.501c-0.343,0-0.646-0.062-0.912-0.192c-0.267-0.129-0.519-0.327-0.746-0.601  v0.681h-1.764V36.852h1.764v3.875c0.237-0.27,0.485-0.478,0.748-0.616c0.267-0.143,0.534-0.212,0.805-0.212  c0.554,0,0.975,0.189,1.265,0.565c0.294,0.379,0.438,0.933,0.438,1.66v4.926C39.034,47.678,38.897,48.159,38.623,48.495z   M30.958,48.884v-0.976c-0.325,0.361-0.658,0.636-1.009,0.822c-0.349,0.191-0.686,0.282-1.014,0.282  c-0.405,0-0.705-0.129-0.913-0.396c-0.201-0.266-0.305-0.658-0.305-1.189v-7.422h1.744v6.809c0,0.211,0.037,0.362,0.107,0.457  c0.077,0.095,0.196,0.141,0.358,0.141c0.128,0,0.292-0.062,0.488-0.188c0.197-0.125,0.375-0.283,0.542-0.475v-6.744h1.744v8.878  H30.958z M24.916,38.6v10.284h-1.968V38.6h-2.034v-1.748h6.036V38.6H24.916z M32.994,32.978c0-0.001,12.08,0.018,13.514,1.45  c1.439,1.435,1.455,8.514,1.455,8.555c0,0-0.012,7.117-1.455,8.556C45.074,52.969,32.994,53,32.994,53s-12.079-0.031-13.516-1.462  c-1.438-1.435-1.441-8.502-1.441-8.556c0-0.041,0.004-7.12,1.441-8.555C20.916,32.996,32.994,32.977,32.994,32.978z M42.52,29.255  h-1.966v-1.08c-0.358,0.397-0.736,0.703-1.13,0.909c-0.392,0.208-0.771,0.312-1.14,0.312c-0.458,0-0.797-0.146-1.027-0.437  c-0.229-0.291-0.345-0.727-0.345-1.311v-8.172h1.962v7.497c0,0.231,0.045,0.399,0.127,0.502c0.08,0.104,0.216,0.156,0.399,0.156  c0.143,0,0.327-0.069,0.548-0.206c0.22-0.137,0.423-0.312,0.605-0.527v-7.422h1.966V29.255z M31.847,27.588  c0.139,0.147,0.339,0.219,0.6,0.219c0.266,0,0.476-0.075,0.634-0.223c0.157-0.152,0.235-0.358,0.235-0.618v-5.327  c0-0.214-0.08-0.387-0.241-0.519c-0.16-0.131-0.37-0.196-0.628-0.196c-0.241,0-0.435,0.065-0.586,0.196  c-0.148,0.132-0.225,0.305-0.225,0.519v5.327C31.636,27.233,31.708,27.439,31.847,27.588z M30.408,19.903  c0.528-0.449,1.241-0.674,2.132-0.674c0.812,0,1.48,0.237,2.001,0.711c0.517,0.473,0.777,1.083,0.777,1.828v5.051  c0,0.836-0.255,1.491-0.762,1.968c-0.513,0.476-1.212,0.714-2.106,0.714c-0.858,0-1.547-0.246-2.064-0.736  c-0.513-0.492-0.772-1.152-0.772-1.983v-5.068C29.613,20.954,29.877,20.351,30.408,19.903z M24.262,16h-2.229l2.634,8.003v5.252  h2.213v-5.5L29.454,16h-2.25l-1.366,5.298h-0.139L24.262,16z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30  S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://github.com/hobelinm" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://gitlab.com/hobelinm" target="_blank" class="gitlab ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitLab link" rel="noopener" aria-label="follow on GitLab——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M29.782 199.732L256 493.714 8.074 309.699c-6.856-5.142-9.712-13.996-7.141-21.993l28.849-87.974zm75.405-174.806c-3.142-8.854-15.709-8.854-18.851 0L29.782 199.732h131.961L105.187 24.926zm56.556 174.806L256 493.714l94.257-293.982H161.743zm349.324 87.974l-28.849-87.974L256 493.714l247.926-184.015c6.855-5.142 9.711-13.996 7.141-21.993zm-85.404-262.78c-3.142-8.854-15.709-8.854-18.851 0l-56.555 174.806h131.961L425.663 24.926z"></path></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/hugobelin/" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://stackoverflow.com/users/747572/hugobelin" target="_blank" class="stackoverflow ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Stack Overflow link" rel="noopener" aria-label="follow on Stack Overflow——Opens in a new window">
+      
+        <span class="icon"><svg
+    style="enable-background:new 0 0 67 67;"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    
+>
+    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.869 5.903l3.114 4.567-.975.665-3.115-4.567.976-.665zm-2.812 2.585l4.84 2.838-.6 1.017-4.842-2.838.602-1.017zm-1.276 2.724l5.413 1.521-.291 1.077-5.428-1.458.306-1.14zm-.588 2.461l5.687.569-.103 1.12-5.691-.513.107-1.176zm-.169 2.16h5.835v1.167h-5.835v-1.167zm7.976 3.167h-10v-6h1v5h8v-5h1v6zm.195-8.602l-.945-5.446 1.162-.202.947 5.446-1.164.202z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div></div>
+  </div>
+</footer>
+
+    
+  </body>
+</html>

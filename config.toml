@@ -1,0 +1,70 @@
+baseURL = "https://hugobelin.com/"
+languageCode = "en-us"
+title = "Hugo Belin"
+theme = "ananke"
+
+MetaDataFormat = "yaml"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+SectionPagesMenu = "main"
+Paginate = 15 # this is set low for demonstrating with dummy content. Set to a higher number
+googleAnalytics = "UA-85767008-2"
+enableRobotsTXT = true
+enableEmoji = true
+disqusShortname = "hugobelin"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[languages]
+  [languages.en]
+    [languages.en.params]
+      description = "Personal Website"
+  [languages.es]
+    [languages.es.params]
+      description = "Personal Website"
+
+[params]
+  useGenericGdpr = false
+  googleAnalytics = "UA-85767008-2"
+  favicon = "images/favicon.ico"
+  facebook = "https://www.facebook.com/hobelinm4"
+  twitter = "https://twitter.com/hugobelinm"
+  instagram = "https://www.instagram.com/darth.oguh/"
+  youtube = "https://www.youtube.com/channel/UCGXUuZrYZxwHVQSNWDc44-w/"
+  github = "https://github.com/hobelinm"
+  gitlab = "https://gitlab.com/hobelinm"
+  linkedin = "https://www.linkedin.com/in/hugobelin/"
+  mastodon = ""
+  slack = ""
+  stackoverflow = "https://stackoverflow.com/users/747572/hugobelin"
+  logo = "/images/emp.jpg"
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  background_color_class = "bg-black"
+  featured_image = "/images/emp.jpg"
+  recent_posts_number = 15
+  #mainSections = ["software", "uncategorized", "site"]
+  env = "production"
+  theme_color = '0, 117, 178'
+  #link_hover = '#EFFF00' # yellow
+  #link_hover = '#C00000' # dark red
+  #link_hover = '#DE1F1F' # red
+  #link_hover = '#007bff' # blue
+  link_hover = '#00802B' # green
+  siteRef = "hugobelin.com"
+  fbAppId = "636890196944822"
+  fbTokenId = "17b874bd11a90bf04332b10b5c45dc9f"
+  telemetryUrl = "https://us-central1-hugobelin-com.cloudfunctions.net/productionLogger"
+  telemetryVizId = "viz1613344044841"
+  telemetryVizPre = "Hu"
+  telemetryVizName = "HugoBelin_com-ProductionTelemetry"
+  telemetryVizView = "Telemetry"
+  statsUrl = "https://us-central1-hugobelin-com.cloudfunctions.net/stats"
+  siteEnv = "production"
+  referral = "https://brewingcats.com"
+  useFooterStats = "true"
+  useFooterReferral = "true"
+  siteVersion = "3.19.27"
+  siteRelease = "Han Solo"

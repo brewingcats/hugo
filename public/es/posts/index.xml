@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Hugo Belin</title>
+    <link>https://hugobelin.com/es/posts/</link>
+    <description>Recent content in Posts on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jun 2020 23:03:06 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Currículum</title>
+      <link>https://hugobelin.com/es/posts/resume/</link>
+      <pubDate>Wed, 28 Apr 2021 21:04:23 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/resume/</guid>
+      <description>Todos somos una obra de arte en progreso. Todos somos capaces de lograr grandes cosas. Y como tal mi objetivo es crear software excelente que cree experiencias deleitables para los usuarios finales. Soy un Ingeniero de Software basado en el área de Seattle, puede conocer mas acerca de mi experiencia profesional en mi Perfil de LinkedIn . De vez en cuando contribuyo con Vizzes en Tableau Public , este sitio web y algunos otros (como BrewingCats ) que mantengo se encuentran hosteados en GitLab o en GitHub Visualización de Tableau de Mi Experiencia Profesional      var divElement = document.</description>
+    </item>
+    
+    <item>
+      <title>Instagram</title>
+      <link>https://hugobelin.com/es/posts/instagram/</link>
+      <pubDate>Tue, 14 Jan 2020 12:52:28 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/instagram/</guid>
+      <description>Este plugin ha sido deshabilitado
+Instagram-Articulo-Embebido
+window.AutoInstagram.Control.Initialize(&#34;636890196944822&#34;, &#34;17b874bd11a90bf04332b10b5c45dc9f&#34;); if (window.AutoInstagram.Control.LoadFromParam() === &#39;&#39;) { window.AutoInstagram.Control.QueryAndAddInstagramPost( &#39;CDqPPKxp1cT&#39;, &#34;Instagram-Articulo-Embebido&#34; ); } else { window.AutoInstagram.Control.QueryAndAddInstagramPost( window.AutoInstagram.Control.LoadFromParam(), &#34;Instagram-Articulo-Embebido&#34; ); } BrewingCatsCore.Logger.traceInfo( `AutoInstagram Component`, &#39;component.autoinstagram&#39;, &#39;tagId_a&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AutoInstagram&#39; } );  </description>
+    </item>
+    
+  </channel>
+</rss>

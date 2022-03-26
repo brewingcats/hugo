@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>software on Hugo Belin</title>
+    <link>https://hugobelin.com/categories/software/</link>
+    <description>Recent content in software on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Aug 2020 14:51:46 -0700</lastBuildDate><atom:link href="https://hugobelin.com/categories/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to make your own Photo Viz</title>
+      <link>https://hugobelin.com/posts/categories/software/photoviz/</link>
+      <pubDate>Sat, 08 Aug 2020 14:51:46 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/software/photoviz/</guid>
+      <description>$(document).ready(() = { window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); });   Table of Contents     Dust off your photo archive and put it to work! In this post I&amp;rsquo;m going to show you how to take your photos into a basic Tableau dashboard that will have them located in a map. This map will show where those photos were taken allowing you to group them and see significant events by location and optionally over time</description>
+    </item>
+    
+  </channel>
+</rss>

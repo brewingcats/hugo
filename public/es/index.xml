@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo Belin</title>
+    <link>https://hugobelin.com/es/</link>
+    <description>Recent content on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 17 Jun 2020 22:33:08 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Árbol de Enlaces</title>
+      <link>https://hugobelin.com/es/posts/site/linktree/</link>
+      <pubDate>Tue, 07 Sep 2021 20:40:17 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/linktree/</guid>
+      <description>Lista de Contenido Promovido  Juego de Lotería Mexicana en NFT   Juego de Lotería Mexicana en NFT creado usando pixel art  Leer más      Colección de Caminatas   Dashboard de Tableau contiene mi colección de caminatas con imágenes que pueden ser vistas a través del tiempo  Leer más      Colección de Imagenes   Todas mis fotos en un mapa.</description>
+    </item>
+    
+    <item>
+      <title>Currículum</title>
+      <link>https://hugobelin.com/es/posts/resume/</link>
+      <pubDate>Wed, 28 Apr 2021 21:04:23 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/resume/</guid>
+      <description>Todos somos una obra de arte en progreso. Todos somos capaces de lograr grandes cosas. Y como tal mi objetivo es crear software excelente que cree experiencias deleitables para los usuarios finales. Soy un Ingeniero de Software basado en el área de Seattle, puede conocer mas acerca de mi experiencia profesional en mi Perfil de LinkedIn . De vez en cuando contribuyo con Vizzes en Tableau Public , este sitio web y algunos otros (como BrewingCats ) que mantengo se encuentran hosteados en GitLab o en GitHub Visualización de Tableau de Mi Experiencia Profesional      var divElement = document.</description>
+    </item>
+    
+    <item>
+      <title>Mi Lectura Reciente</title>
+      <link>https://hugobelin.com/es/posts/categories/uncategorized/tweets/</link>
+      <pubDate>Sat, 24 Apr 2021 00:07:53 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/uncategorized/tweets/</guid>
+      <description> Tweets by hugobelinm   Créditos de la Imagen: Unsplash: Road Trip with Raj imagen de @roadtripwithraj    Volver al Comienzo   function invokeScrollToTop() { BrewingCatsCore.Logger.traceInfo( `Scrolling to top`, &#39;ScrollToTop&#39;, &#39;tagId_13&#39;, &#39;ComponentInteraction&#39;, { &#39;url&#39;: window.location.href, } ); BrewingCatsCore.Util.scrollToTop(); }   Site Views: 0  Page Views: 0  Your Site Views: 0  Your Page Views: 0   </description>
+    </item>
+    
+    <item>
+      <title>Telemetría</title>
+      <link>https://hugobelin.com/es/posts/site/telemetry/</link>
+      <pubDate>Sat, 13 Feb 2021 17:29:42 -0800</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/telemetry/</guid>
+      <description>La mayoría si no es que todos los sitios web usan alguna forma de telemetría. Desde la creación de este sitio web he tenido planes de añadir telemetría. Muchos sitios sin embargo, recoleccionan datos no solo con el propósito de mejorar el sitio, detectar problemas de usabilidad, o con la finalidad de mejorarlo; muchos sitios venden esta información y la usan para otros propósitos. Dado que mi intención se limita a mejorar este sitio he tomado algunos pasos para asegurar que el manejo de la información es transparente</description>
+    </item>
+    
+    <item>
+      <title>Como Crear Tu Propio Foto Viz</title>
+      <link>https://hugobelin.com/es/posts/categories/software/photoviz/</link>
+      <pubDate>Sat, 08 Aug 2020 14:51:56 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/software/photoviz/</guid>
+      <description>$(document).ready(() = { window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); });   Tabla de Contenidos     Desempolva ese archivo de fotos y ponlas a trabajar! En este artículo voy a mostrar como poner tus fotos en un dashboard básico de Tableau que las mostrará en un mapa. Este mapa mostrará donde fueron tomadas esas fotos permitiéndote agruparlas y ver eventos significativos en un lugar dado y opcionalmente en función del tiempo</description>
+    </item>
+    
+    <item>
+      <title>Colección de Caminatas</title>
+      <link>https://hugobelin.com/es/posts/categories/travel/hikecollection/</link>
+      <pubDate>Fri, 24 Jul 2020 20:48:59 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/travel/hikecollection/</guid>
+      <description>El mapa mostrado abajo tiene los lugares de mis caminatas documentadas (de acuerdo a mi archivo de fotos). Planeo actualizar el mapa conforme hago más caminatas, así que no olvide regresar a este artículo de vez en cuando para ver nuevo contenido. El dashboard de Tableau muestra el lugar, fecha y título de cada caminata
+     var divElement = document.getElementById(&#39;viz1595830498772&#39;); var vizElement = divElement.getElementsByTagName(&#39;object&#39;)[0]; if ( divElement.</description>
+    </item>
+    
+    <item>
+      <title>Colección de Imagenes</title>
+      <link>https://hugobelin.com/es/posts/categories/travel/photocollection/</link>
+      <pubDate>Fri, 17 Jul 2020 23:39:22 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/travel/photocollection/</guid>
+      <description>Este artículo contiene un resumen de mi colección de fotos las cuales he utilizado en otros artículos en mi sitio, mientras que los artículos individuales muestran porciones más pequeñas de terreno lo que los hace más conveniente para interactuar con el viz. Tener todas las fotos en un solo lugar sin embargo, permite ver todos los lugares en los que he estado y me permite traer memorias y recuerdos de nuevo 😃</description>
+    </item>
+    
+    <item>
+      <title>2019 Faro de Mukilteo y Diablo Lake</title>
+      <link>https://hugobelin.com/es/posts/categories/travel/2019mukilteodiablolake/</link>
+      <pubDate>Fri, 10 Jul 2020 14:16:31 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/travel/2019mukilteodiablolake/</guid>
+      <description>Comenzando el fin de semana el 27 de Julio decidimos visitar el Faro de Mukilteo. Sorprendentemente después de vivir varios años en la región nunca nos habíamos visitado este faro así que decidimos ir a conocer y ver como está
+ Vista Principal desde el Faro, Ferry al fondo
+  BrewingCatsCore.Logger.traceInfo( `Unsplash Component`, &#39;component.unsplash&#39;, &#39;tagId_m&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;Unsplash&#39;, &#39;imageId&#39;: &#39;hi-6URE4bqA&#39; } );     Faro y Ferry de Mukilteo</description>
+    </item>
+    
+    <item>
+      <title>Viaje a San Diego 2019</title>
+      <link>https://hugobelin.com/es/posts/categories/travel/2019sandiego/</link>
+      <pubDate>Mon, 29 Jun 2020 20:24:41 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/travel/2019sandiego/</guid>
+      <description>Para un viaje sencillo y corto, San Diego. Una buena oportunidad para conocer un gran lugar de EUA. Saliendo temprano en Sábado tuvimos la oportunidad de pasar la última parte de la mañana en San Diego, en una caminata inicial pudimos conocer: el centro de San Diego y las cercanías de Gaslamp Quarter
+ Vista inicial del centro de San Diego
+ El primer pensamiento que vino a mi mente sobre la ciudad fue que &amp;rsquo;es un lugar donde lo antiguo y lo moderno coexisten&amp;rsquo;, idea misma que reforcé durante el viaje&amp;hellip; construcciones modernas y antiguas juntas una y otra vez.</description>
+    </item>
+    
+    <item>
+      <title>Estado de los Video Juegos</title>
+      <link>https://hugobelin.com/es/posts/categories/gaming/stateofplay/</link>
+      <pubDate>Mon, 29 Jun 2020 15:42:10 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/gaming/stateofplay/</guid>
+      <description>En la tabla de abajo puedes ver los juegos que estoy jugando, los juegos que he terminado, los juegos que jugaré más adelante, así como los juegos que estoy considerando en jugar. En un futuro pondre enlaces a artículos de opinión para distintos juegos 🎮
+
+  BrewingCatsCore.Logger.traceInfo( `AirTable Component`, &#39;component.airtable&#39;, &#39;tagId_10&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AirTable&#39;, &#39;tableId&#39;: &#39;shrhxkYyy8rmrF5Q2&#39; } ); 
+
+Gamer Card  DarthOguh Xbox: DarthOguh PlayStation: HugoBelin Nintendo: darthoguh Steam: DarthOguh Twitter, Instagram, Website</description>
+    </item>
+    
+    <item>
+      <title>Brewing Cats Core</title>
+      <link>https://hugobelin.com/es/posts/site/brewingcatscore/</link>
+      <pubDate>Thu, 25 Jun 2020 22:19:47 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/brewingcatscore/</guid>
+      <description>Este sitio web es creado a partir de una librería central usada por otros sitios. Contiene características y funcionalidad especifica que hacen de HugoBelin.com un mejor sitio. Brewing Cats Core es la librería que aumenta la funcionalidad base del Tema Ananke que funciona con Hugo framework
+Este artículo muestra el trabajo completado asi como la funcionalidad en la que estamos trabajando. Los detalles se pueden ver en la siguiente tabla de Trello:</description>
+    </item>
+    
+    <item>
+      <title>Planeación del Sitio</title>
+      <link>https://hugobelin.com/es/posts/site/roadmap/</link>
+      <pubDate>Wed, 24 Jun 2020 21:15:45 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/roadmap/</guid>
+      <description>Este sitio es una versión derivada del sitio que compone Brewing Cats (mi compañía) utilizando una librería que llamo Brewing Cats Core (puedes ver los planes del proyecto aquí ). Como tal este sitio tiene sus propios planes, mismos que se muestran abajo:
+    $(&#39;article&#39;).css(&#39;max-width&#39;, &#39;100%&#39;);    BrewingCatsCore.Logger.traceInfo( `Trello Component`, &#39;component.trello&#39;, &#39;tagId_l&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;Trello&#39;, &#39;boardId&#39;: &#39;dGtZpxVf&#39; } );   Trabajo Completado   BrewingCatsCore.</description>
+    </item>
+    
+    <item>
+      <title>Créditos</title>
+      <link>https://hugobelin.com/es/posts/site/credits/</link>
+      <pubDate>Wed, 24 Jun 2020 18:00:29 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/credits/</guid>
+      <description>Este artículo fue creado para reconocer la labor y el duro trabajo de los muchos desarrolladores que han hecho posible este sitio. Desde hosting de sitios web, hasta librerías, todas las reconocemos aquí:
+Hosting, Librerías, Frameworks y otras Tecnologías   BrewingCatsCore.Logger.traceInfo( `AirTable Component`, &#39;component.airtable&#39;, &#39;tagId_10&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AirTable&#39;, &#39;tableId&#39;: &#39;shraGTO9M4qs0Th5v&#39; } );  
+ Créditos de la Imagen: Unsplash: Tarjeta de Circuitos imagen de @harrisonbroadbent    Créditos de la Imagen: Página Principal.</description>
+    </item>
+    
+    <item>
+      <title>Acerca de</title>
+      <link>https://hugobelin.com/es/posts/site/about/</link>
+      <pubDate>Fri, 19 Jun 2020 22:58:06 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/about/</guid>
+      <description>Mi nombre es Hugo Belin y este es mi sitio web personal. Si buscas mi currículum y experiencia profesional la podrás encontrar en mi Currículum Solo otro ser humano en este planeta que busca dejarlo en mejor estado 
+Esta es mi huella en internet:
+  Facebook   Twitter   Instagram   Snapchat   Reddit   Tableau Public   LinkedIn   También soy dueño de, y mantengo BrewingCats como proyecto personal.</description>
+    </item>
+    
+    <item>
+      <title>Bitácora de Cambios</title>
+      <link>https://hugobelin.com/es/posts/site/changelog/</link>
+      <pubDate>Fri, 19 Jun 2020 21:23:24 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/changelog/</guid>
+      <description>Este artículo presenta una lista de cambios hechos al sitio web, tiene como objetivo llevar control del mismo
+
+Version: 3.19.27 Release: Han Solo
+ Políticas de Versión Mayor.Menor.Incremento  | | |_______ Versión de Brewing Cats Core  | |_____________ Nueva funcionalidad  |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)
+ Convención de Nombres de Proyecto Los nombres de proyecto se toman de:
+  Lista de personajes de Star Wars posteriormente:  Lista de personajes legendarios de Star Wars posteriormente:  Lista de personajes de la Rebelión de Star Wars posteriormente:  Personajes de Star Wars: Caballeros de la Vieja República posteriormente:  Miembros del elenco de Star Wars posteriormente:  Miembros del elenco de Star Wars: La Batalla de los Clones   El Código de Proyecto será presentado de la siguiente forma:</description>
+    </item>
+    
+    <item>
+      <title>Política de Uso</title>
+      <link>https://hugobelin.com/es/posts/site/policy/</link>
+      <pubDate>Sun, 31 May 2020 17:34:44 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/site/policy/</guid>
+      <description>Política de Uso Creemos en hacer el bien y no el mal. El uso de este sitio web implica que esta de acuerdo con los términos explicados abajo. Aclarado lo anterior Brewing Cats opera con cierta cantidad de información que se utilizada de diferentes formas para mejorar la funcionalidad del sitio web así como para permitir la interoperabilidad con otros sitios en la web. La información generada debida a su uso será utilizada de una forma justa y transparente, creemos que la información generada por un usuario dado puede ayudarnos a hacer este sitio web mejor, crear nuevas mejoras, optimizándolo, y permitiendo conocer inversiones clave.</description>
+    </item>
+    
+    <item>
+      <title>Instagram</title>
+      <link>https://hugobelin.com/es/posts/instagram/</link>
+      <pubDate>Tue, 14 Jan 2020 12:52:28 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/instagram/</guid>
+      <description>Este plugin ha sido deshabilitado
+Instagram-Articulo-Embebido
+window.AutoInstagram.Control.Initialize(&#34;636890196944822&#34;, &#34;17b874bd11a90bf04332b10b5c45dc9f&#34;); if (window.AutoInstagram.Control.LoadFromParam() === &#39;&#39;) { window.AutoInstagram.Control.QueryAndAddInstagramPost( &#39;CDqPPKxp1cT&#39;, &#34;Instagram-Articulo-Embebido&#34; ); } else { window.AutoInstagram.Control.QueryAndAddInstagramPost( window.AutoInstagram.Control.LoadFromParam(), &#34;Instagram-Articulo-Embebido&#34; ); } BrewingCatsCore.Logger.traceInfo( `AutoInstagram Component`, &#39;component.autoinstagram&#39;, &#39;tagId_a&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AutoInstagram&#39; } );  </description>
+    </item>
+    
+  </channel>
+</rss>

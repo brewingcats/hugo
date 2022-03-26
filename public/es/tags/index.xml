@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Hugo Belin</title>
+    <link>https://hugobelin.com/es/tags/</link>
+    <description>Recent content in Tags on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Sep 2021 20:40:17 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>site</title>
+      <link>https://hugobelin.com/es/tags/site/</link>
+      <pubDate>Tue, 07 Sep 2021 20:40:17 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/tags/site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uncategorized</title>
+      <link>https://hugobelin.com/es/tags/uncategorized/</link>
+      <pubDate>Sat, 24 Apr 2021 00:07:53 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/tags/uncategorized/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software</title>
+      <link>https://hugobelin.com/es/tags/software/</link>
+      <pubDate>Sat, 08 Aug 2020 14:51:56 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>viajes</title>
+      <link>https://hugobelin.com/es/tags/viajes/</link>
+      <pubDate>Fri, 24 Jul 2020 20:48:59 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/tags/viajes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>videojuegos</title>
+      <link>https://hugobelin.com/es/tags/videojuegos/</link>
+      <pubDate>Mon, 29 Jun 2020 15:42:10 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/tags/videojuegos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sitio</title>
+      <link>https://hugobelin.com/es/tags/sitio/</link>
+      <pubDate>Thu, 25 Jun 2020 22:19:47 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/tags/sitio/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

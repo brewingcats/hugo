@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gaming on Hugo Belin</title>
+    <link>https://hugobelin.com/categories/gaming/</link>
+    <description>Recent content in gaming on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 29 Jun 2020 15:42:08 -0700</lastBuildDate><atom:link href="https://hugobelin.com/categories/gaming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>State of Play</title>
+      <link>https://hugobelin.com/posts/categories/gaming/stateofplay/</link>
+      <pubDate>Mon, 29 Jun 2020 15:42:08 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/gaming/stateofplay/</guid>
+      <description>In the table below I&amp;rsquo;m showing the games I&amp;rsquo;m currently playing, the games I&amp;rsquo;ve finished, the games I will be playing, as well as the games I&amp;rsquo;m considering. In the future I will add links to reviews to those games 🎮
+
+  BrewingCatsCore.Logger.traceInfo( `AirTable Component`, &#39;component.airtable&#39;, &#39;tagId_10&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AirTable&#39;, &#39;tableId&#39;: &#39;shrhxkYyy8rmrF5Q2&#39; } ); 
+
+Gamer Card  DarthOguh Xbox: DarthOguh PlayStation: HugoBelin Nintendo: darthoguh Steam: DarthOguh Twitter, Instagram, Website</description>
+    </item>
+    
+  </channel>
+</rss>
