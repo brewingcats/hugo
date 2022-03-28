@@ -22,7 +22,7 @@
       <pubDate>Wed, 28 Apr 2021 21:04:15 -0700</pubDate>
       
       <guid>https://hugobelin.com/posts/resume/</guid>
-      <description>We are all a masterpiece in progress. We are all capable of great things. As such I strive to create excellent software that creates delightful experiences for end users. I am a Software Engineer based on the Seatle Area, you can find out more about my career history in my LinkedIn Profile . Every now and then I contribute with Vizzes to Tableau Public , this website as well as few others (such as BrewingCats ) that I maintain are hosted in GitLab or in GitHub Tableau Visualization of My Work History      var divElement = document.</description>
+      <description>We are all a masterpiece in progress. We are all capable of great things. As such I strive to create excellent software that creates delightful experiences for end users. I am a Software Engineer based on the Seatle Area, you can find out more about my career history in my LinkedIn Profile . Every now and then I contribute with Vizzes to Tableau Public , this website as well as few others (such as BrewingCats ) that I maintain are hosted in GitHub (here my profile ) or in GitLab .</description>
     </item>
     
     <item>
@@ -86,7 +86,7 @@ This is my internet footprint:
       <guid>https://hugobelin.com/posts/site/changelog/</guid>
       <description>This post contains a list of the changes made to the website, it is used for tracking purposes
 
-Version: 3.19.27 Release: Han Solo
+Version: 3.20.27 Release: Han Solo
  Versioning Policies Major.Minor.Build  | | |_______ Brewing Cats Core Version  | |_____________ New features  |___________________ Official new releases (Tied to a Release name)
  Milestone Naming Conventions Milestone names are taken from:
   List of Star Wars characters then:  Star Wars Legends characters then:  Star Wars Rebels characters then:  Star Wars: Knights of the Old Republic characters then:  Star Wars cast members then:  Star Wars: The Clone Wars cast members   Release milestone would look like:</description>
