@@ -1,7 +1,7 @@
 ---
 title: "Movies"
 date: 2020-06-17T23:05:25-07:00
-draft: false
+draft: true
 author: Hugo Belin
 featured_image: '/images/cinema.jpg'
 type: section

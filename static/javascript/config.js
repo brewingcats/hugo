@@ -2,8 +2,9 @@ var BrewingCatsCore;
 (function (BrewingCatsCore) {
     class Config {
     }
-    Config.Version = '1.12';
+    Config.Version = '1.13';
     Config.SiteVersion = '';
+    Config.ProjectId = '';
     Config.TelemetryEnabled = true;
     Config.ClientId = '';
     Config.SessionId = '';

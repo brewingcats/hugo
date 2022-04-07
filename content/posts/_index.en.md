@@ -13,7 +13,7 @@ Overall structure of my website, check out our sections below to see related pos
   {{< card "/images/sections.jpg" "site" "Site" "Overall structure of my website" >}}
   {{< card "/images/leo01.jpg" "categories" "Categories" "Website categories" >}}
   {{< card "/images/controller.jpg" "categories/gaming" "Gaming" "General ideas, posts, reviews, and projects about video games" >}}
-  {{< card "/images/cinema.jpg" "categories/movies" "Movies" "Opinions, thoughts, and some other ideas on movies" >}}
+  <!--{{< card "/images/cinema.jpg" "categories/movies" "Movies" "Opinions, thoughts, and some other ideas on movies" >}}-->
   {{< card "/images/software.jpg" "categories/software" "Software" "Software developer doing software related things" >}}
   {{< card "/images/travel.jpg" "categories/travel" "Travel" "Tales of my Trips" >}}
   {{< card "/images/dreamer.jpg" "categories/uncategorized" "Uncategorized" "Posts that do not belong to a specific category" >}}

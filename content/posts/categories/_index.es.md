@@ -13,7 +13,7 @@ Categorías de mi sitio web:
 
 {{< cards >}}
   {{< card "/images/controller.jpg" "gaming" "Video Juegos" "Ideas generales, artículos, opinión y proyectos sobre video juegos" >}}
-  {{< card "/images/cinema.jpg" "movies" "Películas" "Opiniones e ideas sobre películas" >}}
+  <!--{{< card "/images/cinema.jpg" "movies" "Películas" "Opiniones e ideas sobre películas" >}}-->
   {{< card "/images/software.jpg" "software" "Software" "Solo un desarrollador de software haciendo software" >}}
   {{< card "/images/travel.jpg" "travel" "Viajes" "Historias de mis Viajes" >}}
   {{< card "/images/dreamer.jpg" "uncategorized" "Sin Categoría" "Artículos sin Categoría" >}}

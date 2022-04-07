@@ -54,6 +54,7 @@ var BrewingCatsCore;
             }
             metrics['SessionId'] = BrewingCatsCore.Config.SessionId;
             metrics['ClientId'] = BrewingCatsCore.Config.ClientId;
+            metrics['ProjectId'] = BrewingCatsCore.Config.ProjectId;
             let idx = `${timestamp.toISOString().split('-')[0]}${timestamp.toISOString().split('-')[1]}`;
             let log = {
                 timestamp: timestamp.getTime(),
