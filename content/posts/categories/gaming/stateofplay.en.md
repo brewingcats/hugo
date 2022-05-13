@@ -14,7 +14,7 @@ lang: en
 In the future I will add links to reviews to those games 🎮
 
 {{< break >}}
-{{< airtable "shrhxkYyy8rmrF5Q2" "green" >}}
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_sugGZ?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< break >}}
 {{< head 3 "Gamer Card" >}}

@@ -13,10 +13,7 @@ lang: en
 
 {{< big T  >}}his post contains a list of the changes made to the website, it is used for tracking purposes
 
-{{< break >}}
-{{< highlight bash >}}
-{{< version >}}
-{{< /highlight >}}
+{{< libversion >}}
 
 {{< head 3 "Versioning Policies" >}}
 {{< highlight bash >}}
@@ -57,11 +54,11 @@ Release milestone would look like:
 
 {{< head 2 "Change Log" >}}
 
-{{< airtable shrVBUJ6PFAFzjjVR blue 800 >}}
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_suBMe?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< head 2 "Brewing Cats Associated Changes" >}}
 
-{{< airtable shrWQhQXmYlzI3bdF purple 800 >}}
+{{< iframe src="https://coda.io/embed/bNNCG5bcPs/_suyO9?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 Follow {{< link "https://brewingcats.com/posts/site/changelog/" "Brewing Cats Changes">}} for details about core codebase
 

@@ -14,7 +14,7 @@ lang: es
 estoy considerando en jugar. En un futuro pondre enlaces a artículos de opinión para distintos juegos 🎮
 
 {{< break >}}
-{{< airtable "shrhxkYyy8rmrF5Q2" "green" >}}
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_sugGZ?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< break >}}
 {{< head 3 "Gamer Card" >}}

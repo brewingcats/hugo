@@ -32,8 +32,8 @@
       
       <guid>https://hugobelin.com/posts/site/brewingcatscore/</guid>
       <description>This website is created over a common core which is used for other websites. It packs specific features and functionality that make HugoBelin.com a better site. Brewing Cats Core augments the base functionality from the Ananke Theme which is built using Hugo framework
-This post showcases the completed work as well as the upcoming features. These can be tracked in the following Trello board:
-   $(&#39;article&#39;).css(&#39;max-width&#39;, &#39;100%&#39;);    BrewingCatsCore.</description>
+This post showcases the completed work as well as the upcoming features. These can be tracked in the following Coda board:
+Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.</description>
     </item>
     
     <item>
@@ -42,8 +42,8 @@ This post showcases the completed work as well as the upcoming features. These c
       <pubDate>Wed, 24 Jun 2020 21:15:42 -0700</pubDate>
       
       <guid>https://hugobelin.com/posts/site/roadmap/</guid>
-      <description>This website is a forked version built by Brewing Cats (my own company) using something I call Brewing Cats Core (you can see its roadmap here ). As such this website has it&amp;rsquo;s own plans, those are outlined below:
-    $(&#39;article&#39;).css(&#39;max-width&#39;, &#39;100%&#39;);    BrewingCatsCore.Logger.traceInfo( `Trello Component`, &#39;component.trello&#39;, &#39;tagId_l&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;Trello&#39;, &#39;boardId&#39;: &#39;dGtZpxVf&#39; } );   Completed Work Items   BrewingCatsCore.Logger.traceInfo( `AirTable Component`, &#39;component.</description>
+      <description>This website is a forked version built by Brewing Cats (my own company) using a set of reusable components (both code libraries, services, and content) that I call Brewing Cats Core. My website as well as the core component roadmaps are shown below:
+ Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.split(&#39;;&#39;); for (let i = 0; i  BrewingCatsCore.Logger.traceInfo( `iframe Component`, &#39;component.iframe&#39;, &#39;tagId_15&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;iframe&#39;, &#39;src&#39;: &#39;https:\/\/coda.</description>
     </item>
     
     <item>
@@ -53,8 +53,8 @@ This post showcases the completed work as well as the upcoming features. These c
       
       <guid>https://hugobelin.com/posts/site/credits/</guid>
       <description>This post was created to recognize the hard work of the many developers that made this site possible thus far. From hosting, to frameworks, they&amp;rsquo;re recognized here:
-Hosting, Libraries, Frameworks and other Technologies   BrewingCatsCore.Logger.traceInfo( `AirTable Component`, &#39;component.airtable&#39;, &#39;tagId_10&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AirTable&#39;, &#39;tableId&#39;: &#39;shraGTO9M4qs0Th5v&#39; } );  
- Image Credits: Unsplash: Circuit Board image by @harrisonbroadbent    Image Credits: Main Page. Unsplash: EMP Museum image by @sakulich    Site Views: 0  Page Views: 0  Your Site Views: 0  Your Page Views: 0   </description>
+Hosting, Libraries, Frameworks and other Technologies Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.split(&#39;;&#39;); for (let i = 0; i  BrewingCatsCore.Logger.traceInfo( `iframe Component`, &#39;component.iframe&#39;, &#39;tagId_15&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;iframe&#39;, &#39;src&#39;: &#39;https:\/\/coda.io\/embed\/bNNCG5bcPs\/_suqXw?viewMode=embedplay\u0026hideSections=true&#39; } );  
+ Image Credits: Unsplash: Circuit Board image by @harrisonbroadbent    Image Credits: Main Page.</description>
     </item>
     
     <item>
@@ -76,11 +76,7 @@ This is my internet footprint:
       
       <guid>https://hugobelin.com/posts/site/changelog/</guid>
       <description>This post contains a list of the changes made to the website, it is used for tracking purposes
-
-Version: 3.21.28 Release: Han Solo
- Versioning Policies Major.Minor.Build  | | |_______ Brewing Cats Core Version  | |_____________ New features  |___________________ Official new releases (Tied to a Release name)
- Milestone Naming Conventions Milestone names are taken from:
-  List of Star Wars characters then:  Star Wars Legends characters then:  Star Wars Rebels characters then:  Star Wars: Knights of the Old Republic characters then:  Star Wars cast members then:  Star Wars: The Clone Wars cast members   Release milestone would look like:</description>
+  Website Version Core Library Version Release Name     4.22.30          Ben Solo         (() = { document.querySelector(&#34;.af5c8015bf1304c8e87c44b7cce4bc0c3&#34;).innerHTML = `${BrewingCatsCore.Config.Version}`; })();   Versioning Policies Major.Minor.Build  | | |_______ Brewing Cats Core Version  | |_____________ New features  |___________________ Official new releases (Tied to a Release name)</description>
     </item>
     
     <item>

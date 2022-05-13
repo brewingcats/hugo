@@ -13,11 +13,7 @@ lang: es
 
 {{< big E >}}ste artículo presenta una lista de cambios hechos al sitio web, tiene como objetivo llevar control del mismo
 
-
-{{< break >}}
-{{< highlight bash >}}
-{{< version >}}
-{{< /highlight >}}
+{{< libversion >}}
 
 {{< head 3 "Políticas de Versión" >}}
 {{< highlight bash >}}
@@ -59,11 +55,11 @@ El Código de Proyecto será presentado de la siguiente forma:
 
 {{< head 2 "Lista de Cambios" >}}
 
-{{< airtable shrVBUJ6PFAFzjjVR blue 800 >}}
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_suBMe?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< head 2 "Cambios Asociados de Brewing Cats" >}}
 
-{{< airtable shrWQhQXmYlzI3bdF purple 800 >}}
+{{< iframe src="https://coda.io/embed/bNNCG5bcPs/_suyO9?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 Sigue los {{< link "https://brewingcats.com/posts/site/changelog/" "cambios de Brewing Cats">}} para más detalles del código compartido
 

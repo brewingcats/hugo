@@ -7,10 +7,12 @@
     <title>Hugo Belin | Hugo Belin</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Personal Website">
-    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Hugo 0.98.0" />
     
     
-      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    
+    
+      <meta name="robots" content="index, follow">
     
 
     
@@ -18,7 +20,8 @@
 
 
 
-
+    
+    
     
       
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
@@ -75,15 +78,10 @@ if (!doNotTrack) {
       gtag('config', 'UA-85767008-2');
     </script>
     
-    <script type='text/javascript' src="/javascript/autoinstagram.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/headparser.js#3.21.28" ></script>
+    <script type='text/javascript' src="/javascript/autoinstagram.js#4.22.30" ></script>
+    <script type='text/javascript' src="/javascript/headparser.js#4.22.30" ></script>
     
-    <script type='text/javascript' src="/javascript/config.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/interfaces.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/util.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/logger.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/gdpr.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/control.js#3.21.28" ></script> 
+    <script type='text/javascript' src="/javascript/bcats.js#4.22.30" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -95,10 +93,11 @@ if (!doNotTrack) {
       BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
       BrewingCatsCore.Config.LinkHoverColor = '#00802B';
       BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '3.21.28';
+      BrewingCatsCore.Config.SiteVersion = '4.22.30';
+      BrewingCatsCore.Config.StatsMode = 'Stats2';
       
       BrewingCatsCore.Control.Init();
-      let version = '3.21.28';
+      let version = '4.22.30';
       let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
       let timeZoneMsg = `UTC+${timeZone}`;
       if (timeZone < 0) {
@@ -121,7 +120,7 @@ if (!doNotTrack) {
 
       BrewingCatsCore.Control.UpdateStats((stats) => {
         BrewingCatsCore.Logger.traceInfo(
-          `Loading: ${window.location.href}`,
+          `Stats for: ${window.location.href}`,
           'document.body',
           'tagId_12',
           'Bootstrap',
@@ -278,6 +277,7 @@ if (!doNotTrack) {
 </span></a>
   
 </div>
+
     </div>
   </div>
 </nav>
@@ -294,7 +294,7 @@ if (!doNotTrack) {
 
     <main class="pb7" role="main">
       
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
+ <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
     <p><em>Sitio Web Personal</em></p>
 
   </article>
@@ -311,7 +311,7 @@ if (!doNotTrack) {
     <div class="pa3 pa4-ns w-100 w-70-ns center">
       
        
-          <h1 class="flex-none text-center">
+          <h1 class="flex-none">
             Posts recientes
           </h1>
         
@@ -744,13 +744,13 @@ if (!doNotTrack) {
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://hugobelin.com/es/posts/site/policy/" class="link black dim">
+            <a href="/es/posts/site/policy/" class="link black dim">
               Política de Uso
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="https://hugobelin.com/es/posts/instagram/" class="link black dim">
+            <a href="/es/posts/instagram/" class="link black dim">
               Instagram
             </a>
           </h2>
@@ -758,7 +758,7 @@ if (!doNotTrack) {
 
         
         
-          <a href="https://hugobelin.com/es/posts/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">Todos los Posts</a>
+          <a href="/es/posts/" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">Todos los Posts</a>
         
         </section>
       
@@ -811,7 +811,7 @@ if (!doNotTrack) {
             style="color: rgb(200, 200, 200); box-shadow: rgb(255, 153, 0) 0px -4px 0px inset; text-decoration: none; " 
             onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
             onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BCats</a>
-          Version: 3.21.28 Release: Han Solo Site Views: <span tag-id="site-page-views-footer">0</span>
+          Version: 4.22.30 Release: Ben Solo Site Views: <span tag-id="site-page-views-footer">0</span>
         </small>
         
       </code>
@@ -910,7 +910,8 @@ if (!doNotTrack) {
 </svg>
 </span></a>
   
-</div></div>
+</div>
+</div>
   </div>
 </footer>
 

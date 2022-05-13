@@ -16,7 +16,7 @@ hasta librerías, todas las reconocemos aquí:
 
 {{< head 3 "Hosting, Librerías, Frameworks y otras Tecnologías" >}}
 
-{{< airtable shraGTO9M4qs0Th5v purple >}}
+{{< iframe src="https://coda.io/embed/bNNCG5bcPs/_suqXw?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< break >}}
 {{< unsplash "RNqs_Ve8qAo" "harrisonbroadbent" "Unsplash: Tarjeta de Circuitos" >}}

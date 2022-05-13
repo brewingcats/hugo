@@ -16,9 +16,9 @@ lang: en
 {{< link "https://github.com/theNewDynamic/gohugo-theme-ananke" "Ananke Theme">}} which is built using 
 {{< link "https://gohugo.io/" "Hugo">}} framework
 
-This post showcases the completed work as well as the upcoming features. These can be tracked in the following Trello board:
+This post showcases the completed work as well as the upcoming features. These can be tracked in the following {{< link "https://coda.io/" "Coda" >}} board:
 
-{{< trello "xcEx1Xjz" >}}
+{{< iframe src="https://coda.io/embed/bNNCG5bcPs/_suz9c?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< scrolltop >}}
 {{< pageStats >}}

@@ -12,13 +12,13 @@ lang: es
 ---
 
 {{< big E >}}ste sitio web es creado a partir de una librería central usada por otros sitios. Contiene características y funcionalidad especifica que hacen de 
-[HugoBelin.com](https://hugobelin.com) un mejor sitio. Brewing Cats Core es la librería que aumenta la funcionalidad base del 
+{{< link "/" "HugoBelin.com" >}} un mejor sitio. Brewing Cats Core es la librería que aumenta la funcionalidad base del 
 {{< link "https://github.com/theNewDynamic/gohugo-theme-ananke" "Tema Ananke">}} que funciona con 
 {{< link "https://gohugo.io/" "Hugo">}} framework
 
-Este artículo muestra el trabajo completado asi como la funcionalidad en la que estamos trabajando. Los detalles se pueden ver en la siguiente tabla de Trello:
+Este artículo muestra el trabajo completado asi como la funcionalidad en la que estamos trabajando. Los detalles se pueden ver en la siguiente tabla de {{< link "https://coda.io/" "Coda" >}}:
 
-{{< trello "xcEx1Xjz" >}}
+{{< iframe src="https://coda.io/embed/bNNCG5bcPs/_suz9c?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< scrolltop >}}
 {{< pageStats >}}

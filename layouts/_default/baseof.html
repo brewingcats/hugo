@@ -9,14 +9,17 @@
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
     {{ hugo.Generator }}
     {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
-    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    {{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+    {{ $public := not .Params.private }}
+    {{ if and $production $public }}
+      <meta name="robots" content="index, follow">
     {{ else }}
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+      <meta name="robots" content="noindex, nofollow">
     {{ end }}
 
     {{ partial "site-style.html" . }}
-
+    {{ partial "site-scripts.html" . }}
+    
     {{ block "favicon" . }}
       {{ partialCached "site-favicon.html" . }}
     {{ end }}
@@ -58,12 +61,7 @@
     <script type='text/javascript' src="/javascript/autoinstagram.js#{{ .Site.Params.siteVersion }}" ></script>
     <script type='text/javascript' src="/javascript/headparser.js#{{ .Site.Params.siteVersion }}" ></script>
     <!-- Brewing Cats Core Libraries -->
-    <script type='text/javascript' src="/javascript/config.js#{{ .Site.Params.siteVersion }}" ></script>
-    <script type='text/javascript' src="/javascript/interfaces.js#{{ .Site.Params.siteVersion }}" ></script>
-    <script type='text/javascript' src="/javascript/util.js#{{ .Site.Params.siteVersion }}" ></script>
-    <script type='text/javascript' src="/javascript/logger.js#{{ .Site.Params.siteVersion }}" ></script>
-    <script type='text/javascript' src="/javascript/gdpr.js#{{ .Site.Params.siteVersion }}" ></script>
-    <script type='text/javascript' src="/javascript/control.js#{{ .Site.Params.siteVersion }}" ></script> 
+    <script type='text/javascript' src="/javascript/bcats.js#{{ .Site.Params.siteVersion }}" ></script>
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
@@ -76,6 +74,7 @@
       BrewingCatsCore.Config.LinkHoverColor = '{{ $.Page.Site.Params.link_hover }}';
       BrewingCatsCore.Config.UseGenericGdpr = '{{ $.Page.Site.Params.useGenericGdpr }}' === 'true';
       BrewingCatsCore.Config.SiteVersion = '{{ .Site.Params.siteVersion }}';
+      BrewingCatsCore.Config.StatsMode = 'Stats2';
       // Initialization happens here
       BrewingCatsCore.Control.Init();
       let version = '{{ .Site.Params.siteVersion }}';
@@ -101,7 +100,7 @@
 
       BrewingCatsCore.Control.UpdateStats((stats) => {
         BrewingCatsCore.Logger.traceInfo(
-          `Loading: ${window.location.href}`,
+          `Stats for: ${window.location.href}`,
           'document.body',
           'tagId_12',
           'Bootstrap',

@@ -7,10 +7,12 @@
     <title>Brewing Cats Core | Hugo Belin</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Este sitio fué construido utilizando una colección de componentes reusables, mísmos que son reusados en mis otros sitios y proyectos, puedes aprender respecto a esos aquí">
-    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Hugo 0.98.0" />
     
     
-      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    
+    
+      <meta name="robots" content="index, follow">
     
 
     
@@ -18,7 +20,8 @@
 
 
 
-
+    
+    
     
       
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
@@ -38,7 +41,7 @@
 <meta itemprop="name" content="Brewing Cats Core">
 <meta itemprop="description" content="Este sitio fué construido utilizando una colección de componentes reusables, mísmos que son reusados en mis otros sitios y proyectos, puedes aprender respecto a esos aquí"><meta itemprop="datePublished" content="2020-06-25T22:19:47-07:00" />
 <meta itemprop="dateModified" content="2020-06-25T22:19:47-07:00" />
-<meta itemprop="wordCount" content="121">
+<meta itemprop="wordCount" content="138">
 <meta itemprop="keywords" content="sitio," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Brewing Cats Core"/>
 <meta name="twitter:description" content="Este sitio fué construido utilizando una colección de componentes reusables, mísmos que son reusados en mis otros sitios y proyectos, puedes aprender respecto a esos aquí"/>
@@ -75,15 +78,10 @@ if (!doNotTrack) {
       gtag('config', 'UA-85767008-2');
     </script>
     
-    <script type='text/javascript' src="/javascript/autoinstagram.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/headparser.js#3.21.28" ></script>
+    <script type='text/javascript' src="/javascript/autoinstagram.js#4.22.30" ></script>
+    <script type='text/javascript' src="/javascript/headparser.js#4.22.30" ></script>
     
-    <script type='text/javascript' src="/javascript/config.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/interfaces.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/util.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/logger.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/gdpr.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/control.js#3.21.28" ></script> 
+    <script type='text/javascript' src="/javascript/bcats.js#4.22.30" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -95,10 +93,11 @@ if (!doNotTrack) {
       BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
       BrewingCatsCore.Config.LinkHoverColor = '#00802B';
       BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '3.21.28';
+      BrewingCatsCore.Config.SiteVersion = '4.22.30';
+      BrewingCatsCore.Config.StatsMode = 'Stats2';
       
       BrewingCatsCore.Control.Init();
-      let version = '3.21.28';
+      let version = '4.22.30';
       let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
       let timeZoneMsg = `UTC+${timeZone}`;
       if (timeZone < 0) {
@@ -121,7 +120,7 @@ if (!doNotTrack) {
 
       BrewingCatsCore.Control.UpdateStats((stats) => {
         BrewingCatsCore.Logger.traceInfo(
-          `Loading: ${window.location.href}`,
+          `Stats for: ${window.location.href}`,
           'document.body',
           'tagId_12',
           'Bootstrap',
@@ -278,6 +277,7 @@ if (!doNotTrack) {
 </span></a>
   
 </div>
+
     </div>
   </div>
 </nav>
@@ -308,7 +308,7 @@ if (!doNotTrack) {
           Brewing Cats Core
         </h1>
       </header>
-      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+      <div class="nested-copy-line-height lh-copy f4 nested-links mid-gray">
         <p><span style="
 color: rgb(0, 117, 178);
 float: left;
@@ -317,7 +317,14 @@ line-height: 60px;
 padding-top: 4px;
 padding-right: 8px;
 padding-left: 3px;">E</span>ste sitio web es creado a partir de una librería central usada por otros sitios. Contiene características y funcionalidad especifica que hacen de
-<a href="https://hugobelin.com">HugoBelin.com</a> un mejor sitio. Brewing Cats Core es la librería que aumenta la funcionalidad base del
+
+
+
+<a href="/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/', 'HugoBelin.com')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">HugoBelin.com</a>
+ un mejor sitio. Brewing Cats Core es la librería que aumenta la funcionalidad base del
 
 
 
@@ -334,27 +341,45 @@ style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; 
 onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
 onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hugo</a>
  framework</p>
-<p>Este artículo muestra el trabajo completado asi como la funcionalidad en la que estamos trabajando. Los detalles se pueden ver en la siguiente tabla de Trello:</p>
+<p>Este artículo muestra el trabajo completado asi como la funcionalidad en la que estamos trabajando. Los detalles se pueden ver en la siguiente tabla de 
 
 
-<div>
-  <script src="https://trello.com/b/xcEx1Xjz.js"></script>
-  <script>
-    $('article').css('max-width', '100%');
-  </script>
-</div>
+<a href="https://coda.io/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/coda.io\/', 'Coda')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Coda</a>
+:</p>
+
+
+
+
+
+
+<iframe id="af5c8015bf1304c8e87c44b7cce4bc0c3" src="https://coda.io/embed/bNNCG5bcPs/_suz9c?viewMode=embedplay&amp;hideSections=true" width="1000" height="800" style="ZgotmplZ" frameborder="0" marginheight="0" marginwidth="0" frameborder='0' allow="fullscreen">Loading…</iframe>
+<script>
+  (() => {
+    let paramStyle = 'max-width:100%;';
+    let styles = paramStyle.split(';');
+    for (let i = 0; i < styles.length; i++) {
+      let stylePair = styles[i].split(':');
+      document.querySelector('#af5c8015bf1304c8e87c44b7cce4bc0c3').style[stylePair[0]] = stylePair[1];
+    }
+  })();
+</script>
+
 <script>
   BrewingCatsCore.Logger.traceInfo(
-    `Trello Component`,
-    'component.trello',
-    'tagId_l',
+    `iframe Component`,
+    'component.iframe',
+    'tagId_15',
     'ComponentSetup',
     {
-      'component': 'Trello',
-      'boardId': 'xcEx1Xjz'
+      'component': 'iframe',
+      'src': 'https:\/\/coda.io\/embed\/bNNCG5bcPs\/_suz9c?viewMode=embedplay\u0026hideSections=true'
     }
   );
 </script>
+<br>
 <p>
 
 
@@ -457,7 +482,7 @@ onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hugo</a>
             style="color: rgb(200, 200, 200); box-shadow: rgb(255, 153, 0) 0px -4px 0px inset; text-decoration: none; " 
             onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
             onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BCats</a>
-          Version: 3.21.28 Release: Han Solo Site Views: <span tag-id="site-page-views-footer">0</span>
+          Version: 4.22.30 Release: Ben Solo Site Views: <span tag-id="site-page-views-footer">0</span>
         </small>
         
       </code>
@@ -556,7 +581,8 @@ onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hugo</a>
 </svg>
 </span></a>
   
-</div></div>
+</div>
+</div>
   </div>
 </footer>
 

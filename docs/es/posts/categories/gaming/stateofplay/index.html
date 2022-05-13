@@ -7,10 +7,12 @@
     <title>Estado de los Video Juegos | Hugo Belin</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="description" content="Videojuegos que estoy jugando 🎮 actualmente, videojuegos que ya terminé, y videojuegos que estoy considerando 🎮">
-    <meta name="generator" content="Hugo 0.96.0" />
+    <meta name="generator" content="Hugo 0.98.0" />
     
     
-      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    
+    
+      <meta name="robots" content="index, follow">
     
 
     
@@ -18,7 +20,8 @@
 
 
 
-
+    
+    
     
       
 <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
@@ -38,7 +41,7 @@
 <meta itemprop="name" content="Estado de los Video Juegos">
 <meta itemprop="description" content="Videojuegos que estoy jugando 🎮 actualmente, videojuegos que ya terminé, y videojuegos que estoy considerando 🎮"><meta itemprop="datePublished" content="2020-06-29T15:42:10-07:00" />
 <meta itemprop="dateModified" content="2020-06-29T15:42:10-07:00" />
-<meta itemprop="wordCount" content="112">
+<meta itemprop="wordCount" content="130">
 <meta itemprop="keywords" content="videojuegos," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Estado de los Video Juegos"/>
 <meta name="twitter:description" content="Videojuegos que estoy jugando 🎮 actualmente, videojuegos que ya terminé, y videojuegos que estoy considerando 🎮"/>
@@ -75,15 +78,10 @@ if (!doNotTrack) {
       gtag('config', 'UA-85767008-2');
     </script>
     
-    <script type='text/javascript' src="/javascript/autoinstagram.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/headparser.js#3.21.28" ></script>
+    <script type='text/javascript' src="/javascript/autoinstagram.js#4.22.30" ></script>
+    <script type='text/javascript' src="/javascript/headparser.js#4.22.30" ></script>
     
-    <script type='text/javascript' src="/javascript/config.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/interfaces.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/util.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/logger.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/gdpr.js#3.21.28" ></script>
-    <script type='text/javascript' src="/javascript/control.js#3.21.28" ></script> 
+    <script type='text/javascript' src="/javascript/bcats.js#4.22.30" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -95,10 +93,11 @@ if (!doNotTrack) {
       BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
       BrewingCatsCore.Config.LinkHoverColor = '#00802B';
       BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '3.21.28';
+      BrewingCatsCore.Config.SiteVersion = '4.22.30';
+      BrewingCatsCore.Config.StatsMode = 'Stats2';
       
       BrewingCatsCore.Control.Init();
-      let version = '3.21.28';
+      let version = '4.22.30';
       let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
       let timeZoneMsg = `UTC+${timeZone}`;
       if (timeZone < 0) {
@@ -121,7 +120,7 @@ if (!doNotTrack) {
 
       BrewingCatsCore.Control.UpdateStats((stats) => {
         BrewingCatsCore.Logger.traceInfo(
-          `Loading: ${window.location.href}`,
+          `Stats for: ${window.location.href}`,
           'document.body',
           'tagId_12',
           'Bootstrap',
@@ -281,6 +280,7 @@ if (!doNotTrack) {
 </span></a>
   
 </div>
+
     </div>
   </div>
 </nav>
@@ -382,27 +382,35 @@ estoy considerando en jugar. En un futuro pondre enlaces a artículos de opinió
 <p><br />
 
 
-<iframe class="airtable-embed"
-  src="https://airtable.com/embed/shrhxkYyy8rmrF5Q2?backgroundColor=green&viewControls=on"
-  frameborder="0"
-  onmousewheel=""
-  width="100%"
-  height="533"
-  style="background: transparent; border: 1px solid #ccc;">
-</iframe>
+
+
+
+
+<iframe id="af5c8015bf1304c8e87c44b7cce4bc0c3" src="https://coda.io/embed/2OLAyWZrMc/_sugGZ?viewMode=embedplay&amp;hideSections=true" width="1000" height="800" style="ZgotmplZ" frameborder="0" marginheight="0" marginwidth="0" frameborder='0' allow="fullscreen">Loading…</iframe>
+<script>
+  (() => {
+    let paramStyle = 'max-width:100%;';
+    let styles = paramStyle.split(';');
+    for (let i = 0; i < styles.length; i++) {
+      let stylePair = styles[i].split(':');
+      document.querySelector('#af5c8015bf1304c8e87c44b7cce4bc0c3').style[stylePair[0]] = stylePair[1];
+    }
+  })();
+</script>
 
 <script>
   BrewingCatsCore.Logger.traceInfo(
-    `AirTable Component`,
-    'component.airtable',
-    'tagId_10',
+    `iframe Component`,
+    'component.iframe',
+    'tagId_15',
     'ComponentSetup',
     {
-      'component': 'AirTable',
-      'tableId': 'shrhxkYyy8rmrF5Q2'
+      'component': 'iframe',
+      'src': 'https:\/\/coda.io\/embed\/2OLAyWZrMc\/_sugGZ?viewMode=embedplay\u0026hideSections=true'
     }
   );
-</script></p>
+</script>
+<br></p>
 <p><br />
 
 <h3 style="text-align: center; color:rgb(0, 117, 178);">Gamer Card</h3>
@@ -586,7 +594,7 @@ estoy considerando en jugar. En un futuro pondre enlaces a artículos de opinió
             style="color: rgb(200, 200, 200); box-shadow: rgb(255, 153, 0) 0px -4px 0px inset; text-decoration: none; " 
             onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
             onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BCats</a>
-          Version: 3.21.28 Release: Han Solo Site Views: <span tag-id="site-page-views-footer">0</span>
+          Version: 4.22.30 Release: Ben Solo Site Views: <span tag-id="site-page-views-footer">0</span>
         </small>
         
       </code>
@@ -685,7 +693,8 @@ estoy considerando en jugar. En un futuro pondre enlaces a artículos de opinió
 </svg>
 </span></a>
   
-</div></div>
+</div>
+</div>
   </div>
 </footer>
 

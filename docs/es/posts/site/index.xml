@@ -32,7 +32,7 @@
       
       <guid>https://hugobelin.com/es/posts/site/brewingcatscore/</guid>
       <description>Este sitio web es creado a partir de una librería central usada por otros sitios. Contiene características y funcionalidad especifica que hacen de HugoBelin.com un mejor sitio. Brewing Cats Core es la librería que aumenta la funcionalidad base del Tema Ananke que funciona con Hugo framework
-Este artículo muestra el trabajo completado asi como la funcionalidad en la que estamos trabajando. Los detalles se pueden ver en la siguiente tabla de Trello:</description>
+Este artículo muestra el trabajo completado asi como la funcionalidad en la que estamos trabajando. Los detalles se pueden ver en la siguiente tabla de Coda :</description>
     </item>
     
     <item>
@@ -41,8 +41,8 @@ Este artículo muestra el trabajo completado asi como la funcionalidad en la que
       <pubDate>Wed, 24 Jun 2020 21:15:45 -0700</pubDate>
       
       <guid>https://hugobelin.com/es/posts/site/roadmap/</guid>
-      <description>Este sitio es una versión derivada del sitio que compone Brewing Cats (mi compañía) utilizando una librería que llamo Brewing Cats Core (puedes ver los planes del proyecto aquí ). Como tal este sitio tiene sus propios planes, mismos que se muestran abajo:
-    $(&#39;article&#39;).css(&#39;max-width&#39;, &#39;100%&#39;);    BrewingCatsCore.Logger.traceInfo( `Trello Component`, &#39;component.trello&#39;, &#39;tagId_l&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;Trello&#39;, &#39;boardId&#39;: &#39;dGtZpxVf&#39; } );   Trabajo Completado   BrewingCatsCore.</description>
+      <description>Este sitio es una versión derivada del sitio Brewing Cats (mi compañía) y utiliza componentes reusables (librerías de código, servicios y contenido) que he llamado Brewing Cats Core. Los planes de mi sitio así como de los componentes se muestran a continuación:
+ Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.split(&#39;;&#39;); for (let i = 0; i  BrewingCatsCore.Logger.traceInfo( `iframe Component`, &#39;component.iframe&#39;, &#39;tagId_15&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;iframe&#39;, &#39;src&#39;: &#39;https:\/\/coda.</description>
     </item>
     
     <item>
@@ -52,8 +52,7 @@ Este artículo muestra el trabajo completado asi como la funcionalidad en la que
       
       <guid>https://hugobelin.com/es/posts/site/credits/</guid>
       <description>Este artículo fue creado para reconocer la labor y el duro trabajo de los muchos desarrolladores que han hecho posible este sitio. Desde hosting de sitios web, hasta librerías, todas las reconocemos aquí:
-Hosting, Librerías, Frameworks y otras Tecnologías   BrewingCatsCore.Logger.traceInfo( `AirTable Component`, &#39;component.airtable&#39;, &#39;tagId_10&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AirTable&#39;, &#39;tableId&#39;: &#39;shraGTO9M4qs0Th5v&#39; } );  
- Créditos de la Imagen: Unsplash: Tarjeta de Circuitos imagen de @harrisonbroadbent    Créditos de la Imagen: Página Principal.</description>
+Hosting, Librerías, Frameworks y otras Tecnologías Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.split(&#39;;&#39;); for (let i = 0; i  BrewingCatsCore.Logger.traceInfo( `iframe Component`, &#39;component.iframe&#39;, &#39;tagId_15&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;iframe&#39;, &#39;src&#39;: &#39;https:\/\/coda.io\/embed\/bNNCG5bcPs\/_suqXw?viewMode=embedplay\u0026hideSections=true&#39; } );</description>
     </item>
     
     <item>
@@ -74,11 +73,7 @@ Esta es mi huella en internet:
       
       <guid>https://hugobelin.com/es/posts/site/changelog/</guid>
       <description>Este artículo presenta una lista de cambios hechos al sitio web, tiene como objetivo llevar control del mismo
-
-Version: 3.21.28 Release: Han Solo
- Políticas de Versión Mayor.Menor.Incremento  | | |_______ Versión de Brewing Cats Core  | |_____________ Nueva funcionalidad  |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)
- Convención de Nombres de Proyecto Los nombres de proyecto se toman de:
-  Lista de personajes de Star Wars posteriormente:  Lista de personajes legendarios de Star Wars posteriormente:  Lista de personajes de la Rebelión de Star Wars posteriormente:  Personajes de Star Wars: Caballeros de la Vieja República posteriormente:  Miembros del elenco de Star Wars posteriormente:  Miembros del elenco de Star Wars: La Batalla de los Clones   El Código de Proyecto será presentado de la siguiente forma:</description>
+  Versión del Sitio Versión de Librería Nombre de la Versión     4.22.30          Ben Solo         (() = { document.querySelector(&#34;.af5c8015bf1304c8e87c44b7cce4bc0c3&#34;).innerHTML = `${BrewingCatsCore.Config.Version}`; })();   Políticas de Versión Mayor.Menor.Incremento  | | |_______ Versión de Brewing Cats Core  | |_____________ Nueva funcionalidad  |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)</description>
     </item>
     
     <item>

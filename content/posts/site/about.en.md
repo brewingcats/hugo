@@ -35,13 +35,13 @@ I own and run {{< link "https://brewingcats.com/" "BrewingCats" >}} as a side pr
 {{< break >}}
 {{< head 3 "Favorite Movies and Series" >}}
 
-{{< airtable shrhuYLWmUnCsNB5D blue >}}
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_suNZI?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< break >}}
 {{< break >}}
 {{< head 3 "Favorite Videogames" >}}
 
-{{< airtable shrJAbxNu3qee0tbv blue >}}
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_suyfL?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< head 3 "Gamer Card" >}}
 

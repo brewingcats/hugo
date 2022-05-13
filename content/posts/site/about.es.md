@@ -36,15 +36,15 @@ ver mis contribuciones en {{< link "https://gitlab.com/hobelinm" "GitLab" >}},
 {{< break >}}
 {{< head 3 "Películas y Series Favoritas" >}}
 
-{{< airtable shrhuYLWmUnCsNB5D blue >}}
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_suNZI?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< break >}}
 {{< break >}}
 {{< head 3 "Video Juegos Favoritos" >}}
 
-{{< airtable shrJAbxNu3qee0tbv blue >}}
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_suyfL?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
-{{< head 3 "Tarjeta del Jugador" >}}
+{{< head 3 "Tarjeta de Jugador" >}}
 
 {{< teamcard 
 "/images/site/me001.png"

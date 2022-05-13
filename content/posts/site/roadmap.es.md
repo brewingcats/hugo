@@ -11,16 +11,15 @@ description: Planes futuros para mi sitio web, nueva funcionalidad, artículos, 
 lang: es
 ---
 
-{{< big E >}}ste sitio es una versión derivada del sitio que compone 
+{{< big E >}}ste sitio es una versión derivada del sitio 
 {{< link "https://brewingcats.com" "Brewing Cats" >}} 
-(mi compañía) utilizando una librería que llamo Brewing Cats Core (puedes ver los planes del proyecto {{< link "/posts/site/brewingcatscore/" "aquí" >}}). 
-Como tal este sitio tiene sus propios planes, mismos que se muestran abajo:
+(mi compañía) y utiliza componentes reusables (librerías de código, servicios y contenido) que he llamado 
+Brewing Cats Core. Los planes de mi sitio así como de los componentes se muestran a continuación:
 
-{{< trello "dGtZpxVf" >}}
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_suDq7?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 {{< break >}}
 
-{{< head 3 "Trabajo Completado" >}}
-{{< airtable shrP3nTakcTVppO6z blue 800 >}}
+{{< iframe src="https://coda.io/embed/bNNCG5bcPs/_suz9c?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
 
 {{< break >}}
 Créditos: Foto de {{< link "http://www.airfocus.com/" "airfocus" >}} en {{< link "https://unsplash.com/@airfocus" "Unsplash" >}}
