@@ -76,7 +76,7 @@ This is my internet footprint:
       
       <guid>https://hugobelin.com/posts/site/changelog/</guid>
       <description>This post contains a list of the changes made to the website, it is used for tracking purposes
-  Website Version Core Library Version Release Name     4.22.30          Ben Solo         (() = { document.querySelector(&#34;.af5c8015bf1304c8e87c44b7cce4bc0c3&#34;).innerHTML = `${BrewingCatsCore.Config.Version}`; })();   Versioning Policies Major.Minor.Build  | | |_______ Brewing Cats Core Version  | |_____________ New features  |___________________ Official new releases (Tied to a Release name)</description>
+  Website Version Core Library Version Release Name     4.22.30          Ben Solo         (() = { document.querySelector(&#34;.a009a67e2b96204a2f99f1ec34d955c67&#34;).innerHTML = `${BrewingCatsCore.Config.Version}`; })();   Versioning Policies Major.Minor.Build  | | |_______ Brewing Cats Core Version  | |_____________ New features  |___________________ Official new releases (Tied to a Release name)</description>
     </item>
     
     <item>
