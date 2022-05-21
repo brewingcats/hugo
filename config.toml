@@ -25,7 +25,7 @@ publishDir = "docs"
       description = "Personal Website"
   [languages.es]
     [languages.es.params]
-      description = "Personal Website"
+      description = "Sitio Web Personal"
 
 [params]
   useGenericGdpr = false
@@ -68,5 +68,5 @@ publishDir = "docs"
   useFooterStats = "true"
   useFooterReferral = "true"
   projectId = "HugoBelin"
-  siteVersion = "4.22.30"
+  siteVersion = "4.23.30"
   siteRelease = "Ben Solo"

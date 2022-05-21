@@ -103,6 +103,10 @@ de poder de alta frecuencia) para iluminación industrial y alumbrado público.
 gradué con especialidad en Electrónica de Potencia. Esta ingeniería incluyo programación en bajo nivel en C y ensamblador, 
 diseño y desarrollo de {{< link "https://en.wikipedia.org/wiki/Switched-mode_power_supply" "fuentes de poder de alta frecuencia" >}}.
 
+{{< head 2 "Línea de Tiempo de Mi Experiencia Profesional" >}}
+
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_sujiY?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
+
 {{< head 2 "Visualización de Tableau de Mi Experiencia Profesional" >}}
 
 {{< tableau "viz1598508433588" "Re" "Resume_15628210064340" "Resume" >}}

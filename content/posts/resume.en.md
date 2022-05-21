@@ -96,6 +96,10 @@ graduated from college with a specialty in Power Electronics. This bachelor's de
 and Assembly languages, design and development of our own 
 {{< link "https://en.wikipedia.org/wiki/Switched-mode_power_supply" "switched mode power supply" >}}.
 
+{{< head 2 "Visual Timeline of My Professional Experience" >}}
+
+{{< iframe src="https://coda.io/embed/2OLAyWZrMc/_sujiY?viewMode=embedplay&hideSections=true" width="1000" height="800" style="max-width:100%;" >}}
+
 {{< head 2 "Tableau Visualization of My Work History" >}}
 
 {{< tableau "viz1598508433588" "Re" "Resume_15628210064340" "Resume" >}}
