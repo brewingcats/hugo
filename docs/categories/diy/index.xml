@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DIY on Hugo Belin</title>
+    <link>https://hugobelin.com/categories/diy/</link>
+    <description>Recent content in DIY on Hugo Belin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 May 2022 11:40:59 -0700</lastBuildDate><atom:link href="https://hugobelin.com/categories/diy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DIY Privacy Screen</title>
+      <link>https://hugobelin.com/posts/categories/uncategorized/diyscreen/</link>
+      <pubDate>Sun, 29 May 2022 11:40:59 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/uncategorized/diyscreen/</guid>
+      <description>(() = { $(window).on(&#34;load&#34;, function(){ window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); }); })();   Table of Contents     Getting ready for the summer! One of the things that just needed to be done before we could enjoy the company of guests in the backyard was the addition of a privacy wall in the deck. We got our hands dirty for few days and accomplished it! Some woodwork here, some staining there (plus few tools) was all we needed to call this project done.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jun 2020 22:33:08 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>DIY Pantalla de Privacidad</title>
+      <link>https://hugobelin.com/es/posts/categories/uncategorized/diyscreen/</link>
+      <pubDate>Sun, 29 May 2022 11:41:05 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/uncategorized/diyscreen/</guid>
+      <description>(() = { $(window).on(&#34;load&#34;, function(){ window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); }); })();   Tabla de Contenidos     ¡El verano se aproxima! Uno de los proyectos que tenían que ser completados antes de poder disfrutar de la compañía de invitados en el patio trasero era la adición de una pantalla de seguridad sobre la cubierta de madera. Es hora de ensuciarse las manos por unos dias y lograrlo. Un poco de trabajo con madera, un poco de barnizado (con ayuda de algunas herramientas) fue todo lo necesario para terminar este proyecto.</description>
+    </item>
+    
+    <item>
       <title>Árbol de Enlaces</title>
       <link>https://hugobelin.com/es/posts/site/linktree/</link>
       <pubDate>Tue, 07 Sep 2021 20:40:17 -0700</pubDate>
@@ -49,7 +58,7 @@
       <pubDate>Sat, 08 Aug 2020 14:51:56 -0700</pubDate>
       
       <guid>https://hugobelin.com/es/posts/categories/software/photoviz/</guid>
-      <description>$(document).ready(() = { window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); });   Tabla de Contenidos     Desempolva ese archivo de fotos y ponlas a trabajar! En este artículo voy a mostrar como poner tus fotos en un dashboard básico de Tableau que las mostrará en un mapa. Este mapa mostrará donde fueron tomadas esas fotos permitiéndote agruparlas y ver eventos significativos en un lugar dado y opcionalmente en función del tiempo</description>
+      <description>(() = { $(window).on(&#34;load&#34;, function(){ window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); }); })();   Tabla de Contenidos     Desempolva ese archivo de fotos y ponlas a trabajar! En este artículo voy a mostrar como poner tus fotos en un dashboard básico de Tableau que las mostrará en un mapa. Este mapa mostrará donde fueron tomadas esas fotos permitiéndote agruparlas y ver eventos significativos en un lugar dado y opcionalmente en función del tiempo</description>
     </item>
     
     <item>
@@ -152,7 +161,7 @@ Esta es mi huella en internet:
       
       <guid>https://hugobelin.com/es/posts/site/changelog/</guid>
       <description>Este artículo presenta una lista de cambios hechos al sitio web, tiene como objetivo llevar control del mismo
-  Versión del Sitio Versión de Librería Nombre de la Versión     4.23.30          Ben Solo         (() = { document.querySelector(&#34;.accb39c2b1b9bd7d16ed9a04ab968175b&#34;).innerHTML = `${BrewingCatsCore.Config.Version}`; })();   Políticas de Versión Mayor.Menor.Incremento  | | |_______ Versión de Brewing Cats Core  | |_____________ Nueva funcionalidad  |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)</description>
+  Versión del Sitio Versión de Librería Nombre de la Versión     4.24          Ben Solo         (() = { document.querySelector(&#34;.a36b65b2c4b6c4bf03e02aa3200d2f43d&#34;).innerHTML = `${BrewingCatsCore.Config.Version}`; })();   Políticas de Versión Mayor.Menor.Incremento  | | |_______ Versión de Brewing Cats Core  | |_____________ Nueva funcionalidad  |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)</description>
     </item>
     
     <item>

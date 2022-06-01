@@ -78,10 +78,7 @@ if (!doNotTrack) {
       gtag('config', 'UA-85767008-2');
     </script>
     
-    <script type='text/javascript' src="/javascript/autoinstagram.js#4.23.30" ></script>
-    <script type='text/javascript' src="/javascript/headparser.js#4.23.30" ></script>
-    
-    <script type='text/javascript' src="/javascript/bcats.js#4.23.30" ></script>
+    <script type='text/javascript' src="/javascript/bcats.js#4.24" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -93,11 +90,11 @@ if (!doNotTrack) {
       BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
       BrewingCatsCore.Config.LinkHoverColor = '#00802B';
       BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '4.23.30';
+      BrewingCatsCore.Config.SiteVersion = '4.24';
       BrewingCatsCore.Config.StatsMode = 'Stats2';
       
       BrewingCatsCore.Control.Init();
-      let version = '4.23.30';
+      let version = BrewingCatsCore.Config.SiteVersion;
       let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
       let timeZoneMsg = `UTC+${timeZone}`;
       if (timeZone < 0) {
@@ -305,6 +302,23 @@ if (!doNotTrack) {
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Sin Categoría</span>
     <h1 class="f3 near-black">
+      <a href="/es/posts/categories/uncategorized/diyscreen/" class="link black dim">
+        DIY Pantalla de Privacidad
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      (() = { $(window).on("load", function(){ window.HeadParser.Control.updateHeaders(); $('#tocContents')[0].appendChild(window.HeadParser.Control.CreateHeaderList()); }); })();   Tabla de Contenidos     ¡El verano se aproxima! Uno de los proyectos que tenían que ser completados antes de poder disfrutar de la compañía de invitados en el patio trasero era la adición de una pantalla de seguridad sobre la cubierta de madera. Es hora de ensuciarse las manos por unos dias y lograrlo. Un poco de trabajo con madera, un poco de barnizado (con ayuda de algunas herramientas) fue todo lo necesario para terminar este proyecto.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Sin Categoría</span>
+    <h1 class="f3 near-black">
       <a href="/es/posts/categories/uncategorized/tweets/" class="link black dim">
         Mi Lectura Reciente
       </a>
@@ -361,12 +375,12 @@ if (!doNotTrack) {
       </a>
       <code class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3">
         
-        <small>
+        <small class="BCCore-Update-SiteVersion">
           <a href="https://brewingcats.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com', 'BCats')" 
             style="color: rgb(200, 200, 200); box-shadow: rgb(255, 153, 0) 0px -4px 0px inset; text-decoration: none; " 
             onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
             onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BCats</a>
-          Version: 4.23.30 Release: Ben Solo Site Views: <span tag-id="site-page-views-footer">0</span>
+          Version: ### Release: Ben Solo Site Views: <span tag-id="site-page-views-footer">0</span>
         </small>
         
       </code>

@@ -127,7 +127,8 @@ if (window.AutoInstagram === undefined) {
 var BrewingCatsCore;
 (function (BrewingCatsCore) {
     class Config {
-        static Version = '3.30';
+        static Version = 3;
+        static Build = 32;
         static SiteVersion = '';
         static ProjectId = '';
         static TelemetryEnabled = true;
@@ -151,6 +152,7 @@ var BrewingCatsCore;
 (function (BrewingCatsCore) {
     class Control {
         static Init() {
+            BrewingCatsCore.Config.SiteVersion = BrewingCatsCore.Util.getSiteVersion();
             let nSession = false;
             let session = window.sessionStorage.getItem('SessionId');
             if (session === null) {
@@ -173,7 +175,7 @@ var BrewingCatsCore;
             if (nSession) {
                 BrewingCatsCore.Logger.traceInfo('New user session', 'BrewingCatsCore.Control', 'tagId_7', BrewingCatsCore.LogCategory.Bootstrap, {
                     'userAgent': window.navigator.userAgent,
-                    'BrewingCatsCoreVersion': BrewingCatsCore.Config.Version
+                    'BrewingCatsCoreVersion': BrewingCatsCore.Util.getCoreVersion()
                 });
             }
             window.addEventListener('beforeunload', (event) => {
@@ -187,12 +189,16 @@ var BrewingCatsCore;
                 let secureLocation = window.location.toString().replace(window.location.protocol, 'https:');
                 BrewingCatsCore.Logger.traceInfo(`Redirecting to: ${secureLocation}`, 'BrewingCatsCore.Control', 'tagId_14', BrewingCatsCore.LogCategory.Bootstrap, {
                     'url': window.location.toString(),
-                    'BrewingCatsCoreVersion': BrewingCatsCore.Config.Version
+                    'BrewingCatsCoreVersion': BrewingCatsCore.Util.getCoreVersion()
                 });
                 window.location.assign(secureLocation);
             }
             $(() => {
                 BrewingCatsCore.Gdpr.UpdateGdpr();
+                document.querySelectorAll(".BCCore-Update-SiteVersion").forEach((i) => {
+                    i.innerHTML = i.innerHTML.replace('###', BrewingCatsCore.Config.SiteVersion);
+                    console.log("updated");
+                });
             });
             const stylesLeft = [
                 'color: cyan',
@@ -220,9 +226,9 @@ var BrewingCatsCore;
                 'padding-bottom: 10px',
                 'padding-right: 10px',
             ].join(';');
-            console.log(`%cBrewing Cats Core v%c${BrewingCatsCore.Config.Version}`, stylesLeft, stylesRight);
+            console.log(`%cBrewing Cats Core v%c${BrewingCatsCore.Util.getCoreVersion()}`, stylesLeft, stylesRight);
             console.table([
-                { 'name': 'Brewing Cats Core', 'value': `${BrewingCatsCore.Config.Version}` },
+                { 'name': 'Brewing Cats Core', 'value': `${BrewingCatsCore.Util.getCoreVersion()}` },
                 { 'name': 'Website Version', 'value': `${BrewingCatsCore.Config.SiteVersion}` },
                 { 'name': 'User Session', 'value': `${BrewingCatsCore.Config.SessionId}` },
                 { 'name': 'User Id', 'value': `${BrewingCatsCore.Config.ClientId}` },
@@ -378,7 +384,7 @@ var HeadParser;
                 let digits = Number(h.prop("tagName").toLowerCase().replace('h', '')) - 1;
                 let deepCode = '';
                 for (let i = 0; i < digits; i++) {
-                    deepCode = `${deepCode}⚪`;
+                    deepCode = `${deepCode}+`;
                 }
                 lnk.innerHTML = `<code>${deepCode}</code>${h.text()}`;
                 li.appendChild(lnk);
@@ -387,7 +393,6 @@ var HeadParser;
             return list;
         }
         static CompressId(val) {
-            console.log(val);
             if (val === undefined || val === null || val === '') {
                 return new Date().getTime().toString();
             }
@@ -599,6 +604,12 @@ var BrewingCatsCore;
         }
         static scrollToTop() {
             window.scrollTo(0, 0);
+        }
+        static getCoreVersion() {
+            return `${BrewingCatsCore.Config.Version}.${BrewingCatsCore.Config.Build}`;
+        }
+        static getSiteVersion() {
+            return `${BrewingCatsCore.Config.SiteVersion}.${BrewingCatsCore.Config.Build}`;
         }
     }
     BrewingCatsCore.Util = Util;

@@ -57,9 +57,6 @@
 
       gtag('config', '{{ .Site.Params.googleAnalytics }}');
     </script>
-    <!-- Automatic Instagram -->
-    <script type='text/javascript' src="/javascript/autoinstagram.js#{{ .Site.Params.siteVersion }}" ></script>
-    <script type='text/javascript' src="/javascript/headparser.js#{{ .Site.Params.siteVersion }}" ></script>
     <!-- Brewing Cats Core Libraries -->
     <script type='text/javascript' src="/javascript/bcats.js#{{ .Site.Params.siteVersion }}" ></script>
   </head>
@@ -77,7 +74,7 @@
       BrewingCatsCore.Config.StatsMode = 'Stats2';
       // Initialization happens here
       BrewingCatsCore.Control.Init();
-      let version = '{{ .Site.Params.siteVersion }}';
+      let version = BrewingCatsCore.Config.SiteVersion;
       let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
       let timeZoneMsg = `UTC+${timeZone}`;
       if (timeZone < 0) {

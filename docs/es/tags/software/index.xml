@@ -13,7 +13,7 @@
       <pubDate>Sat, 08 Aug 2020 14:51:56 -0700</pubDate>
       
       <guid>https://hugobelin.com/es/posts/categories/software/photoviz/</guid>
-      <description>$(document).ready(() = { window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); });   Tabla de Contenidos     Desempolva ese archivo de fotos y ponlas a trabajar! En este artículo voy a mostrar como poner tus fotos en un dashboard básico de Tableau que las mostrará en un mapa. Este mapa mostrará donde fueron tomadas esas fotos permitiéndote agruparlas y ver eventos significativos en un lugar dado y opcionalmente en función del tiempo</description>
+      <description>(() = { $(window).on(&#34;load&#34;, function(){ window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); }); })();   Tabla de Contenidos     Desempolva ese archivo de fotos y ponlas a trabajar! En este artículo voy a mostrar como poner tus fotos en un dashboard básico de Tableau que las mostrará en un mapa. Este mapa mostrará donde fueron tomadas esas fotos permitiéndote agruparlas y ver eventos significativos en un lugar dado y opcionalmente en función del tiempo</description>
     </item>
     
   </channel>

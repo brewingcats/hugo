@@ -6,22 +6,31 @@
     <description>Recent content in Tags on Hugo Belin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Sep 2021 20:40:17 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 May 2022 11:41:05 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>site</title>
-      <link>https://hugobelin.com/es/tags/site/</link>
-      <pubDate>Tue, 07 Sep 2021 20:40:17 -0700</pubDate>
+      <title>DIY</title>
+      <link>https://hugobelin.com/es/tags/diy/</link>
+      <pubDate>Sun, 29 May 2022 11:41:05 -0700</pubDate>
       
-      <guid>https://hugobelin.com/es/tags/site/</guid>
+      <guid>https://hugobelin.com/es/tags/diy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>uncategorized</title>
       <link>https://hugobelin.com/es/tags/uncategorized/</link>
-      <pubDate>Sat, 24 Apr 2021 00:07:53 -0700</pubDate>
+      <pubDate>Sun, 29 May 2022 11:41:05 -0700</pubDate>
       
       <guid>https://hugobelin.com/es/tags/uncategorized/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>site</title>
+      <link>https://hugobelin.com/es/tags/site/</link>
+      <pubDate>Tue, 07 Sep 2021 20:40:17 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/tags/site/</guid>
       <description></description>
     </item>
     

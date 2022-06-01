@@ -1,13 +1,15 @@
 {{ $lang := .Page.Params.lang }}
 <script>
-  $(document).ready(() => {
-    window.HeadParser.Control.updateHeaders();
-    $('#tocContents')[0].appendChild(window.HeadParser.Control.CreateHeaderList());
-  });
+  (() => {
+    $(window).on("load", function(){
+      window.HeadParser.Control.updateHeaders();
+      $('#tocContents')[0].appendChild(window.HeadParser.Control.CreateHeaderList());
+    });
+  })();
 </script>
 <aside id="toc">
   <p>
-    <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
+    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
       {{ if eq $lang "en" }}
       <h2>Table of Contents</h2>
       {{ else if eq $lang "es" }}

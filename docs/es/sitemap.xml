@@ -2,6 +2,111 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hugobelin.com/es/categories/</loc>
+    <lastmod>2022-05-29T11:41:05-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/categories/"
+                />
+  </url><url>
+    <loc>https://hugobelin.com/es/tags/diy/</loc>
+    <lastmod>2022-05-29T11:41:05-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/tags/diy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/tags/diy/"
+                />
+  </url><url>
+    <loc>https://hugobelin.com/es/categories/diy/</loc>
+    <lastmod>2022-05-29T11:41:05-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/categories/diy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/categories/diy/"
+                />
+  </url><url>
+    <loc>https://hugobelin.com/es/posts/categories/uncategorized/diyscreen/</loc>
+    <lastmod>2022-05-29T11:41:05-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/posts/categories/uncategorized/diyscreen/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/posts/categories/uncategorized/diyscreen/"
+                />
+  </url><url>
+    <loc>https://hugobelin.com/es/tags/</loc>
+    <lastmod>2022-05-29T11:41:05-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/tags/"
+                />
+  </url><url>
+    <loc>https://hugobelin.com/es/tags/uncategorized/</loc>
+    <lastmod>2022-05-29T11:41:05-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/tags/uncategorized/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/tags/uncategorized/"
+                />
+  </url><url>
+    <loc>https://hugobelin.com/es/categories/uncategorized/</loc>
+    <lastmod>2022-05-29T11:41:05-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/categories/uncategorized/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/categories/uncategorized/"
+                />
+  </url><url>
     <loc>https://hugobelin.com/es/posts/site/linktree/</loc>
     <lastmod>2021-09-07T20:40:17-07:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -15,21 +120,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://hugobelin.com/es/posts/site/linktree/"
-                />
-  </url><url>
-    <loc>https://hugobelin.com/es/categories/</loc>
-    <lastmod>2021-09-07T20:40:17-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hugobelin.com/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://hugobelin.com/es/categories/"
                 />
   </url><url>
     <loc>https://hugobelin.com/es/tags/site/</loc>
@@ -62,21 +152,6 @@
                 href="https://hugobelin.com/es/categories/site/"
                 />
   </url><url>
-    <loc>https://hugobelin.com/es/tags/</loc>
-    <lastmod>2021-09-07T20:40:17-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hugobelin.com/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://hugobelin.com/es/tags/"
-                />
-  </url><url>
     <loc>https://hugobelin.com/es/posts/resume/</loc>
     <lastmod>2021-04-28T21:04:23-07:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -105,36 +180,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://hugobelin.com/es/posts/categories/uncategorized/tweets/"
-                />
-  </url><url>
-    <loc>https://hugobelin.com/es/tags/uncategorized/</loc>
-    <lastmod>2021-04-24T00:07:53-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hugobelin.com/tags/uncategorized/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://hugobelin.com/es/tags/uncategorized/"
-                />
-  </url><url>
-    <loc>https://hugobelin.com/es/categories/uncategorized/</loc>
-    <lastmod>2021-04-24T00:07:53-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hugobelin.com/categories/uncategorized/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://hugobelin.com/es/categories/uncategorized/"
                 />
   </url><url>
     <loc>https://hugobelin.com/es/posts/site/telemetry/</loc>

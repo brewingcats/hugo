@@ -78,10 +78,7 @@ if (!doNotTrack) {
       gtag('config', 'UA-85767008-2');
     </script>
     
-    <script type='text/javascript' src="/javascript/autoinstagram.js#4.23.30" ></script>
-    <script type='text/javascript' src="/javascript/headparser.js#4.23.30" ></script>
-    
-    <script type='text/javascript' src="/javascript/bcats.js#4.23.30" ></script>
+    <script type='text/javascript' src="/javascript/bcats.js#4.24" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -93,11 +90,11 @@ if (!doNotTrack) {
       BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
       BrewingCatsCore.Config.LinkHoverColor = '#00802B';
       BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '4.23.30';
+      BrewingCatsCore.Config.SiteVersion = '4.24';
       BrewingCatsCore.Config.StatsMode = 'Stats2';
       
       BrewingCatsCore.Control.Init();
-      let version = '4.23.30';
+      let version = BrewingCatsCore.Config.SiteVersion;
       let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
       let timeZoneMsg = `UTC+${timeZone}`;
       if (timeZone < 0) {
@@ -408,12 +405,12 @@ if (!doNotTrack) {
       </a>
       <code class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3">
         
-        <small>
+        <small class="BCCore-Update-SiteVersion">
           <a href="https://brewingcats.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com', 'BCats')" 
             style="color: rgb(200, 200, 200); box-shadow: rgb(255, 153, 0) 0px -4px 0px inset; text-decoration: none; " 
             onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
             onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BCats</a>
-          Version: 4.23.30 Release: Ben Solo Site Views: <span tag-id="site-page-views-footer">0</span>
+          Version: ### Release: Ben Solo Site Views: <span tag-id="site-page-views-footer">0</span>
         </small>
         
       </code>
