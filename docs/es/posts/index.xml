@@ -23,8 +23,7 @@
       
       <guid>https://hugobelin.com/es/posts/instagram/</guid>
       <description>Este plugin ha sido deshabilitado
-Instagram-Articulo-Embebido
-window.AutoInstagram.Control.Initialize(&#34;636890196944822&#34;, &#34;17b874bd11a90bf04332b10b5c45dc9f&#34;); if (window.AutoInstagram.Control.LoadFromParam() === &#39;&#39;) { window.AutoInstagram.Control.QueryAndAddInstagramPost( &#39;CDqPPKxp1cT&#39;, &#34;Instagram-Articulo-Embebido&#34; ); } else { window.AutoInstagram.Control.QueryAndAddInstagramPost( window.AutoInstagram.Control.LoadFromParam(), &#34;Instagram-Articulo-Embebido&#34; ); } BrewingCatsCore.Logger.traceInfo( `AutoInstagram Component`, &#39;component.autoinstagram&#39;, &#39;tagId_a&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AutoInstagram&#39; } );  </description>
+Instagram-Articulo-Embebido</description>
     </item>
     
   </channel>

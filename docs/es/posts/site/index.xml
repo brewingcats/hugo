@@ -13,7 +13,7 @@
       <pubDate>Tue, 07 Sep 2021 20:40:17 -0700</pubDate>
       
       <guid>https://hugobelin.com/es/posts/site/linktree/</guid>
-      <description>Lista de Contenido Promovido  Juego de Lotería Mexicana en NFT   Juego de Lotería Mexicana en NFT creado usando pixel art  Leer más      Colección de Caminatas   Dashboard de Tableau contiene mi colección de caminatas con imágenes que pueden ser vistas a través del tiempo  Leer más      Colección de Imagenes   Todas mis fotos en un mapa.</description>
+      <description>Lista de Contenido Promovido Juego de Lotería Mexicana en NFT Juego de Lotería Mexicana en NFT creado usando pixel art Leer más Colección de Caminatas Dashboard de Tableau contiene mi colección de caminatas con imágenes que pueden ser vistas a través del tiempo Leer más Colección de Imagenes Todas mis fotos en un mapa. Con la ayuda de este Dashboard de Tableau coloqué las fotos en un mapa de acuerdo al lugar donde fueron tomadas Leer más 2019 Faro de Mukilteo y Diablo Lake Detalles del fin de semana donde visitamos el Faro de Mukilteo así como un paseo en bote en el Diablo Lake Leer más Viaje a San Diego 2019 Un viaje corto donde conocimos por vez primera San Diego en 2019.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ Este artículo muestra el trabajo completado asi como la funcionalidad en la que
       
       <guid>https://hugobelin.com/es/posts/site/roadmap/</guid>
       <description>Este sitio es una versión derivada del sitio Brewing Cats (mi compañía) y utiliza componentes reusables (librerías de código, servicios y contenido) que he llamado Brewing Cats Core. Los planes de mi sitio así como de los componentes se muestran a continuación:
- Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.split(&#39;;&#39;); for (let i = 0; i  BrewingCatsCore.Logger.traceInfo( `iframe Component`, &#39;component.iframe&#39;, &#39;tagId_15&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;iframe&#39;, &#39;src&#39;: &#39;https:\/\/coda.</description>
+Loading… Loading… Créditos: Foto de airfocus en Unsplash Volver al Comienzo Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@ Este artículo muestra el trabajo completado asi como la funcionalidad en la que
       
       <guid>https://hugobelin.com/es/posts/site/credits/</guid>
       <description>Este artículo fue creado para reconocer la labor y el duro trabajo de los muchos desarrolladores que han hecho posible este sitio. Desde hosting de sitios web, hasta librerías, todas las reconocemos aquí:
-Hosting, Librerías, Frameworks y otras Tecnologías Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.split(&#39;;&#39;); for (let i = 0; i  BrewingCatsCore.Logger.traceInfo( `iframe Component`, &#39;component.iframe&#39;, &#39;tagId_15&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;iframe&#39;, &#39;src&#39;: &#39;https:\/\/coda.io\/embed\/bNNCG5bcPs\/_suqXw?viewMode=embedplay\u0026hideSections=true&#39; } );</description>
+Hosting, Librerías, Frameworks y otras Tecnologías Loading… Créditos de la Imagen: Unsplash: Tarjeta de Circuitos imagen de @harrisonbroadbent Créditos de la Imagen: Página Principal. Unsplash: Museo EMP imagen de @sakulich Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -61,9 +61,8 @@ Hosting, Librerías, Frameworks y otras Tecnologías Loading…  (() = { let par
       <pubDate>Fri, 19 Jun 2020 22:58:06 -0700</pubDate>
       
       <guid>https://hugobelin.com/es/posts/site/about/</guid>
-      <description>Mi nombre es Hugo Belin y este es mi sitio web personal. Si buscas mi currículum y experiencia profesional la podrás encontrar en mi Currículum Solo otro ser humano en este planeta que busca dejarlo en mejor estado 
-Esta es mi huella en internet:
-  Facebook   Twitter   Instagram   Snapchat   Reddit   Tableau Public   LinkedIn   También soy dueño de, y mantengo BrewingCats como proyecto personal.</description>
+      <description>Mi nombre es Hugo Belin y este es mi sitio web personal. Si buscas mi currículum y experiencia profesional la podrás encontrar en mi Currículum Solo otro ser humano en este planeta que busca dejarlo en mejor estado Esta es mi huella en internet:
+Facebook Twitter Instagram Snapchat Reddit Tableau Public LinkedIn También soy dueño de, y mantengo BrewingCats como proyecto personal. Puedes ver mis contribuciones en GitLab , GitHub y mis Gists Películas y Series Favoritas Loading… Video Juegos Favoritos Loading… Tarjeta de Jugador DarthOguh Xbox: DarthOguh PlayStation: HugoBelin Nintendo: darthoguh Steam: DarthOguh Twitter, Instagram, Website Créditos de la Imagen: Unsplash: Nota imagen de @noemieke Volver al Comienzo Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -73,7 +72,9 @@ Esta es mi huella en internet:
       
       <guid>https://hugobelin.com/es/posts/site/changelog/</guid>
       <description>Este artículo presenta una lista de cambios hechos al sitio web, tiene como objetivo llevar control del mismo
-  Versión del Sitio Versión de Librería Nombre de la Versión     4.24          Ben Solo         (() = { document.querySelector(&#34;.a36b65b2c4b6c4bf03e02aa3200d2f43d&#34;).innerHTML = `${BrewingCatsCore.Config.Version}`; })();   Políticas de Versión Mayor.Menor.Incremento  | | |_______ Versión de Brewing Cats Core  | |_____________ Nueva funcionalidad  |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)</description>
+Versión del Sitio Versión de Librería Nombre de la Versión 4.25 @@@ Políticas de Versión Mayor.Menor.Incremento | | |_______ Versión de Brewing Cats Core | |_____________ Nueva funcionalidad |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)
+Convención de Nombres de Proyecto Los nombres de proyecto se toman de:
+Lista de personajes de Star Wars posteriormente: Lista de personajes legendarios de Star Wars posteriormente: Personajes de Star Wars: Caballeros de la Vieja República El Código de Proyecto será presentado de la siguiente forma:</description>
     </item>
     
     <item>

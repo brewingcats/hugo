@@ -27,10 +27,7 @@ Major.Minor.Build
 Milestone names are taken from:
 - {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars_characters" "List of Star Wars characters" >}} then:
 - {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars_Legends_characters" "Star Wars Legends characters" >}} then:
-- {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars_Rebels_characters" "Star Wars Rebels characters" >}} then:
-- {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars:_Knights_of_the_Old_Republic_characters" "Star Wars: Knights of the Old Republic characters" >}} then:
-- {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars_cast_members" "Star Wars cast members" >}} then:
-- {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars:_The_Clone_Wars_cast_members" "Star Wars: The Clone Wars cast members" >}}
+- {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars:_Knights_of_the_Old_Republic_characters" "Star Wars: Knights of the Old Republic characters" >}}
 
 Release milestone would look like:
 

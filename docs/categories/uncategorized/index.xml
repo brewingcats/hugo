@@ -13,7 +13,7 @@
       <pubDate>Sun, 29 May 2022 11:40:59 -0700</pubDate>
       
       <guid>https://hugobelin.com/posts/categories/uncategorized/diyscreen/</guid>
-      <description>(() = { $(window).on(&#34;load&#34;, function(){ window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); }); })();   Table of Contents     Getting ready for the summer! One of the things that just needed to be done before we could enjoy the company of guests in the backyard was the addition of a privacy wall in the deck. We got our hands dirty for few days and accomplished it! Some woodwork here, some staining there (plus few tools) was all we needed to call this project done.</description>
+      <description>Table of Contents Getting ready for the summer! One of the things that just needed to be done before we could enjoy the company of guests in the backyard was the addition of a privacy wall in the deck. We got our hands dirty for few days and accomplished it! Some woodwork here, some staining there (plus few tools) was all we needed to call this project done. Here&amp;rsquo;s how it happened.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Sat, 24 Apr 2021 00:07:48 -0700</pubDate>
       
       <guid>https://hugobelin.com/posts/categories/uncategorized/tweets/</guid>
-      <description> Tweets by hugobelinm   Image Credits: Unsplash: Road Trip with Raj image by @roadtripwithraj    Scroll to Top   function invokeScrollToTop() { BrewingCatsCore.Logger.traceInfo( `Scrolling to top`, &#39;ScrollToTop&#39;, &#39;tagId_13&#39;, &#39;ComponentInteraction&#39;, { &#39;url&#39;: window.location.href, } ); BrewingCatsCore.Util.scrollToTop(); }   Site Views: 0  Page Views: 0  Your Site Views: 0  Your Page Views: 0   </description>
+      <description> Tweets by hugobelinm Image Credits: Unsplash: Road Trip with Raj image by @roadtripwithraj Scroll to Top Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
   </channel>

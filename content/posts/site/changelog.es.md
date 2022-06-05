@@ -27,11 +27,7 @@ Mayor.Menor.Incremento
 Los nombres de proyecto se toman de:
 - {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars_characters" "Lista de personajes de Star Wars" >}} posteriormente:
 - {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars_Legends_characters" "Lista de personajes legendarios de Star Wars" >}} posteriormente:
-- {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars_Rebels_characters" "Lista de personajes de la Rebelión de Star Wars" >}} posteriormente:
 - {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars:_Knights_of_the_Old_Republic_characters" "Personajes de Star Wars: Caballeros de la Vieja República" >}}
- posteriormente:
-- {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars_cast_members" "Miembros del elenco de Star Wars" >}} posteriormente:
-- {{< link "https://en.wikipedia.org/wiki/List_of_Star_Wars:_The_Clone_Wars_cast_members" "Miembros del elenco de Star Wars: La Batalla de los Clones" >}}
 
 El Código de Proyecto será presentado de la siguiente forma:
 

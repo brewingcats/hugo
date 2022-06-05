@@ -13,7 +13,7 @@
       <pubDate>Sun, 29 May 2022 11:40:59 -0700</pubDate>
       
       <guid>https://hugobelin.com/posts/categories/uncategorized/diyscreen/</guid>
-      <description>(() = { $(window).on(&#34;load&#34;, function(){ window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); }); })();   Table of Contents     Getting ready for the summer! One of the things that just needed to be done before we could enjoy the company of guests in the backyard was the addition of a privacy wall in the deck. We got our hands dirty for few days and accomplished it! Some woodwork here, some staining there (plus few tools) was all we needed to call this project done.</description>
+      <description>Table of Contents Getting ready for the summer! One of the things that just needed to be done before we could enjoy the company of guests in the backyard was the addition of a privacy wall in the deck. We got our hands dirty for few days and accomplished it! Some woodwork here, some staining there (plus few tools) was all we needed to call this project done. Here&amp;rsquo;s how it happened.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Tue, 07 Sep 2021 20:40:11 -0700</pubDate>
       
       <guid>https://hugobelin.com/posts/site/linktree/</guid>
-      <description>Promoted Content  Mexican Lottery Game on NFT   Mexican Lottery Game on NFT created using pixel art  read more      Hike Collection   Tableau Dashboard that contains my hikes with pictures over the time  read more      Photo Collection   All my photos in a map. With the help of this Tableau Dashboard I&amp;#39;m locating them in a map that helps visualize them  read more      2019 Mukilteo and Diablo Lake   Details about the weekend used to visit the Mukilteo Lighthouse as well as a boat tour on the Diablo Lake  read more      Trip to San Diego 2019   A short trip to visit for first time San Diego in 2019.</description>
+      <description>Promoted Content Mexican Lottery Game on NFT Mexican Lottery Game on NFT created using pixel art read more Hike Collection Tableau Dashboard that contains my hikes with pictures over the time read more Photo Collection All my photos in a map. With the help of this Tableau Dashboard I&amp;#39;m locating them in a map that helps visualize them read more 2019 Mukilteo and Diablo Lake Details about the weekend used to visit the Mukilteo Lighthouse as well as a boat tour on the Diablo Lake read more Trip to San Diego 2019 A short trip to visit for first time San Diego in 2019.</description>
     </item>
     
     <item>
@@ -40,7 +40,7 @@
       <pubDate>Sat, 24 Apr 2021 00:07:48 -0700</pubDate>
       
       <guid>https://hugobelin.com/posts/categories/uncategorized/tweets/</guid>
-      <description> Tweets by hugobelinm   Image Credits: Unsplash: Road Trip with Raj image by @roadtripwithraj    Scroll to Top   function invokeScrollToTop() { BrewingCatsCore.Logger.traceInfo( `Scrolling to top`, &#39;ScrollToTop&#39;, &#39;tagId_13&#39;, &#39;ComponentInteraction&#39;, { &#39;url&#39;: window.location.href, } ); BrewingCatsCore.Util.scrollToTop(); }   Site Views: 0  Page Views: 0  Your Site Views: 0  Your Page Views: 0   </description>
+      <description> Tweets by hugobelinm Image Credits: Unsplash: Road Trip with Raj image by @roadtripwithraj Scroll to Top Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -58,7 +58,8 @@
       <pubDate>Sat, 08 Aug 2020 14:51:46 -0700</pubDate>
       
       <guid>https://hugobelin.com/posts/categories/software/photoviz/</guid>
-      <description>(() = { $(window).on(&#34;load&#34;, function(){ window.HeadParser.Control.updateHeaders(); $(&#39;#tocContents&#39;)[0].appendChild(window.HeadParser.Control.CreateHeaderList()); }); })();   Table of Contents     Dust off your photo archive and put it to work! In this post I&amp;rsquo;m going to show you how to take your photos into a basic Tableau dashboard that will have them located in a map. This map will show where those photos were taken allowing you to group them and see significant events by location and optionally over time</description>
+      <description>Table of Contents Dust off your photo archive and put it to work! In this post I&amp;rsquo;m going to show you how to take your photos into a basic Tableau dashboard that will have them located in a map. This map will show where those photos were taken allowing you to group them and see significant events by location and optionally over time
+We will also review options for hosting your photos in a way that can be embed-able and useful for our Tableau dashboard.</description>
     </item>
     
     <item>
@@ -68,7 +69,8 @@
       
       <guid>https://hugobelin.com/posts/categories/travel/hikecollection/</guid>
       <description>The map below has the places of my documented hikes (according to my photo archive). I plan to update this as I go on more hikes so make sure to check here every now and then. The Tableau dashboard below shows the location, date, and title of each hike on a map
-     var divElement = document.getElementById(&#39;viz1595830498772&#39;); var vizElement = divElement.getElementsByTagName(&#39;object&#39;)[0]; if ( divElement.offsetWidth  800 ) { vizElement.</description>
+Hike Collection
+Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -78,7 +80,7 @@
       
       <guid>https://hugobelin.com/posts/categories/travel/photocollection/</guid>
       <description>This post summarizes my collection of photos all of which are spread across multiple posts in this website and more, while individual posts point to specific places from the world which is more convenient for visualizing smaller portions of land and interacting with the viz. Having all of the photos in one place make it nice to see all the places I&amp;rsquo;ve been to and bring memories back 😃
-You can check out the viz directly on Tableau Public      var divElement = document.</description>
+You can check out the viz directly on Tableau Public Image Credits: Unsplash: Flighting image by @wistomsin Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -88,8 +90,9 @@ You can check out the viz directly on Tableau Public      var divElement = docum
       
       <guid>https://hugobelin.com/posts/categories/travel/2019mukilteodiablolake/</guid>
       <description>Starting the weekend on July 27 we decided to visit the Mukilteo Lighthouse. Surprisingly after being several years in the region we&amp;rsquo;ve never visited this lighthouse before so we decided to head over there and take a look at it
- Main View from the Lighthouse, Ferry
-  BrewingCatsCore.Logger.traceInfo( `Unsplash Component`, &#39;component.unsplash&#39;, &#39;tagId_m&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;Unsplash&#39;, &#39;imageId&#39;: &#39;hi-6URE4bqA&#39; } );     Mukilteo lighthouse and ferry</description>
+Main View from the Lighthouse, Ferry
+Mukilteo lighthouse and ferry
+Construction of the lighthouse began on 1905 and became operational in 1906. They used a &amp;lsquo;revolving Fresnel lens&amp;#39; same that is on exhibition below along with a white bust sculpture from George Vancouver.</description>
     </item>
     
     <item>
@@ -99,8 +102,8 @@ You can check out the viz directly on Tableau Public      var divElement = docum
       
       <guid>https://hugobelin.com/posts/categories/travel/2019sandiego/</guid>
       <description>A simple, short trip to San Diego. A good opportunity to get to know another nice place from US. Off we go early on Saturday we got a chance to catch the late morning in San Diego, first walk: downtown San Diego, close to Gaslamp Quarter. Doing an initial assessment of the surroundings
- Downtown First View
- My initial thought about the city was &amp;rsquo;new meets old&amp;rsquo;, I had this idea reinforced throughout the trip&amp;hellip; new buildings next to old ones over and over.</description>
+Downtown First View
+My initial thought about the city was &amp;rsquo;new meets old&amp;rsquo;, I had this idea reinforced throughout the trip&amp;hellip; new buildings next to old ones over and over.</description>
     </item>
     
     <item>
@@ -110,8 +113,7 @@ You can check out the viz directly on Tableau Public      var divElement = docum
       
       <guid>https://hugobelin.com/posts/categories/gaming/stateofplay/</guid>
       <description>In the table below I&amp;rsquo;m showing the games I&amp;rsquo;m currently playing, the games I&amp;rsquo;ve finished, the games I will be playing, as well as the games I&amp;rsquo;m considering. In the future I will add links to reviews to those games 🎮
-
-Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.split(&#39;;&#39;); for (let i = 0; i  BrewingCatsCore.Logger.traceInfo( `iframe Component`, &#39;component.iframe&#39;, &#39;tagId_15&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;iframe&#39;, &#39;src&#39;: &#39;https:\/\/coda.</description>
+Loading… Gamer Card DarthOguh Xbox: DarthOguh PlayStation: HugoBelin Nintendo: darthoguh Steam: DarthOguh Twitter, Instagram, Website Latest Gaming Status Tweets by DarthOguh Scroll to Top Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -122,7 +124,7 @@ Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = par
       <guid>https://hugobelin.com/posts/site/brewingcatscore/</guid>
       <description>This website is created over a common core which is used for other websites. It packs specific features and functionality that make HugoBelin.com a better site. Brewing Cats Core augments the base functionality from the Ananke Theme which is built using Hugo framework
 This post showcases the completed work as well as the upcoming features. These can be tracked in the following Coda board:
-Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.</description>
+Loading… Scroll to Top Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -132,7 +134,7 @@ Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = par
       
       <guid>https://hugobelin.com/posts/site/roadmap/</guid>
       <description>This website is a forked version built by Brewing Cats (my own company) using a set of reusable components (both code libraries, services, and content) that I call Brewing Cats Core. My website as well as the core component roadmaps are shown below:
- Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.split(&#39;;&#39;); for (let i = 0; i  BrewingCatsCore.Logger.traceInfo( `iframe Component`, &#39;component.iframe&#39;, &#39;tagId_15&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;iframe&#39;, &#39;src&#39;: &#39;https:\/\/coda.</description>
+Loading… Loading… Credits: Photo by airfocus on Unsplash Scroll to Top Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -142,8 +144,7 @@ Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = par
       
       <guid>https://hugobelin.com/posts/site/credits/</guid>
       <description>This post was created to recognize the hard work of the many developers that made this site possible thus far. From hosting, to frameworks, they&amp;rsquo;re recognized here:
-Hosting, Libraries, Frameworks and other Technologies Loading…  (() = { let paramStyle = &#39;max-width:100%;&#39;; let styles = paramStyle.split(&#39;;&#39;); for (let i = 0; i  BrewingCatsCore.Logger.traceInfo( `iframe Component`, &#39;component.iframe&#39;, &#39;tagId_15&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;iframe&#39;, &#39;src&#39;: &#39;https:\/\/coda.io\/embed\/bNNCG5bcPs\/_suqXw?viewMode=embedplay\u0026hideSections=true&#39; } );  
- Image Credits: Unsplash: Circuit Board image by @harrisonbroadbent    Image Credits: Main Page.</description>
+Hosting, Libraries, Frameworks and other Technologies Loading… Image Credits: Unsplash: Circuit Board image by @harrisonbroadbent Image Credits: Main Page. Unsplash: EMP Museum image by @sakulich Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -153,9 +154,8 @@ Hosting, Libraries, Frameworks and other Technologies Loading…  (() = { let pa
       
       <guid>https://hugobelin.com/posts/site/about/</guid>
       <description>My name is Hugo Belin and this is my personal website. If you&amp;rsquo;re looking for my resume and professional history you can find it on this Resume post
-Just another human being in this planet trying to leave it better than when I arrived 
-This is my internet footprint:
-  Facebook   Twitter   Instagram   Snapchat   Reddit   Tableau Public   LinkedIn   I own and run BrewingCats as a side project.</description>
+Just another human being in this planet trying to leave it better than when I arrived This is my internet footprint:
+Facebook Twitter Instagram Snapchat Reddit Tableau Public LinkedIn I own and run BrewingCats as a side project. You can see my contributions in GitLab , GitHub and my Gists Favorite Movies and Series Loading… Favorite Videogames Loading… Gamer Card DarthOguh Xbox: DarthOguh PlayStation: HugoBelin Nintendo: darthoguh Steam: DarthOguh Twitter, Instagram, Website Image Credits: Unsplash: Note image by @noemieke Scroll to Top Site Views: 0 Page Views: 0 Your Site Views: 0 Your Page Views: 0 </description>
     </item>
     
     <item>
@@ -165,7 +165,9 @@ This is my internet footprint:
       
       <guid>https://hugobelin.com/posts/site/changelog/</guid>
       <description>This post contains a list of the changes made to the website, it is used for tracking purposes
-  Website Version Core Library Version Release Name     4.24          Ben Solo         (() = { document.querySelector(&#34;.a36b65b2c4b6c4bf03e02aa3200d2f43d&#34;).innerHTML = `${BrewingCatsCore.Config.Version}`; })();   Versioning Policies Major.Minor.Build  | | |_______ Brewing Cats Core Version  | |_____________ New features  |___________________ Official new releases (Tied to a Release name)</description>
+Website Version Core Library Version Release Name 4.25 @@@ Versioning Policies Major.Minor.Build | | |_______ Brewing Cats Core Version | |_____________ New features |___________________ Official new releases (Tied to a Release name)
+Milestone Naming Conventions Milestone names are taken from:
+List of Star Wars characters then: Star Wars Legends characters then: Star Wars: Knights of the Old Republic characters Release milestone would look like:</description>
     </item>
     
     <item>
@@ -184,8 +186,7 @@ This is my internet footprint:
       
       <guid>https://hugobelin.com/posts/instagram/</guid>
       <description>This plugin has been deprecated
-Instagram-Auto-Embed
-window.AutoInstagram.Control.Initialize(&#34;636890196944822&#34;, &#34;17b874bd11a90bf04332b10b5c45dc9f&#34;); if (window.AutoInstagram.Control.LoadFromParam() === &#39;&#39;) { window.AutoInstagram.Control.QueryAndAddInstagramPost( &#39;CDqPPKxp1cT&#39;, &#34;Instagram-Auto-Embed&#34; ); } else { window.AutoInstagram.Control.QueryAndAddInstagramPost( window.AutoInstagram.Control.LoadFromParam(), &#34;Instagram-Auto-Embed&#34; ); } BrewingCatsCore.Logger.traceInfo( `AutoInstagram Component`, &#39;component.autoinstagram&#39;, &#39;tagId_a&#39;, &#39;ComponentSetup&#39;, { &#39;component&#39;: &#39;AutoInstagram&#39; } );  </description>
+Instagram-Auto-Embed</description>
     </item>
     
   </channel>
