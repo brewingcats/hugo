@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jun 2020 22:33:08 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Gracias Tableau</title>
+      <link>https://hugobelin.com/es/posts/categories/uncategorized/thankyoutableau/</link>
+      <pubDate>Tue, 14 Jun 2022 16:29:04 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/uncategorized/thankyoutableau/</guid>
+      <description>Equipo Move to the Web
+Gracias Tableau Hace casi 6 años desde que me uní a Tableau en 2016. ¡Vaya aventura! Increíble compañía, excelentes compañeros, un gran lugar para aprender. Tuve la responsabilidad de mejorar partes del producto (¡arriba Web Authoring!) así como de la infraestructura de pruebas. Trabajé en varias Conferencias de Tableau (Austin, TX 2016. Las Vegas, NV 2017. Las Vegas, NV 2019) y todas fueron divertidas tanto dentro del evento como después del mismo.</description>
+    </item>
+    
+    <item>
       <title>DIY Pantalla de Privacidad</title>
       <link>https://hugobelin.com/es/posts/categories/uncategorized/diyscreen/</link>
       <pubDate>Sun, 29 May 2022 11:41:05 -0700</pubDate>
@@ -162,7 +172,7 @@ Facebook Twitter Instagram Snapchat Reddit Tableau Public LinkedIn También soy 
       
       <guid>https://hugobelin.com/es/posts/site/changelog/</guid>
       <description>Este artículo presenta una lista de cambios hechos al sitio web, tiene como objetivo llevar control del mismo
-Versión del Sitio Versión de Librería Nombre de la Versión 4.25 @@@ Políticas de Versión Mayor.Menor.Incremento | | |_______ Versión de Brewing Cats Core | |_____________ Nueva funcionalidad |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)
+Versión del Sitio Versión de Librería Nombre de la Versión 4.26 @@@ Políticas de Versión Mayor.Menor.Incremento | | |_______ Versión de Brewing Cats Core | |_____________ Nueva funcionalidad |___________________ Liberación oficial de nueva funcionalidad (Incluyde nuevo código de proyecto)
 Convención de Nombres de Proyecto Los nombres de proyecto se toman de:
 Lista de personajes de Star Wars posteriormente: Lista de personajes legendarios de Star Wars posteriormente: Personajes de Star Wars: Caballeros de la Vieja República El Código de Proyecto será presentado de la siguiente forma:</description>
     </item>

@@ -6,22 +6,31 @@
     <description>Recent content in Categories on Hugo Belin</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 May 2022 11:40:59 -0700</lastBuildDate><atom:link href="https://hugobelin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jun 2022 16:28:58 -0700</lastBuildDate><atom:link href="https://hugobelin.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>DIY</title>
-      <link>https://hugobelin.com/categories/diy/</link>
-      <pubDate>Sun, 29 May 2022 11:40:59 -0700</pubDate>
+      <title>career</title>
+      <link>https://hugobelin.com/categories/career/</link>
+      <pubDate>Tue, 14 Jun 2022 16:28:58 -0700</pubDate>
       
-      <guid>https://hugobelin.com/categories/diy/</guid>
+      <guid>https://hugobelin.com/categories/career/</guid>
       <description></description>
     </item>
     
     <item>
       <title>uncategorized</title>
       <link>https://hugobelin.com/categories/uncategorized/</link>
-      <pubDate>Sun, 29 May 2022 11:40:59 -0700</pubDate>
+      <pubDate>Tue, 14 Jun 2022 16:28:58 -0700</pubDate>
       
       <guid>https://hugobelin.com/categories/uncategorized/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DIY</title>
+      <link>https://hugobelin.com/categories/diy/</link>
+      <pubDate>Sun, 29 May 2022 11:40:59 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/categories/diy/</guid>
       <description></description>
     </item>
     

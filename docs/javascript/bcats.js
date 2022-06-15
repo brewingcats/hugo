@@ -127,8 +127,8 @@ if (window.AutoInstagram === undefined) {
 var BrewingCatsCore;
 (function (BrewingCatsCore) {
     class Config {
-        static Version = 3;
-        static Build = 33;
+        static Version = 4;
+        static Build = 34;
         static SiteVersion = '';
         static ProjectId = '';
         static TelemetryEnabled = true;
@@ -142,6 +142,9 @@ var BrewingCatsCore;
         static WarnLocalhost = false;
         static StatsMode = 'Stats2';
         static RedirectHttps = true;
+        static TelemetryDataUrl = '';
+        static TelemetryDataBaseName = '';
+        static TelemetryDataEnv = '';
         static getCodeName() {
             return Config.CodeNames[Config.Build];
         }
@@ -1575,6 +1578,14 @@ var HeadParser;
 if (window.HeadParser === undefined) {
     window.HeadParser = HeadParser;
 }
+var BrewingCatsCore;
+(function (BrewingCatsCore) {
+    let TelemetryResponseStatus;
+    (function (TelemetryResponseStatus) {
+        TelemetryResponseStatus["Success"] = "Success";
+        TelemetryResponseStatus["Failure"] = "Failure";
+    })(TelemetryResponseStatus = BrewingCatsCore.TelemetryResponseStatus || (BrewingCatsCore.TelemetryResponseStatus = {}));
+})(BrewingCatsCore || (BrewingCatsCore = {}));
 if (window.BrewingCatsCore === undefined) {
     window.BrewingCatsCore = BrewingCatsCore;
 }
@@ -1588,6 +1599,8 @@ var BrewingCatsCore;
         LogCategory["Configuration"] = "Configuration";
         LogCategory["ComponentInteraction"] = "ComponentInteraction";
         LogCategory["Unload"] = "Unload";
+        LogCategory["Telemetry"] = "Telemetry";
+        LogCategory["Nivo"] = "Nivo";
     })(LogCategory = BrewingCatsCore.LogCategory || (BrewingCatsCore.LogCategory = {}));
     let LogType;
     (function (LogType) {
@@ -1725,6 +1738,565 @@ var BrewingCatsCore;
         indexId;
     }
     BrewingCatsCore.TraceLog = TraceLog;
+})(BrewingCatsCore || (BrewingCatsCore = {}));
+if (window.BrewingCatsCore === undefined) {
+    window.BrewingCatsCore = BrewingCatsCore;
+}
+var BrewingCatsCore;
+(function (BrewingCatsCore) {
+    class NivoController {
+        static dataControl = {};
+        static config = {
+            LineMonthCount: 3
+        };
+        static createUsageLine(appName, propertyFilter) {
+            NivoController.dataControl[appName] = {
+                DirSize: NivoController.config.LineMonthCount,
+                CollectedSize: 0,
+                ChartData: [],
+                TempData: []
+            };
+            for (let i = 0; i <= NivoController.config.LineMonthCount; i++) {
+                BrewingCatsCore.TelemetryReader.getTelemetryData(BrewingCatsCore.TelemetryReader.getNthId(i), (data, status) => {
+                    if (status !== BrewingCatsCore.TelemetryResponseStatus.Success) {
+                        let resourceId = BrewingCatsCore.TelemetryReader.getNthId(i);
+                        BrewingCatsCore.Logger.traceError(`Failure while reading ${resourceId}`, 'NivoController', 'tagId_2b', BrewingCatsCore.LogCategory.Telemetry, {
+                            errorType: 'ReadTelemetryData'
+                        });
+                        return;
+                    }
+                    let normalized = [];
+                    if (data.length === undefined) {
+                        normalized.push(data);
+                    }
+                    else {
+                        normalized = data;
+                    }
+                    NivoController.processLineData(appName, propertyFilter, normalized);
+                });
+            }
+        }
+        static processLineData(appName, propertyFilter, data) {
+            let filterTagId = 'tagId_1';
+            let currentMonthData = {
+                id: '',
+                data: []
+            };
+            const tag1 = data.filter((i) => {
+                if (BrewingCatsCore.Config.TelemetryDataEnv === 'staging') {
+                    return i.tagId === filterTagId &&
+                        (i.url.indexOf('brewingcats') !== -1 ||
+                            i.url.indexOf('localhost') !== -1) &&
+                        (i.url.indexOf(BrewingCatsCore.Config.TelemetryDataEnv) !== -1 ||
+                            i.url.indexOf('localhost') !== -1);
+                }
+                return i.tagId === filterTagId &&
+                    i.url.indexOf('brewingcats') !== -1;
+            });
+            NivoController.dataControl[appName].CollectedSize++;
+            BrewingCatsCore.Logger.traceInfo(`Got ${data.length} entries, filtered down to ${tag1.length}`, 'usersPerMonth', 'tagId_x', BrewingCatsCore.LogCategory.Telemetry, {
+                originalSize: `${data.length}`,
+                filterSize: `${tag1.length}`
+            });
+            if (tag1 === undefined || tag1.length === 0) {
+                if (NivoController.dataControl[appName].CollectedSize ===
+                    NivoController.dataControl[appName].DirSize) {
+                    let evt = new CustomEvent('NivoChartsCoreBootApp', {
+                        detail: {
+                            appName: appName,
+                            chartType: 'line',
+                            chartMeta: window.BrewingCatsCore.TelemetryChartConfig.LineConfig,
+                            chartData: NivoController.dataControl[appName].ChartData
+                        }
+                    });
+                    NivoController.sendChartEvent(evt);
+                }
+                return;
+            }
+            currentMonthData.id = NivoController.parseMonth(tag1[0].timestamp);
+            let dayCount = {};
+            tag1.forEach(e => {
+                let day = new Date(e.timestamp).getDate();
+                if (dayCount[day] === undefined) {
+                    dayCount[day] = [];
+                    dayCount[day].push(e[propertyFilter]);
+                }
+                else {
+                    if (dayCount[day].indexOf(e[propertyFilter]) == -1) {
+                        dayCount[day].push(e[propertyFilter]);
+                    }
+                }
+            });
+            for (let j = 1; j < 32; j++) {
+                if (dayCount[j] === undefined) {
+                    currentMonthData.data.push({ x: `${j}`, y: 0 });
+                }
+                else {
+                    currentMonthData.data.push({
+                        x: `${j}`,
+                        y: dayCount[j].length
+                    });
+                }
+            }
+            NivoController.dataControl[appName].ChartData.push(currentMonthData);
+            if (NivoController.dataControl[appName].CollectedSize ===
+                NivoController.dataControl[appName].DirSize) {
+                let evt = new CustomEvent('NivoChartsCoreBootApp', {
+                    detail: {
+                        appName: appName,
+                        chartType: 'line',
+                        chartMeta: window.BrewingCatsCore.TelemetryChartConfig.LineConfig,
+                        chartData: NivoController.dataControl[appName].ChartData
+                    }
+                });
+                NivoController.sendChartEvent(evt);
+            }
+        }
+        static parseMonth(date) {
+            return new Date(date).toDateString().split(' ')[1];
+        }
+        static createUsageCalendar(name, propertyFilter, filterName) {
+            NivoController.dataControl[name] = {
+                DirSize: 0,
+                CollectedSize: 0,
+                ChartData: [],
+                TempData: {}
+            };
+            switch (filterName) {
+                case 'regular':
+                    NivoController.readEntireDir(name, propertyFilter, NivoController.processDataForCalendar);
+                    break;
+                case 'currentUser':
+                    NivoController.readEntireDir(name, propertyFilter, NivoController.processMyPageViewsCalendar);
+                    break;
+                default:
+                    NivoController.readEntireDir(name, propertyFilter, NivoController.processDataForCalendar);
+            }
+        }
+        static processMyPageViewsCalendar(appName, propertyFilter, data) {
+            const currentUser = window.localStorage.getItem('ClientId');
+            let filteredData = data.filter(item => {
+                return item.ClientId == currentUser;
+            });
+            NivoController.dataControl[appName].CollectedSize++;
+            let appData = NivoController.dataControl[appName];
+            if (filteredData === undefined || filteredData.length === 0) {
+                if (appData.DirSize === appData.CollectedSize) {
+                    NivoController.initializeNivoCalendar(appName);
+                }
+                return;
+            }
+            filteredData.forEach(testData => {
+                let dateTag = new Date(testData.timestamp).toISOString().split('T')[0];
+                if (NivoController.dataControl[appName].TempData[dateTag] === undefined) {
+                    NivoController.dataControl[appName].TempData[dateTag] = [];
+                }
+                if (!NivoController.dataControl[appName].TempData[dateTag].includes(testData[propertyFilter])) {
+                    NivoController.dataControl[appName].TempData[dateTag].push(testData[propertyFilter]);
+                }
+            });
+            if (appData.DirSize === appData.CollectedSize) {
+                NivoController.initializeNivoCalendar(appName);
+            }
+        }
+        static processDataForCalendar(appName, propertyFilter, data) {
+            let logEnv = BrewingCatsCore.Config.TelemetryDataEnv.toLowerCase();
+            let filteredData = data.filter(item => {
+                if (logEnv === 'staging') {
+                    return item.tagId === 'tagId_1' &&
+                        (item.url.indexOf('localhost') !== -1 ||
+                            item.url.indexOf('brewingcats') !== -1) && (item.url.indexOf(logEnv) !== -1 ||
+                        item.url.indexOf('localhost') !== -1);
+                }
+                return item.tagId == 'tagId_1' && item.url.indexOf('brewingcats') !== -1;
+            });
+            NivoController.dataControl[appName].CollectedSize++;
+            let appData = NivoController.dataControl[appName];
+            if (filteredData === undefined || filteredData.length === 0) {
+                if (appData.DirSize === appData.CollectedSize) {
+                    NivoController.initializeNivoCalendar(appName);
+                }
+                return;
+            }
+            filteredData.forEach(testData => {
+                let dateTag = new Date(testData.timestamp).toISOString().split('T')[0];
+                if (NivoController.dataControl[appName].TempData[dateTag] === undefined) {
+                    NivoController.dataControl[appName].TempData[dateTag] = [];
+                }
+                if (!NivoController.dataControl[appName].TempData[dateTag].includes(testData[propertyFilter])) {
+                    NivoController.dataControl[appName].TempData[dateTag].push(testData[propertyFilter]);
+                }
+            });
+            if (appData.DirSize === appData.CollectedSize) {
+                NivoController.initializeNivoCalendar(appName);
+            }
+        }
+        static initializeNivoCalendar(appName) {
+            let earliest = new Date();
+            let latest = new Date("2000-01-01");
+            for (const prop in NivoController.dataControl[appName].TempData) {
+                let dayValue = {
+                    value: NivoController.dataControl[appName].TempData[prop].length,
+                    day: prop
+                };
+                NivoController.dataControl[appName].ChartData.push(dayValue);
+                let testDay = new Date(prop);
+                if (testDay > latest) {
+                    latest = testDay;
+                }
+                if (testDay < earliest) {
+                    earliest = testDay;
+                }
+            }
+            let meta = BrewingCatsCore.TelemetryChartConfig.CalendarMeta;
+            let metaFrom = new Date(meta.from);
+            if (metaFrom < earliest) {
+                earliest = metaFrom;
+            }
+            else {
+                BrewingCatsCore.TelemetryChartConfig.CalendarMeta.from = earliest.toISOString().split('T')[0];
+            }
+            let metaTo = new Date(meta.to);
+            if (metaTo > latest) {
+                latest = metaTo;
+            }
+            else {
+                BrewingCatsCore.TelemetryChartConfig.CalendarMeta.to = latest.toISOString().split('T')[0];
+            }
+            meta.from = earliest.toISOString().split('T')[0];
+            meta.to = latest.toISOString().split('T')[0];
+            let calendarEvent = new CustomEvent('NivoChartsCoreBootApp', {
+                detail: {
+                    appName: appName,
+                    chartType: 'calendar',
+                    chartMeta: meta,
+                    chartData: NivoController.dataControl[appName].ChartData
+                }
+            });
+            document.dispatchEvent(calendarEvent);
+        }
+        static sendChartEvent(evt) {
+            if (window.NivoChartsCore === undefined ||
+                window.NivoChartsCore.Listening !== true) {
+                setTimeout(() => {
+                    NivoController.sendChartEvent(evt);
+                }, 500);
+                BrewingCatsCore.Logger.traceWarn(`Nivo chart is not ready`, 'NivoController', 'tagId_19', BrewingCatsCore.LogCategory.Nivo, {
+                    AppName: evt.detail.appName
+                });
+                return;
+            }
+            document.dispatchEvent(evt);
+        }
+        static readEntireDir(appName, propertyFilter, customProcessor) {
+            NivoController.dataControl[appName].CollectedSize = 0;
+            BrewingCatsCore.TelemetryReader.getDataDir((dirInfo, s) => {
+                if (s !== BrewingCatsCore.TelemetryResponseStatus.Success) {
+                    BrewingCatsCore.Logger.traceError(`Failure while reading dir`, 'NivoController', 'tagId_x', BrewingCatsCore.LogCategory.Telemetry, {
+                        errorType: 'ReadTelemetryDir'
+                    });
+                    return;
+                }
+                NivoController.dataControl[appName].DirSize = dirInfo.length;
+                dirInfo.forEach((dirData) => {
+                    BrewingCatsCore.TelemetryReader.getTelemetryData(NivoController.extractId(dirData.Name), (data, status) => {
+                        if (status === BrewingCatsCore.TelemetryResponseStatus.Failure) {
+                            BrewingCatsCore.Logger.traceError(`Failure while reading telemetry data`, 'NivoController', 'tagId_y', BrewingCatsCore.LogCategory.Telemetry, {
+                                errorType: 'ReadTelemetryData'
+                            });
+                            return;
+                        }
+                        let normalizedData = [];
+                        if (data.length === undefined) {
+                            normalizedData.push(data);
+                        }
+                        else {
+                            normalizedData = data;
+                        }
+                        customProcessor(appName, propertyFilter, normalizedData);
+                    });
+                });
+            });
+        }
+        static extractId(fileName) {
+            return fileName.replace(".json", "").split('-')[2];
+        }
+    }
+    BrewingCatsCore.NivoController = NivoController;
+})(BrewingCatsCore || (BrewingCatsCore = {}));
+if (window.BrewingCatsCore === undefined) {
+    window.BrewingCatsCore = BrewingCatsCore;
+}
+var BrewingCatsCore;
+(function (BrewingCatsCore) {
+    class TelemetryReader {
+        static dataCache = {};
+        static telemetryCallbacks = {};
+        static getCurrentId() {
+            return TelemetryReader.getNthId(0);
+        }
+        static getNthId(nth) {
+            let date = new Date();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear();
+            if (nth >= month) {
+                let diffYears = Math.floor(nth / 12);
+                year = year - diffYears;
+                let diffMonths = nth % 12;
+                if (diffMonths >= month) {
+                    year = year - 1;
+                    diffMonths = 12 - (diffMonths - month);
+                }
+                else {
+                    diffMonths = month - diffMonths;
+                }
+                month = diffMonths;
+            }
+            else {
+                month = month - nth;
+            }
+            let monthStr = `${month}`;
+            if (month < 10) {
+                monthStr = `0${month}`;
+            }
+            return `${year}${monthStr}`;
+        }
+        static getDataDir(callback) {
+            let id = 'dir';
+            let url = `${BrewingCatsCore.Config.TelemetryDataUrl}${id}.json`;
+            TelemetryReader.getFromTelemetry(id, (d, r) => {
+                if (r === BrewingCatsCore.TelemetryResponseStatus.Failure) {
+                    callback(d, r);
+                    return;
+                }
+                callback(d.filter((i) => i.Name.indexOf(BrewingCatsCore.Config.TelemetryDataEnv) !== -1).map((x) => {
+                    return ({
+                        LastWriteTime: new Date(x.LastWriteTime),
+                        Name: x.Name.replaceAll('\\', '')
+                    });
+                }), r);
+            }, url);
+        }
+        static getTelemetryData(id, callback) {
+            let url = `${BrewingCatsCore.Config.TelemetryDataUrl}${BrewingCatsCore.Config.TelemetryDataBaseName}-${BrewingCatsCore.Config.TelemetryDataEnv}`;
+            url = `${url}-${id}.json`;
+            TelemetryReader.getFromTelemetry(id, callback, url);
+        }
+        static getFromTelemetry(id, callback, url) {
+            if (TelemetryReader.dataCache[id] !== undefined) {
+                let nowMs = new Date().getTime();
+                let nextUpdate = TelemetryReader.dataCache[id].lastUpdate + TelemetryChartConfig.CacheTimeout;
+                if (nowMs < nextUpdate) {
+                    BrewingCatsCore.Logger.traceInfo(`Returning cached data for id: ${id}`, 'TelemetryReader', 'tagId_u', BrewingCatsCore.LogCategory.Telemetry, {
+                        logId: id
+                    });
+                    callback(TelemetryReader.dataCache[id].data, BrewingCatsCore.TelemetryResponseStatus.Success);
+                    return;
+                }
+            }
+            if (TelemetryReader.telemetryCallbacks[id] !== undefined &&
+                TelemetryReader.telemetryCallbacks[id].length > 0) {
+                TelemetryReader.telemetryCallbacks[id].push(callback);
+                return;
+            }
+            if (TelemetryReader.telemetryCallbacks[id] === undefined) {
+                TelemetryReader.telemetryCallbacks[id] = [];
+            }
+            TelemetryReader.telemetryCallbacks[id].push(callback);
+            let reqTime = new Date().getTime();
+            fetch(url).then((response) => response.json()).then((json) => {
+                let duration = new Date().getTime() - reqTime;
+                let dataSize = json.length;
+                if (json.length === undefined) {
+                    dataSize = 1;
+                }
+                BrewingCatsCore.Logger.traceInfo(`Read resource id: ${id}. Entries: ${dataSize}`, 'TelemetryReader', 'tagId_w', BrewingCatsCore.LogCategory.Telemetry, {
+                    id: id,
+                    url: url,
+                    size: dataSize,
+                    duration: `${duration}`
+                });
+                let data = [];
+                if (json.length === undefined) {
+                    data.push(json);
+                }
+                else {
+                    data = json;
+                }
+                TelemetryReader.dataCache[id] = {
+                    lastUpdate: new Date().getTime(),
+                    data: data
+                };
+                while (TelemetryReader.telemetryCallbacks[id].length > 0) {
+                    let subscriptor = TelemetryReader.telemetryCallbacks[id].pop();
+                    subscriptor(data, BrewingCatsCore.TelemetryResponseStatus.Success);
+                }
+            }).catch((reason) => {
+                let duration = new Date().getTime() - reqTime;
+                BrewingCatsCore.Logger.traceError(`Failure reading resource ${id}: ${reason}`, 'TelemetryReader', 'tagId_v', BrewingCatsCore.LogCategory.Telemetry, {
+                    id: id,
+                    url: url,
+                    duration: `${duration}`
+                });
+                while (TelemetryReader.telemetryCallbacks[id].length > 0) {
+                    let subscriptor = TelemetryReader.telemetryCallbacks[id].pop();
+                    subscriptor(reason, BrewingCatsCore.TelemetryResponseStatus.Failure);
+                }
+            });
+        }
+    }
+    BrewingCatsCore.TelemetryReader = TelemetryReader;
+    class TelemetryChartConfig {
+        static CacheTimeout = 1000 * 60 * 10;
+        static LineConfig = {
+            width: 900,
+            height: 400,
+            margin: { top: 20, right: 20, bottom: 60, left: 80 },
+            animate: true,
+            enableSlices: 'x',
+            xScale: {
+                type: 'linear',
+                min: 0,
+                max: 'auto',
+            },
+            yScale: {
+                type: 'linear',
+                stacked: false,
+            },
+            axisLeft: {
+                legend: 'Site Views',
+                legendOffset: 12,
+            },
+            axisBottom: {
+                legend: 'Day of the Month',
+                legendOffset: -12,
+            },
+            curve: 'monotoneX',
+            enablePointLabel: true,
+            yFormat: " >-.2f",
+            pointSize: 16,
+            pointBorderWidth: 1,
+            pointBorderColor: {
+                from: 'color',
+                modifiers: [['darker', 0.3]],
+            },
+            pointLabel: (t) => { return `${t.y}`; },
+            useMesh: true,
+            enableArea: true,
+            colors: { scheme: 'nivo' },
+            motionConfig: "stiff",
+            legends: [
+                {
+                    anchor: 'bottom-right',
+                    direction: 'column',
+                    justify: false,
+                    translateX: 100,
+                    translateY: 0,
+                    itemsSpacing: 0,
+                    itemDirection: 'top-to-bottom',
+                    itemWidth: 80,
+                    itemHeight: 20,
+                    itemOpacity: 0.75,
+                    symbolSize: 10,
+                    symbolShape: 'circle',
+                    symbolBorderColor: 'rgba(0, 0, 0, .5)',
+                    effects: [
+                        {
+                            on: 'hover',
+                            style: {
+                                itemBackground: 'rgba(0, 0, 0, .03)',
+                                itemOpacity: 1
+                            }
+                        }
+                    ]
+                }
+            ],
+            nivoUseCustomPoint: true,
+        };
+        static CalendarMeta = {
+            width: 900,
+            height: 260,
+            emptyColor: "#eeeeee",
+            monthBorderColor: "#ffffff",
+            dayBorderWidth: 2,
+            dayBorderColor: "#ffffff",
+            margin: {
+                top: 50,
+                right: 10,
+                bottom: 10,
+                left: 50,
+            },
+            from: (new Date().toISOString().split('T')[0]),
+            to: "2000-01-01"
+        };
+        static CalendarData = [
+            {
+                "value": 268,
+                "day": "2017-10-28"
+            },
+            {
+                "value": 42,
+                "day": "2017-03-16"
+            },
+            {
+                "value": 253,
+                "day": "2017-08-30"
+            },
+            {
+                "value": 291,
+                "day": "2017-07-30"
+            },
+            {
+                "value": 52,
+                "day": "2017-10-20"
+            },
+            {
+                "value": 229,
+                "day": "2016-06-06"
+            },
+            {
+                "value": 349,
+                "day": "2015-10-20"
+            },
+            {
+                "value": 306,
+                "day": "2017-04-07"
+            },
+            {
+                "value": 207,
+                "day": "2018-05-06"
+            },
+        ];
+        static LinelData = [
+            {
+                id: 'Current Month',
+                data: [
+                    { x: '1', y: 7 },
+                    { x: '2', y: 5 },
+                    { x: '3', y: 11 },
+                    { x: '4', y: 9 },
+                    { x: '5', y: 12 },
+                    { x: '6', y: 16 },
+                    { x: '7', y: 13 },
+                    { x: '8', y: 13 },
+                ],
+            },
+            {
+                id: 'Previous Month',
+                data: [
+                    { x: '4', y: 14 },
+                    { x: '5', y: 14 },
+                    { x: '6', y: 15 },
+                    { x: '7', y: 11 },
+                    { x: '8', y: 10 },
+                    { x: '9', y: 12 },
+                    { x: '10', y: 9 },
+                    { x: '11', y: 7 },
+                ],
+            },
+        ];
+    }
+    BrewingCatsCore.TelemetryChartConfig = TelemetryChartConfig;
 })(BrewingCatsCore || (BrewingCatsCore = {}));
 if (window.BrewingCatsCore === undefined) {
     window.BrewingCatsCore = BrewingCatsCore;
