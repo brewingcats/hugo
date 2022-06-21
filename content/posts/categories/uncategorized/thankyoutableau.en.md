@@ -70,7 +70,8 @@ later renamed to *Stay on the Web*) and this company.
 next career adventure and sadly my departure from this team and this company. I will hold great memories 
 from my time here and for sure will keep in touch with the great people that crossed at some point on my 
 team or the company. Empowering people and organizations to be more efficient and achieve more with their 
-data was and will still be a focus on {{< link "https://www.linkedin.com/in/hugobelin/" "my career" >}}.
+data {{< link "/posts/resume/" "was and will still be" >}} a focus on 
+{{< link "https://www.linkedin.com/in/hugobelin/" "my career" >}}.
 
 {{< big T >}}hank you **Tableau**, thank you **Move to the Web** team, and thank you **Stay on the Web** 
 team!

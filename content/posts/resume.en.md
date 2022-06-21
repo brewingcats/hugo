@@ -23,7 +23,11 @@ or in {{< link "https://gitlab.com/hobelinm" "GitLab" >}}. Feel free to check ou
 
 {{< head 2 "Career History" >}}
 
-{{< big-custom label="2020-Now" >}} **Software Engineer Lead Member of the Technical Staff** - 
+{{< big-custom label="2022-Now" >}} **Senior Software Engineer** - {{< link 
+"https://www.dremio.com/" "Dremio" >}}. Help and contribute to the latest generation of Dremio Lakehouse 
+platform. Drive improvements to branch health and performance.
+
+{{< big-custom label="2020-2022" >}} **Software Engineer Lead Member of the Technical Staff** - 
 {{< link "https://www.salesforce.com/" "Salesforce" >}}. A role updated per the acquisition of Tableau by Salesforce, continue
 designing and develop components for Tableau web authoring. Contribute feature development for web-first experiences for 
 Tableau authoring. Develop features to improve the perceived and real performance of the product, auto-saving capabilities and more. 

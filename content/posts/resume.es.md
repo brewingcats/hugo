@@ -23,7 +23,11 @@ basado en el área de Seattle, puede conocer mas acerca de mi experiencia profes
 
 {{< head 2 "Carrera Profesional" >}}
 
-{{< big-custom label="2020-Hoy" >}} **Ingeniero de Software Miembro Líder del Staff Ténico** - 
+{{< big-custom label="2022-Hoy" >}} **Senior Software Engineer** - {{< link 
+"https://www.dremio.com/" "Dremio" >}}. Ayudo y contribuyo a entregar la última generación de la 
+plataforma Lakehouse de Dremio. Líder de mejoras al branch y a la suite de performance.
+
+{{< big-custom label="2020-2022" >}} **Ingeniero de Software Miembro Líder del Staff Ténico** - 
 {{< link "https://www.salesforce.com/" "Salesforce" >}}. Como un nuevo rol producto de la adquisición de Tableau por 
 Salesforce, continúo con el diseño y desarrollo de componentes para la autoría de vizzes (visualizaciones) en Tableau Web. 
 Contribuyo con el desarrollo de nueva funcionalidad de experiencias centradas principalmente en la autoría de vizzes mediante 

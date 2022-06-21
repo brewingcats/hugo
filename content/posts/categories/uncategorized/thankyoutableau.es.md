@@ -74,8 +74,8 @@ en esta compañía.
 sistemas de información me ha llevado al siguiente paso en mi carrera y tristemente a mi salida de este 
 equipo y esta compañía. Me llevo geniales recuerdos de mi tiempo aquí y me mantendré en contacto con la 
 excelente gente con la que me crucé en la compañía. Ayudar a personas y organizaciones a ser más 
-eficientes y lograr más con su información ha sido y seguirá siendo un objetivo de 
-{{< link "https://www.linkedin.com/in/hugobelin/" "mi carrera" >}}.
+eficientes y lograr más con su información {{< link "/es/posts/resume/" "ha sido y seguirá siendo" >}} un 
+objetivo de {{< link "https://www.linkedin.com/in/hugobelin/" "mi carrera" >}}.
 
 {{< big G >}}racias **Tableau**, gracias a mi equipo **Move to the Web**, y gracias a mi equipo **Stay on 
 the Web**

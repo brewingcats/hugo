@@ -1754,7 +1754,8 @@ var BrewingCatsCore;
                 DirSize: NivoController.config.LineMonthCount,
                 CollectedSize: 0,
                 ChartData: [],
-                TempData: []
+                TempData: [],
+                CustomCounter: 0
             };
             for (let i = 0; i <= NivoController.config.LineMonthCount; i++) {
                 BrewingCatsCore.TelemetryReader.getTelemetryData(BrewingCatsCore.TelemetryReader.getNthId(i), (data, status) => {
@@ -1783,15 +1784,8 @@ var BrewingCatsCore;
                 data: []
             };
             const tag1 = data.filter((i) => {
-                if (BrewingCatsCore.Config.TelemetryDataEnv === 'staging') {
-                    return i.tagId === filterTagId &&
-                        (i.url.indexOf('brewingcats') !== -1 ||
-                            i.url.indexOf('localhost') !== -1) &&
-                        (i.url.indexOf(BrewingCatsCore.Config.TelemetryDataEnv) !== -1 ||
-                            i.url.indexOf('localhost') !== -1);
-                }
                 return i.tagId === filterTagId &&
-                    i.url.indexOf('brewingcats') !== -1;
+                    i.url.indexOf('olainterpreting.com') === -1;
             });
             NivoController.dataControl[appName].CollectedSize++;
             BrewingCatsCore.Logger.traceInfo(`Got ${data.length} entries, filtered down to ${tag1.length}`, 'usersPerMonth', 'tagId_x', BrewingCatsCore.LogCategory.Telemetry, {
@@ -1901,15 +1895,7 @@ var BrewingCatsCore;
         }
         static processDataForCalendar(appName, propertyFilter, data) {
             let logEnv = BrewingCatsCore.Config.TelemetryDataEnv.toLowerCase();
-            let filteredData = data.filter(item => {
-                if (logEnv === 'staging') {
-                    return item.tagId === 'tagId_1' &&
-                        (item.url.indexOf('localhost') !== -1 ||
-                            item.url.indexOf('brewingcats') !== -1) && (item.url.indexOf(logEnv) !== -1 ||
-                        item.url.indexOf('localhost') !== -1);
-                }
-                return item.tagId == 'tagId_1' && item.url.indexOf('brewingcats') !== -1;
-            });
+            let filteredData = data.filter(item => item.tagId === 'tagId_1' && item.url.indexOf('olainterpreting.com') === -1);
             NivoController.dataControl[appName].CollectedSize++;
             let appData = NivoController.dataControl[appName];
             if (filteredData === undefined || filteredData.length === 0) {
