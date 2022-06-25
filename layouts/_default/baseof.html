@@ -71,7 +71,9 @@
       BrewingCatsCore.Config.LinkHoverColor = '{{ $.Page.Site.Params.link_hover }}';
       BrewingCatsCore.Config.UseGenericGdpr = '{{ $.Page.Site.Params.useGenericGdpr }}' === 'true';
       BrewingCatsCore.Config.SiteVersion = '{{ .Site.Params.siteVersion }}';
-      BrewingCatsCore.Config.StatsMode = 'Stats2';
+      BrewingCatsCore.Config.TelemetryDataUrl = '{{ .Site.Params.telemetryDataUrl }}';
+      BrewingCatsCore.Config.TelemetryDataBaseName = '{{ .Site.Params.telemetryDataBaseName }}';
+      BrewingCatsCore.Config.TelemetryDataEnv = '{{ .Site.Params.telemetryDataEnv }}';
       // Initialization happens here
       BrewingCatsCore.Control.Init();
       let version = BrewingCatsCore.Config.SiteVersion;

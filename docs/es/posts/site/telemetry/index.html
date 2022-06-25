@@ -41,7 +41,7 @@
 <meta itemprop="name" content="Telemetría">
 <meta itemprop="description" content="Datos de Telemetría, estadistica de uso"><meta itemprop="datePublished" content="2021-02-13T17:29:42-08:00" />
 <meta itemprop="dateModified" content="2021-02-13T17:29:42-08:00" />
-<meta itemprop="wordCount" content="334">
+<meta itemprop="wordCount" content="407">
 <meta itemprop="keywords" content="site," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Telemetría"/>
 <meta name="twitter:description" content="Datos de Telemetría, estadistica de uso"/>
@@ -78,7 +78,7 @@ if (!doNotTrack) {
       gtag('config', 'UA-85767008-2');
     </script>
     
-    <script type='text/javascript' src="/javascript/bcats.js#4.27" ></script>
+    <script type='text/javascript' src="/javascript/bcats.js#4.28" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
@@ -90,8 +90,10 @@ if (!doNotTrack) {
       BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
       BrewingCatsCore.Config.LinkHoverColor = '#00802B';
       BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '4.27';
-      BrewingCatsCore.Config.StatsMode = 'Stats2';
+      BrewingCatsCore.Config.SiteVersion = '4.28';
+      BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
+      BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
+      BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
       
       BrewingCatsCore.Control.Init();
       let version = BrewingCatsCore.Config.SiteVersion;
@@ -313,9 +315,12 @@ font-size: 75px;
 line-height: 60px;
 padding-top: 4px;
 padding-right: 8px;
-padding-left: 3px;">L</span>a mayoría si no es que todos los sitios web usan alguna forma de telemetría. Desde la creación de este sitio web he tenido planes de añadir telemetría. Muchos sitios sin embargo,
-recoleccionan datos no solo con el propósito de mejorar el sitio, detectar problemas de usabilidad, o con la finalidad de mejorarlo; muchos sitios venden esta información y la usan para otros
-propósitos. Dado que mi intención se limita a mejorar este sitio he tomado algunos pasos para asegurar que el manejo de la información es transparente</p>
+padding-left: 3px;">L</span>a mayoría si no es que todos los sitios web usan alguna forma de telemetría. Desde la
+creación de este sitio web he tenido planes de añadir telemetría. Muchos sitios sin embargo,
+recoleccionan datos no solo con el propósito de mejorar el sitio, detectar problemas de usabilidad, o con
+la finalidad de mejorarlo; muchos sitios venden esta información y la usan para otros
+propósitos. Dado que mi intención se limita a mejorar este sitio he tomado algunos pasos para asegurar
+que el manejo de la información es transparente</p>
 <p><span style="
 color: rgb(0, 117, 178);
 float: left;
@@ -323,7 +328,8 @@ font-size: 75px;
 line-height: 60px;
 padding-top: 4px;
 padding-right: 8px;
-padding-left: 3px;">C</span>omo te habrás dado cuenta desarrollo la funcionalidad centra para este y otros sitios en una colección de librerías que llamo <code>Brewing Cats Core</code>. Otro sitio que hace uso de ellas
+padding-left: 3px;">C</span>omo te habrás dado cuenta desarrollo la funcionalidad centra para este y otros sitios en una
+colección de librerías que llamo <code>Brewing Cats Core</code>. Otro sitio que hace uso de ellas
 es en 
 
 
@@ -331,7 +337,8 @@ es en
 style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
 onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
 onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BrewingCats.com</a>
- donde aplico los mismos principios para el uso de datos. Puedes ver nuestros terminos completos en cuanto al uso y generación
+ donde aplico los mismos principios
+para el uso de datos. Puedes ver nuestros terminos completos en cuanto al uso y generación
 de datos de Telemetría en la 
 
 
@@ -355,11 +362,16 @@ font-size: 75px;
 line-height: 60px;
 padding-top: 4px;
 padding-right: 8px;
-padding-left: 3px;">C</span>onstruí un sistema de telemetría personalizado desde cero para tener el control del manejo de la información. Estoy haciendo los datos de telemetría generados disponibles a todos
-en forma de una Viz de Tableau mostrado abajo. No identifico a ninguna persona, solo se identifican sesiones de usuario, sin embargo tu te puedes identificar personalmente mediante el uso de
-tu <code>Client ID</code> mostrado abajo. Puedes ver la información que has generado al usar este sitio mediante el filtro del Viz de telemetría (los datos no son añadidos en tiempo real, si es la
-primera vez que visitas el sitio puede tomar hasta un mes en mostrarse, trataré de actualizar el viz frecuentemente). Finalmente si no deseas aportar con tus datos a la mejora de este sitio
-web puedes deshabilitar la generación de datos de telemetría de tu navegador usando el switch mostrado abajo</p>
+padding-left: 3px;">C</span>onstruí un sistema de telemetría personalizado desde cero para tener el control del manejo
+de la información. Estoy haciendo los datos de telemetría generados disponibles a todos
+por medio de los diagramas mostrado abajo. No identifico a ninguna persona, solo se identifican sesiones
+de usuario, sin embargo tu te puedes identificar personalmente mediante el uso de
+tu <code>Client ID</code> mostrado abajo. Puedes ver la información que has generado al usar este sitio en algunos
+de los diagramas (los datos no son añadidos en tiempo real, si es la
+primera vez que visitas el sitio puede tomar hasta un mes en mostrarse, trataré de actualizar los datos
+frecuentemente). Finalmente si no deseas aportar con tus datos a la mejora de este sitio
+web puedes deshabilitar la generación de datos de telemetría de tu navegador usando el switch mostrado
+abajo</p>
 <p>
 <h4 style="text-align: center; color:rgb(0, 117, 178);">Datos de Telemetría del Último Mes</h4>
 
@@ -438,65 +450,628 @@ Tu Client ID: <code tag-id="ClientId"></code>
  <script>
    $('code[tag-id="ClientId"]').html(window.localStorage.getItem('ClientId'));
  </script></p>
+<p>
+<h3 style="text-align: center; color:rgb(0, 117, 178);">Estadisticas del Mes</h3>
 
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+    <h3 style="text-align: center; color:rgb(0, 117, 178);">Usuarios:</h3>
 
+  </div>
+  <div class="col">
+    
+    <h3 style="text-align: center; color:rgb(0, 117, 178);">Sesiones:</h3>
 
+  </div>
+  <div class="col">
+    
+    <h3 style="text-align: center; color:rgb(0, 117, 178);">Acceptaron TDS:</h3>
 
-
-
-<div class='tableauPlaceholder' id='viz1613344044841' style='position: relative'>
-  <noscript>
-    <a href='#'>
-      <img alt=' '
-        src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Hu&#47;HugoBelin_com-ProductionTelemetry&#47;Telemetry&#47;1_rss.png'
-        style='border: none' />
-    </a>
-  </noscript>
-  <object class='tableauViz'  style='display:none;'>
-    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-    <param name='embed_code_version' value='3' />
-    <param name='site_root' value='' />
-    <param name='name' value='HugoBelin_com-ProductionTelemetry&#47;Telemetry' />
-    <param name='tabs' value='no' />
-    <param name='toolbar' value='yes' />
-    <param name='static_image' 
-      value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Hu&#47;HugoBelin_com-ProductionTelemetry&#47;Telemetry&#47;1.png' />
-    <param name='animate_transition' value='yes' />
-    <param name='display_static_image' value='yes' />
-    <param name='display_spinner' value='yes' />
-    <param name='display_overlay' value='yes' />
-    <param name='display_count' value='yes' />
-    <param name='language' value='en' />
-  </object>
+  </div>
 </div>
-<script type='text/javascript'>
-  var divElement = document.getElementById('viz1613344044841');
-  var vizElement = divElement.getElementsByTagName('object')[0];
-  if ( divElement.offsetWidth > 800 ) {
-    vizElement.style.width='1000px';
-    vizElement.style.height='827px';
-  } else if ( divElement.offsetWidth > 500 ) {
-    vizElement.style.width='1000px';
-    vizElement.style.height='827px';
-  } else {
-    vizElement.style.width='100%';
-    vizElement.style.height='2027px';
-  }
+</div>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+    
+    <h3 style="text-align: center; color:rgb(0, 117, 178);">
+      <code id="monthly-users-count">Loading</code>
+    </h3>
+    <script>
+      (() => {
+        window.BrewingCatsCore.TelemetryReader.getTelemetryData(
+          window.BrewingCatsCore.TelemetryReader.getCurrentId(),
+          (d, s) => {
+            const tag1 = d.filter(i => i.tagId === 'tagId_1' && i.url.indexOf('olainterpreting') === -1);
+            let users = [];
+            tag1.forEach((i) => {
+              if (!users.includes(i.ClientId)) {
+                users.push(i.ClientId);
+              }
+            });
+    
+            document.getElementById('monthly-users-count').innerHTML = users.length;
+          }
+        );
+      })();
+    </script>
 
-  var scriptElement = document.createElement('script');
-  scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-  vizElement.parentNode.insertBefore(scriptElement, vizElement);
-  BrewingCatsCore.Logger.traceInfo(
-    `Tableau Component`,
-    'component.tableau',
-    'tagId_j',
-    'ComponentSetup',
-    {
-      'component': 'Tableau',
-      'vizId': 'viz1613344044841'
-    }
-  );
+  </div>
+  <div class="col">
+    
+    
+    <h3 style="text-align: center; color:rgb(0, 117, 178);">
+      <code id="monthly-session-count">Loading</code>
+    </h3>
+    <script>
+      (() => {
+        window.BrewingCatsCore.TelemetryReader.getTelemetryData(
+          window.BrewingCatsCore.TelemetryReader.getCurrentId(),
+          (d, s) => {
+            const tag1 = d.filter(i => i.tagId === 'tagId_1' && i.url.indexOf('olainterpreting') === -1);
+            let users = [];
+            tag1.forEach((i) => {
+              if (!users.includes(i.SessionId)) {
+                users.push(i.SessionId);
+              }
+            });
+    
+            document.getElementById('monthly-session-count').innerHTML = users.length;
+          }
+        );
+      })();
+    </script>
+
+  </div>
+  <div class="col">
+    
+    
+    <h3 style="text-align: center; color:rgb(0, 117, 178);">
+      <code id="monthly-tos-count">Loading</code>
+    </h3>
+    <script>
+      (() => {
+        window.BrewingCatsCore.TelemetryReader.getTelemetryData(
+          window.BrewingCatsCore.TelemetryReader.getCurrentId(),
+          (d, s) => {
+            const tag1 = d.filter(i => i.tagId === 'tagId_2');
+            let users = [];
+            tag1.forEach((i) => {
+              if (!users.includes(i.SessionId)) {
+                users.push(i.SessionId);
+              }
+            });
+    
+            document.getElementById('monthly-tos-count').innerHTML = users.length;
+          }
+        );
+      })();
+    </script>
+
+  </div>
+</div>
+</div></p>
+<p><div class="container">
+  <div class="row">
+  <div class="col">
+    
+    <h3 style="text-align: center; color:rgb(0, 117, 178);">Resoluciones Populares:</h3>
+
+  </div>
+  <div class="col">
+    
+    <h3 style="text-align: center; color:rgb(0, 117, 178);">Popularidad de Artículos:</h3>
+
+  </div>
+</div>
+</div>
+<div class="container">
+  <div class="row">
+  <div class="col">
+    
+    
+    <button type="button" class="btn btn-primary position-relative">
+      <span id="screen-sizes-size-1">Top Res</span>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <span id="screen-sizes-count-1">1</span>
+        <span class="visually-hidden">Top Resolution</span>
+      </span>
+    </button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary position-relative">
+      <span id="screen-sizes-size-2">Second Res</span>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <span id="screen-sizes-count-2">1</span>
+        <span class="visually-hidden">Second to Top Resolution</span>
+      </span>
+    </button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary position-relative">
+      <span id="screen-sizes-size-3">Third Res</span>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <span id="screen-sizes-count-3">1</span>
+        <span class="visually-hidden">Third to Top Resolution</span>
+      </span>
+    </button>
+    <script>
+      (() => {
+        let monthIds = [
+          window.BrewingCatsCore.TelemetryReader.getNthId(0),
+          window.BrewingCatsCore.TelemetryReader.getNthId(1),
+          window.BrewingCatsCore.TelemetryReader.getNthId(2),
+        ];
+    
+        window.BrewingCatsCore.TelemetryReader.queryTelemetryData(
+          'screen-sizes',
+          monthIds,
+          (data) => {
+            return data.filter(item => item.tagId === 'tagId_1');
+          },
+          (data) => {
+            let resolutions = {};
+            data.forEach(d => {
+              let resLabel = `${d.width}x${d.height}`;
+              if (resolutions[resLabel] === undefined) {
+                resolutions[resLabel] = 0;
+              }
+    
+              resolutions[resLabel]++;
+            });
+    
+            let res = [];
+            for (let prop in resolutions) {
+              res.push({
+                resolution: prop,
+                count: resolutions[prop]
+              });
+            }
+            
+            res.sort((a, b) => {
+              if (a.count < b.count) return 1;
+              if (a.count > b.count) return -1;
+              return 0;
+            });
+    
+            let appName = "screen-sizes";
+            for (let i = 1; i <= 3; i++) {
+              document.getElementById(`${appName}-size-${i}`).innerHTML = res[i].resolution;
+              document.getElementById(`${appName}-count-${i}`).innerHTML = res[i].count;
+            }
+          }
+        );
+      })();
+    </script>
+  </div>
+  <div class="col">
+    
+    
+    <button type="button" class="btn btn-primary position-relative">
+      <span id="post-scores-post-1">Top Post</span>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <span id="post-scores-count-1">1984</span>
+        <span class="visually-hidden">Top Resolution</span>
+      </span>
+    </button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary position-relative">
+      <span id="post-scores-post-2">Second Res</span>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <span id="post-scores-count-2">114</span>
+        <span class="visually-hidden">Second to Top Resolution</span>
+      </span>
+    </button>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary position-relative">
+      <span id="post-scores-post-3">Third Res</span>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        <span id="post-scores-count-3">58</span>
+        <span class="visually-hidden">Third to Top Resolution</span>
+      </span>
+    </button>
+    <script>
+      (() => {
+        let monthIds = [
+          window.BrewingCatsCore.TelemetryReader.getNthId(0),
+          window.BrewingCatsCore.TelemetryReader.getNthId(1),
+          window.BrewingCatsCore.TelemetryReader.getNthId(2),
+        ];
+    
+        window.BrewingCatsCore.TelemetryReader.queryTelemetryData(
+          'post-scores',
+          monthIds,
+          (data) => {
+            return data.filter(item => item.tagId === 'tagId_1');
+          },
+          (data) => {
+            let uris = {};
+            data.forEach((d) => {
+              let path = new URL(d.url).pathname;
+              if (uris[path] === undefined) {
+                uris[path] = 0;
+              }
+    
+              uris[path]++;
+            });
+    
+            let paths = [];
+            for (let prop in uris) {
+              paths.push({
+                path: prop,
+                count: uris[prop]
+              });
+            }
+    
+            paths.sort((a, b) => {
+              if (a.count < b.count) return 1;
+              if (a.count > b.count) return -1;
+              return 0;
+            });
+    
+            let appName = "post-scores";
+            for (let i = 1; i <= 3; i++) {
+              document.getElementById(`${appName}-post-${i}`).innerHTML = paths[i].path;
+              document.getElementById(`${appName}-count-${i}`).innerHTML = paths[i].count;
+            }
+          }
+        );
+      })();
+    </script>
+  </div>
+</div>
+</div></p>
+<p>Frescura de la Información: 
+ 
+ <code id="telemetry-freshness">Loading</code>
+ <script>
+   (()=> {
+     window.BrewingCatsCore.TelemetryReader.getDataDir((d, s) => {
+       let currentId = window.BrewingCatsCore.TelemetryReader.getCurrentId();
+       currentId = `${window.BrewingCatsCore.Config.TelemetryDataEnv}-${currentId}`;
+       let currentDir = d.filter(i => i.Name.indexOf(currentId) != -1)[0];
+       document.getElementById('telemetry-freshness').innerHTML = currentDir.LastWriteTime.toLocaleString();
+     });
+   })();
+ </script></p>
+<p>
+<h4 style="text-align: center; color:rgb(0, 117, 178);">Usuarios Mensuales</h4>
+
+
+
+
+
+<div id="users-telemetry"></div>
+<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.28"></script>
+<script>
+  (() => {
+    window.BrewingCatsCore.NivoController.createUsageLine(
+      'users-telemetry',
+      'ClientId'
+    );
+  })();
 </script>
+
+
+
+
+
+<div id="users-calendar"></div>
+<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.28"></script>
+<script>
+  window.BrewingCatsCore.NivoController.createUsageCalendar(
+    'users-calendar',
+    'ClientId',
+    'regular');
+</script></p>
+<p>
+<h4 style="text-align: center; color:rgb(0, 117, 178);">Sesiones Mensuales</h4>
+
+
+
+
+
+<div id="sessions-telemetry"></div>
+<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.28"></script>
+<script>
+  (() => {
+    window.BrewingCatsCore.NivoController.createUsageLine(
+      'sessions-telemetry',
+      'SessionId'
+    );
+  })();
+</script>
+
+
+
+
+
+<div id="sessions-calendar"></div>
+<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.28"></script>
+<script>
+  window.BrewingCatsCore.NivoController.createUsageCalendar(
+    'sessions-calendar',
+    'SessionId',
+    'regular');
+</script></p>
+<p>
+<h4 style="text-align: center; color:rgb(0, 117, 178);">Mis Vistas por Día</h4>
+
+
+
+
+
+<div id="my-calendar"></div>
+<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.28"></script>
+<script>
+  window.BrewingCatsCore.NivoController.createUsageCalendar(
+    'my-calendar',
+    'SessionId',
+    'currentUser');
+</script></p>
+<p>
+<h4 style="text-align: center; color:rgb(0, 117, 178);">Zonas Horarias</h4>
+
+
+
+<div id="time-zones"></div>
+<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.28"></script>
+<script>
+  (() => {
+    let monthIds = [
+      window.BrewingCatsCore.TelemetryReader.getNthId(0),
+    ];
+
+    window.BrewingCatsCore.TelemetryReader.queryTelemetryData(
+      'time-zones',
+      monthIds,
+      (data) => {
+        return data.filter(item => item.tagId === 'tagId_1');
+      },
+      (data) => {
+        let timeZones = {};
+        data.forEach(d => {
+          let zone = d.timezone;
+          if (timeZones[zone] === undefined) {
+            timeZones[zone] = 1;
+          } else {
+            timeZones[zone]++;
+          }
+        });
+
+        let timeZoneData = [];
+        for (let tz in timeZones) {
+          timeZoneData.push({
+            zone: tz,
+            count: timeZones[tz]
+          });
+        }
+
+        timeZoneData.sort((a, b) => {
+          if (a.count < b.count) { return 1; }
+          if (a.count > b.count) { return -1; }
+          return 0;
+        });
+
+        let chartData = [];
+        let countriesControl = [];
+        timeZoneData.forEach(tz => {
+          let countries = window.BrewingCatsCore.TimeZones.getCountriesWithTimeZone(tz.zone);
+          countries.forEach(c => {
+            if (!countriesControl.includes(c)) { 
+              chartData.push({
+                id: c,
+                value: tz.count
+              });
+
+              countriesControl.push(c);
+            }
+          });
+        });
+
+        let meta = window.BrewingCatsCore.TelemetryChartConfig.ChoroplethMeta;
+        meta.domain = [0, timeZoneData[0].count];
+        meta.features = window.BrewingCatsCore.TelemetryChartConfig.ChoroplethFeatures['features'];
+
+        window.BrewingCatsCore.NivoController.createNivoChart(
+          'time-zones',
+          'choropleth',
+          chartData,
+          meta
+        );
+      }
+    );
+  })();
+</script></p>
+<p>
+<h4 style="text-align: center; color:rgb(0, 117, 178);">Flujo entre Artículos</h4>
+
+
+
+<div id="page-flows"></div>
+<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.28"></script>
+<script>
+  (() => {
+    let monthIds = [
+      window.BrewingCatsCore.TelemetryReader.getNthId(0),
+    ];
+
+    window.BrewingCatsCore.TelemetryReader.queryTelemetryData(
+      'page-flows',
+      monthIds,
+      (data) => {
+        return data.filter(item => item.tagId === 'tagId_1');
+      },
+      (data) => {
+        let sessions = [];
+        
+        data.forEach((i) => {
+          if (!sessions.includes(i.SessionId)) {
+            sessions.push(i.SessionId);
+          }
+        });
+
+        let uris = [];
+        let linkTmp = {}
+        sessions.forEach(s => {
+          let sessionData = data.filter(d => d.SessionId === s);
+          if (sessionData.length !== undefined && sessionData.length !== 1) {
+            sessionData.sort((a, b) => {
+              let aTime = new Date(a.timestamp);
+              let bTime = new Date(b.timestamp);
+              if (aTime > bTime) return 1;
+              if (aTime < bTime) return -1;
+              return 0;
+            });
+  
+            sessionData.forEach((sess) => {
+              let path = new URL(sess.url).pathname;
+              if (!uris.includes(path)) {
+                uris.push(path);
+              }
+            });
+
+            for (let idx = 0; idx < sessionData.length; idx++) {
+              if (idx + 1 < sessionData.length) {
+                let curPath = new URL(sessionData[idx].url).pathname;
+                let nextPath = new URL(sessionData[idx + 1].url).pathname;
+                if (curPath !== nextPath) {
+                  let toFrom = `${curPath}=>${nextPath}`;
+                  let fromTo = `${nextPath}=>${curPath}`;
+                  if (linkTmp[toFrom] === undefined && linkTmp[fromTo] === undefined) {
+                    linkTmp[toFrom] = 1;
+                  } else if (linkTmp[toFrom] !== undefined && linkTmp[fromTo] === undefined) {
+                    linkTmp[toFrom]++;
+                  } else if (linkTmp[toFrom] === undefined && linkTmp[fromTo] !== undefined) {
+                    linkTmp[fromTo]++;
+                  }
+                }
+              }
+            }
+          }
+        });
+
+        let linkData = [];
+        for (let link in linkTmp) {
+          let source = link.split('=>')[0];
+          let target = link.split('=>')[1];
+
+          linkData.push({
+            source: (source < target)? source : target,
+            target: (source > target)? source : target,
+            value: linkTmp[link]
+          });
+        }
+
+        
+        let nodes = [];
+        uris.forEach(p => {
+          nodes.push({
+            id: p,
+            nodeColor: window.BrewingCatsCore.Util.getRandomHsl()
+          });
+        });
+
+        let chartData = {
+          nodes: nodes,
+          links: linkData
+        };
+
+        window.BrewingCatsCore.NivoController.createNivoChart(
+          'page-flows',
+          'sankey',
+          chartData,
+          window.BrewingCatsCore.TelemetryChartConfig.SankeyMeta
+        );
+      }
+    );
+  })();
+</script></p>
+<p>
+<h4 style="text-align: center; color:rgb(0, 117, 178);">Popularidad de Tag_Id</h4>
+
+
+
+<div id="tag-id-count"></div>
+<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.28"></script>
+<script>
+  (() => {
+    window.BrewingCatsCore.NivoController.createUsageBar('tag-id-count');
+  })();
+</script></p>
+<p>
+<h4 style="text-align: center; color:rgb(0, 117, 178);">Popularidad entre Artículos</h4>
+
+
+
+<div id="post-popularity"></div>
+<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.28"></script>
+<script>
+  (() => {
+    let monthIds = [
+      window.BrewingCatsCore.TelemetryReader.getNthId(0),
+    ];
+
+    window.BrewingCatsCore.TelemetryReader.queryTelemetryData(
+      'post-popularity',
+      monthIds,
+      (data) => {
+        return data.filter(item => item.tagId === 'tagId_1');
+      },
+      (data) => {
+        let uris = {};
+        data.forEach(d => {
+          let uri = new URL(d.url).pathname;
+          let id = uri;
+          if (uris[id] === undefined) {
+            uris[id] = {
+              id: id,
+              value: 1,
+              label: uri
+            };
+          } else {
+            let curId = uris[id];
+            curId.value++;
+            uris[id] = curId;
+          }
+        });
+
+        let chartData = [];
+        for (let id in uris) {
+          chartData.push(uris[id]);
+        }
+
+        chartData.sort((a, b) => {
+          if (a.value < b.value) { return 1; }
+          if (a.value > b.value) { return -1; }
+          return 0;
+        });
+
+        window.BrewingCatsCore.NivoController.createNivoChart(
+          'post-popularity',
+          'funnel',
+          chartData,
+          window.BrewingCatsCore.TelemetryChartConfig.FunnelMeta
+        );
+      }
+    );
+  })();
+</script></p>
+<br />
 <p>
 
 

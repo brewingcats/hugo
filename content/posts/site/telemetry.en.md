@@ -19,16 +19,86 @@ other purposes. Since I don't plan to make use of this data for purposes other t
 {{< link "https://brewingcats.com" "BrewingCats.com">}} where the same guidelines for data usage apply. You can see the complete policy for Telemetry generation and use in the 
 {{< link "https://brewingcats.com/posts/site/telemetry/" "Telemetry page" >}} of {{< link "https://brewingcats.com" "BrewingCats.com">}}. Here I will simplify its contents
 
-{{< big B >}}uilt a custom telemetry pipeline in order to get full control of the data handling. I'm making telemetry data available to anyone in the form of a Tableu Viz shown below. I 
-don't identify people, I only identify users but you can identify yourself by getting your `Client ID` below. You can see the data you generated with the use of my site by using the filter 
-in the Viz (the data is not added in real time so if it's the first time you use the site it might take up to a month to see it, I will try to update the viz frequently). Finally if you don't 
-wish to support improving this website you can disable telemetry generation for your browser by using the switch below
+{{< big B >}}uilt a custom telemetry pipeline in order to get full control of the data handling. I'm 
+making telemetry data available to anyone in the charts below. I don't identify people, I only identify 
+users but you can identify yourself by getting your `Client ID` below. You can see the data you generated 
+with the use of my site in some of these charts 
+(the data is not added in real time so if it's the first time you use the site it might take up to a 
+month to see it, I will try to update the data frequently). Finally if you don't 
+wish to support improving this website you can disable telemetry generation for your browser by using the 
+switch below
 
 {{< head 4 "Last Month Telemetry Data" >}}
 {{< telemetrybrs en >}}
 Your Client ID: {{< clientid >}}
 
-{{< tableautelemetry >}}
+{{< head 3 "Current Month Stats" >}}
+{{< grid >}}
+  {{< gridcol "col" >}}
+    {{< head 3 "Users:" >}}
+  {{</ gridcol >}}
+  {{< gridcol "col" >}}
+    {{< head 3 "Sessions:" >}}
+  {{</ gridcol >}}
+  {{< gridcol "col" >}}
+    {{< head 3 "Accepted TOS:" >}}
+  {{</ gridcol >}}
+{{</ grid>}}
+{{< grid >}}
+  {{< gridcol "col" >}}
+    {{< telemetryMonthlyUsers name="monthly-users-count" >}}
+  {{</ gridcol >}}
+  {{< gridcol "col" >}}
+    {{< telemetryMonthlySessions name="monthly-session-count" >}}
+  {{</ gridcol >}}
+  {{< gridcol "col" >}}
+    {{< telemetryMonthlyTOS name="monthly-tos-count" >}}
+  {{</ gridcol >}}
+{{</ grid>}}
 
+{{< grid >}}
+  {{< gridcol "col" >}}
+    {{< head 3 "Screen sizes:" >}}
+  {{</ gridcol >}}
+  {{< gridcol "col" >}}
+    {{< head 3 "Post Popularity:" >}}
+  {{</ gridcol >}}
+{{</ grid>}}
+{{< grid >}}
+  {{< gridcol "col" >}}
+    {{< telemetryScreenSizes name="screen-sizes" >}}
+  {{</ gridcol >}}
+  {{< gridcol "col" >}}
+    {{< telemetryPostScores name="post-scores" >}}
+  {{</ gridcol >}}
+{{</ grid>}}
+
+Data Freshness: {{< telemetryFreshness name="telemetry-freshness" >}}
+
+{{< head 4 "Monthly Users" >}}
+{{< nivoUsageLine name="users-telemetry" prop="ClientId" filter="regular" >}}
+{{< nivoUsageCalendar name="users-calendar" prop="ClientId" filter="regular" >}}
+
+{{< head 4 "Monthly Sessions" >}}
+{{< nivoUsageLine name="sessions-telemetry" prop="SessionId" filter="regular" >}}
+{{< nivoUsageCalendar name="sessions-calendar" prop="SessionId" filter="regular" >}}
+
+{{< head 4 "My page views per day" >}}
+{{< nivoUsageCalendar name="my-calendar" prop="SessionId" filter="currentUser" >}}
+
+{{< head 4 "Time zones" >}}
+{{< nivoTimeZones name="time-zones" >}}
+
+{{< head 4 "Page workflows" >}}
+{{< nivoWorkflows name="page-flows" >}}
+
+{{< head 4 "Tag_Id Popularity" >}}
+{{< nivoUsageBar name="tag-id-count" >}}
+
+{{< head 4 "Page popularity" >}}
+{{< nivoPosts name="post-popularity" >}}
+
+{{< break >}}
 {{< scrolltop >}}
+
 {{< pageStats >}}
