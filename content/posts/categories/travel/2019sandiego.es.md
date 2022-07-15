@@ -182,19 +182,12 @@ Hay muchas cosas más por hacer, y más que no pude incluir en este artículo co
 Algunas fotos adicionales de este hermoso lugar:
 
 {{< carousel "75%"
-"Más Imágenes de San Diego"
-"https://hugobelin.com/media/sandiego2019/sdh01.jpg"
-"https://hugobelin.com/media/sandiego2019/sdh02.jpg"
->}}
-
-
-{{< carousel "75%"
 "Imágenes de San Diego"
-"https://hugobelin.com/media/sandiego2019/sdv01.jpg"
-"https://hugobelin.com/media/sandiego2019/sdv02.jpg"
-"https://hugobelin.com/media/sandiego2019/sdv03.jpg"
-"https://hugobelin.com/media/sandiego2019/sdv04.jpg"
-"https://hugobelin.com/media/sandiego2019/sdv07.jpg"
+"/images/categories/travel/2019sandiego/sdv001.jpg"
+"/images/categories/travel/2019sandiego/sdv002.jpg"
+"/images/categories/travel/2019sandiego/sdv003.jpg"
+"/images/categories/travel/2019sandiego/sdv004.jpg"
+"/images/categories/travel/2019sandiego/sdv007.jpg"
 >}}
 
 Fotografías en un mapa en un viz:

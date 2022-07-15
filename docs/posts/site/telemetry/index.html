@@ -46,92 +46,89 @@
 <meta name="twitter:title" content="Telemetry"/>
 <meta name="twitter:description" content="Telemetry data, usage stats"/>
 
-      
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-85767008-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     
-    
-    
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85767008-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-85767008-2');
-    </script>
-    
-    <script type='text/javascript' src="/javascript/bcats.js#4.28" ></script>
+    <script type='text/javascript' src="/javascript/bcats.min.js#4.29" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
     <script>
-      BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
-      BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
-      BrewingCatsCore.Config.ProjectId = 'HugoBelin';
-      BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
-      BrewingCatsCore.Config.LinkHoverColor = '#00802B';
-      BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '4.28';
-      BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
-      BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
-      BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
-      
-      BrewingCatsCore.Control.Init();
-      let version = BrewingCatsCore.Config.SiteVersion;
-      let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
-      let timeZoneMsg = `UTC+${timeZone}`;
-      if (timeZone < 0) {
-        timeZoneMsg = `UTC${timeZone}`;
-      }
-
-      BrewingCatsCore.Logger.traceInfo(
-        `Loading: ${window.location.href}`,
-        'document.body',
-        'tagId_1',
-        'Bootstrap',
-        {
-          'url': window.location.href,
-          'siteVersion': version,
-          'height': $(window).height(),
-          'width': $(window).width(),
-          'timezone': timeZoneMsg
+      (() => {
+        BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
+        BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
+        BrewingCatsCore.Config.ProjectId = 'HugoBelin';
+        BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
+        BrewingCatsCore.Config.LinkHoverColor = '#00802B';
+        BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
+        BrewingCatsCore.Config.SiteVersion = '4.29';
+        BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
+        BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
+        BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
+        
+        BrewingCatsCore.Control.Init();
+        let version = BrewingCatsCore.Config.SiteVersion;
+        let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
+        let timeZoneMsg = `UTC+${timeZone}`;
+        if (timeZone < 0) {
+          timeZoneMsg = `UTC${timeZone}`;
         }
-      );
-
-      BrewingCatsCore.Control.UpdateStats((stats) => {
+  
         BrewingCatsCore.Logger.traceInfo(
-          `Stats for: ${window.location.href}`,
+          `Loading: ${window.location.href}`,
           'document.body',
-          'tagId_12',
+          'tagId_1',
           'Bootstrap',
-          stats
+          {
+            'url': window.location.href,
+            'siteVersion': version,
+            'height': window.innerHeight,
+            'width': window.innerWidth,
+            'timezone': timeZoneMsg
+          }
         );
+  
+        BrewingCatsCore.Control.UpdateStats((stats) => {
+          BrewingCatsCore.Logger.traceInfo(
+            `Stats for: ${window.location.href}`,
+            'document.body',
+            'tagId_12',
+            'Bootstrap',
+            stats
+          );
+  
+          let selection = window.document.querySelector('span[tag-id="site-page-views-footer"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.SiteViews;
+          }
 
-        $('span[tag-id="site-page-views-footer"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-site-views"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-page-views"]').html(stats.PageViews);
-        $('button[tag-id="stats-widget-user-site-views"]').html(stats.UserSiteViews);
-        $('button[tag-id="stats-widget-user-page-views"]').html(stats.UserPageViews);
-      });
+          selection = window.document.querySelector('button[tag-id="stats-widget-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-page-views"]');
+          if (selection !== null) {
+            selection = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserSiteViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-page-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserPageViews;
+          }
+        });
+      })();
     </script>
     
 
@@ -329,25 +326,130 @@ padding-left: 3px;">A</span>s you might know I develop core functionality for th
 
 
 
-<a href="https://brewingcats.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com', 'BrewingCats.com')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BrewingCats.com</a>
+
+
+<a href="https://brewingcats.com" target="_blank" class="aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com', 'BrewingCats.com')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Base')"
+>BrewingCats.com</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  where the same guidelines for data usage apply. You can see the complete policy for Telemetry generation and use in the
 
 
 
-<a href="https://brewingcats.com/posts/site/telemetry/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/posts\/site\/telemetry\/', 'Telemetry page')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Telemetry page</a>
+
+
+<a href="https://brewingcats.com/posts/site/telemetry/" target="_blank" class="aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vcG9zdHMvc2l0ZS90ZWxlbWV0cnkv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/posts\/site\/telemetry\/', 'Telemetry page')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vcG9zdHMvc2l0ZS90ZWxlbWV0cnkvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vcG9zdHMvc2l0ZS90ZWxlbWV0cnkvBase')"
+>Telemetry page</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vcG9zdHMvc2l0ZS90ZWxlbWV0cnkv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vcG9zdHMvc2l0ZS90ZWxlbWV0cnkvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vcG9zdHMvc2l0ZS90ZWxlbWV0cnkvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vcG9zdHMvc2l0ZS90ZWxlbWV0cnkvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vcG9zdHMvc2l0ZS90ZWxlbWV0cnkvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  of 
 
 
-<a href="https://brewingcats.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com', 'BrewingCats.com')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BrewingCats.com</a>
+
+
+<a href="https://brewingcats.com" target="_blank" class="aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com', 'BrewingCats.com')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Base')"
+>BrewingCats.com</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Here I will simplify its contents</p>
 <p><span style="
 color: rgb(0, 117, 178);
@@ -380,25 +482,25 @@ switch below</p>
   let labelSelector = `code[tag-id="telemetryStatusLabel-${lang}"]`;
   let disabledTelemetry = window.localStorage.getItem('DisabledTelemetry');
   if ('true' === disabledTelemetry) {
-    $('#disableTelemetry').prop('checked', false);
+    window.document.getElementById('disableTelemetry').checked = false;
     if ('en' == lang) {
-      $(labelSelector).text('Disabled');
+      window.document.querySelector(labelSelector).innerHTML = 'Disabled';
     } else {
-      $(labelSelector).text('Deshabilitada');
+      window.document.querySelector(labelSelector).innerHTML = 'Deshabilitada';
     }
   } else {
-    $('#disableTelemetry').prop('checked', true);
+    window.document.getElementById('disableTelemetry').checked = true;
     if ('en' == lang) {
-      $(labelSelector).text('Enabled');
+      window.document.querySelector(labelSelector).innerHTML = 'Enabled';
     } else {
-      $(labelSelector).text('Habilitada');
+      window.document.querySelector(labelSelector).innerHTML = 'Habilitada';
     }
   }
 
   function handleTelemetrySwitch() {
     let lang = "$lang";
     let labelSelector = `code[tag-id="telemetryStatusLabel-${lang}"]`;
-    let enableTelemetry = $('#disableTelemetry').prop('checked');
+    let enableTelemetry = window.document.getElementById('disableTelemetry').checked;
     if (true === enableTelemetry) {
       window.localStorage.removeItem('DisabledTelemetry');
       BrewingCatsCore.Config.TelemetryEnabled = true;
@@ -413,9 +515,9 @@ switch below</p>
       );
 
       if ('en' == lang) {
-        $(labelSelector).text('Enabled');
+        window.document.querySelector(labelSelector).innerHTML = 'Enabled';
       } else {
-        $(labelSelector).text('Habilitada');
+        window.document.querySelector(labelSelector).innerHTML = 'Habilitada';
       }
     } else {
       BrewingCatsCore.Logger.traceInfo(
@@ -431,16 +533,17 @@ switch below</p>
       window.localStorage.setItem('DisabledTelemetry', 'true');
       BrewingCatsCore.Config.TelemetryEnabled = false;
       if ('en' == lang) {
-        $(labelSelector).text('Disabled');
+        window.document.querySelector(labelSelector).innerHTML = 'Disabled';
       } else {
-        $(labelSelector).text('Deshabilitada');
+        window.document.querySelector(labelSelector).innerHTML = 'Deshabilitada';
       }
     }
   }
 </script>
 Your Client ID: <code tag-id="ClientId"></code>
  <script>
-   $('code[tag-id="ClientId"]').html(window.localStorage.getItem('ClientId'));
+   window.document.querySelector('code[tag-id="ClientId"]')
+     .innerHTML = window.localStorage.getItem('ClientId');
  </script></p>
 <p>
 <h3 style="text-align: center; color:rgb(0, 117, 178);">Current Month Stats</h3>
@@ -739,8 +842,8 @@ Your Client ID: <code tag-id="ClientId"></code>
 
 
 <div id="users-telemetry"></div>
-<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
-<script src="/javascript/nivo/nivo.js#4.28"></script>
+<link href="/style/nivo/nivo-style.css#4.29" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.29"></script>
 <script>
   (() => {
     window.BrewingCatsCore.NivoController.createUsageLine(
@@ -755,8 +858,8 @@ Your Client ID: <code tag-id="ClientId"></code>
 
 
 <div id="users-calendar"></div>
-<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
-<script src="/javascript/nivo/nivo.js#4.28"></script>
+<link href="/style/nivo/nivo-style.css#4.29" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.29"></script>
 <script>
   window.BrewingCatsCore.NivoController.createUsageCalendar(
     'users-calendar',
@@ -771,8 +874,8 @@ Your Client ID: <code tag-id="ClientId"></code>
 
 
 <div id="sessions-telemetry"></div>
-<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
-<script src="/javascript/nivo/nivo.js#4.28"></script>
+<link href="/style/nivo/nivo-style.css#4.29" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.29"></script>
 <script>
   (() => {
     window.BrewingCatsCore.NivoController.createUsageLine(
@@ -787,8 +890,8 @@ Your Client ID: <code tag-id="ClientId"></code>
 
 
 <div id="sessions-calendar"></div>
-<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
-<script src="/javascript/nivo/nivo.js#4.28"></script>
+<link href="/style/nivo/nivo-style.css#4.29" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.29"></script>
 <script>
   window.BrewingCatsCore.NivoController.createUsageCalendar(
     'sessions-calendar',
@@ -803,8 +906,8 @@ Your Client ID: <code tag-id="ClientId"></code>
 
 
 <div id="my-calendar"></div>
-<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
-<script src="/javascript/nivo/nivo.js#4.28"></script>
+<link href="/style/nivo/nivo-style.css#4.29" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.29"></script>
 <script>
   window.BrewingCatsCore.NivoController.createUsageCalendar(
     'my-calendar',
@@ -817,8 +920,8 @@ Your Client ID: <code tag-id="ClientId"></code>
 
 
 <div id="time-zones"></div>
-<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
-<script src="/javascript/nivo/nivo.js#4.28"></script>
+<link href="/style/nivo/nivo-style.css#4.29" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.29"></script>
 <script>
   (() => {
     let monthIds = [
@@ -892,12 +995,14 @@ Your Client ID: <code tag-id="ClientId"></code>
 
 
 <div id="page-flows"></div>
-<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
-<script src="/javascript/nivo/nivo.js#4.28"></script>
+<link href="/style/nivo/nivo-style.css#4.29" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.29"></script>
 <script>
   (() => {
     let monthIds = [
       window.BrewingCatsCore.TelemetryReader.getNthId(0),
+      window.BrewingCatsCore.TelemetryReader.getNthId(1),
+      window.BrewingCatsCore.TelemetryReader.getNthId(2),
     ];
 
     window.BrewingCatsCore.TelemetryReader.queryTelemetryData(
@@ -997,8 +1102,8 @@ Your Client ID: <code tag-id="ClientId"></code>
 
 
 <div id="tag-id-count"></div>
-<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
-<script src="/javascript/nivo/nivo.js#4.28"></script>
+<link href="/style/nivo/nivo-style.css#4.29" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.29"></script>
 <script>
   (() => {
     window.BrewingCatsCore.NivoController.createUsageBar('tag-id-count');
@@ -1010,8 +1115,8 @@ Your Client ID: <code tag-id="ClientId"></code>
 
 
 <div id="post-popularity"></div>
-<link href="/style/nivo/nivo-style.css#4.28" rel="stylesheet">
-<script src="/javascript/nivo/nivo.js#4.28"></script>
+<link href="/style/nivo/nivo-style.css#4.29" rel="stylesheet">
+<script src="/javascript/nivo/nivo.js#4.29"></script>
 <script>
   (() => {
     let monthIds = [

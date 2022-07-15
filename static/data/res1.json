@@ -1,0 +1,13 @@
+{
+  "test1": ["https://source.unsplash.com/WLUHO9A_xik/800x600"],
+  "test2": ["/images/cinema.jpg"],
+  "test3": [
+    "https://source.unsplash.com/WLUHO9A_xik/800x600",
+    "/images/cinema.jpg"
+  ],
+  "test4": ["/images/categories/gaming/ff701.jpg"],
+  "test5": [
+    "/images/categories/gaming/ff701.jpg",
+    "/images/cinema.jpg"
+  ]
+}

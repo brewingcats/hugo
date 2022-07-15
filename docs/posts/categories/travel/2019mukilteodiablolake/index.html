@@ -46,92 +46,89 @@
 <meta name="twitter:title" content="2019 Mukilteo and Diablo Lake"/>
 <meta name="twitter:description" content="Details about the weekend used to visit the Mukilteo Lighthouse as well as a boat tour on the Diablo Lake"/>
 
-      
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-85767008-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     
-    
-    
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85767008-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-85767008-2');
-    </script>
-    
-    <script type='text/javascript' src="/javascript/bcats.js#4.28" ></script>
+    <script type='text/javascript' src="/javascript/bcats.min.js#4.29" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
     <script>
-      BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
-      BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
-      BrewingCatsCore.Config.ProjectId = 'HugoBelin';
-      BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
-      BrewingCatsCore.Config.LinkHoverColor = '#00802B';
-      BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '4.28';
-      BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
-      BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
-      BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
-      
-      BrewingCatsCore.Control.Init();
-      let version = BrewingCatsCore.Config.SiteVersion;
-      let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
-      let timeZoneMsg = `UTC+${timeZone}`;
-      if (timeZone < 0) {
-        timeZoneMsg = `UTC${timeZone}`;
-      }
-
-      BrewingCatsCore.Logger.traceInfo(
-        `Loading: ${window.location.href}`,
-        'document.body',
-        'tagId_1',
-        'Bootstrap',
-        {
-          'url': window.location.href,
-          'siteVersion': version,
-          'height': $(window).height(),
-          'width': $(window).width(),
-          'timezone': timeZoneMsg
+      (() => {
+        BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
+        BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
+        BrewingCatsCore.Config.ProjectId = 'HugoBelin';
+        BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
+        BrewingCatsCore.Config.LinkHoverColor = '#00802B';
+        BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
+        BrewingCatsCore.Config.SiteVersion = '4.29';
+        BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
+        BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
+        BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
+        
+        BrewingCatsCore.Control.Init();
+        let version = BrewingCatsCore.Config.SiteVersion;
+        let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
+        let timeZoneMsg = `UTC+${timeZone}`;
+        if (timeZone < 0) {
+          timeZoneMsg = `UTC${timeZone}`;
         }
-      );
-
-      BrewingCatsCore.Control.UpdateStats((stats) => {
+  
         BrewingCatsCore.Logger.traceInfo(
-          `Stats for: ${window.location.href}`,
+          `Loading: ${window.location.href}`,
           'document.body',
-          'tagId_12',
+          'tagId_1',
           'Bootstrap',
-          stats
+          {
+            'url': window.location.href,
+            'siteVersion': version,
+            'height': window.innerHeight,
+            'width': window.innerWidth,
+            'timezone': timeZoneMsg
+          }
         );
+  
+        BrewingCatsCore.Control.UpdateStats((stats) => {
+          BrewingCatsCore.Logger.traceInfo(
+            `Stats for: ${window.location.href}`,
+            'document.body',
+            'tagId_12',
+            'Bootstrap',
+            stats
+          );
+  
+          let selection = window.document.querySelector('span[tag-id="site-page-views-footer"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.SiteViews;
+          }
 
-        $('span[tag-id="site-page-views-footer"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-site-views"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-page-views"]').html(stats.PageViews);
-        $('button[tag-id="stats-widget-user-site-views"]').html(stats.UserSiteViews);
-        $('button[tag-id="stats-widget-user-page-views"]').html(stats.UserPageViews);
-      });
+          selection = window.document.querySelector('button[tag-id="stats-widget-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-page-views"]');
+          if (selection !== null) {
+            selection = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserSiteViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-page-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserPageViews;
+          }
+        });
+      })();
     </script>
     
    
@@ -379,10 +376,45 @@ padding-right: 8px;
 padding-left: 3px;">S</span>tarting the weekend on July 27 we decided to visit the 
 
 
-<a href="https://en.wikipedia.org/wiki/Mukilteo_Light" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Mukilteo_Light', 'Mukilteo Lighthouse.')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Mukilteo Lighthouse.</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Mukilteo_Light" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHQ="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Mukilteo_Light', 'Mukilteo Lighthouse.')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHQ=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHQ=Base')"
+>Mukilteo Lighthouse.</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHQ=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHQ=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHQ=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHQ=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHQ=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  Surprisingly
 after being several years in the region we&rsquo;ve never visited this lighthouse before so we decided to head over there and take a look at it</p>
 
@@ -426,27 +458,132 @@ padding-left: 3px;">C</span>onstruction of the lighthouse began on 1905 and beca
 
 
 
-<a href="https://en.wikipedia.org/wiki/Fresnel_lens" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Fresnel_lens', 'Fresnel lens\u0027')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Fresnel lens&#39;</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Fresnel_lens" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRnJlc25lbF9sZW5z"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Fresnel_lens', 'Fresnel lens\u0027')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRnJlc25lbF9sZW5zHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRnJlc25lbF9sZW5zBase')"
+>Fresnel lens&#39;</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRnJlc25lbF9sZW5z");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRnJlc25lbF9sZW5zBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRnJlc25lbF9sZW5zBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRnJlc25lbF9sZW5zHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRnJlc25lbF9sZW5zHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  same that is on exhibition below along with a white bust sculpture from
 
 
 
-<a href="https://en.wikipedia.org/wiki/George_Vancouver" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/George_Vancouver', 'George Vancouver.')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">George Vancouver.</a>
+
+
+<a href="https://en.wikipedia.org/wiki/George_Vancouver" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VvcmdlX1ZhbmNvdXZlcg=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/George_Vancouver', 'George Vancouver.')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VvcmdlX1ZhbmNvdXZlcg==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VvcmdlX1ZhbmNvdXZlcg==Base')"
+>George Vancouver.</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VvcmdlX1ZhbmNvdXZlcg==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VvcmdlX1ZhbmNvdXZlcg==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VvcmdlX1ZhbmNvdXZlcg==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VvcmdlX1ZhbmNvdXZlcg==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvR2VvcmdlX1ZhbmNvdXZlcg==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  There were several other details on the bottom floor of the lighthouse that
 will have to wait for the next visit HugoWink We also didn&rsquo;t go up to the lighthouse as that day was crowded, so another day will be&hellip; 😉 Then we took a small
 walk on the 
 
 
-<a href="https://en.wikipedia.org/wiki/Mukilteo_Lighthouse_Park" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Mukilteo_Lighthouse_Park', 'Mukilteo Lighthouse Park')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Mukilteo Lighthouse Park</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Mukilteo_Lighthouse_Park" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHRob3VzZV9QYXJr"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Mukilteo_Lighthouse_Park', 'Mukilteo Lighthouse Park')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHRob3VzZV9QYXJrHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHRob3VzZV9QYXJrBase')"
+>Mukilteo Lighthouse Park</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHRob3VzZV9QYXJr");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHRob3VzZV9QYXJrBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHRob3VzZV9QYXJrBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHRob3VzZV9QYXJrHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTXVraWx0ZW9fTGlnaHRob3VzZV9QYXJrHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  which is an easy-walk park where families get
 together that also serves as relaxation area</p>
 
@@ -637,26 +774,131 @@ padding-right: 8px;
 padding-left: 3px;">N</span>ext day we had booked a 
 
 
-<a href="http://www.seattle.gov/light/damtours/diablotours.asp" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('http:\/\/www.seattle.gov\/light\/damtours\/diablotours.asp', 'boat tour')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">boat tour</a>
+
+
+<a href="http://www.seattle.gov/light/damtours/diablotours.asp" target="_blank" class="aHR0cDovL3d3dy5zZWF0dGxlLmdvdi9saWdodC9kYW10b3Vycy9kaWFibG90b3Vycy5hc3A="
+onclick="BrewingCatsCore.LinkActions.openLink('http:\/\/www.seattle.gov\/light\/damtours\/diablotours.asp', 'boat tour')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cDovL3d3dy5zZWF0dGxlLmdvdi9saWdodC9kYW10b3Vycy9kaWFibG90b3Vycy5hc3A=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cDovL3d3dy5zZWF0dGxlLmdvdi9saWdodC9kYW10b3Vycy9kaWFibG90b3Vycy5hc3A=Base')"
+>boat tour</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cDovL3d3dy5zZWF0dGxlLmdvdi9saWdodC9kYW10b3Vycy9kaWFibG90b3Vycy5hc3A=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cDovL3d3dy5zZWF0dGxlLmdvdi9saWdodC9kYW10b3Vycy9kaWFibG90b3Vycy5hc3A=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cDovL3d3dy5zZWF0dGxlLmdvdi9saWdodC9kYW10b3Vycy9kaWFibG90b3Vycy5hc3A=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cDovL3d3dy5zZWF0dGxlLmdvdi9saWdodC9kYW10b3Vycy9kaWFibG90b3Vycy5hc3A=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cDovL3d3dy5zZWF0dGxlLmdvdi9saWdodC9kYW10b3Vycy9kaWFibG90b3Vycy5hc3A=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  in
 
 
 
-<a href="https://en.wikipedia.org/wiki/Diablo_Lake" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Diablo_Lake', 'Diablo Lake')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Diablo Lake</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Diablo_Lake" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0xha2U="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Diablo_Lake', 'Diablo Lake')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0xha2U=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0xha2U=Base')"
+>Diablo Lake</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0xha2U=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0xha2U=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0xha2U=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0xha2U=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0xha2U=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  so we jumped on the road early on Sunday. We had to drive across the
 
 
 
-<a href="https://en.wikipedia.org/wiki/Diablo_Dam" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Diablo_Dam', 'diablo dam')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">diablo dam</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Diablo_Dam" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0RhbQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Diablo_Dam', 'diablo dam')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0RhbQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0RhbQ==Base')"
+>diablo dam</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0RhbQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0RhbQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0RhbQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0RhbQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRGlhYmxvX0RhbQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  to get to the tour. Apparently this is open just few months during summer. Once getting
 there we were able to see the beauty of the lake and its surrounding places</p>
 
@@ -1490,10 +1732,45 @@ padding-right: 8px;
 padding-left: 3px;">T</span>he guys from the boat tour let us enter the hydroelectric plant Ross Powerhouse at the 
 
 
-<a href="https://en.wikipedia.org/wiki/Ross_Dam" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Ross_Dam', 'Ross Dam,')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Ross Dam,</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Ross_Dam" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9zc19EYW0="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Ross_Dam', 'Ross Dam,')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9zc19EYW0=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9zc19EYW0=Base')"
+>Ross Dam,</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9zc19EYW0=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9zc19EYW0=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9zc19EYW0=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9zc19EYW0=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUm9zc19EYW0=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 
 you can see some of the pictures above. We actually saw the main rotor operating which drives the energy from the water turbine into the generator above:</p>
 <p>

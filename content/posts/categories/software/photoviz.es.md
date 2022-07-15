@@ -356,6 +356,19 @@ organizada de la siguiente manera en columnas:
 
 {{< customimg src="/images/categories/software/photoviz/gsheets.jpg" caption="Ejemplo de Google Sheets" >}}
 
+{{< head 1 "Manejando el Contenido del Tamaño Embebido" >}}
+
+{{< big U >}}na vez que se ha resuelto donde hostear la imagen, si resulto ser directamente sobre un 
+sitio web, el añadirla directamente a Tableau resultará en un contenedor con la imagen original la 
+cual puede o no caber en el área designada. Para ajustarla automáticamente al tamaño designado es 
+necesario utilizar otro contenedor que le indique el tamaño disponible. Este sitio tiene la 
+funcionalidad necesaria para lograrlo. El contenedor de Tableau dictará el espacio disponible, a su 
+vez este contenedor deberá cargar la imagen desde la fuente (la imagen debera ser accesible al 
+dominio) e indicar el espacio disponible, esto ajustará la imagen al espacio disponible. Abajo puede 
+encontrar controles para generar esta URL
+
+{{< embedencoder >}}
+
 {{< head 1 "Creación del Viz" >}}
 
 {{< big A>}}bra la aplicación de Tableau Public desde su escritorio y conéctese a su data source. Agregue la tabla adecuada y vaya a `Sheet 1`

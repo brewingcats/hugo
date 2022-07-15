@@ -181,18 +181,11 @@ Some more pictures of this beautiful place:
 
 {{< carousel "75%"
 "More of San Diego"
-"https://hugobelin.com/media/sandiego2019/sdh01.jpg"
-"https://hugobelin.com/media/sandiego2019/sdh02.jpg"
->}}
-
-
-{{< carousel "75%"
-"More of San Diego Too"
-"https://hugobelin.com/media/sandiego2019/sdv01.jpg"
-"https://hugobelin.com/media/sandiego2019/sdv02.jpg"
-"https://hugobelin.com/media/sandiego2019/sdv03.jpg"
-"https://hugobelin.com/media/sandiego2019/sdv04.jpg"
-"https://hugobelin.com/media/sandiego2019/sdv07.jpg"
+"/images/categories/travel/2019sandiego/sdv001.jpg"
+"/images/categories/travel/2019sandiego/sdv002.jpg"
+"/images/categories/travel/2019sandiego/sdv003.jpg"
+"/images/categories/travel/2019sandiego/sdv004.jpg"
+"/images/categories/travel/2019sandiego/sdv007.jpg"
 >}}
 
 Pictures on a map in a viz:

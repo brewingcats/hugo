@@ -298,10 +298,14 @@ I created a local copy and modified the following theme files to allow hiding al
 
 {{< customimg src="/images/categories/software/photoviz/baseof.jpg" caption="baseof.html - Allows to hide footer" >}}
 
-The remaining change is done in `single.html` and for the sake of simplicity you can view it {{< link "https://gist.github.com/hobelinm/11b327cccac1ab5a5201bff6614ad188" "here" >}}. Now we have 
-the option of hiding the UI pieces, for the special post we create a simple post without photo header and we simply add the option `barePage: true` to the front matter. We need to create a 
-shortcode that allows to connect our post with the library we added in the previous section. This shortcode will take two parameters: the first one to indicate whether to parse the 
-Instagram's post from query parameters and the second to locate the contents of the paragraph used for the selector to replace with the actual post's content
+The remaining change is done in `single.html` and for the sake of simplicity you can view it 
+{{< link "https://gist.github.com/hobelinm/11b327cccac1ab5a5201bff6614ad188" "here" >}}. Now we have 
+the option of hiding the UI pieces, for the special post we create a simple post without photo header 
+and we simply add the option `barePage: true` to the front matter. We need to create a 
+shortcode that allows to connect our post with the library we added in the previous section. This 
+shortcode will take two parameters: the first one to indicate whether to parse the 
+Instagram's post from query parameters and the second to locate the contents of the paragraph used 
+for the selector to replace with the actual post's content
 
 {{< gist hobelinm 667e929b1de8b57eabf360bb1781bb9d >}}
 {{< caption "Shortcode to connect posts with our Instagram library" >}}
@@ -310,10 +314,14 @@ Finally we call this shortcode from our special post, this is how it looks like:
 
 {{< gist hobelinm 6de724ebfc80560db7c8da05141fc571 >}}
 
-You can see it running on {{< link "/posts/instagram/" "this post" >}}. You can add `?insta=<postId>` to the URL to load custom posts, feel free to give it a try. If you want help getting 
-Instagram post IDs {{< link "https://brewingcats.com/posts/projects/software/instaparser/" "I built a post" >}} to help you extract those IDs and visualize them loaded, feel free to 
-check it out as well. Also if you don't want to build all of this for yourself feel free to take {{< link "/posts/instagram/" "my special post" >}} for your own Tableau Vizzes, again you can 
-get help from this {{< link "https://brewingcats.com/posts/projects/software/instaparser/" "Brewing Cats' post" >}}. ~~Finally you can see the code working here:~~
+You can see it running on {{< link "/posts/instagram/" "this post" >}}. You can add `?insta=<postId>` 
+to the URL to load custom posts, feel free to give it a try. If you want help getting 
+Instagram post IDs {{< link "https://brewingcats.com/posts/projects/software/instaparser/" 
+"I built a post" >}} to help you extract those IDs and visualize them loaded, feel free to 
+check it out as well. Also if you don't want to build all of this for yourself feel free to take 
+{{< link "/posts/instagram/" "my special post" >}} for your own Tableau Vizzes, again you can 
+get help from this {{< link "https://brewingcats.com/posts/projects/software/instaparser/" 
+"Brewing Cats' post" >}}. ~~Finally you can see the code working here:~~
 
 Instagram-Embed-Working-Here
 
@@ -321,17 +329,33 @@ Instagram-Embed-Working-Here
 
 {{< head 1 "Creating Our Data Source" >}}
 
-{{< big F >}}inally we have all we need to start working on our Tableau Viz. In this section I'll detail how I put together the data to be consumed by the Tableau Viz. You have many options in 
-regards to the format of the source `.txt`, `.csv`, `.xlsx`, locally. I decided to use {{< link "https://www.google.com/sheets/about/" "Google Sheets" >}} because it is very convenient and easy 
-to update. Connecting to either of these data sources is actually pretty simple. I've organized the data that we already collected in the following columns in the spreadsheet:
+{{< big F >}}inally we have all we need to start working on our Tableau Viz. In this section I'll 
+detail how I put together the data to be consumed by the Tableau Viz. You have many options in 
+regards to the format of the source `.txt`, `.csv`, `.xlsx`, locally. I decided to use 
+{{< link "https://www.google.com/sheets/about/" "Google Sheets" >}} because it is very convenient 
+and easy 
+to update. Connecting to either of these data sources is actually pretty simple. I've organized the 
+data that we already collected in the following columns in the spreadsheet:
 - Latitude
 - Longitude
 - Title/Description of the photo/group of photos
 - Date of the photo/group of photos
-- URL of the photos. For this post I'm using Instagram IDs since our shortcode already assembles the full URL (you can get the post IDs from 
+- URL of the photos. For this post I'm using Instagram IDs since our shortcode already assembles the 
+full URL (you can get the post IDs from 
 {{< link "https://brewingcats.com/posts/projects/software/instaparser/" "here" >}})
 
 {{< customimg src="/images/categories/software/photoviz/gsheets.jpg" caption="Google Sheets Sample" >}}
+
+{{< head 1 "Handling Embedded Sizing" >}}
+
+{{< big O >}}nce you have hosting figured out. If you decided to host a raw picture, adding it directly 
+into Tableau will not resize it to the available space and you will end up with a huge image that won't 
+fit into the given Tableau container. For that we need to wrap it in a container that will not grow 
+beyond the given space a.k.a the Tableau container. This website has a way to do it (your image needs 
+to be able to be loaded from this domain for it to work). Below there's an encoded that will take your 
+image source and an updated URL that will resize to the available space. Give it a try
+
+{{< embedencoder >}}
 
 {{< head 1 "Creating the Viz" >}}
 

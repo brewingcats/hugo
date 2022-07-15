@@ -41,97 +41,94 @@
 <meta itemprop="name" content="Como Crear Tu Propio Foto Viz">
 <meta itemprop="description" content="Tutorial que explica como crear Dashboards de Tableau que mostrarán tus fotos de Instagram (y de otras fuentes). Paso a paso y con código de ejemplo"><meta itemprop="datePublished" content="2020-08-08T14:51:56-07:00" />
 <meta itemprop="dateModified" content="2020-08-08T14:51:56-07:00" />
-<meta itemprop="wordCount" content="5735">
+<meta itemprop="wordCount" content="5862">
 <meta itemprop="keywords" content="software," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Como Crear Tu Propio Foto Viz"/>
 <meta name="twitter:description" content="Tutorial que explica como crear Dashboards de Tableau que mostrarán tus fotos de Instagram (y de otras fuentes). Paso a paso y con código de ejemplo"/>
 
-      
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-85767008-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     
-    
-    
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85767008-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-85767008-2');
-    </script>
-    
-    <script type='text/javascript' src="/javascript/bcats.js#4.28" ></script>
+    <script type='text/javascript' src="/javascript/bcats.min.js#4.29" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
     <script>
-      BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
-      BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
-      BrewingCatsCore.Config.ProjectId = 'HugoBelin';
-      BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
-      BrewingCatsCore.Config.LinkHoverColor = '#00802B';
-      BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '4.28';
-      BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
-      BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
-      BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
-      
-      BrewingCatsCore.Control.Init();
-      let version = BrewingCatsCore.Config.SiteVersion;
-      let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
-      let timeZoneMsg = `UTC+${timeZone}`;
-      if (timeZone < 0) {
-        timeZoneMsg = `UTC${timeZone}`;
-      }
-
-      BrewingCatsCore.Logger.traceInfo(
-        `Loading: ${window.location.href}`,
-        'document.body',
-        'tagId_1',
-        'Bootstrap',
-        {
-          'url': window.location.href,
-          'siteVersion': version,
-          'height': $(window).height(),
-          'width': $(window).width(),
-          'timezone': timeZoneMsg
+      (() => {
+        BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
+        BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
+        BrewingCatsCore.Config.ProjectId = 'HugoBelin';
+        BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
+        BrewingCatsCore.Config.LinkHoverColor = '#00802B';
+        BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
+        BrewingCatsCore.Config.SiteVersion = '4.29';
+        BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
+        BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
+        BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
+        
+        BrewingCatsCore.Control.Init();
+        let version = BrewingCatsCore.Config.SiteVersion;
+        let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
+        let timeZoneMsg = `UTC+${timeZone}`;
+        if (timeZone < 0) {
+          timeZoneMsg = `UTC${timeZone}`;
         }
-      );
-
-      BrewingCatsCore.Control.UpdateStats((stats) => {
+  
         BrewingCatsCore.Logger.traceInfo(
-          `Stats for: ${window.location.href}`,
+          `Loading: ${window.location.href}`,
           'document.body',
-          'tagId_12',
+          'tagId_1',
           'Bootstrap',
-          stats
+          {
+            'url': window.location.href,
+            'siteVersion': version,
+            'height': window.innerHeight,
+            'width': window.innerWidth,
+            'timezone': timeZoneMsg
+          }
         );
+  
+        BrewingCatsCore.Control.UpdateStats((stats) => {
+          BrewingCatsCore.Logger.traceInfo(
+            `Stats for: ${window.location.href}`,
+            'document.body',
+            'tagId_12',
+            'Bootstrap',
+            stats
+          );
+  
+          let selection = window.document.querySelector('span[tag-id="site-page-views-footer"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.SiteViews;
+          }
 
-        $('span[tag-id="site-page-views-footer"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-site-views"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-page-views"]').html(stats.PageViews);
-        $('button[tag-id="stats-widget-user-site-views"]').html(stats.UserSiteViews);
-        $('button[tag-id="stats-widget-user-page-views"]').html(stats.UserPageViews);
-      });
+          selection = window.document.querySelector('button[tag-id="stats-widget-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-page-views"]');
+          if (selection !== null) {
+            selection = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserSiteViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-page-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserPageViews;
+          }
+        });
+      })();
     </script>
     
    
@@ -372,17 +369,28 @@ if (!doNotTrack) {
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l">
 <script>
   (() => {
-    $(window).on("load", function(){
+    window.addEventListener("load", function(){
       window.HeadParser.Control.updateHeaders();
-      $('#tocContents')[0].appendChild(window.HeadParser.Control.CreateHeaderList());
+      window.document.getElementById('tocContents')
+        .appendChild(window.HeadParser.Control.CreateHeaderList());
     });
   })();
 </script>
 <aside id="toc">
   <p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
+    <button class="btn btn-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseToc"
+      aria-expanded="false"
+      aria-controls="collapseToc"
+    >
       
-      <h2>Tabla de Contenidos</h2>
+      <h2 
+        style="color: rgb(34, 34, 34); text-decoration: none; box-shadow: rgb(0, 117, 178) 0px -4px 0px inset;"
+        onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+        onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)"
+      >Tabla de Contenidos</h2>
       
     </button>
   </p>
@@ -409,10 +417,45 @@ pueden ser reemplazados fácilmente por alternativas que no utilicen nada de có
 para ciertos tipos de hosting de fotos. Este sitio fue construido utilizando el 
 
 
-<a href="https://gohugo.io/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/', 'framework Hugo')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">framework Hugo</a>
+
+
+<a href="https://gohugo.io/" target="_blank" class="aHR0cHM6Ly9nb2h1Z28uaW8v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/', 'framework Hugo')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vBase')"
+>framework Hugo</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9nb2h1Z28uaW8v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  y por lo tanto algunos de los ejemplos de código fueron
 diseñados para funcionar con ese framework; si estas acostumbrado a escribir código (en JavaScript principalmente) no debe ser mayor problema adaptar los ejemplos de código a otros
 frameworks y/o sistemas</p>
@@ -509,30 +552,135 @@ esas coordenadas en grados decimales (no en grados con formato <code>hora-minuto
 utilizando esta 
 
 
-<a href="https://www.fcc.gov/media/radio/dms-decimal" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.fcc.gov\/media\/radio\/dms-decimal', 'herramienta en línea')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">herramienta en línea</a>
+
+
+<a href="https://www.fcc.gov/media/radio/dms-decimal" target="_blank" class="aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.fcc.gov\/media\/radio\/dms-decimal', 'herramienta en línea')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Base')"
+>herramienta en línea</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Hay múltiples formas de obtener las coordenadas de tus fotos, aquí algunas de ellas:</p>
 <ul>
 <li>Por medio del uso de una aplicación que nos permita leer el metadata de tus fotos (yo use esta aplicación:
 
 
 
-<a href="https://apps.apple.com/us/app/exif-metadata/id1455197364" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/apps.apple.com\/us\/app\/exif-metadata\/id1455197364', 'EXIF Metadata para iOS')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">EXIF Metadata para iOS</a>
+
+
+<a href="https://apps.apple.com/us/app/exif-metadata/id1455197364" target="_blank" class="aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZXhpZi1tZXRhZGF0YS9pZDE0NTUxOTczNjQ="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/apps.apple.com\/us\/app\/exif-metadata\/id1455197364', 'EXIF Metadata para iOS')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZXhpZi1tZXRhZGF0YS9pZDE0NTUxOTczNjQ=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZXhpZi1tZXRhZGF0YS9pZDE0NTUxOTczNjQ=Base')"
+>EXIF Metadata para iOS</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZXhpZi1tZXRhZGF0YS9pZDE0NTUxOTczNjQ=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZXhpZi1tZXRhZGF0YS9pZDE0NTUxOTczNjQ=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZXhpZi1tZXRhZGF0YS9pZDE0NTUxOTczNjQ=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZXhpZi1tZXRhZGF0YS9pZDE0NTUxOTczNjQ=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS91cy9hcHAvZXhpZi1tZXRhZGF0YS9pZDE0NTUxOTczNjQ=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 )</li>
 <li>Transfiere tus fotos a una PC o Mac y lee su metadata desde ahí. Fotos transferidas en formato <code>.HEIC</code> usualmente incluyen metadata con las coordenadas. En Mac OS puedes ver la foto en <code>Finder</code>,
 asegurate de que el panel de <code>Preview</code> se muestre, selecciona la foto y en ese panel desliza por los detalles hasta encontrar las coordenadas. De nuevo, si el formato esta en <code>HH:MM:SS</code> utiliza
 esta 
 
 
-<a href="https://www.fcc.gov/media/radio/dms-decimal" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.fcc.gov\/media\/radio\/dms-decimal', 'herramienta en línea')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">herramienta en línea</a>
+
+
+<a href="https://www.fcc.gov/media/radio/dms-decimal" target="_blank" class="aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.fcc.gov\/media\/radio\/dms-decimal', 'herramienta en línea')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Base')"
+>herramienta en línea</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZmNjLmdvdi9tZWRpYS9yYWRpby9kbXMtZGVjaW1hbA==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  para hacer la conversión</li>
 </ul>
 
@@ -554,10 +702,45 @@ Para leer el metadata solo tienes que pasar el nombre y directorio completos de 
 el comando. Puedes revisar la 
 
 
-<a href="https://ss64.com/osx/mdls.html" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/ss64.com\/osx\/mdls.html', 'guía de ese comando aquí')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">guía de ese comando aquí</a>
+
+
+<a href="https://ss64.com/osx/mdls.html" target="_blank" class="aHR0cHM6Ly9zczY0LmNvbS9vc3gvbWRscy5odG1s"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/ss64.com\/osx\/mdls.html', 'guía de ese comando aquí')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9zczY0LmNvbS9vc3gvbWRscy5odG1sHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9zczY0LmNvbS9vc3gvbWRscy5odG1sBase')"
+>guía de ese comando aquí</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9zczY0LmNvbS9vc3gvbWRscy5odG1s");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9zczY0LmNvbS9vc3gvbWRscy5odG1sBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9zczY0LmNvbS9vc3gvbWRscy5odG1sBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9zczY0LmNvbS9vc3gvbWRscy5odG1sHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9zczY0LmNvbS9vc3gvbWRscy5odG1sHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 </li>
 </ul>
 
@@ -576,10 +759,45 @@ onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">guía de ese comando aqu
 <li>Una solución que funciona en iOS y Android es utilizando 
 
 
-<a href="https://photos.google.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/photos.google.com\/', 'Google Fotos')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Fotos</a>
+
+
+<a href="https://photos.google.com/" target="_blank" class="aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/photos.google.com\/', 'Google Fotos')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Base')"
+>Google Fotos</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . En iOS puedes ver fácilmente las coordenadas donde tus fotos fueron tomadas,
 solo abre la aplicación, abre una foto dada que desees compartir y muestra los detalles de esa foto (en tu navegador el proceso es similar, sencillamente expande el mapa mostrado en los detalles
 y este tendra los detalles de las coordenadas de la imagen)</li>
@@ -629,18 +847,88 @@ padding-right: 8px;
 padding-left: 3px;">P</span>ara tener nuestras fotos agrupadas lo que haremos será usar 
 
 
-<a href="https://www.google.com/maps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Maps</a>
+
+
+<a href="https://www.google.com/maps/" target="_blank" class="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base')"
+>Google Maps</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . El primer paso será decidir qué fotos pertenecerán a qué
 grupo y crear esos grupos de fotos, para cada grupo deberás seleccionar un lugar representativo. Para ello haga click en 
 
 
-<a href="https://www.google.com/maps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Maps</a>
+
+
+<a href="https://www.google.com/maps/" target="_blank" class="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base')"
+>Google Maps</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  en el lugar
 seleccionado para un grupo de fotos dado, esto creará un pin en el mapa, cuando lo anterior ocurra en la parte inferior del mapa se mostrarán las coordenadas del pin (vea la siguiente foto),
 sencillamente tome esas coordenadas para representar al grupo de fotos</p>
@@ -660,10 +948,45 @@ sencillamente tome esas coordenadas para representar al grupo de fotos</p>
 
 
 
-<a href="https://www.google.com/maps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Maps</a>
+
+
+<a href="https://www.google.com/maps/" target="_blank" class="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base')"
+>Google Maps</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Sin embargo, no hay reglas en esto y puedes localizar grupos de fotos donde quieras</p>
 
 <h1 style="text-align: center; color:rgb(0, 117, 178);">Hosting de Fotos</h1>
@@ -680,37 +1003,177 @@ un poco de conocimiento puedes incluir mecanismos de autorización dentro de tu 
 embebido). Este sitio web particular se encuentra hosteado en 
 
 
-<a href="https://about.gitlab.com/stages-devops-lifecycle/pages/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/about.gitlab.com\/stages-devops-lifecycle\/pages\/', 'GitLab Pages')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">GitLab Pages</a>
+
+
+<a href="https://about.gitlab.com/stages-devops-lifecycle/pages/" target="_blank" class="aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/about.gitlab.com\/stages-devops-lifecycle\/pages\/', 'GitLab Pages')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Base')"
+>GitLab Pages</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  (ampliamente recomendado 😍)
 así que fue naturalmente mi primera opción el incluir las imágenes directamente en 
 
 
-<a href="https://about.gitlab.com/stages-devops-lifecycle/pages/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/about.gitlab.com\/stages-devops-lifecycle\/pages\/', 'GitLab Pages')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">GitLab Pages</a>
+
+
+<a href="https://about.gitlab.com/stages-devops-lifecycle/pages/" target="_blank" class="aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/about.gitlab.com\/stages-devops-lifecycle\/pages\/', 'GitLab Pages')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Base')"
+>GitLab Pages</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  en un directorio en el
 repositorio. Y aunque incluir imágenes en esta plataforma es bastante sencillo (las imágenes están disponibles con tan solo unos cuantos comandos de <code>git</code>), no pensé a detalle en las
 implicaciones del rendimiento del sitio (si deseas ver un ejemplo del impacto al rendimiento puedes ver mi artículo sobre
 
 
 
-<a href="/es/posts/categories/travel/2019sandiego/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/es\/posts\/categories\/travel\/2019sandiego\/', 'San Diego')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">San Diego</a>
+
+
+<a href="/es/posts/categories/travel/2019sandiego/" target="_blank" class="L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8="
+onclick="BrewingCatsCore.LinkActions.openLink('\/es\/posts\/categories\/travel\/2019sandiego\/', 'San Diego')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Base')"
+>San Diego</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  donde los tiempos de carga son demasiado largos), cuando se agregan imágenes en cantidades grandes o de resoluciones altas
 el desempeño se afecta gravemente. Si no planeas tener muchas imágenes en tu sitio y las imágenes no son de resoluciones muy altas
 
 
 
-<a href="https://about.gitlab.com/stages-devops-lifecycle/pages/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/about.gitlab.com\/stages-devops-lifecycle\/pages\/', 'GitLab Pages')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">GitLab Pages</a>
+
+
+<a href="https://about.gitlab.com/stages-devops-lifecycle/pages/" target="_blank" class="aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/about.gitlab.com\/stages-devops-lifecycle\/pages\/', 'GitLab Pages')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Base')"
+>GitLab Pages</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hYm91dC5naXRsYWIuY29tL3N0YWdlcy1kZXZvcHMtbGlmZWN5Y2xlL3BhZ2VzLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  puede ser una opción para ti, el proceso es muy sencillo y rápido (se requieren conocimientos básicos de
 <code>git</code>)</p>
 <p>Idealmente para hostear imágenes en tu sitio web, este debe estar en modo de producción y con todas las bondades que ello implica (usar un CDN, tener Geo-replicación, balanceo de tráfico,
@@ -732,17 +1195,87 @@ padding-right: 8px;
 padding-left: 3px;">A</span>lmacenamiento de tus imágenes en 
 
 
-<a href="https://unsplash.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Unsplash</a>
+
+
+<a href="https://unsplash.com/" target="_blank" class="aHR0cHM6Ly91bnNwbGFzaC5jb20v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vBase')"
+>Unsplash</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly91bnNwbGFzaC5jb20v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . 
 
 
-<a href="https://unsplash.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Unsplash</a>
+
+
+<a href="https://unsplash.com/" target="_blank" class="aHR0cHM6Ly91bnNwbGFzaC5jb20v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vBase')"
+>Unsplash</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly91bnNwbGFzaC5jb20v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  es una excelente plataforma para el almacenamiento
 de imágenes, ofrece todas las ventajas de un sitio web de producción (incluso puedes obtener las imágenes en diferentes resoluciones ahorrándonos este trabajo y permitiéndonos optimizar aun
 más el desempeño). Es muy fácil obtener URLs que se pueden compartir (sin el contenido de la interface de Unsplash). Unsplash tiene algunas desventajas:</p>
@@ -751,19 +1284,89 @@ más el desempeño). Es muy fácil obtener URLs que se pueden compartir (sin el 
 
 
 
-<a href="https://unsplash.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Unsplash</a>
+
+
+<a href="https://unsplash.com/" target="_blank" class="aHR0cHM6Ly91bnNwbGFzaC5jb20v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vBase')"
+>Unsplash</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly91bnNwbGFzaC5jb20v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  es la distribución libre de imágenes de modo que cada fotografía que se sube a la plataforma es fácil de descubrir (a diferencia de que las
 imágenes aunque públicas, no son tan fáciles de descubrir por motores de búsqueda cuando son hosteadas por cuenta propia), para usar Unsplash tienes q estar cómodo con con estos términos</li>
 <li>Las fotos que se suben a la plataforma son sujetas a la 
 
 
-<a href="https://unsplash.com/license" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/license', 'Licencia de Unsplash')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Licencia de Unsplash</a>
+
+
+<a href="https://unsplash.com/license" target="_blank" class="aHR0cHM6Ly91bnNwbGFzaC5jb20vbGljZW5zZQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/license', 'Licencia de Unsplash')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vbGljZW5zZQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vbGljZW5zZQ==Base')"
+>Licencia de Unsplash</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly91bnNwbGFzaC5jb20vbGljZW5zZQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vbGljZW5zZQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vbGljZW5zZQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vbGljZW5zZQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vbGljZW5zZQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  la cual otorga derechos a cualquiera de usarlas y modificarlas
 para cualquier propósito (personal o comercial). Tus fotos pueden terminar en productos comerciales y debes estar de acuerdo con estos términos para usar el servicio</li>
 <li>Tampoco puedes subir cualquier foto a la plataforma. Fotos demasiado similares (como aquellas que toman objetos desde ángulos ligeramente distintos) son removidas para mantener una alta
@@ -771,43 +1374,218 @@ calidad en las imágenes del servicio. Tampoco se pueden subir imágenes que ten
 <li>Si estas de acuerdo con todo lo anterior, usar 
 
 
-<a href="https://unsplash.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Unsplash</a>
+
+
+<a href="https://unsplash.com/" target="_blank" class="aHR0cHM6Ly91bnNwbGFzaC5jb20v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/unsplash.com\/', 'Unsplash')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly91bnNwbGFzaC5jb20vBase')"
+>Unsplash</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly91bnNwbGFzaC5jb20v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly91bnNwbGFzaC5jb20vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  es bastante sencillo para localizar fotos individualmente en nuestro mapa. Lo anterior también
 significa que si quieres localizar fotografías por grupos eso requiere de trabajo adicional. Típicamente esto requiere de algún componente web que te permita ver fotos individuales en el
 grupo (una opción para esto es crear un 
 
 
-<a href="https://getbootstrap.com/docs/4.5/components/carousel/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/getbootstrap.com\/docs\/4.5\/components\/carousel\/', 'carrusel de Bootstrap')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">carrusel de Bootstrap</a>
+
+
+<a href="https://getbootstrap.com/docs/4.5/components/carousel/" target="_blank" class="aHR0cHM6Ly9nZXRib290c3RyYXAuY29tL2RvY3MvNC41L2NvbXBvbmVudHMvY2Fyb3VzZWwv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/getbootstrap.com\/docs\/4.5\/components\/carousel\/', 'carrusel de Bootstrap')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9nZXRib290c3RyYXAuY29tL2RvY3MvNC41L2NvbXBvbmVudHMvY2Fyb3VzZWwvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9nZXRib290c3RyYXAuY29tL2RvY3MvNC41L2NvbXBvbmVudHMvY2Fyb3VzZWwvBase')"
+>carrusel de Bootstrap</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9nZXRib290c3RyYXAuY29tL2RvY3MvNC41L2NvbXBvbmVudHMvY2Fyb3VzZWwv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nZXRib290c3RyYXAuY29tL2RvY3MvNC41L2NvbXBvbmVudHMvY2Fyb3VzZWwvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nZXRib290c3RyYXAuY29tL2RvY3MvNC41L2NvbXBvbmVudHMvY2Fyb3VzZWwvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nZXRib290c3RyYXAuY29tL2RvY3MvNC41L2NvbXBvbmVudHMvY2Fyb3VzZWwvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nZXRib290c3RyYXAuY29tL2RvY3MvNC41L2NvbXBvbmVudHMvY2Fyb3VzZWwvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  que cargue las imágenes a partir de <code>query parameters</code> las
 cuales sean pasadas desde nuestro dashboard de Tableau. Haremos algo similar más adelante en este artículo. Si usas el framework 
 
 
-<a href="https://gohugo.io/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/', 'Hugo')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Hugo</a>
+
+
+<a href="https://gohugo.io/" target="_blank" class="aHR0cHM6Ly9nb2h1Z28uaW8v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/', 'Hugo')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vBase')"
+>Hugo</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9nb2h1Z28uaW8v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  puedes tomar este
 carrusel como punto de partida para tu trabajo que es mi 
 
 
-<a href="https://gohugo.io/content-management/shortcodes/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/content-management\/shortcodes\/', 'short-code')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">short-code</a>
+
+
+<a href="https://gohugo.io/content-management/shortcodes/" target="_blank" class="aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/content-management\/shortcodes\/', 'short-code')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvBase')"
+>short-code</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  que implementa un
 
 
 
-<a href="https://gist.github.com/hobelinm/c7249acf3c20b09228a5911aa00483b0" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gist.github.com\/hobelinm\/c7249acf3c20b09228a5911aa00483b0', 'componente de carrusel')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">componente de carrusel</a>
+
+
+<a href="https://gist.github.com/hobelinm/c7249acf3c20b09228a5911aa00483b0" target="_blank" class="aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vYzcyNDlhY2YzYzIwYjA5MjI4YTU5MTFhYTAwNDgzYjA="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gist.github.com\/hobelinm\/c7249acf3c20b09228a5911aa00483b0', 'componente de carrusel')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vYzcyNDlhY2YzYzIwYjA5MjI4YTU5MTFhYTAwNDgzYjA=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vYzcyNDlhY2YzYzIwYjA5MjI4YTU5MTFhYTAwNDgzYjA=Base')"
+>componente de carrusel</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vYzcyNDlhY2YzYzIwYjA5MjI4YTU5MTFhYTAwNDgzYjA=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vYzcyNDlhY2YzYzIwYjA5MjI4YTU5MTFhYTAwNDgzYjA=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vYzcyNDlhY2YzYzIwYjA5MjI4YTU5MTFhYTAwNDgzYjA=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vYzcyNDlhY2YzYzIwYjA5MjI4YTU5MTFhYTAwNDgzYjA=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vYzcyNDlhY2YzYzIwYjA5MjI4YTU5MTFhYTAwNDgzYjA=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  para este tipo de sitios)</li>
 </ul>
 <p>
@@ -823,58 +1601,303 @@ padding-right: 8px;
 padding-left: 3px;">O</span>tra opción es subir tus fotos a 
 
 
-<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+
+
+<a href="https://www.instagram.com" target="_blank" class="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base')"
+>Instagram</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  y acceder a ellas desde tu Viz. 
 
 
-<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+
+
+<a href="https://www.instagram.com" target="_blank" class="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base')"
+>Instagram</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  es una
 plataforma bastante popular que se encarga de las complejidades del hosting (replicación, disponibilidad, etcétera) y te da las características de un sitio de producción. El contenido de
 
 
 
-<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+
+
+<a href="https://www.instagram.com" target="_blank" class="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base')"
+>Instagram</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  en tu Viz puede constar de fotos individuales o grupos de fotos sin trabajo adicional. Con esta opción podrás ver tus fotos sin embargo
 estas incluirán la interfaz de usuario de 
 
 
-<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+
+
+<a href="https://www.instagram.com" target="_blank" class="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base')"
+>Instagram</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  en todo momento y no existe la oportunidad de ocultarla (después de todo ellos quieren que
 termines usando su plataforma directamente). El uso de 
 
 
-<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+
+
+<a href="https://www.instagram.com" target="_blank" class="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base')"
+>Instagram</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  no es una mala idea si deseas construir tu presencia online, tu marca, o tu sitio web.
 Puedes mover e intercambiar el tráfico entre tu perfil de 
 
 
-<a href="https://public.tableau.com/s/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/s\/', 'Tableau Public')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Tableau Public</a>
+
+
+<a href="https://public.tableau.com/s/" target="_blank" class="aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcy8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/s\/', 'Tableau Public')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcy8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcy8=Base')"
+>Tableau Public</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcy8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcy8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcy8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcy8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcy8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  ↔️ tu perfil de
 
 
 
-<a href="https://www.instagram.com" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Instagram</a>
+
+
+<a href="https://www.instagram.com" target="_blank" class="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com', 'Instagram')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base')"
+>Instagram</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  ↔️ tu sitio web lo cual te permite extender tu red de alcance en la web, al final de cuentas el contenido es el que manda,
 ¿cierto? Puedes explotar el uso de los #️⃣hashtags para atraer tráfico a Instagram el cual a su vez puede llevar tráfico a tu perfil de Tableau o tu sitio web (usa el campo de <code>Home Page</code>
 para ello). Un requerimiento para que esto funcione es que tu perfil de Instagram debe ser público para que las fotos embebidas puedan ser mostradas. Como bono adicional si tu cuenta de
@@ -882,10 +1905,45 @@ Instagram se convierte en un perfil de negocios puedes obtener telemetría desde
 ejemplo de abajo para uno de mis 
 
 
-<a href="https://www.instagram.com/super.m4n/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com\/super.m4n\/', 'perfiles de negocios')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">perfiles de negocios</a>
+
+
+<a href="https://www.instagram.com/super.m4n/" target="_blank" class="aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdXBlci5tNG4v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.instagram.com\/super.m4n\/', 'perfiles de negocios')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdXBlci5tNG4vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdXBlci5tNG4vBase')"
+>perfiles de negocios</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdXBlci5tNG4v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdXBlci5tNG4vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdXBlci5tNG4vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdXBlci5tNG4vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdXBlci5tNG4vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 )</p>
 <div class="container">
   <div class="row">
@@ -938,10 +1996,45 @@ Tableau Desktop sin embargo una vez que publicas el Viz a la web, el objeto web 
 fotos de Instagram necesitamos crear una 
 
 
-<a href="https://developers.facebook.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/', 'cuenta de desarrollador de Facebook')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">cuenta de desarrollador de Facebook</a>
+
+
+<a href="https://developers.facebook.com/" target="_blank" class="aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/', 'cuenta de desarrollador de Facebook')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Base')"
+>cuenta de desarrollador de Facebook</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 , crear una Aplicación, y finalmente añadir el producto <code>oEmbed</code> a
 la aplicación. Una vez que se completaron los pasos anteriores tendremos acceso a llamar su API las cuales nos proveerán con el fragmento de <code>HTML</code> que necesitamos para embeber las fotos.
 Ciertamente no es el proceso más sencillo sin embargo tampoco es cosa del otro mundo 😉</p>
@@ -970,10 +2063,45 @@ padding-right: 8px;
 padding-left: 3px;">T</span>ambién exploré el uso de 
 
 
-<a href="https://photos.google.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/photos.google.com\/', 'Google Photos')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Photos</a>
+
+
+<a href="https://photos.google.com/" target="_blank" class="aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/photos.google.com\/', 'Google Photos')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Base')"
+>Google Photos</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  para contener las fotos que serían accedidas por nuestro Viz. Aunque esto funcionó en Tableau
 Desktop, una vez que publicas, el Viz resultante tiene el contenido de la foto bloqueada por Google una vez que este detecta que se encuentra en un <code>iframe</code> (vea la foto de arriba). Una
 diferencia clave con Instagram es que no hay API para clientes web para Google Photos, se necesita hostear un servidor de backend que ejecute las llamadas de API y envíe el resultado de la
@@ -1009,26 +2137,131 @@ problemas tenemos que seguir algunos pasos:</p>
 <li>Crea una cuenta de 
 
 
-<a href="https://developers.facebook.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/', 'Desarrollador de Facebook')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Desarrollador de Facebook</a>
+
+
+<a href="https://developers.facebook.com/" target="_blank" class="aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/', 'Desarrollador de Facebook')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Base')"
+>Desarrollador de Facebook</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 , puedes usar tus credenciales regulares de Facebook para esto</li>
 <li>
 
 
-<a href="https://developers.facebook.com/docs/apps#register" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/docs\/apps#register', 'Crea una aplicación nueva')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Crea una aplicación nueva</a>
+
+
+<a href="https://developers.facebook.com/docs/apps#register" target="_blank" class="aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9kb2NzL2FwcHMjcmVnaXN0ZXI="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/docs\/apps#register', 'Crea una aplicación nueva')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9kb2NzL2FwcHMjcmVnaXN0ZXI=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9kb2NzL2FwcHMjcmVnaXN0ZXI=Base')"
+>Crea una aplicación nueva</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9kb2NzL2FwcHMjcmVnaXN0ZXI=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9kb2NzL2FwcHMjcmVnaXN0ZXI=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9kb2NzL2FwcHMjcmVnaXN0ZXI=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9kb2NzL2FwcHMjcmVnaXN0ZXI=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9kb2NzL2FwcHMjcmVnaXN0ZXI=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  la que usaremos para acceder a Instagram, puedes añadir una aplicación desde
 
 
 
-<a href="https://developers.facebook.com/apps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/apps\/', 'tu dashboard')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">tu dashboard</a>
+
+
+<a href="https://developers.facebook.com/apps/" target="_blank" class="aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9hcHBzLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/developers.facebook.com\/apps\/', 'tu dashboard')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9hcHBzLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9hcHBzLw==Base')"
+>tu dashboard</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9hcHBzLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9hcHBzLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9hcHBzLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9hcHBzLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kZXZlbG9wZXJzLmZhY2Vib29rLmNvbS9hcHBzLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 </li>
 </ul>
 <div class="container">
@@ -1182,10 +2415,45 @@ padding-left: 3px;">Y</span>a con la información necesaria podemos proceder a c
 
 
 
-<a href="https://gohugo.io/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/', 'framework de Hugo')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">framework de Hugo</a>
+
+
+<a href="https://gohugo.io/" target="_blank" class="aHR0cHM6Ly9nb2h1Z28uaW8v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/', 'framework de Hugo')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vBase')"
+>framework de Hugo</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9nb2h1Z28uaW8v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 , si usas otro sitio, plataforma, o sistema aún puedes usar la librería y puedes omitir los detalles relativos al framework de Hugo, las
 llamadas a la librería se pueden traducir fácilmente a tu sistema. La librería que cree es bastante simple, expone dos métodos, uno para extraer la foto ID de Instagram de los <code>query parameters</code> y el otro método es para llamar al API de Instagram para obtener el fragmento de <code>HTML</code> necesario para desplegar la foto de Instagram de forma embebida. La librería está escrita en TypeScript la
 cual se transpila fácilmente a JavaScript, utiliza su propio <code>namespace</code> para evitar mezclarse con otras piezas de JavaScript siendo ejecutadas en la página. También puede ser utilizada para
@@ -1220,10 +2488,45 @@ forma:</li>
 <p>Puedes ver los contenidos de la librería en 
 
 
-<a href="https://gist.github.com/hobelinm/ce7ebdb0dc601a05542376eeb393e378" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gist.github.com\/hobelinm\/ce7ebdb0dc601a05542376eeb393e378', 'este Gist')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">este Gist</a>
+
+
+<a href="https://gist.github.com/hobelinm/ce7ebdb0dc601a05542376eeb393e378" target="_blank" class="aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vY2U3ZWJkYjBkYzYwMWEwNTU0MjM3NmVlYjM5M2UzNzg="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gist.github.com\/hobelinm\/ce7ebdb0dc601a05542376eeb393e378', 'este Gist')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vY2U3ZWJkYjBkYzYwMWEwNTU0MjM3NmVlYjM5M2UzNzg=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vY2U3ZWJkYjBkYzYwMWEwNTU0MjM3NmVlYjM5M2UzNzg=Base')"
+>este Gist</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vY2U3ZWJkYjBkYzYwMWEwNTU0MjM3NmVlYjM5M2UzNzg=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vY2U3ZWJkYjBkYzYwMWEwNTU0MjM3NmVlYjM5M2UzNzg=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vY2U3ZWJkYjBkYzYwMWEwNTU0MjM3NmVlYjM5M2UzNzg=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vY2U3ZWJkYjBkYzYwMWEwNTU0MjM3NmVlYjM5M2UzNzg=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vY2U3ZWJkYjBkYzYwMWEwNTU0MjM3NmVlYjM5M2UzNzg=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 </p>
 <p>Como puedes ver es muy sencillo 😉</p>
 
@@ -1255,10 +2558,45 @@ Instagram por medio de los <code>query parameters</code> en tiempo de ejecución
 
 
 
-<a href="https://gohugo.io/content-management/shortcodes/#instagram" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/content-management\/shortcodes\/#instagram', 'insertar artículos de Instagram')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">insertar artículos de Instagram</a>
+
+
+<a href="https://gohugo.io/content-management/shortcodes/#instagram" target="_blank" class="aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvI2luc3RhZ3JhbQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/content-management\/shortcodes\/#instagram', 'insertar artículos de Instagram')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvI2luc3RhZ3JhbQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvI2luc3RhZ3JhbQ==Base')"
+>insertar artículos de Instagram</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvI2luc3RhZ3JhbQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvI2luc3RhZ3JhbQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvI2luc3RhZ3JhbQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvI2luc3RhZ3JhbQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vY29udGVudC1tYW5hZ2VtZW50L3Nob3J0Y29kZXMvI2luc3RhZ3JhbQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  sin embargo los identificadores de las fotos deben ser conocidos a la hora de crear
 el artículo que haga uso de él y en nuestro caso cambiaremos de fotos de forma dinámica según lo indique nuestro Viz). Ya que las fotos serán embebidas en nuestro Viz de Tableau finalmente y
 dado que la interfaz de usuario de Instagram no puede ser ocultada debemos reservar todo el espacio que nos sea posible para el contenido de Instagram. Por ello esta página deberá ocultar
@@ -1266,18 +2604,88 @@ todos los elementos de la interfaz que componen cada página normalmente (la bar
 Note que estoy usando el 
 
 
-<a href="https://gohugo-ananke-theme-demo.netlify.app/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo-ananke-theme-demo.netlify.app\/', 'Ananke Theme')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Ananke Theme</a>
+
+
+<a href="https://gohugo-ananke-theme-demo.netlify.app/" target="_blank" class="aHR0cHM6Ly9nb2h1Z28tYW5hbmtlLXRoZW1lLWRlbW8ubmV0bGlmeS5hcHAv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo-ananke-theme-demo.netlify.app\/', 'Ananke Theme')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9nb2h1Z28tYW5hbmtlLXRoZW1lLWRlbW8ubmV0bGlmeS5hcHAvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9nb2h1Z28tYW5hbmtlLXRoZW1lLWRlbW8ubmV0bGlmeS5hcHAvBase')"
+>Ananke Theme</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9nb2h1Z28tYW5hbmtlLXRoZW1lLWRlbW8ubmV0bGlmeS5hcHAv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28tYW5hbmtlLXRoZW1lLWRlbW8ubmV0bGlmeS5hcHAvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28tYW5hbmtlLXRoZW1lLWRlbW8ubmV0bGlmeS5hcHAvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28tYW5hbmtlLXRoZW1lLWRlbW8ubmV0bGlmeS5hcHAvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28tYW5hbmtlLXRoZW1lLWRlbW8ubmV0bGlmeS5hcHAvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  que se sugiere por default por la
 
 
 
-<a href="https://gohugo.io/getting-started/quick-start/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/getting-started\/quick-start\/', 'guía de instalación de Hugo')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">guía de instalación de Hugo</a>
+
+
+<a href="https://gohugo.io/getting-started/quick-start/" target="_blank" class="aHR0cHM6Ly9nb2h1Z28uaW8vZ2V0dGluZy1zdGFydGVkL3F1aWNrLXN0YXJ0Lw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gohugo.io\/getting-started\/quick-start\/', 'guía de instalación de Hugo')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vZ2V0dGluZy1zdGFydGVkL3F1aWNrLXN0YXJ0Lw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9nb2h1Z28uaW8vZ2V0dGluZy1zdGFydGVkL3F1aWNrLXN0YXJ0Lw==Base')"
+>guía de instalación de Hugo</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9nb2h1Z28uaW8vZ2V0dGluZy1zdGFydGVkL3F1aWNrLXN0YXJ0Lw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vZ2V0dGluZy1zdGFydGVkL3F1aWNrLXN0YXJ0Lw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vZ2V0dGluZy1zdGFydGVkL3F1aWNrLXN0YXJ0Lw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vZ2V0dGluZy1zdGFydGVkL3F1aWNrLXN0YXJ0Lw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9nb2h1Z28uaW8vZ2V0dGluZy1zdGFydGVkL3F1aWNrLXN0YXJ0Lw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Cree una copia local y modificada de los siguientes archivos del tema para habilitar esconder las
 piezas de la interfaz cuando sea necesario</p>
 
@@ -1295,10 +2703,45 @@ piezas de la interfaz cuando sea necesario</p>
 <p>El resto de los cambios se hicieron en <code>single.html</code> y por motivos de simplicidad puedes verlos 
 
 
-<a href="https://gist.github.com/hobelinm/11b327cccac1ab5a5201bff6614ad188" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gist.github.com\/hobelinm\/11b327cccac1ab5a5201bff6614ad188', 'aquí')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">aquí</a>
+
+
+<a href="https://gist.github.com/hobelinm/11b327cccac1ab5a5201bff6614ad188" target="_blank" class="aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vMTFiMzI3Y2NjYWMxYWI1YTUyMDFiZmY2NjE0YWQxODg="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gist.github.com\/hobelinm\/11b327cccac1ab5a5201bff6614ad188', 'aquí')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vMTFiMzI3Y2NjYWMxYWI1YTUyMDFiZmY2NjE0YWQxODg=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vMTFiMzI3Y2NjYWMxYWI1YTUyMDFiZmY2NjE0YWQxODg=Base')"
+>aquí</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vMTFiMzI3Y2NjYWMxYWI1YTUyMDFiZmY2NjE0YWQxODg=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vMTFiMzI3Y2NjYWMxYWI1YTUyMDFiZmY2NjE0YWQxODg=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vMTFiMzI3Y2NjYWMxYWI1YTUyMDFiZmY2NjE0YWQxODg=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vMTFiMzI3Y2NjYWMxYWI1YTUyMDFiZmY2NjE0YWQxODg=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vaG9iZWxpbm0vMTFiMzI3Y2NjYWMxYWI1YTUyMDFiZmY2NjE0YWQxODg=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Ahora
 que tenemos la opción de esconder las piezas de la interfaz de usuario, nuestra página especial será un simple artículo sin imagen de encabezado y con el siguiente switch en el <code>front matter</code>:
 <code>barePage: true</code>. Ahora necesitaremos un shortcode que nos permita conectar nuestro artículo con la librería que ya añadimos en la sección anterior. Este shortcode tomará dos parámetros: el
@@ -1312,35 +2755,175 @@ primero indicará si extraer el foto ID de los <code>query parameters</code> y e
 <p>La página especial puede ser vista 
 
 
-<a href="/posts/instagram/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/instagram\/', 'aquí')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">aquí</a>
+
+
+<a href="/posts/instagram/" target="_blank" class="L3Bvc3RzL2luc3RhZ3JhbS8="
+onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/instagram\/', 'aquí')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'L3Bvc3RzL2luc3RhZ3JhbS8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'L3Bvc3RzL2luc3RhZ3JhbS8=Base')"
+>aquí</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("L3Bvc3RzL2luc3RhZ3JhbS8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Puedes añadir <code>?insta=&lt;postId&gt;</code> a la URL para cargar fotos de Instagram, siéntase libre de intentarlo. Si deseas
 ayuda obteniendo los IDs de fotos de Instagram 
 
 
-<a href="https://brewingcats.com/es/posts/projects/software/instaparser/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/es\/posts\/projects\/software\/instaparser\/', 'creé un artículo')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">creé un artículo</a>
+
+
+<a href="https://brewingcats.com/es/posts/projects/software/instaparser/" target="_blank" class="aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/es\/posts\/projects\/software\/instaparser\/', 'creé un artículo')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvBase')"
+>creé un artículo</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  que detalla los pasos y te ayuda a extraer esos
 IDs y visualizar como se cargan, siéntase en libertad de revisarlo. Igualmente si no quiere construir nada de esta infraestructura por usted mismo siéntase en libertad de usar mi
 
 
 
-<a href="/posts/instagram/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/instagram\/', 'página especial')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">página especial</a>
+
+
+<a href="/posts/instagram/" target="_blank" class="L3Bvc3RzL2luc3RhZ3JhbS8="
+onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/instagram\/', 'página especial')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'L3Bvc3RzL2luc3RhZ3JhbS8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'L3Bvc3RzL2luc3RhZ3JhbS8=Base')"
+>página especial</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("L3Bvc3RzL2luc3RhZ3JhbS8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  para sus Vizzes de Tableau, de nuevo, puedes obtener ayuda con los IDs en este
 
 
 
-<a href="https://brewingcats.com/es/posts/projects/software/instaparser/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/es\/posts\/projects\/software\/instaparser\/', 'artículo de Brewing Cats')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">artículo de Brewing Cats</a>
+
+
+<a href="https://brewingcats.com/es/posts/projects/software/instaparser/" target="_blank" class="aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/es\/posts\/projects\/software\/instaparser\/', 'artículo de Brewing Cats')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvBase')"
+>artículo de Brewing Cats</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . <del>Finalmente puedes ver el código en funcionamiento aqui:</del></p>
 <p>Instagram-Embebido-Y-Funcionando-Aqui</p>
 
@@ -1384,10 +2967,45 @@ padding-left: 3px;">F</span>inalmente tenemos todo lo necesario para comenzar a 
 Tableau. Tienes muchas opciones respecto al formato a usar <code>.txt</code>, <code>.csv</code>, <code>.xlsx</code>, local. Yo decidí usar 
 
 
-<a href="https://www.google.com/sheets/about/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/sheets\/about\/', 'Google Sheets')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Sheets</a>
+
+
+<a href="https://www.google.com/sheets/about/" target="_blank" class="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zaGVldHMvYWJvdXQv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/sheets\/about\/', 'Google Sheets')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zaGVldHMvYWJvdXQvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zaGVldHMvYWJvdXQvBase')"
+>Google Sheets</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zaGVldHMvYWJvdXQv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zaGVldHMvYWJvdXQvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zaGVldHMvYWJvdXQvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zaGVldHMvYWJvdXQvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zaGVldHMvYWJvdXQvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  debido a que es
 bastante conveniente y fácil de actualizar. Conectar Tableau a cualquiera de estos Data Sources es bastante sencillo. La información que hemos recopilado a lo largo de este artículo fué
 organizada de la siguiente manera en columnas:</p>
@@ -1400,10 +3018,45 @@ organizada de la siguiente manera en columnas:</p>
 
 
 
-<a href="https://brewingcats.com/es/posts/projects/software/instaparser/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/es\/posts\/projects\/software\/instaparser\/', 'aquí')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">aquí</a>
+
+
+<a href="https://brewingcats.com/es/posts/projects/software/instaparser/" target="_blank" class="aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/es\/posts\/projects\/software\/instaparser\/', 'aquí')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvBase')"
+>aquí</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vZXMvcG9zdHMvcHJvamVjdHMvc29mdHdhcmUvaW5zdGFwYXJzZXIvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 )</li>
 </ul>
 
@@ -1418,6 +3071,59 @@ onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">aquí</a>
       max-height:min-content; ">
   <p style="text-align: center; font-style: italic;">Ejemplo de Google Sheets</p>
 </div>
+
+<h1 style="text-align: center; color:rgb(0, 117, 178);">Manejando el Contenido del Tamaño Embebido</h1>
+
+<p><span style="
+color: rgb(0, 117, 178);
+float: left;
+font-size: 75px;
+line-height: 60px;
+padding-top: 4px;
+padding-right: 8px;
+padding-left: 3px;">U</span>na vez que se ha resuelto donde hostear la imagen, si resulto ser directamente sobre un
+sitio web, el añadirla directamente a Tableau resultará en un contenedor con la imagen original la
+cual puede o no caber en el área designada. Para ajustarla automáticamente al tamaño designado es
+necesario utilizar otro contenedor que le indique el tamaño disponible. Este sitio tiene la
+funcionalidad necesaria para lograrlo. El contenedor de Tableau dictará el espacio disponible, a su
+vez este contenedor deberá cargar la imagen desde la fuente (la imagen debera ser accesible al
+dominio) e indicar el espacio disponible, esto ajustará la imagen al espacio disponible. Abajo puede
+encontrar controles para generar esta URL</p>
+
+
+
+
+
+
+
+
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="embed-code-label" >
+      URL de la imágen
+    </span>
+  </div>
+  <input type="text" class="form-control" id="embed-code-input" aria-describedby="embed-code-label"
+    placeholder='Pegue la dirección de la imágen'>
+  <div class="input-group-append">
+    <button class="btn btn-primary" type="button" 
+      onclick="window.BrewingCatsCore.EmbedControl.CreateEmbedUri()" 
+      id="encodeButton"
+    data-bs-toggle="tooltip" data-bs-placement="right" title="Encode" data-bs-animation="true" data-trigger="manual">
+      Codificar
+    </button>
+  </div>
+</div>
+<div id="embeddedImgLink">
+  <a href="#" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('#', 'Abrir URL Codificada')" 
+style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Abrir URL Codificada</a>
+
+</div>
+<code id="embeddedImg"></code>
+
 
 <h1 style="text-align: center; color:rgb(0, 117, 178);">Creación del Viz</h1>
 
@@ -1563,10 +3269,45 @@ contendrá la foto embebida y a su vez esta página será embebida en nuestro Vi
 
 
 
-<a href="https://www.google.com/maps/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Maps</a>
+
+
+<a href="https://www.google.com/maps/" target="_blank" class="aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.google.com\/maps\/', 'Google Maps')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base')"
+>Google Maps</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 , el otro para abrir la foto de Instagram en una nueva pestaña del navegador. Para ambas acciones:</p>
 <ul>
 <li>Serán acciones de tipo <code>Go To URL...</code></li>
@@ -1630,10 +3371,45 @@ onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Google Maps</a>
 <p>Finalmente necesitamos crear un filtro conocido como 
 
 
-<a href="https://help.tableau.com/current/pro/desktop/en-us/actions_filter.htm" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/help.tableau.com\/current\/pro\/desktop\/en-us\/actions_filter.htm', 'filter action')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">filter action</a>
+
+
+<a href="https://help.tableau.com/current/pro/desktop/en-us/actions_filter.htm" target="_blank" class="aHR0cHM6Ly9oZWxwLnRhYmxlYXUuY29tL2N1cnJlbnQvcHJvL2Rlc2t0b3AvZW4tdXMvYWN0aW9uc19maWx0ZXIuaHRt"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/help.tableau.com\/current\/pro\/desktop\/en-us\/actions_filter.htm', 'filter action')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9oZWxwLnRhYmxlYXUuY29tL2N1cnJlbnQvcHJvL2Rlc2t0b3AvZW4tdXMvYWN0aW9uc19maWx0ZXIuaHRtHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9oZWxwLnRhYmxlYXUuY29tL2N1cnJlbnQvcHJvL2Rlc2t0b3AvZW4tdXMvYWN0aW9uc19maWx0ZXIuaHRtBase')"
+>filter action</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9oZWxwLnRhYmxlYXUuY29tL2N1cnJlbnQvcHJvL2Rlc2t0b3AvZW4tdXMvYWN0aW9uc19maWx0ZXIuaHRt");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9oZWxwLnRhYmxlYXUuY29tL2N1cnJlbnQvcHJvL2Rlc2t0b3AvZW4tdXMvYWN0aW9uc19maWx0ZXIuaHRtBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9oZWxwLnRhYmxlYXUuY29tL2N1cnJlbnQvcHJvL2Rlc2t0b3AvZW4tdXMvYWN0aW9uc19maWx0ZXIuaHRtBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9oZWxwLnRhYmxlYXUuY29tL2N1cnJlbnQvcHJvL2Rlc2t0b3AvZW4tdXMvYWN0aW9uc19maWx0ZXIuaHRtHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9oZWxwLnRhYmxlYXUuY29tL2N1cnJlbnQvcHJvL2Rlc2t0b3AvZW4tdXMvYWN0aW9uc19maWx0ZXIuaHRtHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Esta acción nos permitirá sincronizar
 los datos puntuales seleccionados en el mapa con las hojas de <code>Name</code> y <code>Date</code>. Selecciona la zona del mapa en el área de tu dashboard y en los controles de la misma haz click en el ícono de
 <code>Filter</code> que tiene la leyenda <code>Use as a Filter</code> cuando pasas el ratón por encima, una vez habilitado al seleccionar un dato puntual en el mapa se deben de filtrar las etiquetas de las hojas
@@ -1655,18 +3431,88 @@ experiencia. Abajo puedes ver dos ejemplos de Vizzes embebidas, una usando
 
 
 
-<a href="https://public.tableau.com/profile/hugo.belin#!/vizhome/SanDiego_15741313638760/SanDiego" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/vizhome\/SanDiego_15741313638760\/SanDiego', 'fotos puntuales')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">fotos puntuales</a>
+
+
+<a href="https://public.tableau.com/profile/hugo.belin#!/vizhome/SanDiego_15741313638760/SanDiego" target="_blank" class="aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9TYW5EaWVnb18xNTc0MTMxMzYzODc2MC9TYW5EaWVnbw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/vizhome\/SanDiego_15741313638760\/SanDiego', 'fotos puntuales')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9TYW5EaWVnb18xNTc0MTMxMzYzODc2MC9TYW5EaWVnbw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9TYW5EaWVnb18xNTc0MTMxMzYzODc2MC9TYW5EaWVnbw==Base')"
+>fotos puntuales</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9TYW5EaWVnb18xNTc0MTMxMzYzODc2MC9TYW5EaWVnbw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9TYW5EaWVnb18xNTc0MTMxMzYzODc2MC9TYW5EaWVnbw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9TYW5EaWVnb18xNTc0MTMxMzYzODc2MC9TYW5EaWVnbw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9TYW5EaWVnb18xNTc0MTMxMzYzODc2MC9TYW5EaWVnbw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9TYW5EaWVnb18xNTc0MTMxMzYzODc2MC9TYW5EaWVnbw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  y la otra usando
 
 
 
-<a href="https://public.tableau.com/profile/hugo.belin#!/vizhome/HikeCollection/Hikes" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/vizhome\/HikeCollection\/Hikes', 'grupos de fotos')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">grupos de fotos</a>
+
+
+<a href="https://public.tableau.com/profile/hugo.belin#!/vizhome/HikeCollection/Hikes" target="_blank" class="aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/vizhome\/HikeCollection\/Hikes', 'grupos de fotos')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Base')"
+>grupos de fotos</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 </p>
 
 <h1 style="text-align: center; color:rgb(0, 117, 178);">Como Embeber el Viz Resultante</h1>
@@ -1688,10 +3534,45 @@ para extraer esos campos de forma automática). Como ejemplo puedes ver
 
 
 
-<a href="https://public.tableau.com/profile/hugo.belin#!/vizhome/HikeCollection/Hikes" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/vizhome\/HikeCollection\/Hikes', 'mi colección de caminatas')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">mi colección de caminatas</a>
+
+
+<a href="https://public.tableau.com/profile/hugo.belin#!/vizhome/HikeCollection/Hikes" target="_blank" class="aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/vizhome\/HikeCollection\/Hikes', 'mi colección de caminatas')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Base')"
+>mi colección de caminatas</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvdml6aG9tZS9IaWtlQ29sbGVjdGlvbi9IaWtlcw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 , haciendo click en el ícono de compartir en la parte de abajo obtienes un
 campo de texto con el código para embeber, de ahi obtenemos los campos que se muestran en la segunda foto de abajo</p>
 
@@ -1723,10 +3604,45 @@ campo de texto con el código para embeber, de ahi obtenemos los campos que se m
 <p>Nuevamente, en este momento me encuentro trabajando en una página que extraiga los campos de forma automática, esté pendiente de esta en 
 
 
-<a href="https://brewingcats.com/%e2%80%ba" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/›', 'Brewing Cats')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Brewing Cats</a>
+
+
+<a href="https://brewingcats.com/%e2%80%ba" target="_blank" class="aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v4oC6"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/›', 'Brewing Cats')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v4oC6Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v4oC6Base')"
+>Brewing Cats</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v4oC6");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v4oC6Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v4oC6Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v4oC6Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v4oC6Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 </p>
 <p>Puedes ver las vizzes embebidas abajo</p>
 
@@ -1787,10 +3703,45 @@ onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Brewing Cats</a>
 
 
 
-<a href="/es/posts/categories/travel/2019sandiego/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/es\/posts\/categories\/travel\/2019sandiego\/', 'Viaje a San Diego')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Viaje a San Diego</a>
+
+
+<a href="/es/posts/categories/travel/2019sandiego/" target="_blank" class="L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8="
+onclick="BrewingCatsCore.LinkActions.openLink('\/es\/posts\/categories\/travel\/2019sandiego\/', 'Viaje a San Diego')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Base')"
+>Viaje a San Diego</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsLzIwMTlzYW5kaWVnby8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 </p>
 
 <div class='tableauPlaceholder' id='viz1595830498772' style='position: relative'>
@@ -1850,10 +3801,45 @@ onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Viaje a San Diego</a>
 
 
 
-<a href="/es/posts/categories/travel/hikecollection/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/es\/posts\/categories\/travel\/hikecollection\/', 'Colección de Caminatas')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Colección de Caminatas</a>
+
+
+<a href="/es/posts/categories/travel/hikecollection/" target="_blank" class="L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsL2hpa2Vjb2xsZWN0aW9uLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('\/es\/posts\/categories\/travel\/hikecollection\/', 'Colección de Caminatas')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsL2hpa2Vjb2xsZWN0aW9uLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsL2hpa2Vjb2xsZWN0aW9uLw==Base')"
+>Colección de Caminatas</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsL2hpa2Vjb2xsZWN0aW9uLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsL2hpa2Vjb2xsZWN0aW9uLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsL2hpa2Vjb2xsZWN0aW9uLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsL2hpa2Vjb2xsZWN0aW9uLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L2VzL3Bvc3RzL2NhdGVnb3JpZXMvdHJhdmVsL2hpa2Vjb2xsZWN0aW9uLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 </p>
 
 <h1 style="text-align: center; color:rgb(0, 117, 178);">Conclusión</h1>
@@ -1871,10 +3857,45 @@ mostrando tus fotos. Una vez que completes las piezas necesarias para hacer esto
 
 
 
-<a href="/posts/instagram/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/instagram\/', 'esta página para cargar fotos the Instagram')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">esta página para cargar fotos the Instagram</a>
+
+
+<a href="/posts/instagram/" target="_blank" class="L3Bvc3RzL2luc3RhZ3JhbS8="
+onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/instagram\/', 'esta página para cargar fotos the Instagram')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'L3Bvc3RzL2luc3RhZ3JhbS8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'L3Bvc3RzL2luc3RhZ3JhbS8=Base')"
+>esta página para cargar fotos the Instagram</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("L3Bvc3RzL2luc3RhZ3JhbS8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL2luc3RhZ3JhbS8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 ) el resto sólo es Tableau y tus fotos</p>
 <p>Embeber vizzes es un bono adicional porque mejora la funcionalidad de tu sitio proporcionando mejores experiencias para tus visitantes, muchas de esas experiencias añadidas solo se pueden obtener
 por medio de Tableau. Combinar vizzes con una buena historia y otras ayudas visuales harán de tu sitio un gran atractivo. Por ahora las vizzes que he creado se usan para mostrar información

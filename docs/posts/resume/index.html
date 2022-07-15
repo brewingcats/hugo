@@ -46,92 +46,89 @@
 <meta name="twitter:title" content="Resume"/>
 <meta name="twitter:description" content="Resume and professional history"/>
 
-      
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-85767008-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     
-    
-    
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85767008-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-85767008-2');
-    </script>
-    
-    <script type='text/javascript' src="/javascript/bcats.js#4.28" ></script>
+    <script type='text/javascript' src="/javascript/bcats.min.js#4.29" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
     <script>
-      BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
-      BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
-      BrewingCatsCore.Config.ProjectId = 'HugoBelin';
-      BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
-      BrewingCatsCore.Config.LinkHoverColor = '#00802B';
-      BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '4.28';
-      BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
-      BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
-      BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
-      
-      BrewingCatsCore.Control.Init();
-      let version = BrewingCatsCore.Config.SiteVersion;
-      let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
-      let timeZoneMsg = `UTC+${timeZone}`;
-      if (timeZone < 0) {
-        timeZoneMsg = `UTC${timeZone}`;
-      }
-
-      BrewingCatsCore.Logger.traceInfo(
-        `Loading: ${window.location.href}`,
-        'document.body',
-        'tagId_1',
-        'Bootstrap',
-        {
-          'url': window.location.href,
-          'siteVersion': version,
-          'height': $(window).height(),
-          'width': $(window).width(),
-          'timezone': timeZoneMsg
+      (() => {
+        BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
+        BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
+        BrewingCatsCore.Config.ProjectId = 'HugoBelin';
+        BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
+        BrewingCatsCore.Config.LinkHoverColor = '#00802B';
+        BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
+        BrewingCatsCore.Config.SiteVersion = '4.29';
+        BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
+        BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
+        BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
+        
+        BrewingCatsCore.Control.Init();
+        let version = BrewingCatsCore.Config.SiteVersion;
+        let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
+        let timeZoneMsg = `UTC+${timeZone}`;
+        if (timeZone < 0) {
+          timeZoneMsg = `UTC${timeZone}`;
         }
-      );
-
-      BrewingCatsCore.Control.UpdateStats((stats) => {
+  
         BrewingCatsCore.Logger.traceInfo(
-          `Stats for: ${window.location.href}`,
+          `Loading: ${window.location.href}`,
           'document.body',
-          'tagId_12',
+          'tagId_1',
           'Bootstrap',
-          stats
+          {
+            'url': window.location.href,
+            'siteVersion': version,
+            'height': window.innerHeight,
+            'width': window.innerWidth,
+            'timezone': timeZoneMsg
+          }
         );
+  
+        BrewingCatsCore.Control.UpdateStats((stats) => {
+          BrewingCatsCore.Logger.traceInfo(
+            `Stats for: ${window.location.href}`,
+            'document.body',
+            'tagId_12',
+            'Bootstrap',
+            stats
+          );
+  
+          let selection = window.document.querySelector('span[tag-id="site-page-views-footer"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.SiteViews;
+          }
 
-        $('span[tag-id="site-page-views-footer"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-site-views"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-page-views"]').html(stats.PageViews);
-        $('button[tag-id="stats-widget-user-site-views"]').html(stats.UserSiteViews);
-        $('button[tag-id="stats-widget-user-page-views"]').html(stats.UserPageViews);
-      });
+          selection = window.document.querySelector('button[tag-id="stats-widget-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-page-views"]');
+          if (selection !== null) {
+            selection = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserSiteViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-page-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserPageViews;
+          }
+        });
+      })();
     </script>
     
 
@@ -321,57 +318,302 @@ you can find out more about my career history in my
 
 
 
-<a href="https://www.linkedin.com/in/hugobelin/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.linkedin.com\/in\/hugobelin\/', 'LinkedIn Profile')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">LinkedIn Profile</a>
+
+
+<a href="https://www.linkedin.com/in/hugobelin/" target="_blank" class="aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2h1Z29iZWxpbi8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.linkedin.com\/in\/hugobelin\/', 'LinkedIn Profile')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2h1Z29iZWxpbi8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2h1Z29iZWxpbi8=Base')"
+>LinkedIn Profile</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2h1Z29iZWxpbi8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2h1Z29iZWxpbi8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2h1Z29iZWxpbi8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2h1Z29iZWxpbi8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2h1Z29iZWxpbi8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Every now and
 then I contribute with Vizzes to 
 
 
-<a href="https://public.tableau.com/profile/hugo.belin#!/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/', 'Tableau Public')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Tableau Public</a>
+
+
+<a href="https://public.tableau.com/profile/hugo.belin#!/" target="_blank" class="aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/public.tableau.com\/profile\/hugo.belin#!\/', 'Tableau Public')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvBase')"
+>Tableau Public</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9wdWJsaWMudGFibGVhdS5jb20vcHJvZmlsZS9odWdvLmJlbGluIyEvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 , this
 website as well as few others (such as 
 
 
-<a href="https://brewingcats.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/', 'BrewingCats')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BrewingCats</a>
+
+
+<a href="https://brewingcats.com/" target="_blank" class="aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/brewingcats.com\/', 'BrewingCats')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vBase')"
+>BrewingCats</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9icmV3aW5nY2F0cy5jb20vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 ) that I maintain are hosted
 in 
 
 
-<a href="https://github.com/brewingcats" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/github.com\/brewingcats', 'GitHub')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">GitHub</a>
+
+
+<a href="https://github.com/brewingcats" target="_blank" class="aHR0cHM6Ly9naXRodWIuY29tL2JyZXdpbmdjYXRz"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/github.com\/brewingcats', 'GitHub')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9naXRodWIuY29tL2JyZXdpbmdjYXRzHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9naXRodWIuY29tL2JyZXdpbmdjYXRzBase')"
+>GitHub</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9naXRodWIuY29tL2JyZXdpbmdjYXRz");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL2JyZXdpbmdjYXRzBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL2JyZXdpbmdjYXRzBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL2JyZXdpbmdjYXRzHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL2JyZXdpbmdjYXRzHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  (here 
 
 
-<a href="https://github.com/hobelinm" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/github.com\/hobelinm', 'my profile')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">my profile</a>
+
+
+<a href="https://github.com/hobelinm" target="_blank" class="aHR0cHM6Ly9naXRodWIuY29tL2hvYmVsaW5t"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/github.com\/hobelinm', 'my profile')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9naXRodWIuY29tL2hvYmVsaW5tHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9naXRodWIuY29tL2hvYmVsaW5tBase')"
+>my profile</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9naXRodWIuY29tL2hvYmVsaW5t");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL2hvYmVsaW5tBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL2hvYmVsaW5tBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL2hvYmVsaW5tHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL2hvYmVsaW5tHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 )
 or in 
 
 
-<a href="https://gitlab.com/hobelinm" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gitlab.com\/hobelinm', 'GitLab')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">GitLab</a>
+
+
+<a href="https://gitlab.com/hobelinm" target="_blank" class="aHR0cHM6Ly9naXRsYWIuY29tL2hvYmVsaW5t"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/gitlab.com\/hobelinm', 'GitLab')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9naXRsYWIuY29tL2hvYmVsaW5tHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9naXRsYWIuY29tL2hvYmVsaW5tBase')"
+>GitLab</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9naXRsYWIuY29tL2hvYmVsaW5t");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRsYWIuY29tL2hvYmVsaW5tBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRsYWIuY29tL2hvYmVsaW5tBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRsYWIuY29tL2hvYmVsaW5tHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRsYWIuY29tL2hvYmVsaW5tHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Feel free to check out my
 
 
 
-<a href="/posts/site/linktree/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/site\/linktree\/', 'promoted content')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">promoted content</a>
+
+
+<a href="/posts/site/linktree/" target="_blank" class="L3Bvc3RzL3NpdGUvbGlua3RyZWUv"
+onclick="BrewingCatsCore.LinkActions.openLink('\/posts\/site\/linktree\/', 'promoted content')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'L3Bvc3RzL3NpdGUvbGlua3RyZWUvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'L3Bvc3RzL3NpdGUvbGlua3RyZWUvBase')"
+>promoted content</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("L3Bvc3RzL3NpdGUvbGlua3RyZWUv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL3NpdGUvbGlua3RyZWUvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL3NpdGUvbGlua3RyZWUvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL3NpdGUvbGlua3RyZWUvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["L3Bvc3RzL3NpdGUvbGlua3RyZWUvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  for samples of my projects.</p>
 
 <h2 style="text-align: center; color:rgb(0, 117, 178);">Career History</h2>
@@ -392,10 +634,45 @@ padding-right: 8px;
 padding-left: 3px;">2022-Now</span> <strong>Senior Software Engineer</strong> - 
 
 
-<a href="https://www.dremio.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.dremio.com\/', 'Dremio')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Dremio</a>
+
+
+<a href="https://www.dremio.com/" target="_blank" class="aHR0cHM6Ly93d3cuZHJlbWlvLmNvbS8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.dremio.com\/', 'Dremio')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuZHJlbWlvLmNvbS8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuZHJlbWlvLmNvbS8=Base')"
+>Dremio</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuZHJlbWlvLmNvbS8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZHJlbWlvLmNvbS8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZHJlbWlvLmNvbS8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZHJlbWlvLmNvbS8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZHJlbWlvLmNvbS8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Help and contribute to the latest generation of Dremio Lakehouse
 platform. Drive improvements to branch health and performance.</p>
 <p>
@@ -415,10 +692,45 @@ padding-left: 3px;">2020-2022</span> <strong>Software Engineer Lead Member of th
 
 
 
-<a href="https://www.salesforce.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.salesforce.com\/', 'Salesforce')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Salesforce</a>
+
+
+<a href="https://www.salesforce.com/" target="_blank" class="aHR0cHM6Ly93d3cuc2FsZXNmb3JjZS5jb20v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.salesforce.com\/', 'Salesforce')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuc2FsZXNmb3JjZS5jb20vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuc2FsZXNmb3JjZS5jb20vBase')"
+>Salesforce</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuc2FsZXNmb3JjZS5jb20v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuc2FsZXNmb3JjZS5jb20vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuc2FsZXNmb3JjZS5jb20vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuc2FsZXNmb3JjZS5jb20vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuc2FsZXNmb3JjZS5jb20vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . A role updated per the acquisition of Tableau by Salesforce, continue
 designing and develop components for Tableau web authoring. Contribute feature development for web-first experiences for
 Tableau authoring. Develop features to improve the perceived and real performance of the product, auto-saving capabilities and more.
@@ -439,19 +751,89 @@ padding-right: 8px;
 padding-left: 3px;">2018-2020</span> <strong>Senior Software Engineer</strong> - 
 
 
-<a href="https://www.tableau.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.tableau.com\/', 'Tableau')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Tableau</a>
+
+
+<a href="https://www.tableau.com/" target="_blank" class="aHR0cHM6Ly93d3cudGFibGVhdS5jb20v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.tableau.com\/', 'Tableau')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cudGFibGVhdS5jb20vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cudGFibGVhdS5jb20vBase')"
+>Tableau</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cudGFibGVhdS5jb20v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudGFibGVhdS5jb20vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudGFibGVhdS5jb20vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudGFibGVhdS5jb20vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudGFibGVhdS5jb20vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . As
 part of <em>Move to the Web</em> worked on designing new testing infrastructures to conform our organization to the
 
 
 
-<a href="https://docs.google.com/presentation/d/15gNk21rjer3xo-b1ZqyQVGebOp_aPvHU3YH7YnOMxtE/edit#slide=id.g437663ce1_53_98" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/docs.google.com\/presentation\/d\/15gNk21rjer3xo-b1ZqyQVGebOp_aPvHU3YH7YnOMxtE\/edit#slide=id.g437663ce1_53_98', 'Pyramid of Test')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Pyramid of Test</a>
+
+
+<a href="https://docs.google.com/presentation/d/15gNk21rjer3xo-b1ZqyQVGebOp_aPvHU3YH7YnOMxtE/edit#slide=id.g437663ce1_53_98" target="_blank" class="aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTVnTmsyMXJqZXIzeG8tYjFacXlRVkdlYk9wX2FQdkhVM1lIN1luT014dEUvZWRpdCNzbGlkZT1pZC5nNDM3NjYzY2UxXzUzXzk4"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/docs.google.com\/presentation\/d\/15gNk21rjer3xo-b1ZqyQVGebOp_aPvHU3YH7YnOMxtE\/edit#slide=id.g437663ce1_53_98', 'Pyramid of Test')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTVnTmsyMXJqZXIzeG8tYjFacXlRVkdlYk9wX2FQdkhVM1lIN1luT014dEUvZWRpdCNzbGlkZT1pZC5nNDM3NjYzY2UxXzUzXzk4Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTVnTmsyMXJqZXIzeG8tYjFacXlRVkdlYk9wX2FQdkhVM1lIN1luT014dEUvZWRpdCNzbGlkZT1pZC5nNDM3NjYzY2UxXzUzXzk4Base')"
+>Pyramid of Test</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTVnTmsyMXJqZXIzeG8tYjFacXlRVkdlYk9wX2FQdkhVM1lIN1luT014dEUvZWRpdCNzbGlkZT1pZC5nNDM3NjYzY2UxXzUzXzk4");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTVnTmsyMXJqZXIzeG8tYjFacXlRVkdlYk9wX2FQdkhVM1lIN1luT014dEUvZWRpdCNzbGlkZT1pZC5nNDM3NjYzY2UxXzUzXzk4Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTVnTmsyMXJqZXIzeG8tYjFacXlRVkdlYk9wX2FQdkhVM1lIN1luT014dEUvZWRpdCNzbGlkZT1pZC5nNDM3NjYzY2UxXzUzXzk4Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTVnTmsyMXJqZXIzeG8tYjFacXlRVkdlYk9wX2FQdkhVM1lIN1luT014dEUvZWRpdCNzbGlkZT1pZC5nNDM3NjYzY2UxXzUzXzk4Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uL2QvMTVnTmsyMXJqZXIzeG8tYjFacXlRVkdlYk9wX2FQdkhVM1lIN1luT014dEUvZWRpdCNzbGlkZT1pZC5nNDM3NjYzY2UxXzUzXzk4Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 
 that includes integration tests. Contributed to create a new integration test layer, trained peers and presented findings
 and advances internally. Created hybrid automation testing for workflows that involved Tableau on the Web and Tableau Desktop.</p>
@@ -471,27 +853,132 @@ padding-right: 8px;
 padding-left: 3px;">2016-2018</span> <strong>Software Engineer</strong> - 
 
 
-<a href="https://www.tableau.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.tableau.com\/', 'Tableau')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Tableau</a>
+
+
+<a href="https://www.tableau.com/" target="_blank" class="aHR0cHM6Ly93d3cudGFibGVhdS5jb20v"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.tableau.com\/', 'Tableau')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cudGFibGVhdS5jb20vHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cudGFibGVhdS5jb20vBase')"
+>Tableau</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cudGFibGVhdS5jb20v");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudGFibGVhdS5jb20vBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudGFibGVhdS5jb20vBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudGFibGVhdS5jb20vHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudGFibGVhdS5jb20vHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Joined
 <em>Move to the Web</em> effort to enable web authoring features of Tableau. Design and develop features for internal E2E testing
 infrastructure. Design and develop test plans and E2E tests for upcoming Tableau features on the Web using Java,
 
 
 
-<a href="https://www.selenium.dev/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.selenium.dev\/', 'Selenium')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Selenium</a>
+
+
+<a href="https://www.selenium.dev/" target="_blank" class="aHR0cHM6Ly93d3cuc2VsZW5pdW0uZGV2Lw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.selenium.dev\/', 'Selenium')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuc2VsZW5pdW0uZGV2Lw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuc2VsZW5pdW0uZGV2Lw==Base')"
+>Selenium</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuc2VsZW5pdW0uZGV2Lw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuc2VsZW5pdW0uZGV2Lw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuc2VsZW5pdW0uZGV2Lw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuc2VsZW5pdW0uZGV2Lw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuc2VsZW5pdW0uZGV2Lw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  and 
 
 
-<a href="https://www.browserstack.com/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.browserstack.com\/', 'BrowserStack')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">BrowserStack</a>
+
+
+<a href="https://www.browserstack.com/" target="_blank" class="aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.browserstack.com\/', 'BrowserStack')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS8=Base')"
+>BrowserStack</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuYnJvd3NlcnN0YWNrLmNvbS8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 .
 Trained peers on new features. Led internal test virtual teams that analyzed and proposed solutions for issues impacting
 the whole organization, organized and fostered new ideas from others by creating free demo sessions. Designed and developed
@@ -499,25 +986,130 @@ features for Tableau Web Authoring that enable users create and view visualizati
 
 
 
-<a href="https://github.com/Saltarelle/SaltarelleCompiler" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/github.com\/Saltarelle\/SaltarelleCompiler', 'Saltarelle')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Saltarelle</a>
+
+
+<a href="https://github.com/Saltarelle/SaltarelleCompiler" target="_blank" class="aHR0cHM6Ly9naXRodWIuY29tL1NhbHRhcmVsbGUvU2FsdGFyZWxsZUNvbXBpbGVy"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/github.com\/Saltarelle\/SaltarelleCompiler', 'Saltarelle')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9naXRodWIuY29tL1NhbHRhcmVsbGUvU2FsdGFyZWxsZUNvbXBpbGVyHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9naXRodWIuY29tL1NhbHRhcmVsbGUvU2FsdGFyZWxsZUNvbXBpbGVyBase')"
+>Saltarelle</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9naXRodWIuY29tL1NhbHRhcmVsbGUvU2FsdGFyZWxsZUNvbXBpbGVy");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL1NhbHRhcmVsbGUvU2FsdGFyZWxsZUNvbXBpbGVyBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL1NhbHRhcmVsbGUvU2FsdGFyZWxsZUNvbXBpbGVyBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL1NhbHRhcmVsbGUvU2FsdGFyZWxsZUNvbXBpbGVyHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9naXRodWIuY29tL1NhbHRhcmVsbGUvU2FsdGFyZWxsZUNvbXBpbGVyHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 , 
 
 
-<a href="https://reactjs.org/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/reactjs.org\/', 'React')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">React</a>
+
+
+<a href="https://reactjs.org/" target="_blank" class="aHR0cHM6Ly9yZWFjdGpzLm9yZy8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/reactjs.org\/', 'React')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9yZWFjdGpzLm9yZy8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9yZWFjdGpzLm9yZy8=Base')"
+>React</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9yZWFjdGpzLm9yZy8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9yZWFjdGpzLm9yZy8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9yZWFjdGpzLm9yZy8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9yZWFjdGpzLm9yZy8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9yZWFjdGpzLm9yZy8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 ,
 and 
 
 
-<a href="https://jasmine.github.io/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/jasmine.github.io\/', 'Jasmine')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Jasmine</a>
+
+
+<a href="https://jasmine.github.io/" target="_blank" class="aHR0cHM6Ly9qYXNtaW5lLmdpdGh1Yi5pby8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/jasmine.github.io\/', 'Jasmine')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9qYXNtaW5lLmdpdGh1Yi5pby8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9qYXNtaW5lLmdpdGh1Yi5pby8=Base')"
+>Jasmine</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9qYXNtaW5lLmdpdGh1Yi5pby8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9qYXNtaW5lLmdpdGh1Yi5pby8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9qYXNtaW5lLmdpdGh1Yi5pby8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9qYXNtaW5lLmdpdGh1Yi5pby8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9qYXNtaW5lLmdpdGh1Yi5pby8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 .</p>
 <p>
 
@@ -535,53 +1127,263 @@ padding-right: 8px;
 padding-left: 3px;">2014-2016</span> <strong>Software Engineer</strong> - 
 
 
-<a href="https://www.microsoft.com/en-us/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.microsoft.com\/en-us\/', 'Microsoft')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Microsoft</a>
+
+
+<a href="https://www.microsoft.com/en-us/" target="_blank" class="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.microsoft.com\/en-us\/', 'Microsoft')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Base')"
+>Microsoft</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 .
 Design and develop internal web products (web services, websites, CLI tools) for deploying, managing, onboarding, and monitoring
 of Office Web Services on the Microsoft&rsquo;s cloud: 
  
  
- <a href="https://azure.microsoft.com/en-us/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/azure.microsoft.com\/en-us\/', 'Azure')" 
- style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
- onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
- onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Azure</a>
+ 
+ 
+ <a href="https://azure.microsoft.com/en-us/" target="_blank" class="aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzLw=="
+ onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/azure.microsoft.com\/en-us\/', 'Azure')" 
+ style="color: rgb(34, 34, 34); text-decoration: none; " 
+ onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzLw==Hover')"
+ onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzLw==Base')"
+ >Azure</a>
+ 
+ <script>
+   (() => {
+     let items = document.getElementsByClassName("aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzLw==");
+     let baseColor = "ThemeColor";
+     
+     for (let i = 0; i < items.length; i++) {
+       let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+       if (baseColor !== 'ThemeColor') {
+         boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+       }
+ 
+       items[i].style.boxShadow = boxShadow;
+     }
+ 
+     if (baseColor !== 'ThemeColor') {
+       window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzLw==Base"] = baseColor;
+     } else {
+       window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzLw==Base"] = 
+         window.BrewingCatsCore.Config.ThemeColor;
+     }
+ 
+     let hoverColor = "LinkHoverColor";
+     if (hoverColor !== 'LinkHoverColor') {
+       window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzLw==Hover"] = hoverColor;
+     } else {
+       window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzLw==Hover"] = 
+         window.BrewingCatsCore.Config.LinkHoverColor;
+     }
+   })();
+ </script>
 . Contributed with
 feature development of internal websites built in 
 
 
-<a href="https://angular.io/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/angular.io\/', 'Angular')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Angular</a>
+
+
+<a href="https://angular.io/" target="_blank" class="aHR0cHM6Ly9hbmd1bGFyLmlvLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/angular.io\/', 'Angular')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9hbmd1bGFyLmlvLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9hbmd1bGFyLmlvLw==Base')"
+>Angular</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9hbmd1bGFyLmlvLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hbmd1bGFyLmlvLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hbmd1bGFyLmlvLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hbmd1bGFyLmlvLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9hbmd1bGFyLmlvLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  using
 
 
 
-<a href="https://www.typescriptlang.org/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.typescriptlang.org\/', 'TypeScript')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">TypeScript</a>
+
+
+<a href="https://www.typescriptlang.org/" target="_blank" class="aHR0cHM6Ly93d3cudHlwZXNjcmlwdGxhbmcub3JnLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.typescriptlang.org\/', 'TypeScript')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cudHlwZXNjcmlwdGxhbmcub3JnLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cudHlwZXNjcmlwdGxhbmcub3JnLw==Base')"
+>TypeScript</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cudHlwZXNjcmlwdGxhbmcub3JnLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudHlwZXNjcmlwdGxhbmcub3JnLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudHlwZXNjcmlwdGxhbmcub3JnLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudHlwZXNjcmlwdGxhbmcub3JnLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudHlwZXNjcmlwdGxhbmcub3JnLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  that allowed the deployment, control and monitoring as well as
 integrating and propagating configuration changes on-the-fly for Office web products deployed on Azure. Developed features for
 the storage layer of a configuration engine using
 
 
 
-<a href="https://azure.microsoft.com/en-us/services/storage/tables/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/azure.microsoft.com\/en-us\/services\/storage\/tables\/', 'Azure Table Storage')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Azure Table Storage</a>
+
+
+<a href="https://azure.microsoft.com/en-us/services/storage/tables/" target="_blank" class="aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzL3NlcnZpY2VzL3N0b3JhZ2UvdGFibGVzLw=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/azure.microsoft.com\/en-us\/services\/storage\/tables\/', 'Azure Table Storage')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzL3NlcnZpY2VzL3N0b3JhZ2UvdGFibGVzLw==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzL3NlcnZpY2VzL3N0b3JhZ2UvdGFibGVzLw==Base')"
+>Azure Table Storage</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzL3NlcnZpY2VzL3N0b3JhZ2UvdGFibGVzLw==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzL3NlcnZpY2VzL3N0b3JhZ2UvdGFibGVzLw==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzL3NlcnZpY2VzL3N0b3JhZ2UvdGFibGVzLw==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzL3NlcnZpY2VzL3N0b3JhZ2UvdGFibGVzLw==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9henVyZS5taWNyb3NvZnQuY29tL2VuLXVzL3NlcnZpY2VzL3N0b3JhZ2UvdGFibGVzLw==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Designed and released internal
 CLI tools written in 
 
 
-<a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/docs.microsoft.com\/en-us\/dotnet\/csharp\/', 'C#')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">C#</a>
+
+
+<a href="https://docs.microsoft.com/en-us/dotnet/csharp/" target="_blank" class="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvZG90bmV0L2NzaGFycC8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/docs.microsoft.com\/en-us\/dotnet\/csharp\/', 'C#')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvZG90bmV0L2NzaGFycC8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvZG90bmV0L2NzaGFycC8=Base')"
+>C#</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvZG90bmV0L2NzaGFycC8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvZG90bmV0L2NzaGFycC8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvZG90bmV0L2NzaGFycC8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvZG90bmV0L2NzaGFycC8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvZG90bmV0L2NzaGFycC8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  and PowerShell that enabled automation
 workflows for other developers to maintain and manage their deployments on Azure. Contributed features for Secrets Management
 CLI tool written in PowerShell.</p>
@@ -602,10 +1404,45 @@ padding-left: 3px;">2012-2013</span> <strong>Graduate Certificate in Software De
 
 
 
-<a href="https://www.uwb.edu/stem/graduate/gcsdd" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.uwb.edu\/stem\/graduate\/gcsdd', 'University of Washington, Campus Bothell')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">University of Washington, Campus Bothell</a>
+
+
+<a href="https://www.uwb.edu/stem/graduate/gcsdd" target="_blank" class="aHR0cHM6Ly93d3cudXdiLmVkdS9zdGVtL2dyYWR1YXRlL2djc2Rk"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.uwb.edu\/stem\/graduate\/gcsdd', 'University of Washington, Campus Bothell')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cudXdiLmVkdS9zdGVtL2dyYWR1YXRlL2djc2RkHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cudXdiLmVkdS9zdGVtL2dyYWR1YXRlL2djc2RkBase')"
+>University of Washington, Campus Bothell</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cudXdiLmVkdS9zdGVtL2dyYWR1YXRlL2djc2Rk");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudXdiLmVkdS9zdGVtL2dyYWR1YXRlL2djc2RkBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudXdiLmVkdS9zdGVtL2dyYWR1YXRlL2djc2RkBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudXdiLmVkdS9zdGVtL2dyYWR1YXRlL2djc2RkHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cudXdiLmVkdS9zdGVtL2dyYWR1YXRlL2djc2RkHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . Complemented Computer Science
 curriculum that includded Object Oriented Design and Development, Data Structures and Algorithms, Design and Testing of software
 systems, Systems Programming, and Software Engineering Life Cycle and Development.</p>
@@ -625,20 +1462,90 @@ padding-right: 8px;
 padding-left: 3px;">2010-2014</span> <strong>Service/DevOps Engineer</strong> - 
 
 
-<a href="https://www.microsoft.com/en-us/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.microsoft.com\/en-us\/', 'Microsoft')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Microsoft</a>
+
+
+<a href="https://www.microsoft.com/en-us/" target="_blank" class="aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.microsoft.com\/en-us\/', 'Microsoft')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Base')"
+>Microsoft</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cubWljcm9zb2Z0LmNvbS9lbi11cy8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 .
 Coordinated processes for new on-premises Office Services, designed and developed automation for patching, maintenance, and other
 common tasks for Office Services assigned to me (Office Subscription, Click-To-Run, Office Web Applications [Word, PowerPoint, Excel
 on the web]). Created shareable 
 
 
-<a href="https://docs.microsoft.com/en-us/powershell/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/docs.microsoft.com\/en-us\/powershell\/', 'PowerShell')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">PowerShell</a>
+
+
+<a href="https://docs.microsoft.com/en-us/powershell/" target="_blank" class="aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcG93ZXJzaGVsbC8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/docs.microsoft.com\/en-us\/powershell\/', 'PowerShell')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcG93ZXJzaGVsbC8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcG93ZXJzaGVsbC8=Base')"
+>PowerShell</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcG93ZXJzaGVsbC8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcG93ZXJzaGVsbC8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcG93ZXJzaGVsbC8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcG93ZXJzaGVsbC8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9kb2NzLm1pY3Jvc29mdC5jb20vZW4tdXMvcG93ZXJzaGVsbC8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  modules for automating
 these tasks which were consumed by fellow team members to automate their assigned services&rsquo; common tasks. Ensured high quality,
 high availability of assigned services. Trained fellow service engineers in automation using PowerShell and provided a framework
@@ -659,27 +1566,132 @@ padding-right: 8px;
 padding-left: 3px;">2009-2010</span> <strong>Embedded Software and Hardware Engineer</strong> - 
 
 
-<a href="https://www.cranepi.com/en" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.cranepi.com\/en', 'MEI')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">MEI</a>
+
+
+<a href="https://www.cranepi.com/en" target="_blank" class="aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.cranepi.com\/en', 'MEI')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4=Base')"
+>MEI</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 
 (see more about brand history 
 
 
-<a href="https://www.cranepi.com/en/about-us/brand-history" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.cranepi.com\/en\/about-us\/brand-history', 'here')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">here</a>
+
+
+<a href="https://www.cranepi.com/en/about-us/brand-history" target="_blank" class="aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4vYWJvdXQtdXMvYnJhbmQtaGlzdG9yeQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.cranepi.com\/en\/about-us\/brand-history', 'here')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4vYWJvdXQtdXMvYnJhbmQtaGlzdG9yeQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4vYWJvdXQtdXMvYnJhbmQtaGlzdG9yeQ==Base')"
+>here</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4vYWJvdXQtdXMvYnJhbmQtaGlzdG9yeQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4vYWJvdXQtdXMvYnJhbmQtaGlzdG9yeQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4vYWJvdXQtdXMvYnJhbmQtaGlzdG9yeQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4vYWJvdXQtdXMvYnJhbmQtaGlzdG9yeQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY3JhbmVwaS5jb20vZW4vYWJvdXQtdXMvYnJhbmQtaGlzdG9yeQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 ).
 Design and develop embedded software and hardware for test fixtures for different segments of the assembly line. Designed software
 (C and Assembly languages) that powered several 
 
 
-<a href="https://en.wikipedia.org/wiki/Cypress_PSoC" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Cypress_PSoC', 'Cypress PSOCs')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Cypress PSOCs</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Cypress_PSoC" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3lwcmVzc19QU29D"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Cypress_PSoC', 'Cypress PSOCs')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3lwcmVzc19QU29DHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3lwcmVzc19QU29DBase')"
+>Cypress PSOCs</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3lwcmVzc19QU29D");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3lwcmVzc19QU29DBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3lwcmVzc19QU29DBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3lwcmVzc19QU29DHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQ3lwcmVzc19QU29DHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 
 (Programmable System on a Chip) as well as the hardware that simulated IO for partially-assembled and final testing vending machine
 products (bill acceptors and coin detectors) in order to assess quality of the products. Designed and developed user interfaces
@@ -700,27 +1712,132 @@ padding-right: 8px;
 padding-left: 3px;">2008-2009</span> <strong>Embedded Software Engineer</strong> - 
 
 
-<a href="https://www.cidec.com.mx/en/home/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.cidec.com.mx\/en\/home\/', 'CIDEC')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">CIDEC</a>
+
+
+<a href="https://www.cidec.com.mx/en/home/" target="_blank" class="aHR0cHM6Ly93d3cuY2lkZWMuY29tLm14L2VuL2hvbWUv"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.cidec.com.mx\/en\/home\/', 'CIDEC')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuY2lkZWMuY29tLm14L2VuL2hvbWUvHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuY2lkZWMuY29tLm14L2VuL2hvbWUvBase')"
+>CIDEC</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuY2lkZWMuY29tLm14L2VuL2hvbWUv");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY2lkZWMuY29tLm14L2VuL2hvbWUvBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY2lkZWMuY29tLm14L2VuL2hvbWUvBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY2lkZWMuY29tLm14L2VuL2hvbWUvHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuY2lkZWMuY29tLm14L2VuL2hvbWUvHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  (Carso
 Group Center for Research and Development). Developed embedded software and features for Delphi&rsquo;s 300C
 
 
 
-<a href="https://en.wikipedia.org/wiki/Real-time_operating_system" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Real-time_operating_system', 'RTOS')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">RTOS</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Real-time_operating_system" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVhbC10aW1lX29wZXJhdGluZ19zeXN0ZW0="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Real-time_operating_system', 'RTOS')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVhbC10aW1lX29wZXJhdGluZ19zeXN0ZW0=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVhbC10aW1lX29wZXJhdGluZ19zeXN0ZW0=Base')"
+>RTOS</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVhbC10aW1lX29wZXJhdGluZ19zeXN0ZW0=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVhbC10aW1lX29wZXJhdGluZ19zeXN0ZW0=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVhbC10aW1lX29wZXJhdGluZ19zeXN0ZW0=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVhbC10aW1lX29wZXJhdGluZ19zeXN0ZW0=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVhbC10aW1lX29wZXJhdGluZ19zeXN0ZW0=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  (Real-Time Operating
 System, with 
 
 
-<a href="https://www.geeksforgeeks.org/preemptive-and-non-preemptive-scheduling/" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.geeksforgeeks.org\/preemptive-and-non-preemptive-scheduling\/', 'non-preemptive scheduling')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">non-preemptive scheduling</a>
+
+
+<a href="https://www.geeksforgeeks.org/preemptive-and-non-preemptive-scheduling/" target="_blank" class="aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJlZW1wdGl2ZS1hbmQtbm9uLXByZWVtcHRpdmUtc2NoZWR1bGluZy8="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.geeksforgeeks.org\/preemptive-and-non-preemptive-scheduling\/', 'non-preemptive scheduling')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJlZW1wdGl2ZS1hbmQtbm9uLXByZWVtcHRpdmUtc2NoZWR1bGluZy8=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJlZW1wdGl2ZS1hbmQtbm9uLXByZWVtcHRpdmUtc2NoZWR1bGluZy8=Base')"
+>non-preemptive scheduling</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJlZW1wdGl2ZS1hbmQtbm9uLXByZWVtcHRpdmUtc2NoZWR1bGluZy8=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJlZW1wdGl2ZS1hbmQtbm9uLXByZWVtcHRpdmUtc2NoZWR1bGluZy8=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJlZW1wdGl2ZS1hbmQtbm9uLXByZWVtcHRpdmUtc2NoZWR1bGluZy8=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJlZW1wdGl2ZS1hbmQtbm9uLXByZWVtcHRpdmUtc2NoZWR1bGluZy8=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuZ2Vla3Nmb3JnZWVrcy5vcmcvcHJlZW1wdGl2ZS1hbmQtbm9uLXByZWVtcHRpdmUtc2NoZWR1bGluZy8=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  and
 priority handling), this software was part of the infotainment systems for multiple brands and models in the automotive industry.
 Had the opportunity to develop (C language) and test (black box, white box, and stress) a customized version of this OS for Cadillac
@@ -742,10 +1859,45 @@ padding-left: 3px;">2007-2008</span> <strong>Electrical and Embedded Software En
 software for 
 
 
-<a href="https://growershouse.com/quantum-digital-dimmable-ballast-1000w" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/growershouse.com\/quantum-digital-dimmable-ballast-1000w', 'electronic ballasts')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">electronic ballasts</a>
+
+
+<a href="https://growershouse.com/quantum-digital-dimmable-ballast-1000w" target="_blank" class="aHR0cHM6Ly9ncm93ZXJzaG91c2UuY29tL3F1YW50dW0tZGlnaXRhbC1kaW1tYWJsZS1iYWxsYXN0LTEwMDB3"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/growershouse.com\/quantum-digital-dimmable-ballast-1000w', 'electronic ballasts')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9ncm93ZXJzaG91c2UuY29tL3F1YW50dW0tZGlnaXRhbC1kaW1tYWJsZS1iYWxsYXN0LTEwMDB3Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9ncm93ZXJzaG91c2UuY29tL3F1YW50dW0tZGlnaXRhbC1kaW1tYWJsZS1iYWxsYXN0LTEwMDB3Base')"
+>electronic ballasts</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9ncm93ZXJzaG91c2UuY29tL3F1YW50dW0tZGlnaXRhbC1kaW1tYWJsZS1iYWxsYXN0LTEwMDB3");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9ncm93ZXJzaG91c2UuY29tL3F1YW50dW0tZGlnaXRhbC1kaW1tYWJsZS1iYWxsYXN0LTEwMDB3Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9ncm93ZXJzaG91c2UuY29tL3F1YW50dW0tZGlnaXRhbC1kaW1tYWJsZS1iYWxsYXN0LTEwMDB3Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9ncm93ZXJzaG91c2UuY29tL3F1YW50dW0tZGlnaXRhbC1kaW1tYWJsZS1iYWxsYXN0LTEwMDB3Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9ncm93ZXJzaG91c2UuY29tL3F1YW50dW0tZGlnaXRhbC1kaW1tYWJsZS1iYWxsYXN0LTEwMDB3Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 
 (switched mode power supply unit) for industrial lightning.</p>
 <p>
@@ -765,20 +1917,90 @@ padding-left: 3px;">2002-2007</span> <strong>Bachelor&rsquo;s Degree in Electron
 
 
 
-<a href="https://morelia.tecnm.mx/#/oferta-educativa/ingenierias/ing-electronica" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/morelia.tecnm.mx\/#\/oferta-educativa\/ingenierias\/ing-electronica', 'Morelia Institute of Technology')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Morelia Institute of Technology</a>
+
+
+<a href="https://morelia.tecnm.mx/#/oferta-educativa/ingenierias/ing-electronica" target="_blank" class="aHR0cHM6Ly9tb3JlbGlhLnRlY25tLm14LyMvb2ZlcnRhLWVkdWNhdGl2YS9pbmdlbmllcmlhcy9pbmctZWxlY3Ryb25pY2E="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/morelia.tecnm.mx\/#\/oferta-educativa\/ingenierias\/ing-electronica', 'Morelia Institute of Technology')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9tb3JlbGlhLnRlY25tLm14LyMvb2ZlcnRhLWVkdWNhdGl2YS9pbmdlbmllcmlhcy9pbmctZWxlY3Ryb25pY2E=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9tb3JlbGlhLnRlY25tLm14LyMvb2ZlcnRhLWVkdWNhdGl2YS9pbmdlbmllcmlhcy9pbmctZWxlY3Ryb25pY2E=Base')"
+>Morelia Institute of Technology</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9tb3JlbGlhLnRlY25tLm14LyMvb2ZlcnRhLWVkdWNhdGl2YS9pbmdlbmllcmlhcy9pbmctZWxlY3Ryb25pY2E=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9tb3JlbGlhLnRlY25tLm14LyMvb2ZlcnRhLWVkdWNhdGl2YS9pbmdlbmllcmlhcy9pbmctZWxlY3Ryb25pY2E=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9tb3JlbGlhLnRlY25tLm14LyMvb2ZlcnRhLWVkdWNhdGl2YS9pbmdlbmllcmlhcy9pbmctZWxlY3Ryb25pY2E=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9tb3JlbGlhLnRlY25tLm14LyMvb2ZlcnRhLWVkdWNhdGl2YS9pbmdlbmllcmlhcy9pbmctZWxlY3Ryb25pY2E=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9tb3JlbGlhLnRlY25tLm14LyMvb2ZlcnRhLWVkdWNhdGl2YS9pbmdlbmllcmlhcy9pbmctZWxlY3Ryb25pY2E=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 . I
 graduated from college with a specialty in Power Electronics. This bachelor&rsquo;s degree included low level programming in C
 and Assembly languages, design and development of our own
 
 
 
-<a href="https://en.wikipedia.org/wiki/Switched-mode_power_supply" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Switched-mode_power_supply', 'switched mode power supply')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">switched mode power supply</a>
+
+
+<a href="https://en.wikipedia.org/wiki/Switched-mode_power_supply" target="_blank" class="aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3dpdGNoZWQtbW9kZV9wb3dlcl9zdXBwbHk="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/en.wikipedia.org\/wiki\/Switched-mode_power_supply', 'switched mode power supply')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3dpdGNoZWQtbW9kZV9wb3dlcl9zdXBwbHk=Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3dpdGNoZWQtbW9kZV9wb3dlcl9zdXBwbHk=Base')"
+>switched mode power supply</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3dpdGNoZWQtbW9kZV9wb3dlcl9zdXBwbHk=");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3dpdGNoZWQtbW9kZV9wb3dlcl9zdXBwbHk=Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3dpdGNoZWQtbW9kZV9wb3dlcl9zdXBwbHk=Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3dpdGNoZWQtbW9kZV9wb3dlcl9zdXBwbHk=Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvU3dpdGNoZWQtbW9kZV9wb3dlcl9zdXBwbHk=Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 .</p>
 
 <h2 style="text-align: center; color:rgb(0, 117, 178);">Visual Timeline of My Professional Experience</h2>
@@ -789,14 +2011,14 @@ onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">switched mode power supp
 
 
 
-<iframe id="ac79b75d69e4e8054bb3ed0c8625fc695" src="https://coda.io/embed/2OLAyWZrMc/_sujiY?viewMode=embedplay&amp;hideSections=true" width="1000" height="800" style="ZgotmplZ" frameborder="0" marginheight="0" marginwidth="0" frameborder='0' allow="fullscreen">Loading…</iframe>
+<iframe id="a64be0210a2a43404c9b015a6ffbc0739" src="https://coda.io/embed/2OLAyWZrMc/_sujiY?viewMode=embedplay&amp;hideSections=true" width="1000" height="800" style="ZgotmplZ" frameborder="0" marginheight="0" marginwidth="0" frameborder='0' allow="fullscreen">Loading…</iframe>
 <script>
   (() => {
     let paramStyle = 'max-width:100%;';
     let styles = paramStyle.split(';');
     for (let i = 0; i < styles.length; i++) {
       let stylePair = styles[i].split(':');
-      document.querySelector('#ac79b75d69e4e8054bb3ed0c8625fc695').style[stylePair[0]] = stylePair[1];
+      document.querySelector('#a64be0210a2a43404c9b015a6ffbc0739').style[stylePair[0]] = stylePair[1];
     }
   })();
 </script>

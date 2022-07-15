@@ -46,92 +46,89 @@
 <meta name="twitter:title" content="DIY Privacy Screen"/>
 <meta name="twitter:description" content="Do-It-Yourself: Build a Privacy Wall"/>
 
-      
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-85767008-2', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
     
-    
-    
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-85767008-2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-85767008-2');
-    </script>
-    
-    <script type='text/javascript' src="/javascript/bcats.js#4.28" ></script>
+    <script type='text/javascript' src="/javascript/bcats.min.js#4.29" ></script>
   </head>
 
   <body class="ma0 avenir bg-near-white">
 
     <script>
-      BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
-      BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
-      BrewingCatsCore.Config.ProjectId = 'HugoBelin';
-      BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
-      BrewingCatsCore.Config.LinkHoverColor = '#00802B';
-      BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
-      BrewingCatsCore.Config.SiteVersion = '4.28';
-      BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
-      BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
-      BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
-      
-      BrewingCatsCore.Control.Init();
-      let version = BrewingCatsCore.Config.SiteVersion;
-      let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
-      let timeZoneMsg = `UTC+${timeZone}`;
-      if (timeZone < 0) {
-        timeZoneMsg = `UTC${timeZone}`;
-      }
-
-      BrewingCatsCore.Logger.traceInfo(
-        `Loading: ${window.location.href}`,
-        'document.body',
-        'tagId_1',
-        'Bootstrap',
-        {
-          'url': window.location.href,
-          'siteVersion': version,
-          'height': $(window).height(),
-          'width': $(window).width(),
-          'timezone': timeZoneMsg
+      (() => {
+        BrewingCatsCore.Config.TelemetryUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/productionLogger';
+        BrewingCatsCore.Config.StatsUrl = 'https:\/\/us-central1-hugobelin-com.cloudfunctions.net\/stats';
+        BrewingCatsCore.Config.ProjectId = 'HugoBelin';
+        BrewingCatsCore.Config.ThemeColor = '0, 117, 178';
+        BrewingCatsCore.Config.LinkHoverColor = '#00802B';
+        BrewingCatsCore.Config.UseGenericGdpr = 'false' === 'true';
+        BrewingCatsCore.Config.SiteVersion = '4.29';
+        BrewingCatsCore.Config.TelemetryDataUrl = 'https:\/\/media.hugobelin.com\/telemetry\/';
+        BrewingCatsCore.Config.TelemetryDataBaseName = 'Hugo';
+        BrewingCatsCore.Config.TelemetryDataEnv = 'Production';
+        
+        BrewingCatsCore.Control.Init();
+        let version = BrewingCatsCore.Config.SiteVersion;
+        let timeZone = -1 * (new Date().getTimezoneOffset() / 60);
+        let timeZoneMsg = `UTC+${timeZone}`;
+        if (timeZone < 0) {
+          timeZoneMsg = `UTC${timeZone}`;
         }
-      );
-
-      BrewingCatsCore.Control.UpdateStats((stats) => {
+  
         BrewingCatsCore.Logger.traceInfo(
-          `Stats for: ${window.location.href}`,
+          `Loading: ${window.location.href}`,
           'document.body',
-          'tagId_12',
+          'tagId_1',
           'Bootstrap',
-          stats
+          {
+            'url': window.location.href,
+            'siteVersion': version,
+            'height': window.innerHeight,
+            'width': window.innerWidth,
+            'timezone': timeZoneMsg
+          }
         );
+  
+        BrewingCatsCore.Control.UpdateStats((stats) => {
+          BrewingCatsCore.Logger.traceInfo(
+            `Stats for: ${window.location.href}`,
+            'document.body',
+            'tagId_12',
+            'Bootstrap',
+            stats
+          );
+  
+          let selection = window.document.querySelector('span[tag-id="site-page-views-footer"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.SiteViews;
+          }
 
-        $('span[tag-id="site-page-views-footer"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-site-views"]').html(stats.SiteViews);
-        $('button[tag-id="stats-widget-page-views"]').html(stats.PageViews);
-        $('button[tag-id="stats-widget-user-site-views"]').html(stats.UserSiteViews);
-        $('button[tag-id="stats-widget-user-page-views"]').html(stats.UserPageViews);
-      });
+          selection = window.document.querySelector('button[tag-id="stats-widget-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-page-views"]');
+          if (selection !== null) {
+            selection = stats.PageViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-site-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserSiteViews;
+          }
+
+          selection = window.document.querySelector('button[tag-id="stats-widget-user-page-views"]');
+          if (selection !== null) {
+            selection.innerHTML = stats.UserPageViews;
+          }
+        });
+      })();
     </script>
     
    
@@ -372,17 +369,28 @@ if (!doNotTrack) {
     <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l">
 <script>
   (() => {
-    $(window).on("load", function(){
+    window.addEventListener("load", function(){
       window.HeadParser.Control.updateHeaders();
-      $('#tocContents')[0].appendChild(window.HeadParser.Control.CreateHeaderList());
+      window.document.getElementById('tocContents')
+        .appendChild(window.HeadParser.Control.CreateHeaderList());
     });
   })();
 </script>
 <aside id="toc">
   <p>
-    <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseToc" aria-expanded="false" aria-controls="collapseToc">
+    <button class="btn btn-light"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseToc"
+      aria-expanded="false"
+      aria-controls="collapseToc"
+    >
       
-      <h2>Table of Contents</h2>
+      <h2
+        style="color: rgb(34, 34, 34); text-decoration: none; box-shadow: rgb(0, 117, 178) 0px -4px 0px inset;"
+        onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
+        onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)"
+      >Table of Contents</h2>
       
     </button>
   </p>
@@ -445,10 +453,45 @@ step is to find appropriate wood for the posts, the decision was to use 4&quot; 
 have the appropriate height and sturdiness for the job. 
 
 
-<a href="https://www.homedepot.com/p/4-in-x-4-in-x-10-ft-Prime-2-and-Better-Douglas-Fir-Lumber-441864/202047663" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/4-in-x-4-in-x-10-ft-Prime-2-and-Better-Douglas-Fir-Lumber-441864\/202047663', 'Home Depot price')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Home Depot price</a>
+
+
+<a href="https://www.homedepot.com/p/4-in-x-4-in-x-10-ft-Prime-2-and-Better-Douglas-Fir-Lumber-441864/202047663" target="_blank" class="aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wLzQtaW4teC00LWluLXgtMTAtZnQtUHJpbWUtMi1hbmQtQmV0dGVyLURvdWdsYXMtRmlyLUx1bWJlci00NDE4NjQvMjAyMDQ3NjYz"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/4-in-x-4-in-x-10-ft-Prime-2-and-Better-Douglas-Fir-Lumber-441864\/202047663', 'Home Depot price')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wLzQtaW4teC00LWluLXgtMTAtZnQtUHJpbWUtMi1hbmQtQmV0dGVyLURvdWdsYXMtRmlyLUx1bWJlci00NDE4NjQvMjAyMDQ3NjYzHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wLzQtaW4teC00LWluLXgtMTAtZnQtUHJpbWUtMi1hbmQtQmV0dGVyLURvdWdsYXMtRmlyLUx1bWJlci00NDE4NjQvMjAyMDQ3NjYzBase')"
+>Home Depot price</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wLzQtaW4teC00LWluLXgtMTAtZnQtUHJpbWUtMi1hbmQtQmV0dGVyLURvdWdsYXMtRmlyLUx1bWJlci00NDE4NjQvMjAyMDQ3NjYz");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wLzQtaW4teC00LWluLXgtMTAtZnQtUHJpbWUtMi1hbmQtQmV0dGVyLURvdWdsYXMtRmlyLUx1bWJlci00NDE4NjQvMjAyMDQ3NjYzBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wLzQtaW4teC00LWluLXgtMTAtZnQtUHJpbWUtMi1hbmQtQmV0dGVyLURvdWdsYXMtRmlyLUx1bWJlci00NDE4NjQvMjAyMDQ3NjYzBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wLzQtaW4teC00LWluLXgtMTAtZnQtUHJpbWUtMi1hbmQtQmV0dGVyLURvdWdsYXMtRmlyLUx1bWJlci00NDE4NjQvMjAyMDQ3NjYzHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wLzQtaW4teC00LWluLXgtMTAtZnQtUHJpbWUtMi1hbmQtQmV0dGVyLURvdWdsYXMtRmlyLUx1bWJlci00NDE4NjQvMjAyMDQ3NjYzHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  for the posts is $21.84 (total $87.36).</p>
 
 
@@ -559,10 +602,45 @@ enough to support the post, the weight of the boards attached to them, and the w
 both directions. Below are some of the brackets I&rsquo;ve considered for this job. 
 
 
-<a href="https://www.homedepot.com/p/MiTek-4-13-16-in-G90-Corner-Brace-UBL4/313507605" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/MiTek-4-13-16-in-G90-Corner-Brace-UBL4\/313507605', 'Selected brace')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">Selected brace</a>
+
+
+<a href="https://www.homedepot.com/p/MiTek-4-13-16-in-G90-Corner-Brace-UBL4/313507605" target="_blank" class="aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL01pVGVrLTQtMTMtMTYtaW4tRzkwLUNvcm5lci1CcmFjZS1VQkw0LzMxMzUwNzYwNQ=="
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/MiTek-4-13-16-in-G90-Corner-Brace-UBL4\/313507605', 'Selected brace')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL01pVGVrLTQtMTMtMTYtaW4tRzkwLUNvcm5lci1CcmFjZS1VQkw0LzMxMzUwNzYwNQ==Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL01pVGVrLTQtMTMtMTYtaW4tRzkwLUNvcm5lci1CcmFjZS1VQkw0LzMxMzUwNzYwNQ==Base')"
+>Selected brace</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL01pVGVrLTQtMTMtMTYtaW4tRzkwLUNvcm5lci1CcmFjZS1VQkw0LzMxMzUwNzYwNQ==");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL01pVGVrLTQtMTMtMTYtaW4tRzkwLUNvcm5lci1CcmFjZS1VQkw0LzMxMzUwNzYwNQ==Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL01pVGVrLTQtMTMtMTYtaW4tRzkwLUNvcm5lci1CcmFjZS1VQkw0LzMxMzUwNzYwNQ==Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL01pVGVrLTQtMTMtMTYtaW4tRzkwLUNvcm5lci1CcmFjZS1VQkw0LzMxMzUwNzYwNQ==Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL01pVGVrLTQtMTMtMTYtaW4tRzkwLUNvcm5lci1CcmFjZS1VQkw0LzMxMzUwNzYwNQ==Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
 
 for the top costs $6.55 (total $26.20). For the bottom I used a galvanized strap tie since it can be
 bent as desired (also included below. Two per post at 57¢ for a total of $4.56).</p>
@@ -824,10 +902,45 @@ ground. Pictures below explain it all. Once the posts were attached to the top, 
 straps to fix the posts to the base of the deck. Attached brackets used 
 
 
-<a href="https://www.homedepot.com/p/Grip-Rite-6-x-1-1-4-in-Philips-Bugle-Head-Coarse-Thread-Sharp-Point-Polymer-Coated-Exterior-Screws-5-lbs-Pack-PTN114S5/100121757" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/Grip-Rite-6-x-1-1-4-in-Philips-Bugle-Head-Coarse-Thread-Sharp-Point-Polymer-Coated-Exterior-Screws-5-lbs-Pack-PTN114S5\/100121757', '#6 x 1 1\/4 in Philips Exterior Screws')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">#6 x 1 1/4 in Philips Exterior Screws</a>
+
+
+<a href="https://www.homedepot.com/p/Grip-Rite-6-x-1-1-4-in-Philips-Bugle-Head-Coarse-Thread-Sharp-Point-Polymer-Coated-Exterior-Screws-5-lbs-Pack-PTN114S5/100121757" target="_blank" class="aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS02LXgtMS0xLTQtaW4tUGhpbGlwcy1CdWdsZS1IZWFkLUNvYXJzZS1UaHJlYWQtU2hhcnAtUG9pbnQtUG9seW1lci1Db2F0ZWQtRXh0ZXJpb3ItU2NyZXdzLTUtbGJzLVBhY2stUFROMTE0UzUvMTAwMTIxNzU3"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/Grip-Rite-6-x-1-1-4-in-Philips-Bugle-Head-Coarse-Thread-Sharp-Point-Polymer-Coated-Exterior-Screws-5-lbs-Pack-PTN114S5\/100121757', '#6 x 1 1\/4 in Philips Exterior Screws')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS02LXgtMS0xLTQtaW4tUGhpbGlwcy1CdWdsZS1IZWFkLUNvYXJzZS1UaHJlYWQtU2hhcnAtUG9pbnQtUG9seW1lci1Db2F0ZWQtRXh0ZXJpb3ItU2NyZXdzLTUtbGJzLVBhY2stUFROMTE0UzUvMTAwMTIxNzU3Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS02LXgtMS0xLTQtaW4tUGhpbGlwcy1CdWdsZS1IZWFkLUNvYXJzZS1UaHJlYWQtU2hhcnAtUG9pbnQtUG9seW1lci1Db2F0ZWQtRXh0ZXJpb3ItU2NyZXdzLTUtbGJzLVBhY2stUFROMTE0UzUvMTAwMTIxNzU3Base')"
+>#6 x 1 1/4 in Philips Exterior Screws</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS02LXgtMS0xLTQtaW4tUGhpbGlwcy1CdWdsZS1IZWFkLUNvYXJzZS1UaHJlYWQtU2hhcnAtUG9pbnQtUG9seW1lci1Db2F0ZWQtRXh0ZXJpb3ItU2NyZXdzLTUtbGJzLVBhY2stUFROMTE0UzUvMTAwMTIxNzU3");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS02LXgtMS0xLTQtaW4tUGhpbGlwcy1CdWdsZS1IZWFkLUNvYXJzZS1UaHJlYWQtU2hhcnAtUG9pbnQtUG9seW1lci1Db2F0ZWQtRXh0ZXJpb3ItU2NyZXdzLTUtbGJzLVBhY2stUFROMTE0UzUvMTAwMTIxNzU3Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS02LXgtMS0xLTQtaW4tUGhpbGlwcy1CdWdsZS1IZWFkLUNvYXJzZS1UaHJlYWQtU2hhcnAtUG9pbnQtUG9seW1lci1Db2F0ZWQtRXh0ZXJpb3ItU2NyZXdzLTUtbGJzLVBhY2stUFROMTE0UzUvMTAwMTIxNzU3Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS02LXgtMS0xLTQtaW4tUGhpbGlwcy1CdWdsZS1IZWFkLUNvYXJzZS1UaHJlYWQtU2hhcnAtUG9pbnQtUG9seW1lci1Db2F0ZWQtRXh0ZXJpb3ItU2NyZXdzLTUtbGJzLVBhY2stUFROMTE0UzUvMTAwMTIxNzU3Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS02LXgtMS0xLTQtaW4tUGhpbGlwcy1CdWdsZS1IZWFkLUNvYXJzZS1UaHJlYWQtU2hhcnAtUG9pbnQtUG9seW1lci1Db2F0ZWQtRXh0ZXJpb3ItU2NyZXdzLTUtbGJzLVBhY2stUFROMTE0UzUvMTAwMTIxNzU3Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  (cost $32.97 5 lb. box).</p>
 
 
@@ -1061,10 +1174,45 @@ right size. In order to know the right size I used two clamps, took measurements
 size we needed to drill holes and screw the board to the posts. We used 
 
 
-<a href="https://www.homedepot.com/p/Grip-Rite-7-x-2-in-Philips-Bugle-Head-Coarse-Thread-Sharp-Point-Polymer-Coated-Exterior-Screws-5-lbs-Pack-PTN2S5/100136822" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/Grip-Rite-7-x-2-in-Philips-Bugle-Head-Coarse-Thread-Sharp-Point-Polymer-Coated-Exterior-Screws-5-lbs-Pack-PTN2S5\/100136822', '#7 x 2 in Phillips Exterior Screws')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">#7 x 2 in Phillips Exterior Screws</a>
+
+
+<a href="https://www.homedepot.com/p/Grip-Rite-7-x-2-in-Philips-Bugle-Head-Coarse-Thread-Sharp-Point-Polymer-Coated-Exterior-Screws-5-lbs-Pack-PTN2S5/100136822" target="_blank" class="aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS03LXgtMi1pbi1QaGlsaXBzLUJ1Z2xlLUhlYWQtQ29hcnNlLVRocmVhZC1TaGFycC1Qb2ludC1Qb2x5bWVyLUNvYXRlZC1FeHRlcmlvci1TY3Jld3MtNS1sYnMtUGFjay1QVE4yUzUvMTAwMTM2ODIy"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/Grip-Rite-7-x-2-in-Philips-Bugle-Head-Coarse-Thread-Sharp-Point-Polymer-Coated-Exterior-Screws-5-lbs-Pack-PTN2S5\/100136822', '#7 x 2 in Phillips Exterior Screws')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS03LXgtMi1pbi1QaGlsaXBzLUJ1Z2xlLUhlYWQtQ29hcnNlLVRocmVhZC1TaGFycC1Qb2ludC1Qb2x5bWVyLUNvYXRlZC1FeHRlcmlvci1TY3Jld3MtNS1sYnMtUGFjay1QVE4yUzUvMTAwMTM2ODIyHover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS03LXgtMi1pbi1QaGlsaXBzLUJ1Z2xlLUhlYWQtQ29hcnNlLVRocmVhZC1TaGFycC1Qb2ludC1Qb2x5bWVyLUNvYXRlZC1FeHRlcmlvci1TY3Jld3MtNS1sYnMtUGFjay1QVE4yUzUvMTAwMTM2ODIyBase')"
+>#7 x 2 in Phillips Exterior Screws</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS03LXgtMi1pbi1QaGlsaXBzLUJ1Z2xlLUhlYWQtQ29hcnNlLVRocmVhZC1TaGFycC1Qb2ludC1Qb2x5bWVyLUNvYXRlZC1FeHRlcmlvci1TY3Jld3MtNS1sYnMtUGFjay1QVE4yUzUvMTAwMTM2ODIy");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS03LXgtMi1pbi1QaGlsaXBzLUJ1Z2xlLUhlYWQtQ29hcnNlLVRocmVhZC1TaGFycC1Qb2ludC1Qb2x5bWVyLUNvYXRlZC1FeHRlcmlvci1TY3Jld3MtNS1sYnMtUGFjay1QVE4yUzUvMTAwMTM2ODIyBase"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS03LXgtMi1pbi1QaGlsaXBzLUJ1Z2xlLUhlYWQtQ29hcnNlLVRocmVhZC1TaGFycC1Qb2ludC1Qb2x5bWVyLUNvYXRlZC1FeHRlcmlvci1TY3Jld3MtNS1sYnMtUGFjay1QVE4yUzUvMTAwMTM2ODIyBase"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS03LXgtMi1pbi1QaGlsaXBzLUJ1Z2xlLUhlYWQtQ29hcnNlLVRocmVhZC1TaGFycC1Qb2ludC1Qb2x5bWVyLUNvYXRlZC1FeHRlcmlvci1TY3Jld3MtNS1sYnMtUGFjay1QVE4yUzUvMTAwMTM2ODIyHover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0dyaXAtUml0ZS03LXgtMi1pbi1QaGlsaXBzLUJ1Z2xlLUhlYWQtQ29hcnNlLVRocmVhZC1TaGFycC1Qb2ludC1Qb2x5bWVyLUNvYXRlZC1FeHRlcmlvci1TY3Jld3MtNS1sYnMtUGFjay1QVE4yUzUvMTAwMTM2ODIyHover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  since the boards are 1 in. thick ($32.97 5lb box). In order to
 keep the gap constant we used a board section. To accelerate locating the drilling spots for each board
 I created a stencil out of other board pieces.</p>
@@ -1379,10 +1527,45 @@ padding-left: 3px;">O</span>nce we&rsquo;re done with the first panel, the other
 part is 
 
 
-<a href="https://www.homedepot.com/p/BEHR-PREMIUM-1-gal-Clear-Transparent-Waterproofing-Exterior-Wood-Finish-50001/301060429#overlay" target="_blank" onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/BEHR-PREMIUM-1-gal-Clear-Transparent-Waterproofing-Exterior-Wood-Finish-50001\/301060429#overlay', 'staining')" 
-style="color: rgb(34, 34, 34); box-shadow: rgb(0, 117, 178) 0px -4px 0px inset; text-decoration: none; " 
-onMouseOver="BrewingCatsCore.LinkActions.mouseover(this)"
-onMouseOut="BrewingCatsCore.LinkActions.mouseout(this)">staining</a>
+
+
+<a href="https://www.homedepot.com/p/BEHR-PREMIUM-1-gal-Clear-Transparent-Waterproofing-Exterior-Wood-Finish-50001/301060429#overlay" target="_blank" class="aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0JFSFItUFJFTUlVTS0xLWdhbC1DbGVhci1UcmFuc3BhcmVudC1XYXRlcnByb29maW5nLUV4dGVyaW9yLVdvb2QtRmluaXNoLTUwMDAxLzMwMTA2MDQyOSNvdmVybGF5"
+onclick="BrewingCatsCore.LinkActions.openLink('https:\/\/www.homedepot.com\/p\/BEHR-PREMIUM-1-gal-Clear-Transparent-Waterproofing-Exterior-Wood-Finish-50001\/301060429#overlay', 'staining')" 
+style="color: rgb(34, 34, 34); text-decoration: none; " 
+onMouseOver="BrewingCatsCore.LinkActions.mouseover(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0JFSFItUFJFTUlVTS0xLWdhbC1DbGVhci1UcmFuc3BhcmVudC1XYXRlcnByb29maW5nLUV4dGVyaW9yLVdvb2QtRmluaXNoLTUwMDAxLzMwMTA2MDQyOSNvdmVybGF5Hover')"
+onMouseOut="BrewingCatsCore.LinkActions.mouseout(this, 'aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0JFSFItUFJFTUlVTS0xLWdhbC1DbGVhci1UcmFuc3BhcmVudC1XYXRlcnByb29maW5nLUV4dGVyaW9yLVdvb2QtRmluaXNoLTUwMDAxLzMwMTA2MDQyOSNvdmVybGF5Base')"
+>staining</a>
+
+<script>
+  (() => {
+    let items = document.getElementsByClassName("aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0JFSFItUFJFTUlVTS0xLWdhbC1DbGVhci1UcmFuc3BhcmVudC1XYXRlcnByb29maW5nLUV4dGVyaW9yLVdvb2QtRmluaXNoLTUwMDAxLzMwMTA2MDQyOSNvdmVybGF5");
+    let baseColor = "ThemeColor";
+    
+    for (let i = 0; i < items.length; i++) {
+      let boxShadow = `rgb(${window.BrewingCatsCore.Config.ThemeColor}) 0px -4px 0px inset`;
+      if (baseColor !== 'ThemeColor') {
+        boxShadow = `rgb(${baseColor}) 0px -4px 0px inset`;
+      }
+
+      items[i].style.boxShadow = boxShadow;
+    }
+
+    if (baseColor !== 'ThemeColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0JFSFItUFJFTUlVTS0xLWdhbC1DbGVhci1UcmFuc3BhcmVudC1XYXRlcnByb29maW5nLUV4dGVyaW9yLVdvb2QtRmluaXNoLTUwMDAxLzMwMTA2MDQyOSNvdmVybGF5Base"] = baseColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0JFSFItUFJFTUlVTS0xLWdhbC1DbGVhci1UcmFuc3BhcmVudC1XYXRlcnByb29maW5nLUV4dGVyaW9yLVdvb2QtRmluaXNoLTUwMDAxLzMwMTA2MDQyOSNvdmVybGF5Base"] = 
+        window.BrewingCatsCore.Config.ThemeColor;
+    }
+
+    let hoverColor = "LinkHoverColor";
+    if (hoverColor !== 'LinkHoverColor') {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0JFSFItUFJFTUlVTS0xLWdhbC1DbGVhci1UcmFuc3BhcmVudC1XYXRlcnByb29maW5nLUV4dGVyaW9yLVdvb2QtRmluaXNoLTUwMDAxLzMwMTA2MDQyOSNvdmVybGF5Hover"] = hoverColor;
+    } else {
+      window.BrewingCatsCore.Config.ClickCustom["aHR0cHM6Ly93d3cuaG9tZWRlcG90LmNvbS9wL0JFSFItUFJFTUlVTS0xLWdhbC1DbGVhci1UcmFuc3BhcmVudC1XYXRlcnByb29maW5nLUV4dGVyaW9yLVdvb2QtRmluaXNoLTUwMDAxLzMwMTA2MDQyOSNvdmVybGF5Hover"] = 
+        window.BrewingCatsCore.Config.LinkHoverColor;
+    }
+  })();
+</script>
  and we&rsquo;re done! Ready for some outdoor time 😁</p>
 
 
