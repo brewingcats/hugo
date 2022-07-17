@@ -33,12 +33,6 @@ together that also serves as relaxation area
 
 {{< unsplashembed "R0Cd0XGeeu0" "800x600" "Animal life around" >}}
 
-Here's a collection of the pictures I've taken from the area:
-
-{{< tableau "viz1571616448020" "Mu" "Mukilteo_15706546970590" "PhotosofMukilteo" >}}
-
-{{< caption "Pictures taken in Mukilteo" >}}
-
 {{< head 2 "Boat Tour in Diablo Lake" >}}
 
 {{< big N >}}ext day we had booked a {{< link "http://www.seattle.gov/light/damtours/diablotours.asp" "boat tour" >}} in 
@@ -128,11 +122,6 @@ After the tour a small drive to `Diablo Lake Vista Point` got us some extra snap
 
 {{< youtube rDhqukU8z9A >}}
 {{< caption "Diablo Lake Vista Point" >}}
-
-You can see the pictures I've taken from the area:
-
-{{< tableau "viz1571769012772" "Di" "DiabloLake" "DiabloLake" >}}
-{{< caption "Pictures taken in Diablo Lake" >}}
 
 {{< scrolltop >}}
 {{< pageStats >}}

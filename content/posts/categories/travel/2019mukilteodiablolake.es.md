@@ -33,12 +33,6 @@ juntan las familias y es un lugar general de relajación
 
 {{< unsplashembed "R0Cd0XGeeu0" "800x600" "Vida Animal de los Alrededores" >}}
 
-Esta es la colección de fotos que he tomado del area:
-
-{{< tableau "viz1571616448020" "Mu" "Mukilteo_15706546970590" "PhotosofMukilteo" >}}
-
-{{< caption "Fotos tomadas en Mukilteo" >}}
-
 {{< head 2 "Tour en Bote en el Diablo Lake" >}}
 
 {{< big A >}}l siguiente día teníamos una reservación para un {{< link "http://www.seattle.gov/light/damtours/diablotours.asp" "tour en bote" >}} en el 
@@ -130,11 +124,6 @@ este vídeo con lo cual concluyó el viaje
 
 {{< youtube rDhqukU8z9A >}}
 {{< caption "Diablo Lake Vista Point" >}}
-
-Aqui las fotos que he tomado del área:
-
-{{< tableau "viz1571769012772" "Di" "DiabloLake" "DiabloLake" >}}
-{{< caption "Fotos tomadas en Diablo Lake" >}}
 
 {{< scrolltop >}}
 {{< pageStats >}}
