@@ -15,6 +15,12 @@ lang: en
 
 
 {{< cards >}}
+  {{< card 
+  "https://source.unsplash.com/JrZvYuBYzCU/"
+  "/posts/categories/software/animatedviz/"
+  "Make Your Viz Fun with Animations"
+  "A step by step guide for replacing your PowerPoint slides with an animated Tableau dashboard for your next presentation" >}}
+
   {{< card
   "/images/site/mexico.jpg"
   "https://loteria.brewingcats.com"
@@ -38,12 +44,6 @@ lang: en
   "/posts/categories/travel/2019mukilteodiablolake/"
   "2019 Mukilteo and Diablo Lake"
   "Details about the weekend used to visit the Mukilteo Lighthouse as well as a boat tour on the Diablo Lake" >}}
-
-  {{< card 
-  "/images/categories/travel/2019sandiego.jpg"
-  "/posts/categories/travel/2019sandiego/"
-  "Trip to San Diego 2019"
-  "A short trip to visit for first time San Diego in 2019. Discovered some interesting places that I documented here" >}}
 
   {{< card 
   "/images/site/insta.jpg"
@@ -81,6 +81,8 @@ lang: en
 {{< unsplash "k1xf2D7jWUs" "alexbemore" "Unsplash: Twitter" >}}
 {{< unsplash "sIFCJHrUWPM" "alexbemore" "Unsplash: Discord" >}}
 {{< unsplash "fRjjnN_8njo" "alexbemore" "Unsplash: Snapchat" >}}
+{{< unsplash "JrZvYuBYzCU" "Roméo A." 
+"Unsplash: Super Nintendo World in Universal Studios Japan, Osaka" >}}
 
 {{< scrolltop >}}
 {{< pageStats >}}

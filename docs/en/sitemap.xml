@@ -2,18 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://hugobelin.com/tags/career/</loc>
-    <lastmod>2022-06-14T16:28:58-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://hugobelin.com/categories/career/</loc>
-    <lastmod>2022-06-14T16:28:58-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
     <loc>https://hugobelin.com/categories/</loc>
-    <lastmod>2022-06-14T16:28:58-07:00</lastmod>
+    <lastmod>2022-07-23T23:01:28-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -27,8 +17,53 @@
                 href="https://hugobelin.com/categories/"
                 />
   </url><url>
+    <loc>https://hugobelin.com/posts/categories/software/animatedviz/</loc>
+    <lastmod>2022-07-23T23:01:28-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/posts/categories/software/animatedviz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/posts/categories/software/animatedviz/"
+                />
+  </url><url>
+    <loc>https://hugobelin.com/tags/software/</loc>
+    <lastmod>2022-07-23T23:01:28-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/tags/software/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/tags/software/"
+                />
+  </url><url>
+    <loc>https://hugobelin.com/categories/software/</loc>
+    <lastmod>2022-07-23T23:01:28-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://hugobelin.com/es/categories/software/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://hugobelin.com/categories/software/"
+                />
+  </url><url>
     <loc>https://hugobelin.com/tags/</loc>
-    <lastmod>2022-06-14T16:28:58-07:00</lastmod>
+    <lastmod>2022-07-23T23:01:28-07:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -41,6 +76,16 @@
                 hreflang="en"
                 href="https://hugobelin.com/tags/"
                 />
+  </url><url>
+    <loc>https://hugobelin.com/tags/career/</loc>
+    <lastmod>2022-06-14T16:28:58-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://hugobelin.com/categories/career/</loc>
+    <lastmod>2022-06-14T16:28:58-07:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>https://hugobelin.com/posts/categories/uncategorized/thankyoutableau/</loc>
     <lastmod>2022-06-14T16:28:58-07:00</lastmod>
@@ -235,36 +280,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://hugobelin.com/posts/categories/software/photoviz/"
-                />
-  </url><url>
-    <loc>https://hugobelin.com/tags/software/</loc>
-    <lastmod>2020-08-08T14:51:46-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://hugobelin.com/es/tags/software/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hugobelin.com/tags/software/"
-                />
-  </url><url>
-    <loc>https://hugobelin.com/categories/software/</loc>
-    <lastmod>2020-08-08T14:51:46-07:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://hugobelin.com/es/categories/software/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://hugobelin.com/categories/software/"
                 />
   </url><url>
     <loc>https://hugobelin.com/posts/categories/travel/hikecollection/</loc>

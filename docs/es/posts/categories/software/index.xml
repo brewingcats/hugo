@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Jun 2020 16:57:18 -0700</lastBuildDate><atom:link href="https://hugobelin.com/es/posts/categories/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Crea una Presentación Memorable con Tableau</title>
+      <link>https://hugobelin.com/es/posts/categories/software/animatedviz/</link>
+      <pubDate>Sat, 23 Jul 2022 23:01:41 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/es/posts/categories/software/animatedviz/</guid>
+      <description>Tabla de Contenidos ¡Haz que tu siguiente presentación resalte más y en lugar de usar una presentación aburrida de PowerPoint (nada en contra de PowerPoint 😅) dále la oportunidad a un dashboard de Tableau! Vamos a hacerla mas divertida añadiendo animaciones que capturarán la atención de tu audiencia. Como ejemplo usaré un Tableau dashboard al estilo de Super Mario Bros. Mostraré como construir uno de estos dashboards usando algunas herramientas y trucos.</description>
+    </item>
+    
+    <item>
       <title>Como Crear Tu Propio Foto Viz</title>
       <link>https://hugobelin.com/es/posts/categories/software/photoviz/</link>
       <pubDate>Sat, 08 Aug 2020 14:51:56 -0700</pubDate>

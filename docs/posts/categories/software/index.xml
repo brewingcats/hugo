@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 18 Jun 2020 16:57:13 -0700</lastBuildDate><atom:link href="https://hugobelin.com/posts/categories/software/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Make Your Next Presentation Pop with Tableau</title>
+      <link>https://hugobelin.com/posts/categories/software/animatedviz/</link>
+      <pubDate>Sat, 23 Jul 2022 23:01:28 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/software/animatedviz/</guid>
+      <description>Table of Contents Make your next meeting pop and instead of using a boring PowerPoint presentation (nothing against PowerPoint 😅) give it a try to a Tableau dashboard! Let&amp;rsquo;s make it even more fun by adding some animations to capture your audience atention. For this example I&amp;rsquo;m going to use a Super Mario Bros style Tableau dashboard. I will show how to build one using several tools
+Plan Your Presentation The first step seems obvious but also takes some planning.</description>
+    </item>
+    
+    <item>
       <title>How to make your own Photo Viz</title>
       <link>https://hugobelin.com/posts/categories/software/photoviz/</link>
       <pubDate>Sat, 08 Aug 2020 14:51:46 -0700</pubDate>

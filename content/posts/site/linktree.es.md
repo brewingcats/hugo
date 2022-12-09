@@ -14,6 +14,12 @@ lang: es
 # Lista de Contenido Promovido #
 
 {{< cards >}}
+  {{< card 
+  "https://source.unsplash.com/JrZvYuBYzCU/"
+  "/es/posts/categories/software/animatedviz/"
+  "Haz Tu Viz Más Divertida con Animaciones"
+  "Guía paso a paso de como reemplazar tus diapositivas de PowerPoint con un dashboard de Tableau para tu siguiente presentación" >}}
+
   {{< card
   "/images/site/mexico.jpg"
   "https://loteria.brewingcats.com"
@@ -37,12 +43,6 @@ lang: es
   "/es/posts/categories/travel/2019mukilteodiablolake/"
   "2019 Faro de Mukilteo y Diablo Lake"
   "Detalles del fin de semana donde visitamos el Faro de Mukilteo así como un paseo en bote en el Diablo Lake" >}}
-
-  {{< card 
-  "/images/categories/travel/2019sandiego.jpg"
-  "/es/posts/categories/travel/2019sandiego/"
-  "Viaje a San Diego 2019"
-  "Un viaje corto donde conocimos por vez primera San Diego en 2019. Descubrimos algunos lugares interesantes documentados en este artículo" >}}
 
   {{< card 
   "/images/site/insta.jpg"
@@ -80,6 +80,8 @@ lang: es
 {{< unsplash "k1xf2D7jWUs" "alexbemore" "Unsplash: Twitter" >}}
 {{< unsplash "sIFCJHrUWPM" "alexbemore" "Unsplash: Discord" >}}
 {{< unsplash "fRjjnN_8njo" "alexbemore" "Unsplash: Snapchat" >}}
+{{< unsplash "JrZvYuBYzCU" "Roméo A." 
+"Unsplash: Super Nintendo World en Universal Studios Japan, Osaka" >}}
 
 {{< scrolltop >}}
 {{< pageStats >}}

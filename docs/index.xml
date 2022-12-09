@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jun 2020 22:31:51 -0700</lastBuildDate><atom:link href="https://hugobelin.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Make Your Next Presentation Pop with Tableau</title>
+      <link>https://hugobelin.com/posts/categories/software/animatedviz/</link>
+      <pubDate>Sat, 23 Jul 2022 23:01:28 -0700</pubDate>
+      
+      <guid>https://hugobelin.com/posts/categories/software/animatedviz/</guid>
+      <description>Table of Contents Make your next meeting pop and instead of using a boring PowerPoint presentation (nothing against PowerPoint 😅) give it a try to a Tableau dashboard! Let&amp;rsquo;s make it even more fun by adding some animations to capture your audience atention. For this example I&amp;rsquo;m going to use a Super Mario Bros style Tableau dashboard. I will show how to build one using several tools
+Plan Your Presentation The first step seems obvious but also takes some planning.</description>
+    </item>
+    
+    <item>
       <title>Thank You Tableau</title>
       <link>https://hugobelin.com/posts/categories/uncategorized/thankyoutableau/</link>
       <pubDate>Tue, 14 Jun 2022 16:28:58 -0700</pubDate>
@@ -32,7 +42,7 @@ Thank You Tableau Almost 6 years have passed since I joined Tableau back in 2016
       <pubDate>Tue, 07 Sep 2021 20:40:11 -0700</pubDate>
       
       <guid>https://hugobelin.com/posts/site/linktree/</guid>
-      <description>Promoted Content Mexican Lottery Game on NFT Mexican Lottery Game on NFT created using pixel art read more Hike Collection Tableau Dashboard that contains my hikes with pictures over the time read more Photo Collection All my photos in a map. With the help of this Tableau Dashboard I&amp;#39;m locating them in a map that helps visualize them read more 2019 Mukilteo and Diablo Lake Details about the weekend used to visit the Mukilteo Lighthouse as well as a boat tour on the Diablo Lake read more Trip to San Diego 2019 A short trip to visit for first time San Diego in 2019.</description>
+      <description>Promoted Content Make Your Viz Fun with Animations A step by step guide for replacing your PowerPoint slides with an animated Tableau dashboard for your next presentation read more Mexican Lottery Game on NFT Mexican Lottery Game on NFT created using pixel art read more Hike Collection Tableau Dashboard that contains my hikes with pictures over the time read more Photo Collection All my photos in a map. With the help of this Tableau Dashboard I&amp;#39;m locating them in a map that helps visualize them read more 2019 Mukilteo and Diablo Lake Details about the weekend used to visit the Mukilteo Lighthouse as well as a boat tour on the Diablo Lake read more Instagram My Instagram Account read more Twitter My Twitter Account read more Discord Profile: DarthOguh#1161 read more Snapchat Snapchat Profile read more Tableau Tableau Public Profile read more Image Credits: Unsplash: Tree by the sea image by @shannonmclaughlin Image Credits: Unsplash: Instagram image by @alexbemore Image Credits: Unsplash: Twitter image by @alexbemore Image Credits: Unsplash: Discord image by @alexbemore Image Credits: Unsplash: Snapchat image by @alexbemore Image Credits: Unsplash: Super Nintendo World in Universal Studios Japan, Osaka image by @Roméo A.</description>
     </item>
     
     <item>
@@ -175,7 +185,7 @@ Facebook Twitter Instagram Snapchat Reddit Tableau Public LinkedIn GitHub GitLab
       
       <guid>https://hugobelin.com/posts/site/changelog/</guid>
       <description>This post contains a list of the changes made to the website, it is used for tracking purposes
-Website Version Core Library Version Release Name 4.31 @@@ Versioning Policies Major.Minor.Build | | |_______ Brewing Cats Core Version | |_____________ New features |___________________ Official new releases (Tied to a Release name)
+Website Version Core Library Version Release Name 4.32 @@@ Versioning Policies Major.Minor.Build | | |_______ Brewing Cats Core Version | |_____________ New features |___________________ Official new releases (Tied to a Release name)
 Milestone Naming Conventions Milestone names are taken from:
 List of Star Wars characters then: Star Wars Legends characters then: Star Wars: Knights of the Old Republic characters Release milestone would look like:</description>
     </item>
